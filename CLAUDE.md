@@ -35,7 +35,11 @@ and push at the end of each completed task without waiting to be asked.
 
 ## Open items
 
-- **GitHub Pages is not enabled** on the repo, so the workflow's `deploy` job
-  fails with a 404 while `check`, `build-apps` and `build-landing` pass. The
-  build is healthy; only publication is blocked. Enabling it is Thiago's call
-  because it makes the site public (Settings → Pages → Source: GitHub Actions).
+- **GitHub Pages is deliberately not enabled yet.** Publishing happens once,
+  at the end of development — not incrementally. Until then the workflow's
+  `deploy` job fails with a 404 on every push while `check`, `build-apps` and
+  `build-landing` pass. That red job is expected, not a regression; do not
+  "fix" it. Enabling Pages is Thiago's call and makes the site public
+  (Settings → Pages → Source: GitHub Actions). The repo name, Vite `base` and
+  PWA scope already agree on lowercase `certdeck`, so nothing blocks it
+  technically.
