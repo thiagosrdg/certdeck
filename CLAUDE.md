@@ -1,0 +1,48 @@
+# CLAUDE.md
+
+Umbrella repo. Today it holds one project, **CertDeck**, in `certdeck/`;
+other, unrelated projects may become sibling folders later. Never assume the
+repo root is a project root.
+
+**Read `certdeck/AGENTS.md` before touching CertDeck code.** It is the
+authoritative spec — architecture rule, question schema, CertConfig, design
+direction, quality floor. This file only covers what lives above it.
+
+## Where things run
+
+```bash
+cd certdeck            # every npm command runs from here, not the repo root
+npm run dev            # dev servers (landing + network-plus)
+npm run validate       # question data — also runs in the pre-commit hook
+npm run test           # unit tests
+npm run build          # engine + landing + apps
+```
+
+The nesting has two consequences that are easy to break:
+
+- `.github/workflows/deploy.yml` stays at the repo root because Actions only
+  runs workflows from there. Its build jobs use
+  `defaults.run.working-directory: certdeck`, but `upload-artifact` paths
+  resolve against the repo root, so they keep the `certdeck/` prefix.
+- Git hooks always run from the repo root. `prepare` is
+  `cd .. && husky certdeck/.husky`, and the pre-commit hook does
+  `cd certdeck && npm run validate`.
+
+## Git workflow
+
+Work directly on `main` — no feature branches, no PRs unless asked. Commit
+and push at the end of each completed task without waiting to be asked.
+
+## Open items
+
+- **GitHub Pages is not enabled** on the repo, so the workflow's `deploy` job
+  fails with a 404 while `check`, `build-apps` and `build-landing` pass. The
+  build is healthy; only publication is blocked. Enabling it is Thiago's call
+  because it makes the site public (Settings → Pages → Source: GitHub Actions).
+- **Case mismatch, blocks the first real deploy.** The repo is `Certdeck`, so
+  Pages will serve `https://thiagosrdg.github.io/Certdeck/`, but the Vite
+  `base` and the PWA `scope`/`start_url` assume `/certdeck/`. Pages URLs are
+  case-sensitive, so assets would 404. Fix the casing throughout — or rename
+  the repo to lowercase — in the same change that enables Pages.
+- The stale remote branch `claude/novo-projeto-u997wt` still exists; `main` is
+  the default branch now and the only one in use.

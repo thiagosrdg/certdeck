@@ -58,19 +58,33 @@ JSON, its PWA manifest and icons, its `base` path, its accent colour.
 
 ## Structure
 
+The repository is an umbrella that may hold other, unrelated projects, so
+CertDeck lives one level down in `certdeck/`. Only what GitHub requires at
+the root stays there.
+
 ```
-certdeck/
-├── README.md            # authoritative, keep current
-├── AGENTS.md            # this file
-├── landing/             # static index of available simulators
-├── packages/engine/     # certification-agnostic logic and UI
-└── apps/
-    └── network-plus/    # PacketPrep
-        ├── src/cert.config.ts
-        └── src/data/questions/
+<repo root>/
+├── .github/workflows/   # Actions only runs workflows from the root
+├── LICENSE, .gitignore
+├── README.md            # index of the repo's projects
+└── certdeck/            # ← this project; all npm commands run from here
+    ├── README.md        # authoritative, keep current
+    ├── AGENTS.md        # this file
+    ├── landing/         # static index of available simulators
+    ├── packages/engine/ # certification-agnostic logic and UI
+    └── apps/
+        └── network-plus/    # PacketPrep
+            ├── src/cert.config.ts
+            └── src/data/questions/
 ```
 
 npm workspaces. Root scripts: `dev`, `build`, `test`, `validate`.
+
+Two things follow from the nesting. The workflow runs its build jobs with
+`working-directory: certdeck`, but `upload-artifact` paths resolve against
+the repo root and so keep the `certdeck/` prefix. Git hooks always run from
+the repo root, so `prepare` is `cd .. && husky certdeck/.husky` and the
+pre-commit hook enters `certdeck/` before validating.
 
 ## Tech stack
 
