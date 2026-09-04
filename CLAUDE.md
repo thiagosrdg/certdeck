@@ -39,5 +39,3 @@ and push at the end of each completed task without waiting to be asked.
   fails with a 404 while `check`, `build-apps` and `build-landing` pass. The
   build is healthy; only publication is blocked. Enabling it is Thiago's call
   because it makes the site public (Settings → Pages → Source: GitHub Actions).
-- The stale remote branch `claude/novo-projeto-u997wt` still exists; `main` is
-  the default branch now and the only one in use.
