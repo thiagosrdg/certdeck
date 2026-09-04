@@ -98,9 +98,10 @@ a simulator, then install it:
 After the first load everything is cached, questions included, and the app
 works offline. Each simulator installs independently.
 
-A newly deployed version is picked up on a later launch, once every window of
-the running one has been closed. There is no update prompt yet, so an
-installed app can serve a previous build for a while without saying so.
+When a new version is deployed, the installed app notices it and shows a
+small notice at the foot of the screen. It never blocks what you are doing —
+it can appear in the middle of an exam — and updating reloads into the new
+build, with any attempt in progress saved and resumed.
 
 ## Adding questions
 

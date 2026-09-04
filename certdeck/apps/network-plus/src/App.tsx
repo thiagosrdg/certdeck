@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { findAccent } from "@certdeck/engine";
 import { HashRouter, Navigate, Route, Routes } from "react-router";
+import { UpdateWatcher } from "./components/UpdateWatcher";
 import { certConfig } from "./cert.config";
 import { questionLoadErrors } from "./data/questions";
 import History from "./pages/History";
@@ -64,7 +65,9 @@ export default function App() {
   }
 
   return (
-    <HashRouter>
+    <>
+      <UpdateWatcher />
+      <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/exam" element={<FullExam />} />
@@ -77,6 +80,7 @@ export default function App() {
         <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </HashRouter>
+      </HashRouter>
+    </>
   );
 }

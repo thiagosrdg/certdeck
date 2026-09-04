@@ -252,16 +252,23 @@ rewriting the workflow.
 The service worker precaches the app and every question file, so the app
 works offline after the first load.
 
-**The update prompt is specified but not built.** `registerType: "prompt"`
-generates a worker that calls `skipWaiting()` only on receiving a
-`SKIP_WAITING` message, and nothing sends it: the app never imports
-`virtual:pwa-register`, so `injectRegister: "auto"` falls back to a plain
-`navigator.serviceWorker.register` with no UI. A new version therefore
-installs, waits for every window of the old one to close, and appears on a
-later launch, silently. Wiring `registerSW({ onNeedRefresh })` to a prompt is
-what closes the gap between this and the design — until then a stale cache
-can hide newly added questions, which is the thing the prompt existed to
-prevent.
+A waiting build is announced by `UpdateWatcher`, which each app mounts once
+outside the router. It calls `useRegisterSW` from `virtual:pwa-register` and
+renders the engine's `UpdateBanner`; confirming calls
+`updateServiceWorker(true)`, which sends the `SKIP_WAITING` the generated
+worker waits for and reloads into the new build.
+
+The split is deliberate: the virtual module comes from vite-plugin-pwa,
+configured per app, and the landing page has no worker at all — so the
+registration lives in the app and only the banner is shared. Without that
+registration the worker still installs, but nothing ever sends
+`SKIP_WAITING`, and a new build sits unused until every window of the old one
+closes. That was the behaviour until it was fixed, and it is what would let a
+stale cache hide newly added questions.
+
+The banner is non-blocking on purpose: it can appear mid-exam, and an update
+is never more urgent than the question on screen. Dismissing it is a real
+choice — the new version still arrives on a later launch.
 
 ## Design direction — card game
 
