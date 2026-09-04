@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import {
   Button,
   CardFlip,
+  ConfirmDialog,
   CardFrame,
   Navigator,
   OptionList,
@@ -28,6 +29,7 @@ export default function FullExam() {
   const settings = useSettingsStore((s) => s.settings);
   const [warnings, setWarnings] = useState<string[]>([]);
   const [navigatorOpen, setNavigatorOpen] = useState(false);
+  const [confirmOpen, setConfirmOpen] = useState(false);
   const directionRef = useRef<1 | -1>(1);
 
   useEffect(() => {
@@ -113,6 +115,10 @@ export default function FullExam() {
 
   const suit = suitFor(displayQuestion.domain);
   const isLast = currentIndex === attempt.questionIds.length - 1;
+  const total = attempt.questionIds.length;
+  const answeredCount = attempt.questionIds.filter((id) => (attempt.answers[id]?.selected.length ?? 0) > 0).length;
+  const unansweredCount = total - answeredCount;
+  const flaggedCount = attempt.questionIds.filter((id) => attempt.answers[id]?.flagged).length;
 
   const flipTarget: FlipTarget = {
     key: currentQuestionId,
@@ -135,7 +141,7 @@ export default function FullExam() {
             </Button>
             <ProgressDeck current={currentIndex + 1} total={attempt.questionIds.length} />
             {isLast ? (
-              <Button onClick={() => window.confirm("Submit the exam now?") && finish()}>Submit</Button>
+              <Button onClick={() => setConfirmOpen(true)}>Submit</Button>
             ) : (
               <Button variant="ghost" onClick={goNext}>
                 Next →
@@ -163,7 +169,7 @@ export default function FullExam() {
           <Button variant="ghost" onClick={() => setNavigatorOpen((v) => !v)}>
             {navigatorOpen ? "Hide grid" : "Question grid"}
           </Button>
-          <Button variant="secondary" onClick={() => window.confirm("Submit the exam now?") && finish()}>
+          <Button variant="secondary" onClick={() => setConfirmOpen(true)}>
             Submit
           </Button>
         </div>
@@ -193,6 +199,35 @@ export default function FullExam() {
       <div className="mx-auto aspect-card w-full max-w-sm flex-1">
         <CardFlip target={flipTarget} disableAnimation={!settings.cardFlipEnabled} className="h-full w-full" />
       </div>
+
+      <ConfirmDialog
+        open={confirmOpen}
+        title="Submit the exam?"
+        confirmLabel="Submit"
+        cancelLabel="Keep working"
+        body={
+          <>
+            <p>
+              Scoring {answeredCount} of {total} answered.
+            </p>
+            {unansweredCount > 0 && (
+              <p className="mt-1 text-incorrect">
+                {unansweredCount} question{unansweredCount === 1 ? "" : "s"} left blank will be marked incorrect.
+              </p>
+            )}
+            {flaggedCount > 0 && (
+              <p className="mt-1">
+                {flaggedCount} still flagged for review.
+              </p>
+            )}
+          </>
+        }
+        onCancel={() => setConfirmOpen(false)}
+        onConfirm={() => {
+          setConfirmOpen(false);
+          finish();
+        }}
+      />
     </div>
   );
 }

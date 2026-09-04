@@ -1,5 +1,6 @@
 export * from "./SuitIcon";
 export * from "./Button";
+export * from "./ConfirmDialog";
 export * from "./CardFrame";
 export * from "./CardFlip";
 export * from "./Navigator";

@@ -62,7 +62,13 @@ iconography rather than hearts-and-spades:
 | 5.0 Network Troubleshooting | Wrench | wrench | `#C0762B` burnt amber |
 
 App accent (`--cd-accent`, used for primary buttons, active nav, the PWA
-theme colour): `#1F6F78` deep signal teal.
+theme colour): `#A32B62` plum magenta in light, `#F07AAE` in dark.
+
+Unlike the core tokens, an accent needs both values supplied by the app: a
+hue saturated enough to carry a filled button on ivory is too dark to read
+on the charcoal-plum card, so each app declares a light and a dark accent in
+its own stylesheet. Both must clear WCAG AA against the card face in their
+own theme — this pair measures 6.32 and 6.30.
 
 ## Type
 

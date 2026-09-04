@@ -10,9 +10,23 @@
 /*
  * PacketPrep's accent, see docs/design.md. Everything else (table, card,
  * ink, gilt...) comes from the engine's tokens.css unchanged.
+ *
+ * The accent needs a dark value of its own: at full saturation it is legible
+ * on ivory but not on the charcoal-plum card, so dark mode lifts it the same
+ * way tokens.css lifts correct/incorrect/gilt.
  */
 :root {
-  --cd-accent: #1f6f78;
+  --cd-accent: #a32b62;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --cd-accent: #f07aae;
+  }
+}
+
+:root[data-theme="dark"] {
+  --cd-accent: #f07aae;
 }
 
 html,

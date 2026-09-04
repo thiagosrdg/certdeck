@@ -19,7 +19,7 @@ export const simulators: SimulatorEntry[] = [
     examCode: "N10-009",
     status: "available",
     href: "./network-plus/",
-    accent: "#1F6F78",
+    accent: "#A32B62",
   },
   {
     name: "Security+ simulator",
