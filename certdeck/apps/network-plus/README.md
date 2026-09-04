@@ -1,4 +1,4 @@
-# PacketPrep
+# CertDeck — CompTIA Network+
 
 An offline exam simulator for **CompTIA Network+ (N10-009)**, part of the
 [CertDeck](../../README.md) monorepo. Built on `packages/engine`; see the

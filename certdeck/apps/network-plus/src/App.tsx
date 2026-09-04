@@ -26,7 +26,7 @@ export default function App() {
       <div className="mx-auto flex min-h-screen max-w-lg flex-col items-center justify-center gap-4 p-6 text-center">
         <h1 className="text-xl font-bold text-incorrect">Question data failed to load</h1>
         <p className="text-sm text-ink-muted">
-          PacketPrep can&apos;t start until these files are fixed. Run <code className="font-mono">npm run validate</code> for
+          CertDeck can&apos;t start until these files are fixed. Run <code className="font-mono">npm run validate</code> for
           details.
         </p>
         <ul className="w-full list-disc rounded-lg border border-incorrect bg-incorrect/10 p-4 text-left text-sm">

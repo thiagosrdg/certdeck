@@ -1,7 +1,7 @@
 import { CertConfigSchema, type CertConfig } from "@certdeck/engine";
 
 /**
- * PacketPrep's certification definition — the only place Network+-specific
+ * The Network+ deck's certification definition — the only place
  * facts (exam code, domain names, weights, colours) are allowed to live.
  * Parsed through the engine's schema so a mistake here (counts that don't
  * sum to questionsPerExam, a duplicate domain id) fails loudly at startup
@@ -9,7 +9,7 @@ import { CertConfigSchema, type CertConfig } from "@certdeck/engine";
  */
 export const certConfig: CertConfig = CertConfigSchema.parse({
   id: "network-plus",
-  appName: "PacketPrep",
+  appName: "CertDeck",
   certName: "CompTIA Network+",
   examCode: "N10-009",
   questionsPerExam: 90,

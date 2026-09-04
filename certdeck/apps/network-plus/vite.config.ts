@@ -16,8 +16,8 @@ export default defineConfig(({ mode }) => {
         includeAssets: ["icons/*.png"],
         manifest: {
           id: base,
-          name: "PacketPrep — CompTIA Network+",
-          short_name: "PacketPrep",
+          name: "CertDeck — CompTIA Network+",
+          short_name: "CertDeck",
           description: "Offline exam simulator for CompTIA Network+ (N10-009).",
           start_url: base,
           scope: base,

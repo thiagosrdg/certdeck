@@ -18,7 +18,7 @@ app — phone, tablet, or desktop — with no connection required.
 
 | App | Certification | Exam code | Status |
 |-----|---------------|-----------|--------|
-| **PacketPrep** | CompTIA Network+ | N10-009 | In development |
+| **CertDeck** | CompTIA Network+ | N10-009 | In development |
 | _planned_ | CompTIA Security+ | SY0-701 | Not started |
 
 ## Why a monorepo
@@ -37,7 +37,7 @@ certdeck/
 ├── packages/
 │   └── engine/           # certification-agnostic logic and UI
 └── apps/
-    └── network-plus/     # PacketPrep (N10-009)
+    └── network-plus/     # the Network+ deck (N10-009)
         ├── src/data/questions/   # question JSON files
         └── src/cert.config.ts    # domains, weights, timing, thresholds
 ```

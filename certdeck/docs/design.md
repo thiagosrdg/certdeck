@@ -50,7 +50,7 @@ by that app's `cert.config.ts` as CSS custom properties the engine consumes
 (`--cd-accent`, `--cd-suit-1` … `--cd-suit-5`), so a second deck is
 recognisably a different deck without touching engine code.
 
-**PacketPrep (Network+)** accent and suits, chosen from network/signal
+**The Network+ deck's** accent and suits, chosen from network/signal
 iconography rather than hearts-and-spades:
 
 | Domain | Suit | Icon | Hue |

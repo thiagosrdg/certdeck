@@ -12,7 +12,12 @@ certifications, built around a card-game metaphor: a certification is a deck,
 a question is a card, a domain is a suit. One shared engine, one app per
 certification.
 
-- `apps/network-plus` — **PacketPrep**, CompTIA Network+ (N10-009). Active.
+- `apps/network-plus` — the CompTIA Network+ (N10-009) deck. Active, and it
+  carries the **CertDeck** name in the UI: wordmark, page title and installed
+  PWA. Its folder and its `cert.config.ts` `id` stay `network-plus` — the id
+  namespaces localStorage, so renaming it would orphan a user's progress.
+  When a second certification ships, that app needs a name of its own, or
+  this convention needs revisiting: two decks cannot both be "CertDeck".
 - A CompTIA Security+ (SY0-701) app is planned and must require no engine
   rewrite.
 
@@ -82,7 +87,7 @@ the root stays there.
     ├── landing/         # static index of available simulators
     ├── packages/engine/ # certification-agnostic logic and UI
     └── apps/
-        └── network-plus/    # PacketPrep
+        └── network-plus/    # the Network+ deck
             ├── src/cert.config.ts
             └── src/data/questions/
 ```

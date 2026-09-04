@@ -14,7 +14,7 @@ export interface SimulatorEntry {
  */
 export const simulators: SimulatorEntry[] = [
   {
-    name: "PacketPrep",
+    name: "CertDeck",
     certName: "CompTIA Network+",
     examCode: "N10-009",
     status: "available",

@@ -1,4 +1,5 @@
-import { Button } from "@certdeck/engine";
+import { useState } from "react";
+import { Button, ConfirmDialog } from "@certdeck/engine";
 import { PageShell } from "../components/PageShell";
 import { certConfig } from "../cert.config";
 import { useExamStore, useHistoryStore, useSettingsStore } from "../stores";
@@ -11,10 +12,14 @@ export default function Settings() {
   const setShuffleOptions = useSettingsStore((s) => s.setShuffleOptions);
   const setCardFlipEnabled = useSettingsStore((s) => s.setCardFlipEnabled);
 
-  function clearAllData() {
-    if (!window.confirm("This deletes all history and any in-progress attempt for PacketPrep. Continue?")) return;
+  const [confirmReset, setConfirmReset] = useState(false);
+  const attemptCount = useHistoryStore((s) => s.entries.length);
+  const hasInProgress = useExamStore((s) => s.hasResumableAttempt());
+
+  function resetProgress() {
     useHistoryStore.getState().clearAll();
     useExamStore.getState().abandon();
+    setConfirmReset(false);
   }
 
   return (
@@ -61,11 +66,38 @@ export default function Settings() {
         <ToggleRow label="Card flip animation" checked={settings.cardFlipEnabled} onChange={setCardFlipEnabled} />
 
         <section className="border-t border-edge pt-4">
-          <Button variant="secondary" onClick={clearAllData}>
-            Clear all data
+          <h2 className="mb-1 text-sm font-semibold">Reset progress</h2>
+          <p className="mb-3 text-xs text-ink-muted">
+            Discards every attempt and any exam in progress. The settings on this page are kept.
+          </p>
+          <Button variant="secondary" onClick={() => setConfirmReset(true)} disabled={attemptCount === 0 && !hasInProgress}>
+            Reset progress
           </Button>
+          {attemptCount === 0 && !hasInProgress && (
+            <p className="mt-2 font-mono text-[11px] text-ink-muted">Nothing to reset yet.</p>
+          )}
         </section>
       </div>
+
+      <ConfirmDialog
+        open={confirmReset}
+        title="Reset your progress?"
+        tone="danger"
+        confirmLabel="Reset progress"
+        cancelLabel="Keep it"
+        body={
+          <>
+            <p>
+              This deletes {attemptCount} recorded attempt{attemptCount === 1 ? "" : "s"}
+              {hasInProgress && " and the exam you have in progress"}, along with the XP, level, streak and mastery
+              built from them.
+            </p>
+            <p className="mt-1">Your theme, pass threshold and other settings are kept. This cannot be undone.</p>
+          </>
+        }
+        onCancel={() => setConfirmReset(false)}
+        onConfirm={resetProgress}
+      />
     </PageShell>
   );
 }

@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import {
   Button,
+  ConfirmDialog,
   CardFlip,
   CardFrame,
   ExplanationPanel,
@@ -34,6 +35,7 @@ export default function Practice() {
   const [count, setCount] = useState(20);
   const [warnings, setWarnings] = useState<string[]>([]);
   const [navigatorOpen, setNavigatorOpen] = useState(false);
+  const [confirmExit, setConfirmExit] = useState(false);
   const [draftSelected, setDraftSelected] = useState<string[]>([]);
   const directionRef = useRef<1 | -1>(1);
 
@@ -82,7 +84,6 @@ export default function Practice() {
   }
 
   function exit() {
-    if (!window.confirm("End this practice session? Your progress on it will be lost.")) return;
     useExamStore.getState().abandon();
     navigate("/");
   }
@@ -238,7 +239,7 @@ export default function Practice() {
   return (
     <div className="mx-auto flex min-h-screen max-w-2xl flex-col gap-4 p-4 sm:p-6">
       <header className="flex items-center justify-between">
-        <Button variant="ghost" onClick={exit}>
+        <Button variant="ghost" onClick={() => setConfirmExit(true)}>
           Exit
         </Button>
         <div className="flex items-center gap-2">
@@ -274,6 +275,20 @@ export default function Practice() {
       <div className="mx-auto aspect-card w-full max-w-sm flex-1">
         <CardFlip target={flipTarget} disableAnimation={!settings.cardFlipEnabled} className="h-full w-full" />
       </div>
+
+      <ConfirmDialog
+        open={confirmExit}
+        title="End this practice session?"
+        tone="danger"
+        confirmLabel="End session"
+        cancelLabel="Keep practising"
+        body="This session is discarded rather than scored, so nothing from it reaches your history or stats."
+        onCancel={() => setConfirmExit(false)}
+        onConfirm={() => {
+          setConfirmExit(false);
+          exit();
+        }}
+      />
     </div>
   );
 }

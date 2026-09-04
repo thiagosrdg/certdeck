@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { useNavigate } from "react-router";
-import { Button } from "@certdeck/engine";
+import { Button, ConfirmDialog } from "@certdeck/engine";
 import { PageShell } from "../components/PageShell";
 import { useHistoryStore } from "../stores";
 
@@ -8,6 +9,7 @@ export default function History() {
   const entries = useHistoryStore((s) => s.entries);
   const removeEntry = useHistoryStore((s) => s.removeEntry);
   const clearAll = useHistoryStore((s) => s.clearAll);
+  const [confirmClear, setConfirmClear] = useState(false);
 
   return (
     <PageShell
@@ -15,12 +17,7 @@ export default function History() {
       backTo="/"
       actions={
         entries.length > 0 ? (
-          <Button
-            variant="ghost"
-            onClick={() => {
-              if (window.confirm("Clear all history? This cannot be undone.")) clearAll();
-            }}
-          >
+          <Button variant="ghost" onClick={() => setConfirmClear(true)}>
             Clear all
           </Button>
         ) : undefined
@@ -53,6 +50,20 @@ export default function History() {
           ))}
         </ul>
       )}
+
+      <ConfirmDialog
+        open={confirmClear}
+        title="Clear all history?"
+        tone="danger"
+        confirmLabel="Clear history"
+        cancelLabel="Keep it"
+        body={`This deletes all ${entries.length} attempt${entries.length === 1 ? "" : "s"}, along with the XP, level, streak and mastery built from them. This cannot be undone.`}
+        onCancel={() => setConfirmClear(false)}
+        onConfirm={() => {
+          setConfirmClear(false);
+          clearAll();
+        }}
+      />
     </PageShell>
   );
 }
