@@ -20,10 +20,22 @@
 
   --cd-flip-duration: 300ms;
   --cd-flip-easing: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  /*
+   * Mastery tiers. Gold deliberately *is* --cd-gilt: reaching the top tier in
+   * a domain should read as the same foil the deck already uses for its
+   * finest details, not as a new colour bolted on. Bronze and silver are its
+   * warm and cool neighbours.
+   */
+  --cd-tier-bronze: #a2673a;
+  --cd-tier-silver: #7d7a92;
+  --cd-tier-gold: var(--cd-gilt);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    --cd-tier-bronze: #d09257;
+    --cd-tier-silver: #b3aec9;
     --cd-table: #12111a;
     --cd-card: #211e2c;
     --cd-ink: #ede9f5;
@@ -36,6 +48,8 @@
 }
 
 :root[data-theme="dark"] {
+  --cd-tier-bronze: #d09257;
+  --cd-tier-silver: #b3aec9;
   --cd-table: #12111a;
   --cd-card: #211e2c;
   --cd-ink: #ede9f5;

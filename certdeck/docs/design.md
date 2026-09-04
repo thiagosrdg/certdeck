@@ -56,10 +56,22 @@ iconography rather than hearts-and-spades:
 | Domain | Suit | Icon | Hue |
 |---|---|---|---|
 | 1.0 Networking Concepts | Node | concentric-circle node | `#3B6EA5` steel blue |
-| 2.0 Network Implementation | Link | chain link | `#3F7D53` signal green |
+| 2.0 Network Implementation | Link | chain link | `#2E8B57` signal green |
 | 3.0 Network Operations | Wave | signal wave | `#6B4FA0` violet |
 | 4.0 Network Security | Shield | shield | `#9C3D46` garnet |
 | 5.0 Network Troubleshooting | Wrench | wrench | `#C0762B` burnt amber |
+
+The five suit hues are a categorical palette, so they are held to one: no two
+may be confusable, and none may desaturate into grey. Verify a change to them
+rather than judging it by eye — the original `#3F7D53` measured a chroma of
+0.093 (reading grey) and only ΔE 15.0 from the steel blue of domain 1.0 in
+*normal* vision, which is why it moved. The set now clears the lightness
+band, the chroma floor, colour-vision separation and 3:1 contrast against the
+light surface.
+
+Against the dark table two hues land near 2.6:1, which is why a suit hue is
+never the only cue: every place a suit appears it carries its mark and its
+domain name as well.
 
 App accent (`--cd-accent`, used for primary buttons, active nav, the PWA
 theme colour): `#A32B62` plum magenta in light, `#F07AAE` in dark.

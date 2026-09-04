@@ -10,3 +10,8 @@ export * from "./TimerDisplay";
 export * from "./DomainBreakdown";
 export * from "./ResultsSummary";
 export * from "./ProgressDeck";
+export * from "./ProgressRing";
+export * from "./MasteryBadge";
+export * from "./StatTile";
+export * from "./LevelBar";
+export * from "./ScoreTrend";
