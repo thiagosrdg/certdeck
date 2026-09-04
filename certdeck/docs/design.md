@@ -141,6 +141,19 @@ offline from the first load):
   body text. Justified by the subject matter (CLI networking tools) and it
   visually separates "data about the question" from "the question."
 
+### Scrollbars
+
+Styled once in `tokens.css` and inherited by every app. The thumb is
+`--cd-scrollbar`, ink at a low alpha, with a transparent track — translucent
+rather than solid, because two different surfaces scroll (the page over
+`--cd-table`, a card body over `--cd-card`) and a translucent thumb settles
+into both without knowing which it is on.
+
+Measure before changing it. `--cd-edge` was the obvious first choice and
+turned out to sit ΔE 16.6 from the light table where Chrome's own grey sits
+at 11.1 — the "subtle" bar was louder than the default it replaced. The alpha
+version lands near ΔE 7 on both surfaces.
+
 ## Card anatomy
 
 ```
