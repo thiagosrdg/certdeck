@@ -189,7 +189,17 @@ export function computeStudyStats(
 
     if (attempt.mode === "full-exam") {
       examAttempts += 1;
-      examTrend.push({ attemptId: attempt.id, finishedAt, score: result.score, passed: result.passed });
+      // The trend is judged against the *current* threshold, because it is
+      // drawn against a line at the current threshold — a point above the
+      // line marked failed would be a chart contradicting itself. XP keeps
+      // the verdict from the day it was earned, so raising the bar in
+      // settings never retroactively takes a level away.
+      examTrend.push({
+        attemptId: attempt.id,
+        finishedAt,
+        score: result.score,
+        passed: result.score >= config.passThreshold,
+      });
       if (result.passed) xp += XP_EXAM_PASS_BONUS;
     }
 

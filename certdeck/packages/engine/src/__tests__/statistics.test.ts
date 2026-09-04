@@ -338,6 +338,23 @@ describe("computeStudyStats", () => {
     expect(stats.bestExamScore).toBe(1);
   });
 
+  it("judges the exam trend against the current threshold, but leaves earned XP alone", () => {
+    const qs = bank("1.0", 1);
+    // Scored 1.0 and recorded as passed under whatever threshold applied then.
+    const past = entry({ questions: qs, answers: { "1.0-q0": ["a"] }, mode: "full-exam", passed: true });
+
+    const reachable = computeStudyStats([past], qs, { ...config, passThreshold: 0.8 }, NOW);
+    expect(reachable.examTrend[0]?.passed).toBe(true);
+
+    // Same attempt, a bar it can no longer clear: the chart must agree with
+    // its own reference line...
+    const unreachable = computeStudyStats([past], qs, { ...config, passThreshold: 1.01 }, NOW);
+    expect(unreachable.examTrend[0]?.passed).toBe(false);
+    // ...while the XP earned at the time survives the change.
+    expect(unreachable.xp).toBe(reachable.xp);
+    expect(unreachable.xp).toBeGreaterThanOrEqual(XP_EXAM_PASS_BONUS);
+  });
+
   it("survives an attempt referencing a question that has left the bank", () => {
     const qs = bank("1.0", 1);
     const stale = entry({ questions: [...qs, makeQuestion({ id: "retired" })], answers: { "1.0-q0": ["a"], retired: ["a"] } });
