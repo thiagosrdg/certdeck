@@ -16,6 +16,17 @@ export const AttemptStatusSchema = z.enum(["in-progress", "completed", "abandone
 export type AttemptStatus = z.infer<typeof AttemptStatusSchema>;
 
 /**
+ * When the answer is revealed.
+ *
+ * `deferred` is exam conditions: nothing is graded until the whole deck is
+ * submitted. `immediate` grades each card as it is played, which turns the
+ * same deck into a study run — you learn the explanation while the question
+ * is still fresh, at the cost of no longer simulating the real thing.
+ */
+export const FeedbackModeSchema = z.enum(["deferred", "immediate"]);
+export type FeedbackMode = z.infer<typeof FeedbackModeSchema>;
+
+/**
  * A single run through a deck: a full exam, a practice session, or a
  * random-question drill. Persisted so an in-progress attempt survives a
  * reload (resume) and a completed one becomes history.
@@ -35,5 +46,11 @@ export const AttemptSchema = z.object({
   domainsFilter: z.array(z.string()).nullable().default(null),
   /** true when the exam generator had to backfill from other domains */
   usedFallback: z.boolean().default(false),
+  /**
+   * Defaulted rather than required: attempts recorded before this existed
+   * must keep parsing, or loadHistory drops the lot and a user's progress
+   * silently disappears.
+   */
+  feedbackMode: FeedbackModeSchema.default("deferred"),
 });
 export type Attempt = z.infer<typeof AttemptSchema>;

@@ -154,8 +154,15 @@ visible error, not a blank screen.
 
 ## Modes
 
-- **Full exam** — `questionsPerExam` questions, timer, no feedback until
-  submit, flagging plus a navigator grid.
+- **Full exam** — `questionsPerExam` questions, timer, flagging plus a
+  navigator grid. A setup screen first asks how the deck is played, and the
+  answer is stored on the attempt as `feedbackMode`, so it survives a reload
+  and a resumed exam keeps the rules it started under:
+  - `deferred` — exam conditions. Nothing is graded until submit, and
+    answers stay editable while moving between questions.
+  - `immediate` — each card is checked as it is played, revealing the answer
+    and its explanation; once checked an answer is locked. Still timed and
+    still scored, so it lands in history and stats like any other attempt.
 - **Practice by domain** — selected domains, immediate feedback.
 - **Random question** — single question, immediate feedback.
 - **Review** — walk a finished attempt with full explanations.
@@ -168,6 +175,12 @@ Results show overall score, pass/fail against `passThreshold`, per-domain
 breakdown, time taken, the weakest domain called out as the next study
 focus, XP earned, accuracy by rank, and the change against the previous
 attempt in the same mode.
+
+**A field added to a persisted schema needs a `.default()`.** `loadHistory`
+validates the whole array and returns `[]` when the parse fails, so a
+required new field would make every attempt already in localStorage vanish
+without a word. `feedbackMode` is defaulted for exactly this reason, and
+there is a test that pins it.
 
 **Nothing the user must be able to finish may depend on a native dialog.**
 `window.confirm` returns false with no signal in a browser that has

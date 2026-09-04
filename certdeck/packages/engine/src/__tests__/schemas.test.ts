@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { AttemptSchema } from "../types/attempt";
 import { CertConfigSchema } from "../types/cert-config";
 import { QuestionSchema } from "../types/question";
 import { makeConfig, makeQuestion } from "./fixtures";
@@ -9,6 +10,25 @@ import { makeConfig, makeQuestion } from "./fixtures";
  * refinements that a type signature cannot express — a schema that silently
  * started accepting malformed data would still typecheck and still build.
  */
+
+/** A minimal valid attempt, for schema-level checks. */
+function makeAttempt() {
+  return {
+    id: "a1",
+    certId: "test-cert",
+    mode: "full-exam" as const,
+    status: "completed" as const,
+    questionIds: ["q1"],
+    answers: { q1: { questionId: "q1", selected: ["a"], flagged: false, answeredAt: 1 } },
+    startedAt: 1,
+    finishedAt: 2,
+    timeLimitMinutes: null,
+    remainingSeconds: null,
+    domainsFilter: null,
+    usedFallback: false,
+    feedbackMode: "deferred" as const,
+  };
+}
 
 /** Builds an otherwise-valid question with one field deliberately broken. */
 function brokenQuestion(overrides: Record<string, unknown>): unknown {
@@ -77,6 +97,39 @@ describe("QuestionSchema", () => {
   it("rejects unknown difficulty and type values", () => {
     expect(QuestionSchema.safeParse(brokenQuestion({ difficulty: "trivial" })).success).toBe(false);
     expect(QuestionSchema.safeParse(brokenQuestion({ type: "essay" })).success).toBe(false);
+  });
+});
+
+describe("AttemptSchema", () => {
+  /**
+   * The migration hazard that matters: loadHistory validates the whole array
+   * and returns [] if the parse fails, so a field added without a default
+   * would make every attempt recorded before it silently vanish.
+   */
+  it("still parses an attempt saved before feedbackMode existed, defaulting it", () => {
+    const legacy = {
+      id: "a1",
+      certId: "test-cert",
+      mode: "full-exam",
+      status: "completed",
+      questionIds: ["q1"],
+      answers: { q1: { questionId: "q1", selected: ["a"], flagged: false, answeredAt: 1 } },
+      startedAt: 1,
+      finishedAt: 2,
+      timeLimitMinutes: null,
+      remainingSeconds: null,
+      domainsFilter: null,
+      usedFallback: false,
+      // no feedbackMode — this is the shape already in people's localStorage
+    };
+    const result = AttemptSchema.safeParse(legacy);
+    expect(result.success).toBe(true);
+    expect(result.success && result.data.feedbackMode).toBe("deferred");
+  });
+
+  it("rejects a feedbackMode it does not know", () => {
+    const bad = { ...makeAttempt(), feedbackMode: "instant" };
+    expect(AttemptSchema.safeParse(bad).success).toBe(false);
   });
 });
 

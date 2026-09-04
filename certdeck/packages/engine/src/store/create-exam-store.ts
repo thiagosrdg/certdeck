@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { clearActiveAttempt, loadActiveAttempt, saveActiveAttempt } from "../engine/persistence";
 import { computeResults } from "../engine/scoring";
-import type { Answer, Attempt, ExamMode } from "../types/attempt";
+import type { Answer, Attempt, ExamMode, FeedbackMode } from "../types/attempt";
 import type { CertConfig } from "../types/cert-config";
 import type { Question } from "../types/question";
 import type { AttemptResult } from "../types/results";
@@ -13,6 +13,7 @@ export interface StartAttemptInput {
   timeLimitMinutes?: number | null;
   domainsFilter?: string[] | null;
   usedFallback?: boolean;
+  feedbackMode?: FeedbackMode;
 }
 
 export interface FinishedAttempt {
@@ -67,7 +68,7 @@ export function createExamStore(certId: string) {
       clearActiveAttempt(certId);
     },
 
-    start: ({ mode, questionIds, timeLimitMinutes = null, domainsFilter = null, usedFallback = false }) => {
+    start: ({ mode, questionIds, timeLimitMinutes = null, domainsFilter = null, usedFallback = false, feedbackMode = "deferred" }) => {
       const answers: Record<string, Answer> = {};
       for (const id of questionIds) answers[id] = emptyAnswer(id);
 
@@ -84,6 +85,7 @@ export function createExamStore(certId: string) {
         remainingSeconds: timeLimitMinutes != null ? timeLimitMinutes * 60 : null,
         domainsFilter,
         usedFallback,
+        feedbackMode,
       };
 
       saveActiveAttempt(certId, attempt);

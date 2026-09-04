@@ -61,6 +61,7 @@ function entry(options: {
     remainingSeconds: null,
     domainsFilter: null,
     usedFallback: false,
+    feedbackMode: "deferred",
   };
 
   return {
