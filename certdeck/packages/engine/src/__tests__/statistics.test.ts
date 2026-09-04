@@ -62,6 +62,7 @@ function entry(options: {
     domainsFilter: null,
     usedFallback: false,
     feedbackMode: "deferred",
+    currentIndex: 0,
   };
 
   return {

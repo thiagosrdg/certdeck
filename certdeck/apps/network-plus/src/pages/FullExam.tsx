@@ -83,6 +83,13 @@ export default function FullExam() {
     });
   }
 
+  function pause() {
+    // Flush the clock explicitly: the ticker dies with this screen, and the
+    // last persisted tick can be up to a second stale.
+    useExamStore.getState().pause(timer.secondsLeft);
+    navigate("/");
+  }
+
   function finish() {
     const store = useExamStore.getState();
     if (!store.attempt) return;
@@ -314,11 +321,17 @@ export default function FullExam() {
             {immediate ? "Card by card" : "Exam conditions"}
           </span>
         </div>
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" onClick={() => setNavigatorOpen((v) => !v)}>
-            {navigatorOpen ? "Hide grid" : "Question grid"}
+        <div className="flex items-center gap-1">
+          {/* Pausing is not quitting: the attempt stays in storage and the
+              home screen offers it back. No confirmation, because nothing is
+              lost — this is a study tool, not a proctored room. */}
+          <Button variant="ghost" className="px-2" onClick={pause}>
+            Pause
           </Button>
-          <Button variant="secondary" onClick={() => setConfirmOpen(true)}>
+          <Button variant="ghost" className="px-2" onClick={() => setNavigatorOpen((v) => !v)}>
+            {navigatorOpen ? "Hide grid" : "Grid"}
+          </Button>
+          <Button variant="secondary" className="px-3" onClick={() => setConfirmOpen(true)}>
             Submit
           </Button>
         </div>

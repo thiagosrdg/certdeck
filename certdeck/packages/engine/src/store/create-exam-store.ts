@@ -36,6 +36,8 @@ export interface ExamStore {
   next: () => void;
   prev: () => void;
   tick: (remainingSeconds: number) => void;
+  /** Leave the attempt in storage, resumable, and clear it from memory. */
+  pause: (remainingSeconds?: number | null) => void;
   finish: (questions: readonly Question[], config: CertConfig) => FinishedAttempt;
   abandon: () => void;
 }
@@ -51,7 +53,23 @@ function emptyAnswer(questionId: string): Answer {
  * `finish`, keeping this store certification-agnostic.
  */
 export function createExamStore(certId: string) {
-  return create<ExamStore>((set, get) => ({
+  return create<ExamStore>((set, get) => {
+    /**
+     * Moving between cards writes through to the persisted attempt, so a
+     * paused exam knows where it was. Clamped here in one place rather than
+     * in each caller.
+     */
+    function moveTo(index: number): void {
+      const attempt = get().attempt;
+      if (!attempt) return;
+      const currentIndex = Math.max(0, Math.min(index, attempt.questionIds.length - 1));
+      if (currentIndex === attempt.currentIndex && currentIndex === get().currentIndex) return;
+      const next: Attempt = { ...attempt, currentIndex };
+      saveActiveAttempt(certId, next);
+      set({ attempt: next, currentIndex });
+    }
+
+    return {
     attempt: null,
     currentIndex: 0,
 
@@ -60,7 +78,8 @@ export function createExamStore(certId: string) {
     resume: () => {
       const saved = loadActiveAttempt(certId);
       if (saved && saved.status === "in-progress") {
-        set({ attempt: saved, currentIndex: 0 });
+        // Back to the card it was paused on, not to the start.
+        set({ attempt: saved, currentIndex: Math.min(saved.currentIndex, Math.max(0, saved.questionIds.length - 1)) });
       }
     },
 
@@ -86,6 +105,7 @@ export function createExamStore(certId: string) {
         domainsFilter,
         usedFallback,
         feedbackMode,
+        currentIndex: 0,
       };
 
       saveActiveAttempt(certId, attempt);
@@ -120,21 +140,9 @@ export function createExamStore(certId: string) {
       set({ attempt: next });
     },
 
-    goTo: (index) => {
-      const attempt = get().attempt;
-      if (!attempt) return;
-      set({ currentIndex: Math.max(0, Math.min(index, attempt.questionIds.length - 1)) });
-    },
-
-    next: () => {
-      const { attempt, currentIndex } = get();
-      if (!attempt) return;
-      set({ currentIndex: Math.min(currentIndex + 1, attempt.questionIds.length - 1) });
-    },
-
-    prev: () => {
-      set((state) => ({ currentIndex: Math.max(state.currentIndex - 1, 0) }));
-    },
+    goTo: (index) => moveTo(index),
+    next: () => moveTo(get().currentIndex + 1),
+    prev: () => moveTo(get().currentIndex - 1),
 
     tick: (remainingSeconds) => {
       const attempt = get().attempt;
@@ -161,5 +169,21 @@ export function createExamStore(certId: string) {
       clearActiveAttempt(certId);
       set({ attempt: null, currentIndex: 0 });
     },
-  }));
+
+    /**
+     * Step away without ending anything: the attempt stays in storage as
+     * in-progress, so `hasResumableAttempt` still finds it. Flushes the
+     * clock first, because the ticker stops the moment the exam screen
+     * unmounts and the last tick may be up to a second stale.
+     */
+    pause: (remainingSeconds) => {
+      const attempt = get().attempt;
+      if (!attempt) return;
+      const next: Attempt =
+        remainingSeconds == null ? attempt : { ...attempt, remainingSeconds };
+      saveActiveAttempt(certId, next);
+      set({ attempt: null, currentIndex: 0 });
+    },
+    };
+  });
 }

@@ -51,6 +51,7 @@ describe("computeResults", () => {
       domainsFilter: null,
       usedFallback: false,
     feedbackMode: "deferred",
+    currentIndex: 0,
     };
 
     const result = computeResults(attempt, bank, config);
@@ -82,6 +83,7 @@ describe("computeResults", () => {
       domainsFilter: null,
       usedFallback: false,
     feedbackMode: "deferred",
+    currentIndex: 0,
     };
 
     const result = computeResults(attempt, bank, config);

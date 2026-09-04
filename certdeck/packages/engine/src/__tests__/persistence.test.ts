@@ -30,6 +30,7 @@ function makeAttempt(certId: string, id: string): Attempt {
     domainsFilter: null,
     usedFallback: false,
     feedbackMode: "deferred",
+    currentIndex: 0,
   };
 }
 

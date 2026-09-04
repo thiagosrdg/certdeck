@@ -1,6 +1,14 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useNavigate } from "react-router";
-import { Button, SuitIcon, Wordmark, computeStudyStats } from "@certdeck/engine";
+import {
+  Button,
+  ConfirmDialog,
+  SuitIcon,
+  Wordmark,
+  computeStudyStats,
+  formatDuration,
+  loadActiveAttempt,
+} from "@certdeck/engine";
 import { certConfig } from "../cert.config";
 import { questions } from "../data/questions";
 import { suitFor } from "../lib/suit";
@@ -11,6 +19,10 @@ const pct = (v: number) => `${Math.round(v * 100)}%`;
 export default function Home() {
   const navigate = useNavigate();
   const resumable = useExamStore((s) => s.hasResumableAttempt());
+  const [confirmDiscard, setConfirmDiscard] = useState(false);
+  // Read the paused attempt without resuming it, so the card can say what is
+  // waiting rather than just that something is.
+  const paused = useMemo(() => (resumable ? loadActiveAttempt(certConfig.id) : null), [resumable]);
   const entries = useHistoryStore((s) => s.entries);
   const stats = useMemo(() => computeStudyStats(entries, questions, certConfig), [entries]);
 
@@ -71,10 +83,31 @@ export default function Home() {
         </button>
       )}
 
-      {resumable && (
-        <div className="rounded-card border border-gilt bg-gilt/10 p-4 text-center text-sm">
-          <p className="mb-2">You have an exam in progress.</p>
-          <Button onClick={resume}>Resume</Button>
+      {paused && (
+        <div className="rounded-card border border-gilt bg-gilt/10 p-4">
+          <div className="flex items-baseline justify-between gap-2">
+            <p className="text-sm font-semibold">
+              {paused.mode === "full-exam" ? "Exam paused" : "Session paused"}
+            </p>
+            <span className="font-mono text-[10px] uppercase tracking-wide text-ink-muted">
+              {paused.feedbackMode === "immediate" ? "Card by card" : "Exam conditions"}
+            </span>
+          </div>
+
+          <p className="mt-1 font-mono text-[11px] text-ink-muted">
+            On card {Math.min(paused.currentIndex + 1, paused.questionIds.length)} of {paused.questionIds.length} ·{" "}
+            {paused.questionIds.filter((id) => (paused.answers[id]?.selected.length ?? 0) > 0).length} answered
+            {paused.remainingSeconds != null && <> · {formatDuration(paused.remainingSeconds)} left</>}
+          </p>
+
+          <div className="mt-3 flex gap-2">
+            <Button className="flex-1" onClick={resume}>
+              Resume
+            </Button>
+            <Button variant="ghost" onClick={() => setConfirmDiscard(true)}>
+              Discard
+            </Button>
+          </div>
         </div>
       )}
 
@@ -100,6 +133,20 @@ export default function Home() {
       </nav>
 
       <p className="text-center text-xs text-ink-muted">Unofficial. Not affiliated with CompTIA.</p>
+
+      <ConfirmDialog
+        open={confirmDiscard}
+        title="Discard the paused exam?"
+        tone="danger"
+        confirmLabel="Discard"
+        cancelLabel="Keep it"
+        body="It is thrown away unscored, so nothing from it reaches your history or stats. You can leave it paused as long as you like instead."
+        onCancel={() => setConfirmDiscard(false)}
+        onConfirm={() => {
+          setConfirmDiscard(false);
+          useExamStore.getState().abandon();
+        }}
+      />
     </div>
   );
 }

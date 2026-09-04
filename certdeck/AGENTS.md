@@ -163,6 +163,15 @@ visible error, not a blank screen.
   - `immediate` — each card is checked as it is played, revealing the answer
     and its explanation; once checked an answer is locked. Still timed and
     still scored, so it lands in history and stats like any other attempt.
+
+  An exam can be **paused**: `pause()` flushes the clock and drops the
+  attempt from memory while leaving it in storage as in-progress, so the home
+  screen offers it back with its card, its answered count and its remaining
+  time. `currentIndex` is persisted on the attempt for this — resuming lands
+  on the card it was left on, not back at card one. The countdown stops
+  because the exam screen unmounts, which is the intended behaviour and is
+  covered by tests: this is a study tool, not a proctored room, and a
+  90-card deck has to survive being walked away from.
 - **Practice by domain** — selected domains, immediate feedback.
 - **Random question** — single question, immediate feedback.
 - **Review** — walk a finished attempt with full explanations.

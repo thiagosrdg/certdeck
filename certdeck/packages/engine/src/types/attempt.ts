@@ -52,5 +52,11 @@ export const AttemptSchema = z.object({
    * silently disappears.
    */
   feedbackMode: FeedbackModeSchema.default("deferred"),
+  /**
+   * Which card the player is on. Persisted so a paused attempt resumes where
+   * it was left rather than back at card one — the whole point of being able
+   * to walk away from a 90-card deck.
+   */
+  currentIndex: z.number().int().nonnegative().default(0),
 });
 export type Attempt = z.infer<typeof AttemptSchema>;
