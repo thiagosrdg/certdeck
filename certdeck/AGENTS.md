@@ -129,6 +129,13 @@ UI.
 
 ## Question schema
 
+**Option order in a file is the order a user sees when shuffling is off.**
+`withDisplayOptions` returns the question untouched when the shuffle setting
+is disabled, so a bank that always lists the correct answer first hands the
+answer away to anyone who turns that setting off. The bank was written that
+way and has been permuted; keep new questions varied, and do not assume the
+shuffle will cover for it.
+
 Questions are data, never code. They live as JSON in
 `apps/<app>/src/data/questions/`, loaded via `import.meta.glob`. Adding a
 file must never require a code change. Never hardcode a question in a
@@ -140,7 +147,7 @@ component. See the README for a commented example.
 | `domain` | Must match a domain id in that app's config |
 | `domainName` | Human-readable domain name |
 | `objective` | Official objective number, e.g. `"1.1"`; must be one the domain lists in the config |
-| `type` | `"single"` or `"multiple"` (checkboxes when multiple) |
+| `type` | `"single"` or `"multiple"` (checkboxes when multiple). A `multiple` question needs at least two `correct` ids and is graded on the exact set — no partial credit, matching how CompTIA grades "choose two" items |
 | `difficulty` | `"easy" \| "medium" \| "hard"` |
 | `stem` | Question text |
 | `options` | Array of `{ id, text }` |

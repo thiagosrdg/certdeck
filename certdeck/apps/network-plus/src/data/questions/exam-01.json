@@ -9,10 +9,6 @@
     "stem": "Which well-known port number does FTP (data) use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "20"
-      },
-      {
         "id": "b",
         "text": "995"
       },
@@ -23,6 +19,10 @@
       {
         "id": "d",
         "text": "3389"
+      },
+      {
+        "id": "a",
+        "text": "20"
       }
     ],
     "correct": [
@@ -49,16 +49,16 @@
     "stem": "Which well-known port number does FTP (control) use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "21"
-      },
-      {
         "id": "b",
         "text": "995"
       },
       {
         "id": "c",
         "text": "3306"
+      },
+      {
+        "id": "a",
+        "text": "21"
       },
       {
         "id": "d",
@@ -89,20 +89,20 @@
     "stem": "Which well-known port number does SSH use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "22"
-      },
-      {
         "id": "b",
         "text": "110"
+      },
+      {
+        "id": "d",
+        "text": "143"
       },
       {
         "id": "c",
         "text": "123"
       },
       {
-        "id": "d",
-        "text": "143"
+        "id": "a",
+        "text": "22"
       }
     ],
     "correct": [
@@ -133,16 +133,16 @@
         "text": "23"
       },
       {
+        "id": "d",
+        "text": "445"
+      },
+      {
         "id": "b",
         "text": "389"
       },
       {
         "id": "c",
         "text": "443"
-      },
-      {
-        "id": "d",
-        "text": "445"
       }
     ],
     "correct": [
@@ -177,12 +177,12 @@
         "text": "445"
       },
       {
-        "id": "c",
-        "text": "514"
-      },
-      {
         "id": "d",
         "text": "636"
+      },
+      {
+        "id": "c",
+        "text": "514"
       }
     ],
     "correct": [
@@ -209,16 +209,16 @@
     "stem": "Which well-known port number does DNS use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "53"
-      },
-      {
         "id": "b",
         "text": "445"
       },
       {
         "id": "c",
         "text": "514"
+      },
+      {
+        "id": "a",
+        "text": "53"
       },
       {
         "id": "d",
@@ -249,20 +249,20 @@
     "stem": "Which well-known port number does DHCP (server) use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "67"
-      },
-      {
-        "id": "b",
-        "text": "23"
-      },
-      {
         "id": "c",
         "text": "25"
       },
       {
+        "id": "a",
+        "text": "67"
+      },
+      {
         "id": "d",
         "text": "53"
+      },
+      {
+        "id": "b",
+        "text": "23"
       }
     ],
     "correct": [
@@ -289,20 +289,20 @@
     "stem": "Which well-known port number does DHCP (client) use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "68"
+        "id": "d",
+        "text": "995"
       },
       {
         "id": "b",
         "text": "636"
       },
       {
-        "id": "c",
-        "text": "993"
+        "id": "a",
+        "text": "68"
       },
       {
-        "id": "d",
-        "text": "995"
+        "id": "c",
+        "text": "993"
       }
     ],
     "correct": [
@@ -329,8 +329,8 @@
     "stem": "Which well-known port number does TFTP use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "69"
+        "id": "d",
+        "text": "123"
       },
       {
         "id": "b",
@@ -341,8 +341,8 @@
         "text": "110"
       },
       {
-        "id": "d",
-        "text": "123"
+        "id": "a",
+        "text": "69"
       }
     ],
     "correct": [
@@ -369,20 +369,20 @@
     "stem": "Which well-known port number does HTTP use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "80"
-      },
-      {
         "id": "b",
         "text": "514"
+      },
+      {
+        "id": "d",
+        "text": "993"
       },
       {
         "id": "c",
         "text": "636"
       },
       {
-        "id": "d",
-        "text": "993"
+        "id": "a",
+        "text": "80"
       }
     ],
     "correct": [
@@ -409,20 +409,20 @@
     "stem": "Which well-known port number does POP3 use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "110"
-      },
-      {
-        "id": "b",
-        "text": "443"
-      },
-      {
         "id": "c",
         "text": "445"
       },
       {
         "id": "d",
         "text": "514"
+      },
+      {
+        "id": "a",
+        "text": "110"
+      },
+      {
+        "id": "b",
+        "text": "443"
       }
     ],
     "correct": [
@@ -453,16 +453,16 @@
         "text": "123"
       },
       {
-        "id": "b",
-        "text": "80"
-      },
-      {
         "id": "c",
         "text": "110"
       },
       {
         "id": "d",
         "text": "143"
+      },
+      {
+        "id": "b",
+        "text": "80"
       }
     ],
     "correct": [
@@ -489,12 +489,12 @@
     "stem": "Which well-known port number does IMAP use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "143"
-      },
-      {
         "id": "b",
         "text": "995"
+      },
+      {
+        "id": "a",
+        "text": "143"
       },
       {
         "id": "c",
@@ -529,20 +529,20 @@
     "stem": "Which well-known port number does SNMP use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "161"
-      },
-      {
-        "id": "b",
-        "text": "123"
+        "id": "d",
+        "text": "162"
       },
       {
         "id": "c",
         "text": "143"
       },
       {
-        "id": "d",
-        "text": "162"
+        "id": "a",
+        "text": "161"
+      },
+      {
+        "id": "b",
+        "text": "123"
       }
     ],
     "correct": [
@@ -609,20 +609,20 @@
     "stem": "Which well-known port number does LDAP use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "389"
+        "id": "d",
+        "text": "69"
       },
       {
-        "id": "b",
-        "text": "67"
+        "id": "a",
+        "text": "389"
       },
       {
         "id": "c",
         "text": "68"
       },
       {
-        "id": "d",
-        "text": "69"
+        "id": "b",
+        "text": "67"
       }
     ],
     "correct": [
@@ -649,20 +649,20 @@
     "stem": "Which well-known port number does HTTPS use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "443"
-      },
-      {
-        "id": "b",
-        "text": "514"
-      },
-      {
         "id": "c",
         "text": "636"
       },
       {
         "id": "d",
         "text": "993"
+      },
+      {
+        "id": "b",
+        "text": "514"
+      },
+      {
+        "id": "a",
+        "text": "443"
       }
     ],
     "correct": [
@@ -697,12 +697,12 @@
         "text": "143"
       },
       {
-        "id": "c",
-        "text": "161"
-      },
-      {
         "id": "d",
         "text": "162"
+      },
+      {
+        "id": "c",
+        "text": "161"
       }
     ],
     "correct": [
@@ -729,20 +729,20 @@
     "stem": "Which well-known port number does Syslog use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "514"
+        "id": "d",
+        "text": "22"
       },
       {
-        "id": "b",
-        "text": "20"
+        "id": "a",
+        "text": "514"
       },
       {
         "id": "c",
         "text": "21"
       },
       {
-        "id": "d",
-        "text": "22"
+        "id": "b",
+        "text": "20"
       }
     ],
     "correct": [
@@ -773,16 +773,16 @@
         "text": "636"
       },
       {
-        "id": "b",
-        "text": "3389"
+        "id": "d",
+        "text": "20"
       },
       {
         "id": "c",
         "text": "5060"
       },
       {
-        "id": "d",
-        "text": "20"
+        "id": "b",
+        "text": "3389"
       }
     ],
     "correct": [
@@ -809,10 +809,6 @@
     "stem": "Which well-known port number does IMAPS use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "993"
-      },
-      {
         "id": "b",
         "text": "162"
       },
@@ -823,6 +819,10 @@
       {
         "id": "d",
         "text": "443"
+      },
+      {
+        "id": "a",
+        "text": "993"
       }
     ],
     "correct": [
@@ -853,12 +853,12 @@
         "text": "Cat 5e"
       },
       {
-        "id": "b",
-        "text": "Cat 6"
-      },
-      {
         "id": "c",
         "text": "Cat 6a"
+      },
+      {
+        "id": "b",
+        "text": "Cat 6"
       },
       {
         "id": "d",
@@ -888,6 +888,10 @@
     "stem": "Which cable type is twisted-pair copper typically terminated with a RJ45 connector and rated for up to 10 Gbps over short runs (up to 55 m), 1 Gbps at full 100 m?",
     "options": [
       {
+        "id": "d",
+        "text": "Cat 5e"
+      },
+      {
         "id": "a",
         "text": "Cat 6"
       },
@@ -898,10 +902,6 @@
       {
         "id": "c",
         "text": "Coaxial (RG-6)"
-      },
-      {
-        "id": "d",
-        "text": "Cat 5e"
       }
     ],
     "correct": [
@@ -927,20 +927,20 @@
     "stem": "Which cable type is twisted-pair copper typically terminated with a RJ45 connector and rated for 10 Gbps at the full 100 m distance?",
     "options": [
       {
-        "id": "a",
-        "text": "Cat 6a"
-      },
-      {
         "id": "b",
         "text": "Single-mode fibre"
+      },
+      {
+        "id": "d",
+        "text": "Coaxial (RG-6)"
       },
       {
         "id": "c",
         "text": "Multimode fibre"
       },
       {
-        "id": "d",
-        "text": "Coaxial (RG-6)"
+        "id": "a",
+        "text": "Cat 6a"
       }
     ],
     "correct": [
@@ -970,16 +970,16 @@
         "text": "Single-mode fibre"
       },
       {
-        "id": "b",
-        "text": "Coaxial (RG-6)"
-      },
-      {
         "id": "c",
         "text": "Cat 5e"
       },
       {
         "id": "d",
         "text": "Cat 6"
+      },
+      {
+        "id": "b",
+        "text": "Coaxial (RG-6)"
       }
     ],
     "correct": [
@@ -1005,16 +1005,16 @@
     "stem": "Which cable type is glass fibre typically terminated with a SC/LC/ST connector and rated for high bandwidth over shorter distances than single-mode, using multiple light paths?",
     "options": [
       {
-        "id": "a",
-        "text": "Multimode fibre"
-      },
-      {
         "id": "b",
         "text": "Coaxial (RG-6)"
       },
       {
         "id": "c",
         "text": "Cat 5e"
+      },
+      {
+        "id": "a",
+        "text": "Multimode fibre"
       },
       {
         "id": "d",
@@ -1044,20 +1044,20 @@
     "stem": "Which cable type is copper with a shielded core typically terminated with a F-connector connector and rated for broadband cable/satellite delivery?",
     "options": [
       {
-        "id": "a",
-        "text": "Coaxial (RG-6)"
-      },
-      {
         "id": "b",
         "text": "Cat 6"
       },
       {
-        "id": "c",
-        "text": "Cat 6a"
+        "id": "a",
+        "text": "Coaxial (RG-6)"
       },
       {
         "id": "d",
         "text": "Single-mode fibre"
+      },
+      {
+        "id": "c",
+        "text": "Cat 6a"
       }
     ],
     "correct": [
@@ -1083,20 +1083,20 @@
     "stem": "Which wireless standard operates on 5 GHz and provides up to 54 Mbps?",
     "options": [
       {
-        "id": "a",
-        "text": "802.11a"
+        "id": "d",
+        "text": "802.11n (Wi-Fi 4)"
       },
       {
-        "id": "b",
-        "text": "802.11b"
+        "id": "a",
+        "text": "802.11a"
       },
       {
         "id": "c",
         "text": "802.11g"
       },
       {
-        "id": "d",
-        "text": "802.11n (Wi-Fi 4)"
+        "id": "b",
+        "text": "802.11b"
       }
     ],
     "correct": [
@@ -1122,8 +1122,8 @@
     "stem": "Which wireless standard operates on 2.4 GHz and provides up to 11 Mbps?",
     "options": [
       {
-        "id": "a",
-        "text": "802.11b"
+        "id": "d",
+        "text": "802.11g"
       },
       {
         "id": "b",
@@ -1134,8 +1134,8 @@
         "text": "802.11a"
       },
       {
-        "id": "d",
-        "text": "802.11g"
+        "id": "a",
+        "text": "802.11b"
       }
     ],
     "correct": [
@@ -1165,16 +1165,16 @@
         "text": "802.11g"
       },
       {
-        "id": "b",
-        "text": "802.11ax (Wi-Fi 6)"
-      },
-      {
         "id": "c",
         "text": "802.11a"
       },
       {
         "id": "d",
         "text": "802.11b"
+      },
+      {
+        "id": "b",
+        "text": "802.11ax (Wi-Fi 6)"
       }
     ],
     "correct": [
@@ -1200,20 +1200,20 @@
     "stem": "Which wireless standard operates on 2.4 GHz and 5 GHz and provides up to 600 Mbps with MIMO?",
     "options": [
       {
-        "id": "a",
-        "text": "802.11n (Wi-Fi 4)"
-      },
-      {
-        "id": "b",
-        "text": "802.11ax (Wi-Fi 6)"
-      },
-      {
         "id": "c",
         "text": "802.11a"
       },
       {
         "id": "d",
         "text": "802.11b"
+      },
+      {
+        "id": "a",
+        "text": "802.11n (Wi-Fi 4)"
+      },
+      {
+        "id": "b",
+        "text": "802.11ax (Wi-Fi 6)"
       }
     ],
     "correct": [
@@ -1239,8 +1239,8 @@
     "stem": "Which wireless standard operates on 5 GHz and provides up to several Gbps with MU-MIMO?",
     "options": [
       {
-        "id": "a",
-        "text": "802.11ac (Wi-Fi 5)"
+        "id": "d",
+        "text": "802.11g"
       },
       {
         "id": "b",
@@ -1251,8 +1251,8 @@
         "text": "802.11b"
       },
       {
-        "id": "d",
-        "text": "802.11g"
+        "id": "a",
+        "text": "802.11ac (Wi-Fi 5)"
       }
     ],
     "correct": [
@@ -1278,16 +1278,16 @@
     "stem": "Which wireless standard operates on 2.4 GHz, 5 GHz, and (Wi-Fi 6E) 6 GHz and provides higher efficiency in dense environments via OFDMA?",
     "options": [
       {
-        "id": "a",
-        "text": "802.11ax (Wi-Fi 6)"
+        "id": "c",
+        "text": "802.11g"
       },
       {
         "id": "b",
         "text": "802.11b"
       },
       {
-        "id": "c",
-        "text": "802.11g"
+        "id": "a",
+        "text": "802.11ax (Wi-Fi 6)"
       },
       {
         "id": "d",
@@ -1317,6 +1317,10 @@
     "stem": "In Spanning Tree Protocol, which port state does not forward frames and does not learn MAC addresses, to prevent a switching loop?",
     "options": [
       {
+        "id": "d",
+        "text": "Forwarding"
+      },
+      {
         "id": "a",
         "text": "Blocking"
       },
@@ -1327,10 +1331,6 @@
       {
         "id": "c",
         "text": "Learning"
-      },
-      {
-        "id": "d",
-        "text": "Forwarding"
       }
     ],
     "correct": [
@@ -1357,6 +1357,10 @@
     "stem": "In Spanning Tree Protocol, which port state does not forward frames yet but starts processing BPDUs to determine the topology?",
     "options": [
       {
+        "id": "d",
+        "text": "Forwarding"
+      },
+      {
         "id": "a",
         "text": "Listening"
       },
@@ -1367,10 +1371,6 @@
       {
         "id": "c",
         "text": "Learning"
-      },
-      {
-        "id": "d",
-        "text": "Forwarding"
       }
     ],
     "correct": [
@@ -1397,12 +1397,12 @@
     "stem": "In Spanning Tree Protocol, which port state still does not forward frames but starts building its MAC address table?",
     "options": [
       {
-        "id": "a",
-        "text": "Learning"
-      },
-      {
         "id": "b",
         "text": "Blocking"
+      },
+      {
+        "id": "a",
+        "text": "Learning"
       },
       {
         "id": "c",
@@ -1437,20 +1437,20 @@
     "stem": "In Spanning Tree Protocol, which port state forwards frames and learns MAC addresses normally?",
     "options": [
       {
-        "id": "a",
-        "text": "Forwarding"
+        "id": "d",
+        "text": "Learning"
       },
       {
-        "id": "b",
-        "text": "Blocking"
+        "id": "a",
+        "text": "Forwarding"
       },
       {
         "id": "c",
         "text": "Listening"
       },
       {
-        "id": "d",
-        "text": "Learning"
+        "id": "b",
+        "text": "Blocking"
       }
     ],
     "correct": [
@@ -1477,20 +1477,20 @@
     "stem": "Which routing protocol is a distance-vector protocol that uses hop count as its metric?",
     "options": [
       {
-        "id": "a",
-        "text": "RIP"
-      },
-      {
-        "id": "b",
-        "text": "BGP"
+        "id": "d",
+        "text": "EIGRP"
       },
       {
         "id": "c",
         "text": "OSPF"
       },
       {
-        "id": "d",
-        "text": "EIGRP"
+        "id": "b",
+        "text": "BGP"
+      },
+      {
+        "id": "a",
+        "text": "RIP"
       }
     ],
     "correct": [
@@ -1516,12 +1516,12 @@
     "stem": "Which routing protocol is a link-state protocol that uses cost (based on bandwidth) as its metric?",
     "options": [
       {
-        "id": "a",
-        "text": "OSPF"
-      },
-      {
         "id": "b",
         "text": "EIGRP"
+      },
+      {
+        "id": "a",
+        "text": "OSPF"
       },
       {
         "id": "c",
@@ -1555,20 +1555,20 @@
     "stem": "Which network performance metric describes the time it takes a packet to travel from source to destination, typically measured in milliseconds?",
     "options": [
       {
-        "id": "a",
-        "text": "Latency"
-      },
-      {
         "id": "b",
         "text": "Packet loss"
+      },
+      {
+        "id": "d",
+        "text": "Throughput"
       },
       {
         "id": "c",
         "text": "Jitter"
       },
       {
-        "id": "d",
-        "text": "Throughput"
+        "id": "a",
+        "text": "Latency"
       }
     ],
     "correct": [
@@ -1594,20 +1594,20 @@
     "stem": "Which network performance metric describes the variation in latency between consecutive packets, typically measured in milliseconds?",
     "options": [
       {
-        "id": "a",
-        "text": "Jitter"
+        "id": "c",
+        "text": "Bandwidth"
       },
       {
         "id": "b",
         "text": "Throughput"
       },
       {
-        "id": "c",
-        "text": "Bandwidth"
-      },
-      {
         "id": "d",
         "text": "Packet loss"
+      },
+      {
+        "id": "a",
+        "text": "Jitter"
       }
     ],
     "correct": [
@@ -1633,20 +1633,20 @@
     "stem": "Which network performance metric describes the actual amount of data successfully transferred over a link in a given time, typically measured in Mbps or Gbps?",
     "options": [
       {
-        "id": "a",
-        "text": "Throughput"
-      },
-      {
         "id": "b",
         "text": "Packet loss"
       },
       {
-        "id": "c",
-        "text": "Latency"
+        "id": "a",
+        "text": "Throughput"
       },
       {
         "id": "d",
         "text": "Jitter"
+      },
+      {
+        "id": "c",
+        "text": "Latency"
       }
     ],
     "correct": [
@@ -1672,20 +1672,20 @@
     "stem": "Which network performance metric describes the theoretical maximum data rate a link can carry, typically measured in Mbps or Gbps?",
     "options": [
       {
-        "id": "a",
-        "text": "Bandwidth"
-      },
-      {
-        "id": "b",
-        "text": "Throughput"
+        "id": "d",
+        "text": "Latency"
       },
       {
         "id": "c",
         "text": "Packet loss"
       },
       {
-        "id": "d",
-        "text": "Latency"
+        "id": "a",
+        "text": "Bandwidth"
+      },
+      {
+        "id": "b",
+        "text": "Throughput"
       }
     ],
     "correct": [
@@ -1711,20 +1711,20 @@
     "stem": "Which network performance metric describes the percentage of packets that never arrive at their destination, typically measured in a percentage?",
     "options": [
       {
-        "id": "a",
-        "text": "Packet loss"
+        "id": "d",
+        "text": "Latency"
       },
       {
-        "id": "b",
-        "text": "Throughput"
+        "id": "a",
+        "text": "Packet loss"
       },
       {
         "id": "c",
         "text": "Bandwidth"
       },
       {
-        "id": "d",
-        "text": "Latency"
+        "id": "b",
+        "text": "Throughput"
       }
     ],
     "correct": [
@@ -1754,16 +1754,16 @@
         "text": "Active-active"
       },
       {
-        "id": "b",
-        "text": "Active-passive"
-      },
-      {
         "id": "c",
         "text": "Load balancing"
       },
       {
         "id": "d",
         "text": "Clustering"
+      },
+      {
+        "id": "b",
+        "text": "Active-passive"
       }
     ],
     "correct": [
@@ -1793,16 +1793,16 @@
         "text": "Active-passive"
       },
       {
-        "id": "b",
-        "text": "Active-active"
+        "id": "d",
+        "text": "Clustering"
       },
       {
         "id": "c",
         "text": "Load balancing"
       },
       {
-        "id": "d",
-        "text": "Clustering"
+        "id": "b",
+        "text": "Active-active"
       }
     ],
     "correct": [
@@ -1832,12 +1832,12 @@
         "text": "Load balancing"
       },
       {
-        "id": "b",
-        "text": "Active-active"
-      },
-      {
         "id": "c",
         "text": "Active-passive"
+      },
+      {
+        "id": "b",
+        "text": "Active-active"
       },
       {
         "id": "d",
@@ -1906,20 +1906,20 @@
     "stem": "Which disaster recovery metric is defined as the maximum acceptable time a system can be down after a disaster before it must be restored?",
     "options": [
       {
-        "id": "a",
-        "text": "RTO (Recovery Time Objective)"
-      },
-      {
-        "id": "b",
-        "text": "RPO (Recovery Point Objective)"
-      },
-      {
         "id": "c",
         "text": "MTTR (Mean Time To Repair)"
       },
       {
+        "id": "a",
+        "text": "RTO (Recovery Time Objective)"
+      },
+      {
         "id": "d",
         "text": "MTBF (Mean Time Between Failures)"
+      },
+      {
+        "id": "b",
+        "text": "RPO (Recovery Point Objective)"
       }
     ],
     "correct": [
@@ -1945,16 +1945,16 @@
     "stem": "Which disaster recovery metric is defined as the maximum acceptable amount of data loss, measured as time since the last good backup?",
     "options": [
       {
-        "id": "a",
-        "text": "RPO (Recovery Point Objective)"
-      },
-      {
         "id": "b",
         "text": "RTO (Recovery Time Objective)"
       },
       {
         "id": "c",
         "text": "MTTR (Mean Time To Repair)"
+      },
+      {
+        "id": "a",
+        "text": "RPO (Recovery Point Objective)"
       },
       {
         "id": "d",
@@ -1984,20 +1984,20 @@
     "stem": "Which disaster recovery metric is defined as the average time it actually takes to fix a failed component and restore service?",
     "options": [
       {
-        "id": "a",
-        "text": "MTTR (Mean Time To Repair)"
-      },
-      {
-        "id": "b",
-        "text": "RTO (Recovery Time Objective)"
+        "id": "d",
+        "text": "MTBF (Mean Time Between Failures)"
       },
       {
         "id": "c",
         "text": "RPO (Recovery Point Objective)"
       },
       {
-        "id": "d",
-        "text": "MTBF (Mean Time Between Failures)"
+        "id": "b",
+        "text": "RTO (Recovery Time Objective)"
+      },
+      {
+        "id": "a",
+        "text": "MTTR (Mean Time To Repair)"
       }
     ],
     "correct": [
@@ -2023,20 +2023,20 @@
     "stem": "Which disaster recovery metric is defined as the average time a component is expected to operate before it fails?",
     "options": [
       {
-        "id": "a",
-        "text": "MTBF (Mean Time Between Failures)"
-      },
-      {
         "id": "b",
         "text": "RTO (Recovery Time Objective)"
+      },
+      {
+        "id": "d",
+        "text": "MTTR (Mean Time To Repair)"
       },
       {
         "id": "c",
         "text": "RPO (Recovery Point Objective)"
       },
       {
-        "id": "d",
-        "text": "MTTR (Mean Time To Repair)"
+        "id": "a",
+        "text": "MTBF (Mean Time Between Failures)"
       }
     ],
     "correct": [
@@ -2062,20 +2062,20 @@
     "stem": "Which backup type backs up every selected file regardless of when it last changed, taking the longest but making restores simplest?",
     "options": [
       {
-        "id": "a",
-        "text": "Full"
-      },
-      {
-        "id": "b",
-        "text": "Incremental"
+        "id": "d",
+        "text": "Snapshot"
       },
       {
         "id": "c",
         "text": "Differential"
       },
       {
-        "id": "d",
-        "text": "Snapshot"
+        "id": "a",
+        "text": "Full"
+      },
+      {
+        "id": "b",
+        "text": "Incremental"
       }
     ],
     "correct": [
@@ -2105,16 +2105,16 @@
         "text": "Incremental"
       },
       {
-        "id": "b",
-        "text": "Full"
+        "id": "d",
+        "text": "Snapshot"
       },
       {
         "id": "c",
         "text": "Differential"
       },
       {
-        "id": "d",
-        "text": "Snapshot"
+        "id": "b",
+        "text": "Full"
       }
     ],
     "correct": [
@@ -2144,16 +2144,16 @@
         "text": "Differential"
       },
       {
+        "id": "d",
+        "text": "Snapshot"
+      },
+      {
         "id": "b",
         "text": "Full"
       },
       {
         "id": "c",
         "text": "Incremental"
-      },
-      {
-        "id": "d",
-        "text": "Snapshot"
       }
     ],
     "correct": [
@@ -2179,6 +2179,10 @@
     "stem": "Which network monitoring approach polls devices for status and performance data and can receive unsolicited traps?",
     "options": [
       {
+        "id": "d",
+        "text": "Packet capture"
+      },
+      {
         "id": "a",
         "text": "SNMP"
       },
@@ -2189,10 +2193,6 @@
       {
         "id": "c",
         "text": "NetFlow"
-      },
-      {
-        "id": "d",
-        "text": "Packet capture"
       }
     ],
     "correct": [
@@ -2222,16 +2222,16 @@
         "text": "Confidentiality"
       },
       {
-        "id": "b",
-        "text": "Integrity"
+        "id": "d",
+        "text": "Non-repudiation"
       },
       {
         "id": "c",
         "text": "Availability"
       },
       {
-        "id": "d",
-        "text": "Non-repudiation"
+        "id": "b",
+        "text": "Integrity"
       }
     ],
     "correct": [
@@ -2257,20 +2257,20 @@
     "stem": "Which element of the CIA triad ensures information isn't altered in transit or storage without detection, typically through hashing?",
     "options": [
       {
-        "id": "a",
-        "text": "Integrity"
+        "id": "d",
+        "text": "Non-repudiation"
       },
       {
         "id": "b",
         "text": "Confidentiality"
       },
       {
-        "id": "c",
-        "text": "Availability"
+        "id": "a",
+        "text": "Integrity"
       },
       {
-        "id": "d",
-        "text": "Non-repudiation"
+        "id": "c",
+        "text": "Availability"
       }
     ],
     "correct": [
@@ -2296,20 +2296,20 @@
     "stem": "Which element of the CIA triad ensures systems and data are accessible when needed, through redundancy and resilience?",
     "options": [
       {
-        "id": "a",
-        "text": "Availability"
-      },
-      {
-        "id": "b",
-        "text": "Confidentiality"
+        "id": "d",
+        "text": "Non-repudiation"
       },
       {
         "id": "c",
         "text": "Integrity"
       },
       {
-        "id": "d",
-        "text": "Non-repudiation"
+        "id": "a",
+        "text": "Availability"
+      },
+      {
+        "id": "b",
+        "text": "Confidentiality"
       }
     ],
     "correct": [
@@ -2378,16 +2378,16 @@
         "text": "Authorization"
       },
       {
-        "id": "b",
-        "text": "Authentication"
+        "id": "d",
+        "text": "Encryption"
       },
       {
         "id": "c",
         "text": "Accounting"
       },
       {
-        "id": "d",
-        "text": "Encryption"
+        "id": "b",
+        "text": "Authentication"
       }
     ],
     "correct": [
@@ -2413,16 +2413,16 @@
     "stem": "In the AAA framework, which component logs what an authenticated user actually did, for auditing?",
     "options": [
       {
-        "id": "a",
-        "text": "Accounting"
-      },
-      {
         "id": "b",
         "text": "Authentication"
       },
       {
         "id": "c",
         "text": "Authorization"
+      },
+      {
+        "id": "a",
+        "text": "Accounting"
       },
       {
         "id": "d",
@@ -2491,12 +2491,12 @@
     "stem": "Which attack involves an unauthorised DHCP server hands out incorrect configuration (like a malicious default gateway) to clients on the network?",
     "options": [
       {
-        "id": "a",
-        "text": "Rogue DHCP server"
-      },
-      {
         "id": "b",
         "text": "DNS poisoning"
+      },
+      {
+        "id": "a",
+        "text": "Rogue DHCP server"
       },
       {
         "id": "c",
@@ -2569,8 +2569,8 @@
     "stem": "Which attack involves an attacker secretly relays and possibly alters communications between two parties who believe they're talking directly to each other?",
     "options": [
       {
-        "id": "a",
-        "text": "On-path (man-in-the-middle)"
+        "id": "d",
+        "text": "ARP spoofing"
       },
       {
         "id": "b",
@@ -2581,8 +2581,8 @@
         "text": "DNS poisoning"
       },
       {
-        "id": "d",
-        "text": "ARP spoofing"
+        "id": "a",
+        "text": "On-path (man-in-the-middle)"
       }
     ],
     "correct": [
@@ -2608,20 +2608,20 @@
     "stem": "Which attack involves many compromised hosts flood a target simultaneously to exhaust its resources and deny service to legitimate users?",
     "options": [
       {
-        "id": "a",
-        "text": "DDoS"
-      },
-      {
-        "id": "b",
-        "text": "Evil twin"
-      },
-      {
         "id": "c",
         "text": "On-path (man-in-the-middle)"
       },
       {
         "id": "d",
         "text": "DNS poisoning"
+      },
+      {
+        "id": "a",
+        "text": "DDoS"
+      },
+      {
+        "id": "b",
+        "text": "Evil twin"
       }
     ],
     "correct": [
@@ -2651,12 +2651,12 @@
         "text": "DNS poisoning"
       },
       {
-        "id": "b",
-        "text": "ARP spoofing"
-      },
-      {
         "id": "c",
         "text": "Rogue DHCP server"
+      },
+      {
+        "id": "b",
+        "text": "ARP spoofing"
       },
       {
         "id": "d",
@@ -2686,20 +2686,20 @@
     "stem": "Which type of firewall inspects each packet's header (source/destination IP and port) in isolation against a rule set, with no awareness of connection state?",
     "options": [
       {
-        "id": "a",
-        "text": "Packet-filtering firewall"
-      },
-      {
-        "id": "b",
-        "text": "Stateful firewall"
+        "id": "d",
+        "text": "Next-generation firewall (NGFW)"
       },
       {
         "id": "c",
         "text": "Application-layer (proxy) firewall"
       },
       {
-        "id": "d",
-        "text": "Next-generation firewall (NGFW)"
+        "id": "b",
+        "text": "Stateful firewall"
+      },
+      {
+        "id": "a",
+        "text": "Packet-filtering firewall"
       }
     ],
     "correct": [
@@ -2764,20 +2764,20 @@
     "stem": "Which command-line tool shows the sequence of routers (hops) a packet passes through to reach a destination?",
     "options": [
       {
-        "id": "a",
-        "text": "traceroute/tracert"
-      },
-      {
-        "id": "b",
-        "text": "arp -a"
-      },
-      {
         "id": "c",
         "text": "ipconfig/ifconfig"
       },
       {
+        "id": "a",
+        "text": "traceroute/tracert"
+      },
+      {
         "id": "d",
         "text": "pathping"
+      },
+      {
+        "id": "b",
+        "text": "arp -a"
       }
     ],
     "correct": [
@@ -2803,20 +2803,20 @@
     "stem": "Which command-line tool queries DNS directly to resolve a name or troubleshoot DNS records?",
     "options": [
       {
-        "id": "a",
-        "text": "nslookup/dig"
-      },
-      {
-        "id": "b",
-        "text": "arp -a"
-      },
-      {
         "id": "c",
         "text": "ipconfig/ifconfig"
       },
       {
+        "id": "a",
+        "text": "nslookup/dig"
+      },
+      {
         "id": "d",
         "text": "pathping"
+      },
+      {
+        "id": "b",
+        "text": "arp -a"
       }
     ],
     "correct": [
@@ -2842,16 +2842,16 @@
     "stem": "Which command-line tool lists active connections and listening ports on the local machine?",
     "options": [
       {
-        "id": "a",
-        "text": "netstat"
-      },
-      {
         "id": "b",
         "text": "ping"
       },
       {
         "id": "c",
         "text": "traceroute/tracert"
+      },
+      {
+        "id": "a",
+        "text": "netstat"
       },
       {
         "id": "d",
@@ -2885,16 +2885,16 @@
         "text": "arp -a"
       },
       {
-        "id": "b",
-        "text": "ping"
-      },
-      {
         "id": "c",
         "text": "traceroute/tracert"
       },
       {
         "id": "d",
         "text": "nslookup/dig"
+      },
+      {
+        "id": "b",
+        "text": "ping"
       }
     ],
     "correct": [
@@ -2928,12 +2928,12 @@
         "text": "arp -a"
       },
       {
-        "id": "c",
-        "text": "pathping"
-      },
-      {
         "id": "d",
         "text": "ping"
+      },
+      {
+        "id": "c",
+        "text": "pathping"
       }
     ],
     "correct": [
@@ -2963,16 +2963,16 @@
         "text": "pathping"
       },
       {
+        "id": "d",
+        "text": "nslookup/dig"
+      },
+      {
         "id": "b",
         "text": "ping"
       },
       {
         "id": "c",
         "text": "traceroute/tracert"
-      },
-      {
-        "id": "d",
-        "text": "nslookup/dig"
       }
     ],
     "correct": [
@@ -2998,20 +2998,20 @@
     "stem": "Which cable/hardware testing tool verifies that a twisted-pair cable's individual wires are correctly mapped end to end and checks for opens or shorts?",
     "options": [
       {
-        "id": "a",
-        "text": "Cable tester"
+        "id": "d",
+        "text": "OTDR (optical time-domain reflectometer)"
       },
       {
         "id": "b",
         "text": "Tone generator and probe"
       },
       {
-        "id": "c",
-        "text": "TDR (time-domain reflectometer)"
+        "id": "a",
+        "text": "Cable tester"
       },
       {
-        "id": "d",
-        "text": "OTDR (optical time-domain reflectometer)"
+        "id": "c",
+        "text": "TDR (time-domain reflectometer)"
       }
     ],
     "correct": [
@@ -3037,20 +3037,20 @@
     "stem": "Which cable/hardware testing tool lets a technician trace a specific cable through a wall or bundle by injecting an audible tone and locating it with a probe?",
     "options": [
       {
-        "id": "a",
-        "text": "Tone generator and probe"
-      },
-      {
-        "id": "b",
-        "text": "Cable tester"
-      },
-      {
         "id": "c",
         "text": "TDR (time-domain reflectometer)"
       },
       {
         "id": "d",
         "text": "OTDR (optical time-domain reflectometer)"
+      },
+      {
+        "id": "b",
+        "text": "Cable tester"
+      },
+      {
+        "id": "a",
+        "text": "Tone generator and probe"
       }
     ],
     "correct": [
@@ -3076,20 +3076,20 @@
     "stem": "Which cable/hardware testing tool sends a signal down a copper cable and measures reflections to pinpoint the distance to a break or fault?",
     "options": [
       {
-        "id": "a",
-        "text": "TDR (time-domain reflectometer)"
+        "id": "d",
+        "text": "OTDR (optical time-domain reflectometer)"
       },
       {
-        "id": "b",
-        "text": "Cable tester"
+        "id": "a",
+        "text": "TDR (time-domain reflectometer)"
       },
       {
         "id": "c",
         "text": "Tone generator and probe"
       },
       {
-        "id": "d",
-        "text": "OTDR (optical time-domain reflectometer)"
+        "id": "b",
+        "text": "Cable tester"
       }
     ],
     "correct": [
@@ -3115,12 +3115,12 @@
     "stem": "Which cable/hardware testing tool does the same distance-to-fault measurement as a TDR, but for fibre optic cable using light pulses?",
     "options": [
       {
-        "id": "a",
-        "text": "OTDR (optical time-domain reflectometer)"
-      },
-      {
         "id": "b",
         "text": "Tone generator and probe"
+      },
+      {
+        "id": "a",
+        "text": "OTDR (optical time-domain reflectometer)"
       },
       {
         "id": "c",
@@ -3193,20 +3193,20 @@
     "stem": "In the standard network troubleshooting methodology, which step is it when you gather information, question users, and identify symptoms before touching anything?",
     "options": [
       {
-        "id": "a",
-        "text": "Step 1: Identify the problem"
+        "id": "d",
+        "text": "Step 3: Test the theory to determine the cause"
       },
       {
-        "id": "b",
-        "text": "Step 7: Document findings, actions, and outcomes"
+        "id": "a",
+        "text": "Step 1: Identify the problem"
       },
       {
         "id": "c",
         "text": "Step 2: Establish a theory of probable cause"
       },
       {
-        "id": "d",
-        "text": "Step 3: Test the theory to determine the cause"
+        "id": "b",
+        "text": "Step 7: Document findings, actions, and outcomes"
       }
     ],
     "correct": [
@@ -3232,6 +3232,10 @@
     "stem": "In the standard network troubleshooting methodology, which step is it when you consider the most likely causes, starting with the simplest/most obvious?",
     "options": [
       {
+        "id": "d",
+        "text": "Step 4: Establish a plan of action and identify potential effects"
+      },
+      {
         "id": "a",
         "text": "Step 2: Establish a theory of probable cause"
       },
@@ -3242,10 +3246,6 @@
       {
         "id": "c",
         "text": "Step 3: Test the theory to determine the cause"
-      },
-      {
-        "id": "d",
-        "text": "Step 4: Establish a plan of action and identify potential effects"
       }
     ],
     "correct": [
@@ -3271,20 +3271,20 @@
     "stem": "In the standard network troubleshooting methodology, which step is it when you confirm the theory before acting on it, or re-establish a new theory if it's wrong?",
     "options": [
       {
-        "id": "a",
-        "text": "Step 3: Test the theory to determine the cause"
-      },
-      {
         "id": "b",
         "text": "Step 2: Establish a theory of probable cause"
       },
       {
-        "id": "c",
-        "text": "Step 4: Establish a plan of action and identify potential effects"
+        "id": "a",
+        "text": "Step 3: Test the theory to determine the cause"
       },
       {
         "id": "d",
         "text": "Step 5: Implement the solution or escalate"
+      },
+      {
+        "id": "c",
+        "text": "Step 4: Establish a plan of action and identify potential effects"
       }
     ],
     "correct": [
@@ -3314,16 +3314,16 @@
         "text": "Step 4: Establish a plan of action and identify potential effects"
       },
       {
-        "id": "b",
-        "text": "Step 3: Test the theory to determine the cause"
-      },
-      {
         "id": "c",
         "text": "Step 5: Implement the solution or escalate"
       },
       {
         "id": "d",
         "text": "Step 6: Verify full system functionality and implement preventive measures"
+      },
+      {
+        "id": "b",
+        "text": "Step 3: Test the theory to determine the cause"
       }
     ],
     "correct": [
@@ -3349,16 +3349,16 @@
     "stem": "In the standard network troubleshooting methodology, which step is it when you carry out the fix, or escalate if it's beyond your authority or ability?",
     "options": [
       {
-        "id": "a",
-        "text": "Step 5: Implement the solution or escalate"
+        "id": "c",
+        "text": "Step 6: Verify full system functionality and implement preventive measures"
       },
       {
         "id": "b",
         "text": "Step 4: Establish a plan of action and identify potential effects"
       },
       {
-        "id": "c",
-        "text": "Step 6: Verify full system functionality and implement preventive measures"
+        "id": "a",
+        "text": "Step 5: Implement the solution or escalate"
       },
       {
         "id": "d",
@@ -3388,20 +3388,20 @@
     "stem": "In the standard network troubleshooting methodology, which step is it when you confirm the fix actually resolved the issue and prevent recurrence?",
     "options": [
       {
-        "id": "a",
-        "text": "Step 6: Verify full system functionality and implement preventive measures"
-      },
-      {
-        "id": "b",
-        "text": "Step 5: Implement the solution or escalate"
+        "id": "d",
+        "text": "Step 1: Identify the problem"
       },
       {
         "id": "c",
         "text": "Step 7: Document findings, actions, and outcomes"
       },
       {
-        "id": "d",
-        "text": "Step 1: Identify the problem"
+        "id": "a",
+        "text": "Step 6: Verify full system functionality and implement preventive measures"
+      },
+      {
+        "id": "b",
+        "text": "Step 5: Implement the solution or escalate"
       }
     ],
     "correct": [
@@ -3427,8 +3427,8 @@
     "stem": "In the standard network troubleshooting methodology, which step is it when you record what happened for future reference?",
     "options": [
       {
-        "id": "a",
-        "text": "Step 7: Document findings, actions, and outcomes"
+        "id": "d",
+        "text": "Step 2: Establish a theory of probable cause"
       },
       {
         "id": "b",
@@ -3439,8 +3439,8 @@
         "text": "Step 1: Identify the problem"
       },
       {
-        "id": "d",
-        "text": "Step 2: Establish a theory of probable cause"
+        "id": "a",
+        "text": "Step 7: Document findings, actions, and outcomes"
       }
     ],
     "correct": [
@@ -3474,12 +3474,12 @@
         "text": "A bad DNS server configuration on the host"
       },
       {
-        "id": "c",
-        "text": "An expired DHCP lease on the host"
-      },
-      {
         "id": "d",
         "text": "The switch port is assigned to the wrong VLAN"
+      },
+      {
+        "id": "c",
+        "text": "An expired DHCP lease on the host"
       }
     ],
     "correct": [
@@ -3506,16 +3506,16 @@
     "stem": "A user reports their laptop has an IP address of 169.254.34.12 and cannot reach anything on the network. What does this address indicate?",
     "options": [
       {
-        "id": "a",
-        "text": "The laptop couldn't reach a DHCP server and self-assigned an APIPA address"
-      },
-      {
         "id": "b",
         "text": "The laptop is correctly configured with a static private IP address"
       },
       {
         "id": "c",
         "text": "The laptop received a valid address from a DHCP scope reserved for guests"
+      },
+      {
+        "id": "a",
+        "text": "The laptop couldn't reach a DHCP server and self-assigned an APIPA address"
       },
       {
         "id": "d",

@@ -9,20 +9,20 @@
     "stem": "A technician captures traffic and observes that a single application message was split across three frames, each with its own sequence number. At which layer did this division occur?",
     "options": [
       {
-        "id": "a",
-        "text": "Layer 4"
-      },
-      {
-        "id": "b",
-        "text": "Layer 2"
-      },
-      {
         "id": "c",
         "text": "Layer 3"
       },
       {
         "id": "d",
         "text": "Layer 6"
+      },
+      {
+        "id": "a",
+        "text": "Layer 4"
+      },
+      {
+        "id": "b",
+        "text": "Layer 2"
       }
     ],
     "correct": [
@@ -49,16 +49,16 @@
     "stem": "Encapsulation adds headers as data descends the stack. Which order correctly describes the resulting units?",
     "options": [
       {
-        "id": "a",
-        "text": "Data, segment, packet, frame, bits"
-      },
-      {
         "id": "b",
         "text": "Data, packet, segment, frame, bits"
       },
       {
         "id": "c",
         "text": "Bits, frame, packet, segment, data"
+      },
+      {
+        "id": "a",
+        "text": "Data, segment, packet, frame, bits"
       },
       {
         "id": "d",
@@ -89,20 +89,20 @@
     "stem": "A next-generation firewall is described as capable of user identity awareness and application control. What does this require beyond traditional stateful inspection?",
     "options": [
       {
-        "id": "a",
-        "text": "Deep packet inspection with directory integration"
-      },
-      {
-        "id": "b",
-        "text": "Higher throughput interfaces only"
-      },
-      {
         "id": "c",
         "text": "Support for dynamic routing protocols"
       },
       {
         "id": "d",
         "text": "A larger NAT translation table"
+      },
+      {
+        "id": "a",
+        "text": "Deep packet inspection with directory integration"
+      },
+      {
+        "id": "b",
+        "text": "Higher throughput interfaces only"
       }
     ],
     "correct": [
@@ -129,16 +129,16 @@
     "stem": "Which statement correctly describes the difference between an inline IPS and a passive IDS deployment?",
     "options": [
       {
-        "id": "a",
-        "text": "An IPS sits in the traffic path and can drop packets, while an IDS analyzes a copy and only alerts"
-      },
-      {
         "id": "b",
         "text": "An IDS sits in the traffic path and an IPS receives mirrored traffic"
       },
       {
         "id": "c",
         "text": "Both sit inline but only the IDS can block"
+      },
+      {
+        "id": "a",
+        "text": "An IPS sits in the traffic path and can drop packets, while an IDS analyzes a copy and only alerts"
       },
       {
         "id": "d",
@@ -168,20 +168,20 @@
     "stem": "An organization must connect three separate cloud VPCs so that resources can communicate without building a full mesh of individual peerings. Which construct addresses this?",
     "options": [
       {
-        "id": "a",
-        "text": "A transit gateway or cloud router hub"
+        "id": "c",
+        "text": "A NAT gateway in each VPC"
       },
       {
         "id": "b",
         "text": "A network access control list on each subnet"
       },
       {
-        "id": "c",
-        "text": "A NAT gateway in each VPC"
-      },
-      {
         "id": "d",
         "text": "A content delivery network"
+      },
+      {
+        "id": "a",
+        "text": "A transit gateway or cloud router hub"
       }
     ],
     "correct": [
@@ -208,20 +208,20 @@
     "stem": "In the shared responsibility model for IaaS, which task remains the customer's responsibility?",
     "options": [
       {
-        "id": "a",
-        "text": "Patching the guest operating system and configuring security groups"
-      },
-      {
-        "id": "b",
-        "text": "Maintaining the physical data center facility"
+        "id": "d",
+        "text": "Securing the hypervisor"
       },
       {
         "id": "c",
         "text": "Replacing failed physical storage media"
       },
       {
-        "id": "d",
-        "text": "Securing the hypervisor"
+        "id": "b",
+        "text": "Maintaining the physical data center facility"
+      },
+      {
+        "id": "a",
+        "text": "Patching the guest operating system and configuring security groups"
       }
     ],
     "correct": [
@@ -289,12 +289,12 @@
     "stem": "Which combination correctly pairs a protocol with both its port and transport?",
     "options": [
       {
-        "id": "a",
-        "text": "TFTP, 69, UDP"
-      },
-      {
         "id": "b",
         "text": "SSH, 22, UDP"
+      },
+      {
+        "id": "a",
+        "text": "TFTP, 69, UDP"
       },
       {
         "id": "c",
@@ -329,20 +329,20 @@
     "stem": "Which traffic type sends a packet to the topologically nearest of several hosts sharing the same address?",
     "options": [
       {
-        "id": "a",
-        "text": "Anycast"
-      },
-      {
         "id": "b",
         "text": "Multicast"
+      },
+      {
+        "id": "d",
+        "text": "Unicast"
       },
       {
         "id": "c",
         "text": "Broadcast"
       },
       {
-        "id": "d",
-        "text": "Unicast"
+        "id": "a",
+        "text": "Anycast"
       }
     ],
     "correct": [
@@ -372,16 +372,16 @@
         "text": "10GBASE-ER"
       },
       {
-        "id": "b",
-        "text": "10GBASE-SR"
-      },
-      {
         "id": "c",
         "text": "10GBASE-LR"
       },
       {
         "id": "d",
         "text": "10GBASE-T"
+      },
+      {
+        "id": "b",
+        "text": "10GBASE-SR"
       }
     ],
     "correct": [
@@ -408,20 +408,20 @@
     "stem": "What is the primary advantage of direct attach copper cables in a rack?",
     "options": [
       {
-        "id": "a",
-        "text": "Low cost and low latency for short intra-rack connections"
-      },
-      {
         "id": "b",
         "text": "Immunity to electromagnetic interference"
       },
       {
-        "id": "c",
-        "text": "Support for runs beyond 100 meters"
+        "id": "a",
+        "text": "Low cost and low latency for short intra-rack connections"
       },
       {
         "id": "d",
         "text": "Compatibility with single-mode fiber ports"
+      },
+      {
+        "id": "c",
+        "text": "Support for runs beyond 100 meters"
       }
     ],
     "correct": [
@@ -448,8 +448,8 @@
     "stem": "A campus design uses redundant distribution switches with first-hop redundancy so that hosts retain a working default gateway if one switch fails. Which protocol family provides this?",
     "options": [
       {
-        "id": "a",
-        "text": "VRRP or HSRP"
+        "id": "d",
+        "text": "OSPF or EIGRP"
       },
       {
         "id": "b",
@@ -460,8 +460,8 @@
         "text": "LACP or PAgP"
       },
       {
-        "id": "d",
-        "text": "OSPF or EIGRP"
+        "id": "a",
+        "text": "VRRP or HSRP"
       }
     ],
     "correct": [
@@ -488,20 +488,20 @@
     "stem": "Which statement best describes east-west traffic in a data center?",
     "options": [
       {
-        "id": "a",
-        "text": "Traffic between servers inside the data center"
-      },
-      {
-        "id": "b",
-        "text": "Traffic between the data center and the internet"
+        "id": "d",
+        "text": "Traffic between clients and the public cloud"
       },
       {
         "id": "c",
         "text": "Traffic between branch offices over the WAN"
       },
       {
-        "id": "d",
-        "text": "Traffic between clients and the public cloud"
+        "id": "b",
+        "text": "Traffic between the data center and the internet"
+      },
+      {
+        "id": "a",
+        "text": "Traffic between servers inside the data center"
       }
     ],
     "correct": [
@@ -528,20 +528,20 @@
     "stem": "Two subnets, 192.168.4.0/24 and 192.168.5.0/24, must be summarized into a single advertisement. What is the correct summary?",
     "options": [
       {
-        "id": "a",
-        "text": "192.168.4.0/23"
-      },
-      {
         "id": "b",
         "text": "192.168.4.0/22"
       },
       {
-        "id": "c",
-        "text": "192.168.0.0/21"
+        "id": "a",
+        "text": "192.168.4.0/23"
       },
       {
         "id": "d",
         "text": "192.168.5.0/23"
+      },
+      {
+        "id": "c",
+        "text": "192.168.0.0/21"
       }
     ],
     "correct": [
@@ -568,8 +568,8 @@
     "stem": "A host is assigned 10.5.8.200 with mask 255.255.255.192. Which address is in the same subnet?",
     "options": [
       {
-        "id": "a",
-        "text": "10.5.8.240"
+        "id": "d",
+        "text": "10.5.9.200"
       },
       {
         "id": "b",
@@ -580,8 +580,8 @@
         "text": "10.5.8.60"
       },
       {
-        "id": "d",
-        "text": "10.5.9.200"
+        "id": "a",
+        "text": "10.5.8.240"
       }
     ],
     "correct": [
@@ -611,16 +611,16 @@
         "text": "fe80::/10 link-local"
       },
       {
+        "id": "d",
+        "text": "ff00::/8 multicast"
+      },
+      {
         "id": "b",
         "text": "2000::/3 global unicast"
       },
       {
         "id": "c",
         "text": "fc00::/7 unique local"
-      },
-      {
-        "id": "d",
-        "text": "ff00::/8 multicast"
       }
     ],
     "correct": [
@@ -647,20 +647,20 @@
     "stem": "What is the primary purpose of CIDR notation?",
     "options": [
       {
-        "id": "a",
-        "text": "To express arbitrary prefix lengths independent of classful boundaries"
-      },
-      {
-        "id": "b",
-        "text": "To identify the manufacturer of a network interface"
-      },
-      {
         "id": "c",
         "text": "To assign VLAN identifiers to subnets"
       },
       {
         "id": "d",
         "text": "To specify the maximum transmission unit"
+      },
+      {
+        "id": "b",
+        "text": "To identify the manufacturer of a network interface"
+      },
+      {
+        "id": "a",
+        "text": "To express arbitrary prefix lengths independent of classful boundaries"
       }
     ],
     "correct": [
@@ -687,6 +687,10 @@
     "stem": "An organization adopts a policy where access decisions consider device posture, user identity, and request context on every connection. Which additional control most directly limits lateral movement in this model?",
     "options": [
       {
+        "id": "d",
+        "text": "Increased link redundancy"
+      },
+      {
         "id": "a",
         "text": "Microsegmentation between workloads"
       },
@@ -697,10 +701,6 @@
       {
         "id": "c",
         "text": "Longer DHCP lease durations"
-      },
-      {
-        "id": "d",
-        "text": "Increased link redundancy"
       }
     ],
     "correct": [
@@ -731,16 +731,16 @@
         "text": "It makes changes repeatable and consistent across many devices, reducing human error"
       },
       {
-        "id": "b",
-        "text": "It removes the need for change management approval"
-      },
-      {
         "id": "c",
         "text": "It eliminates the need for network monitoring"
       },
       {
         "id": "d",
         "text": "It guarantees that no outage can occur"
+      },
+      {
+        "id": "b",
+        "text": "It removes the need for change management approval"
       }
     ],
     "correct": [
@@ -767,20 +767,20 @@
     "stem": "Why are SCADA and industrial control systems typically placed on isolated network segments?",
     "options": [
       {
-        "id": "a",
-        "text": "They often run legacy protocols and cannot be patched or hardened like standard IT systems"
-      },
-      {
         "id": "b",
         "text": "They require higher bandwidth than office systems"
       },
       {
-        "id": "c",
-        "text": "They cannot operate with any form of IP addressing"
-      },
-      {
         "id": "d",
         "text": "They generate excessive broadcast traffic by design"
+      },
+      {
+        "id": "a",
+        "text": "They often run legacy protocols and cannot be patched or hardened like standard IT systems"
+      },
+      {
+        "id": "c",
+        "text": "They cannot operate with any form of IP addressing"
       }
     ],
     "correct": [
@@ -811,16 +811,16 @@
         "text": "A reverse proxy performing SSL offload"
       },
       {
-        "id": "b",
-        "text": "A forward proxy performing URL filtering"
+        "id": "d",
+        "text": "A DHCP relay agent"
       },
       {
         "id": "c",
         "text": "A layer 2 switch performing port mirroring"
       },
       {
-        "id": "d",
-        "text": "A DHCP relay agent"
+        "id": "b",
+        "text": "A forward proxy performing URL filtering"
       }
     ],
     "correct": [
@@ -847,16 +847,16 @@
     "stem": "A router has these routes to 10.1.1.0: a /24 via OSPF, a /25 via RIP, and a /26 via a static route. Traffic is destined for 10.1.1.10. Which route is used?",
     "options": [
       {
+        "id": "c",
+        "text": "The /25 RIP route, because it is the middle specificity"
+      },
+      {
         "id": "a",
         "text": "The /26 static route, because longest prefix match is evaluated first"
       },
       {
         "id": "b",
         "text": "The /24 OSPF route, because OSPF has a lower administrative distance than RIP"
-      },
-      {
-        "id": "c",
-        "text": "The /25 RIP route, because it is the middle specificity"
       },
       {
         "id": "d",
@@ -886,16 +886,16 @@
     "stem": "Which BGP attribute is evaluated first in the path selection process for routes with equal prefix length?",
     "options": [
       {
+        "id": "c",
+        "text": "Administrative distance, then MTU"
+      },
+      {
         "id": "a",
         "text": "Weight, then local preference"
       },
       {
         "id": "b",
         "text": "Metric, then hop count"
-      },
-      {
-        "id": "c",
-        "text": "Administrative distance, then MTU"
       },
       {
         "id": "d",
@@ -926,6 +926,10 @@
     "stem": "What distinguishes EIGRP from a pure distance-vector protocol such as RIP?",
     "options": [
       {
+        "id": "d",
+        "text": "It operates only between autonomous systems"
+      },
+      {
         "id": "a",
         "text": "It maintains a topology table with feasible successors for rapid convergence"
       },
@@ -936,10 +940,6 @@
       {
         "id": "c",
         "text": "It is limited to 15 hops like RIP but converges faster"
-      },
-      {
-        "id": "d",
-        "text": "It operates only between autonomous systems"
       }
     ],
     "correct": [
@@ -965,16 +965,16 @@
     "stem": "When is static routing preferable to a dynamic routing protocol?",
     "options": [
       {
-        "id": "a",
-        "text": "On small, stable networks or stub links where predictability matters more than adaptability"
+        "id": "c",
+        "text": "Whenever redundant paths exist"
       },
       {
         "id": "b",
         "text": "On large networks with frequent topology changes"
       },
       {
-        "id": "c",
-        "text": "Whenever redundant paths exist"
+        "id": "a",
+        "text": "On small, stable networks or stub links where predictability matters more than adaptability"
       },
       {
         "id": "d",
@@ -1004,16 +1004,16 @@
     "stem": "A switch port configured as an access port in VLAN 20 receives a tagged frame for VLAN 30. What happens?",
     "options": [
       {
+        "id": "c",
+        "text": "The frame is forwarded into VLAN 20 with the tag removed"
+      },
+      {
         "id": "a",
         "text": "The frame is dropped because access ports expect untagged traffic"
       },
       {
         "id": "b",
         "text": "The frame is forwarded into VLAN 30"
-      },
-      {
-        "id": "c",
-        "text": "The frame is forwarded into VLAN 20 with the tag removed"
       },
       {
         "id": "d",
@@ -1044,20 +1044,20 @@
     "stem": "Rapid spanning tree converges faster than the original standard primarily because of which mechanism?",
     "options": [
       {
-        "id": "a",
-        "text": "Proposal and agreement handshakes between adjacent switches replace timer-based transitions"
+        "id": "c",
+        "text": "It requires all switches to share a single MAC address"
       },
       {
         "id": "b",
         "text": "It disables all redundant links permanently"
       },
       {
-        "id": "c",
-        "text": "It requires all switches to share a single MAC address"
-      },
-      {
         "id": "d",
         "text": "It eliminates the concept of a root bridge"
+      },
+      {
+        "id": "a",
+        "text": "Proposal and agreement handshakes between adjacent switches replace timer-based transitions"
       }
     ],
     "correct": [
@@ -1084,20 +1084,20 @@
     "stem": "What is the effect of configuring a switch port with 'switchport mode trunk' when the neighboring port is an access port?",
     "options": [
       {
-        "id": "a",
-        "text": "A configuration mismatch that causes VLAN traffic to be dropped or misdelivered"
-      },
-      {
-        "id": "b",
-        "text": "Automatic negotiation to a working access link"
+        "id": "d",
+        "text": "Spanning tree blocks both ports permanently"
       },
       {
         "id": "c",
         "text": "The trunk carries all VLANs untagged"
       },
       {
-        "id": "d",
-        "text": "Spanning tree blocks both ports permanently"
+        "id": "a",
+        "text": "A configuration mismatch that causes VLAN traffic to be dropped or misdelivered"
+      },
+      {
+        "id": "b",
+        "text": "Automatic negotiation to a working access link"
       }
     ],
     "correct": [
@@ -1124,20 +1124,20 @@
     "stem": "Which condition would cause a switch to place a port in the blocking state under spanning tree?",
     "options": [
       {
-        "id": "a",
-        "text": "The port is not the designated port for its segment and offers a higher cost path to the root"
+        "id": "d",
+        "text": "The port speed does not match the uplink"
       },
       {
         "id": "b",
         "text": "The port has no device connected"
       },
       {
-        "id": "c",
-        "text": "The port is configured with port security"
+        "id": "a",
+        "text": "The port is not the designated port for its segment and offers a higher cost path to the root"
       },
       {
-        "id": "d",
-        "text": "The port speed does not match the uplink"
+        "id": "c",
+        "text": "The port is configured with port security"
       }
     ],
     "correct": [
@@ -1163,6 +1163,10 @@
     "stem": "Which feature allows a switch to detect and disable a port that is receiving its own transmissions, indicating a loop?",
     "options": [
       {
+        "id": "d",
+        "text": "Jumbo frame support"
+      },
+      {
         "id": "a",
         "text": "Loopback detection"
       },
@@ -1173,10 +1177,6 @@
       {
         "id": "c",
         "text": "Storm control"
-      },
-      {
-        "id": "d",
-        "text": "Jumbo frame support"
       }
     ],
     "correct": [
@@ -1203,20 +1203,20 @@
     "stem": "A wireless controller reports high channel utilization but low client count on one AP. Which cause should be investigated?",
     "options": [
       {
-        "id": "a",
-        "text": "Non-Wi-Fi interference or nearby co-channel APs consuming airtime"
-      },
-      {
-        "id": "b",
-        "text": "Insufficient DHCP addresses in the wireless scope"
-      },
-      {
         "id": "c",
         "text": "An incorrect default gateway on the AP"
       },
       {
         "id": "d",
         "text": "An expired certificate on the RADIUS server"
+      },
+      {
+        "id": "b",
+        "text": "Insufficient DHCP addresses in the wireless scope"
+      },
+      {
+        "id": "a",
+        "text": "Non-Wi-Fi interference or nearby co-channel APs consuming airtime"
       }
     ],
     "correct": [
@@ -1243,6 +1243,10 @@
     "stem": "Which factor most limits achievable throughput when many clients share a single access point on the same channel?",
     "options": [
       {
+        "id": "d",
+        "text": "The DHCP lease duration for wireless clients"
+      },
+      {
         "id": "a",
         "text": "Airtime contention, since only one device transmits at a time on the channel"
       },
@@ -1253,10 +1257,6 @@
       {
         "id": "c",
         "text": "The length of the SSID broadcast"
-      },
-      {
-        "id": "d",
-        "text": "The DHCP lease duration for wireless clients"
       }
     ],
     "correct": [
@@ -1283,8 +1283,8 @@
     "stem": "What does a wireless heat map produced during a site survey primarily depict?",
     "options": [
       {
-        "id": "a",
-        "text": "Signal strength coverage across the physical space"
+        "id": "d",
+        "text": "The VLAN assignment of each SSID"
       },
       {
         "id": "b",
@@ -1295,8 +1295,8 @@
         "text": "Client MAC addresses by location"
       },
       {
-        "id": "d",
-        "text": "The VLAN assignment of each SSID"
+        "id": "a",
+        "text": "Signal strength coverage across the physical space"
       }
     ],
     "correct": [
@@ -1323,20 +1323,20 @@
     "stem": "Which band offers more non-overlapping channels and generally less interference, at the cost of reduced range and wall penetration?",
     "options": [
       {
-        "id": "a",
-        "text": "5 GHz"
-      },
-      {
         "id": "b",
         "text": "2.4 GHz"
       },
       {
-        "id": "c",
-        "text": "900 MHz"
+        "id": "a",
+        "text": "5 GHz"
       },
       {
         "id": "d",
         "text": "60 GHz for standard client access"
+      },
+      {
+        "id": "c",
+        "text": "900 MHz"
       }
     ],
     "correct": [
@@ -1362,20 +1362,20 @@
     "stem": "During installation, a technician must document which patch panel port connects to which wall jack and switch port. What is the primary operational benefit?",
     "options": [
       {
-        "id": "a",
-        "text": "Faster fault isolation and safer changes during future troubleshooting"
-      },
-      {
-        "id": "b",
-        "text": "Improved throughput on those links"
-      },
-      {
         "id": "c",
         "text": "Automatic VLAN assignment for connected devices"
       },
       {
         "id": "d",
         "text": "Reduced power consumption in the rack"
+      },
+      {
+        "id": "a",
+        "text": "Faster fault isolation and safer changes during future troubleshooting"
+      },
+      {
+        "id": "b",
+        "text": "Improved throughput on those links"
       }
     ],
     "correct": [
@@ -1402,20 +1402,20 @@
     "stem": "Which consideration is most important when planning rack layout for a heavy UPS unit?",
     "options": [
       {
-        "id": "a",
-        "text": "Mounting heavy equipment low to maintain rack stability and meet floor loading limits"
-      },
-      {
         "id": "b",
         "text": "Placing it at the top for easier access to the display"
+      },
+      {
+        "id": "d",
+        "text": "Mounting it outside the rack entirely"
       },
       {
         "id": "c",
         "text": "Positioning it beside the network switches to shorten cables"
       },
       {
-        "id": "d",
-        "text": "Mounting it outside the rack entirely"
+        "id": "a",
+        "text": "Mounting heavy equipment low to maintain rack stability and meet floor loading limits"
       }
     ],
     "correct": [
@@ -1442,6 +1442,10 @@
     "stem": "A device requires 802.3bt Type 4 power. What must the switch support?",
     "options": [
       {
+        "id": "d",
+        "text": "Power delivered over fiber connections"
+      },
+      {
         "id": "a",
         "text": "Up to approximately 90 W per port using all four pairs"
       },
@@ -1452,10 +1456,6 @@
       {
         "id": "c",
         "text": "Up to 30 W per port using two pairs"
-      },
-      {
-        "id": "d",
-        "text": "Power delivered over fiber connections"
       }
     ],
     "correct": [
@@ -1521,20 +1521,20 @@
     "stem": "What is the purpose of configuring a management VLAN separate from user VLANs?",
     "options": [
       {
-        "id": "a",
-        "text": "To isolate device administration traffic from general user traffic"
+        "id": "d",
+        "text": "To eliminate the need for spanning tree"
       },
       {
         "id": "b",
         "text": "To increase the available bandwidth for user data"
       },
       {
-        "id": "c",
-        "text": "To allow switches to route between VLANs without a router"
+        "id": "a",
+        "text": "To isolate device administration traffic from general user traffic"
       },
       {
-        "id": "d",
-        "text": "To eliminate the need for spanning tree"
+        "id": "c",
+        "text": "To allow switches to route between VLANs without a router"
       }
     ],
     "correct": [
@@ -1561,6 +1561,10 @@
     "stem": "An emergency change is implemented during an outage without prior approval. What should happen afterward under a mature change process?",
     "options": [
       {
+        "id": "d",
+        "text": "The change is exempt from the configuration management database"
+      },
+      {
         "id": "a",
         "text": "The change is documented and submitted for retrospective review and approval"
       },
@@ -1571,10 +1575,6 @@
       {
         "id": "c",
         "text": "The change is automatically rolled back at the next maintenance window"
-      },
-      {
-        "id": "d",
-        "text": "The change is exempt from the configuration management database"
       }
     ],
     "correct": [
@@ -1600,20 +1600,20 @@
     "stem": "Which document would most directly define the penalties applied when a provider fails to meet agreed availability?",
     "options": [
       {
-        "id": "a",
-        "text": "Service level agreement"
-      },
-      {
         "id": "b",
         "text": "Memorandum of understanding"
       },
       {
-        "id": "c",
-        "text": "Acceptable use policy"
-      },
-      {
         "id": "d",
         "text": "Network topology diagram"
+      },
+      {
+        "id": "a",
+        "text": "Service level agreement"
+      },
+      {
+        "id": "c",
+        "text": "Acceptable use policy"
       }
     ],
     "correct": [
@@ -1643,12 +1643,12 @@
         "text": "Physical diagrams show cabling and location while logical diagrams show addressing and traffic flow"
       },
       {
-        "id": "b",
-        "text": "Logical diagrams are required only for wireless networks"
-      },
-      {
         "id": "c",
         "text": "Physical diagrams are only needed for cloud environments"
+      },
+      {
+        "id": "b",
+        "text": "Logical diagrams are required only for wireless networks"
       },
       {
         "id": "d",
@@ -1678,16 +1678,16 @@
     "stem": "A monitoring system alerts on an interface reaching 80 percent utilization, but the baseline shows this is normal for that time each day. What should be adjusted?",
     "options": [
       {
+        "id": "c",
+        "text": "Monitoring should be disabled on that interface"
+      },
+      {
         "id": "a",
         "text": "The alert threshold should be tuned to the established baseline to reduce false positives"
       },
       {
         "id": "b",
         "text": "The interface should be replaced with a faster port immediately"
-      },
-      {
-        "id": "c",
-        "text": "Monitoring should be disabled on that interface"
       },
       {
         "id": "d",
@@ -1758,12 +1758,12 @@
     "stem": "What does an interface counter for discards typically indicate, as opposed to errors?",
     "options": [
       {
-        "id": "a",
-        "text": "Frames were dropped due to resource constraints such as full queues, not corruption"
-      },
-      {
         "id": "b",
         "text": "Frames failed the CRC check"
+      },
+      {
+        "id": "a",
+        "text": "Frames were dropped due to resource constraints such as full queues, not corruption"
       },
       {
         "id": "c",
@@ -1798,16 +1798,16 @@
     "stem": "An organization replicates data synchronously to a second site and can fail over within minutes. Which combination of DR characteristics does this describe?",
     "options": [
       {
-        "id": "a",
-        "text": "A hot site with a near-zero RPO and a very low RTO"
+        "id": "c",
+        "text": "A warm site with a high RPO and low RTO"
       },
       {
         "id": "b",
         "text": "A cold site with a high RPO and high RTO"
       },
       {
-        "id": "c",
-        "text": "A warm site with a high RPO and low RTO"
+        "id": "a",
+        "text": "A hot site with a near-zero RPO and a very low RTO"
       },
       {
         "id": "d",
@@ -1876,16 +1876,16 @@
     "stem": "Why does a high MTBF alone not guarantee that availability targets will be met?",
     "options": [
       {
-        "id": "a",
-        "text": "Availability also depends on how long each failure takes to repair"
-      },
-      {
         "id": "b",
         "text": "MTBF is measured only in laboratory conditions"
       },
       {
         "id": "c",
         "text": "MTBF applies only to software components"
+      },
+      {
+        "id": "a",
+        "text": "Availability also depends on how long each failure takes to repair"
       },
       {
         "id": "d",
@@ -1916,16 +1916,16 @@
     "stem": "A DHCP server and clients are on the same VLAN, yet clients receive addresses from an unexpected range with a wrong gateway. What is the most likely cause?",
     "options": [
       {
+        "id": "c",
+        "text": "The clients have static addresses configured"
+      },
+      {
         "id": "a",
         "text": "A rogue DHCP server is responding faster than the legitimate one"
       },
       {
         "id": "b",
         "text": "The DHCP lease time is set too high"
-      },
-      {
-        "id": "c",
-        "text": "The clients have static addresses configured"
       },
       {
         "id": "d",
@@ -1956,6 +1956,10 @@
     "stem": "Which DNS zone configuration allows a secondary server to receive updates from the primary automatically?",
     "options": [
       {
+        "id": "d",
+        "text": "Round-robin record rotation"
+      },
+      {
         "id": "a",
         "text": "Zone transfer between primary and secondary"
       },
@@ -1966,10 +1970,6 @@
       {
         "id": "c",
         "text": "Conditional forwarding to an external resolver"
-      },
-      {
-        "id": "d",
-        "text": "Round-robin record rotation"
       }
     ],
     "correct": [
@@ -1999,16 +1999,16 @@
         "text": "It creates an alias pointing one name to another canonical name"
       },
       {
-        "id": "b",
-        "text": "It maps a name directly to an IPv6 address"
+        "id": "d",
+        "text": "It stores verification text for a domain"
       },
       {
         "id": "c",
         "text": "It designates the authoritative name servers for a zone"
       },
       {
-        "id": "d",
-        "text": "It stores verification text for a domain"
+        "id": "b",
+        "text": "It maps a name directly to an IPv6 address"
       }
     ],
     "correct": [
@@ -2034,20 +2034,20 @@
     "stem": "Which characteristic of a full tunnel VPN is most relevant to an organization prioritizing traffic inspection?",
     "options": [
       {
-        "id": "a",
-        "text": "All client traffic traverses the corporate network where policy can be applied"
-      },
-      {
-        "id": "b",
-        "text": "Only corporate-bound traffic uses the tunnel, reducing concentrator load"
+        "id": "d",
+        "text": "It requires no authentication for connected clients"
       },
       {
         "id": "c",
         "text": "Traffic bypasses the firewall for performance"
       },
       {
-        "id": "d",
-        "text": "It requires no authentication for connected clients"
+        "id": "a",
+        "text": "All client traffic traverses the corporate network where policy can be applied"
+      },
+      {
+        "id": "b",
+        "text": "Only corporate-bound traffic uses the tunnel, reducing concentrator load"
       }
     ],
     "correct": [
@@ -2074,8 +2074,8 @@
     "stem": "Which access method uses a defined interface for programmatic configuration and data retrieval from network devices?",
     "options": [
       {
-        "id": "a",
-        "text": "API access"
+        "id": "d",
+        "text": "Terminal emulation over serial"
       },
       {
         "id": "b",
@@ -2086,8 +2086,8 @@
         "text": "GUI access"
       },
       {
-        "id": "d",
-        "text": "Terminal emulation over serial"
+        "id": "a",
+        "text": "API access"
       }
     ],
     "correct": [
@@ -2114,20 +2114,20 @@
     "stem": "Which statement about flow data is accurate?",
     "options": [
       {
-        "id": "a",
-        "text": "It summarizes conversations by source, destination, port, and volume rather than capturing full packet contents"
-      },
-      {
         "id": "b",
         "text": "It captures complete packet payloads for forensic reconstruction"
+      },
+      {
+        "id": "d",
+        "text": "It operates only on wireless networks"
       },
       {
         "id": "c",
         "text": "It replaces the need for interface counters entirely"
       },
       {
-        "id": "d",
-        "text": "It operates only on wireless networks"
+        "id": "a",
+        "text": "It summarizes conversations by source, destination, port, and volume rather than capturing full packet contents"
       }
     ],
     "correct": [
@@ -2154,20 +2154,20 @@
     "stem": "What is the primary risk of allowing undocumented configuration changes on production devices?",
     "options": [
       {
-        "id": "a",
-        "text": "Recovery and troubleshooting become unreliable because the documented state no longer matches reality"
-      },
-      {
-        "id": "b",
-        "text": "Device performance degrades measurably over time"
+        "id": "d",
+        "text": "Warranty coverage is automatically voided"
       },
       {
         "id": "c",
         "text": "Routing protocols stop converging"
       },
       {
-        "id": "d",
-        "text": "Warranty coverage is automatically voided"
+        "id": "a",
+        "text": "Recovery and troubleshooting become unreliable because the documented state no longer matches reality"
+      },
+      {
+        "id": "b",
+        "text": "Device performance degrades measurably over time"
       }
     ],
     "correct": [
@@ -2194,6 +2194,10 @@
     "stem": "What does a DHCP option provide beyond an address and subnet mask?",
     "options": [
       {
+        "id": "d",
+        "text": "Automatic VLAN assignment for the client"
+      },
+      {
         "id": "a",
         "text": "Additional configuration such as default gateway, DNS servers, and NTP servers"
       },
@@ -2204,10 +2208,6 @@
       {
         "id": "c",
         "text": "Encryption of the DHCP exchange"
-      },
-      {
-        "id": "d",
-        "text": "Automatic VLAN assignment for the client"
       }
     ],
     "correct": [
@@ -2233,20 +2233,20 @@
     "stem": "Which statement accurately describes the relationship between a vulnerability, a threat, and an exploit?",
     "options": [
       {
-        "id": "a",
-        "text": "A vulnerability is a weakness, a threat is a potential danger, and an exploit is the method used to leverage the weakness"
-      },
-      {
-        "id": "b",
-        "text": "A threat is a weakness, a vulnerability is the attacker, and an exploit is the damage"
-      },
-      {
         "id": "c",
         "text": "A vulnerability is an attack in progress and a threat is the aftermath"
       },
       {
         "id": "d",
         "text": "All three terms describe the same event at different times"
+      },
+      {
+        "id": "a",
+        "text": "A vulnerability is a weakness, a threat is a potential danger, and an exploit is the method used to leverage the weakness"
+      },
+      {
+        "id": "b",
+        "text": "A threat is a weakness, a vulnerability is the attacker, and an exploit is the damage"
       }
     ],
     "correct": [
@@ -2272,20 +2272,20 @@
     "stem": "An organization stores cardholder data and must demonstrate compliance with industry requirements including segmentation and access control. Which standard applies?",
     "options": [
       {
-        "id": "a",
-        "text": "PCI DSS"
+        "id": "c",
+        "text": "HIPAA"
       },
       {
         "id": "b",
         "text": "GDPR"
       },
       {
-        "id": "c",
-        "text": "HIPAA"
-      },
-      {
         "id": "d",
         "text": "SOX"
+      },
+      {
+        "id": "a",
+        "text": "PCI DSS"
       }
     ],
     "correct": [
@@ -2312,20 +2312,20 @@
     "stem": "What does single sign-on provide?",
     "options": [
       {
-        "id": "a",
-        "text": "One authentication event grants access to multiple systems without reauthenticating"
+        "id": "c",
+        "text": "Passwords are eliminated entirely"
       },
       {
         "id": "b",
         "text": "Multiple credentials are required for each system"
       },
       {
-        "id": "c",
-        "text": "Passwords are eliminated entirely"
-      },
-      {
         "id": "d",
         "text": "Each application maintains its own separate credential store"
+      },
+      {
+        "id": "a",
+        "text": "One authentication event grants access to multiple systems without reauthenticating"
       }
     ],
     "correct": [
@@ -2352,8 +2352,8 @@
     "stem": "Why is geofencing used as a security control?",
     "options": [
       {
-        "id": "a",
-        "text": "It restricts access based on the physical location of the device or user"
+        "id": "d",
+        "text": "It replicates data to regional data centers"
       },
       {
         "id": "b",
@@ -2364,8 +2364,8 @@
         "text": "It assigns IP addresses according to location"
       },
       {
-        "id": "d",
-        "text": "It replicates data to regional data centers"
+        "id": "a",
+        "text": "It restricts access based on the physical location of the device or user"
       }
     ],
     "correct": [
@@ -2392,20 +2392,20 @@
     "stem": "An attacker positioned between a client and server relays and potentially alters traffic while both parties believe they are communicating directly. Which control most effectively prevents this?",
     "options": [
       {
-        "id": "a",
-        "text": "Mutual certificate validation with TLS"
-      },
-      {
         "id": "b",
         "text": "A longer DHCP lease time"
+      },
+      {
+        "id": "d",
+        "text": "Disabling ICMP on the gateway"
       },
       {
         "id": "c",
         "text": "Increasing the switch CAM table size"
       },
       {
-        "id": "d",
-        "text": "Disabling ICMP on the gateway"
+        "id": "a",
+        "text": "Mutual certificate validation with TLS"
       }
     ],
     "correct": [
@@ -2432,20 +2432,20 @@
     "stem": "Which attack specifically targets the availability of a service by consuming its resources, and which control mitigates it at the network edge?",
     "options": [
       {
-        "id": "a",
-        "text": "Volumetric DDoS, mitigated by upstream scrubbing and rate limiting"
+        "id": "c",
+        "text": "Phishing, mitigated by port security"
       },
       {
         "id": "b",
         "text": "ARP poisoning, mitigated by DNSSEC"
       },
       {
-        "id": "c",
-        "text": "Phishing, mitigated by port security"
-      },
-      {
         "id": "d",
         "text": "VLAN hopping, mitigated by longer passwords"
+      },
+      {
+        "id": "a",
+        "text": "Volumetric DDoS, mitigated by upstream scrubbing and rate limiting"
       }
     ],
     "correct": [
@@ -2472,20 +2472,20 @@
     "stem": "What distinguishes a rogue access point from an evil twin?",
     "options": [
       {
-        "id": "a",
-        "text": "A rogue AP is any unauthorized AP on the network, while an evil twin specifically impersonates a legitimate SSID"
-      },
-      {
-        "id": "b",
-        "text": "A rogue AP always impersonates a legitimate SSID"
-      },
-      {
         "id": "c",
         "text": "An evil twin is authorized but misconfigured"
       },
       {
         "id": "d",
         "text": "They are identical terms used interchangeably"
+      },
+      {
+        "id": "a",
+        "text": "A rogue AP is any unauthorized AP on the network, while an evil twin specifically impersonates a legitimate SSID"
+      },
+      {
+        "id": "b",
+        "text": "A rogue AP always impersonates a legitimate SSID"
       }
     ],
     "correct": [
@@ -2512,20 +2512,20 @@
     "stem": "Which malware characteristic distinguishes a worm from a virus?",
     "options": [
       {
-        "id": "a",
-        "text": "A worm propagates across networks without user interaction"
+        "id": "d",
+        "text": "A worm cannot carry a payload"
       },
       {
-        "id": "b",
-        "text": "A worm requires a host file to execute"
+        "id": "a",
+        "text": "A worm propagates across networks without user interaction"
       },
       {
         "id": "c",
         "text": "A worm only affects removable media"
       },
       {
-        "id": "d",
-        "text": "A worm cannot carry a payload"
+        "id": "b",
+        "text": "A worm requires a host file to execute"
       }
     ],
     "correct": [
@@ -2556,16 +2556,16 @@
         "text": "The ACL direction or interface placement relative to the traffic flow"
       },
       {
+        "id": "d",
+        "text": "The DHCP scope on the source subnet"
+      },
+      {
         "id": "b",
         "text": "The routing protocol timers"
       },
       {
         "id": "c",
         "text": "The switch spanning tree priority"
-      },
-      {
-        "id": "d",
-        "text": "The DHCP scope on the source subnet"
       }
     ],
     "correct": [
@@ -2592,20 +2592,20 @@
     "stem": "Which control best limits the damage an attacker can do after compromising a single workstation in a flat network?",
     "options": [
       {
-        "id": "a",
-        "text": "Segmenting the network so lateral movement is restricted between zones"
-      },
-      {
-        "id": "b",
-        "text": "Increasing the strength of the wireless passphrase"
-      },
-      {
         "id": "c",
         "text": "Adding a second internet circuit"
       },
       {
         "id": "d",
         "text": "Extending the DHCP lease duration"
+      },
+      {
+        "id": "b",
+        "text": "Increasing the strength of the wireless passphrase"
+      },
+      {
+        "id": "a",
+        "text": "Segmenting the network so lateral movement is restricted between zones"
       }
     ],
     "correct": [
@@ -2632,20 +2632,20 @@
     "stem": "What is the purpose of network access control that evaluates device posture before granting access?",
     "options": [
       {
-        "id": "a",
-        "text": "To ensure connecting devices meet security requirements such as patch level and antivirus status"
-      },
-      {
         "id": "b",
         "text": "To assign the fastest available link speed to compliant devices"
+      },
+      {
+        "id": "d",
+        "text": "To eliminate the need for authentication"
       },
       {
         "id": "c",
         "text": "To reduce the number of VLANs required"
       },
       {
-        "id": "d",
-        "text": "To eliminate the need for authentication"
+        "id": "a",
+        "text": "To ensure connecting devices meet security requirements such as patch level and antivirus status"
       }
     ],
     "correct": [
@@ -2672,20 +2672,20 @@
     "stem": "Which key management practice most directly limits the impact of a compromised encryption key?",
     "options": [
       {
-        "id": "a",
-        "text": "Regular key rotation with defined lifetimes"
-      },
-      {
         "id": "b",
         "text": "Storing all keys on a single administrative workstation"
+      },
+      {
+        "id": "d",
+        "text": "Extending key lifetimes to reduce operational overhead"
       },
       {
         "id": "c",
         "text": "Using the same key across all systems for consistency"
       },
       {
-        "id": "d",
-        "text": "Extending key lifetimes to reduce operational overhead"
+        "id": "a",
+        "text": "Regular key rotation with defined lifetimes"
       }
     ],
     "correct": [
@@ -2712,20 +2712,20 @@
     "stem": "Which pairing correctly matches an authentication protocol with its typical use?",
     "options": [
       {
-        "id": "a",
-        "text": "RADIUS for network access authentication, LDAP for directory queries"
+        "id": "d",
+        "text": "LDAP for encrypting VPN tunnels, RADIUS for time synchronization"
       },
       {
-        "id": "b",
-        "text": "RADIUS for directory queries, LDAP for device administration"
+        "id": "a",
+        "text": "RADIUS for network access authentication, LDAP for directory queries"
       },
       {
         "id": "c",
         "text": "TACACS+ for wireless client encryption, RADIUS for file sharing"
       },
       {
-        "id": "d",
-        "text": "LDAP for encrypting VPN tunnels, RADIUS for time synchronization"
+        "id": "b",
+        "text": "RADIUS for directory queries, LDAP for device administration"
       }
     ],
     "correct": [
@@ -2752,20 +2752,20 @@
     "stem": "After implementing a fix, a technician confirms the reported symptom is gone but does not check related services. Which methodology step was incomplete?",
     "options": [
       {
-        "id": "a",
-        "text": "Verify full system functionality and implement preventive measures"
-      },
-      {
         "id": "b",
         "text": "Establish a theory of probable cause"
+      },
+      {
+        "id": "d",
+        "text": "Escalate to a higher tier"
       },
       {
         "id": "c",
         "text": "Identify the problem"
       },
       {
-        "id": "d",
-        "text": "Escalate to a higher tier"
+        "id": "a",
+        "text": "Verify full system functionality and implement preventive measures"
       }
     ],
     "correct": [
@@ -2791,8 +2791,8 @@
     "stem": "A widespread outage affects multiple sites simultaneously. Which approach best reflects a top-down troubleshooting strategy?",
     "options": [
       {
-        "id": "a",
-        "text": "Begin at the application layer and work down through the stack"
+        "id": "d",
+        "text": "Begin by resetting all switch configurations"
       },
       {
         "id": "b",
@@ -2803,8 +2803,8 @@
         "text": "Begin by reimaging affected workstations"
       },
       {
-        "id": "d",
-        "text": "Begin by resetting all switch configurations"
+        "id": "a",
+        "text": "Begin at the application layer and work down through the stack"
       }
     ],
     "correct": [
@@ -2830,20 +2830,20 @@
     "stem": "A technician measures 3.5 dB of loss on a 300 meter multimode run with two connector pairs, and the link budget allows 4 dB. The link is marginal and errors appear under load. What is the appropriate next step?",
     "options": [
       {
-        "id": "a",
-        "text": "Clean and inspect the connector end faces to reduce insertion loss"
-      },
-      {
         "id": "b",
         "text": "Increase the switch port speed to compensate"
       },
       {
-        "id": "c",
-        "text": "Enable jumbo frames on both ends"
+        "id": "a",
+        "text": "Clean and inspect the connector end faces to reduce insertion loss"
       },
       {
         "id": "d",
         "text": "Shorten the DHCP lease on connected devices"
+      },
+      {
+        "id": "c",
+        "text": "Enable jumbo frames on both ends"
       }
     ],
     "correct": [
@@ -2878,12 +2878,12 @@
         "text": "The interface is administratively disabled"
       },
       {
-        "id": "c",
-        "text": "The VLAN database is out of sync"
-      },
-      {
         "id": "d",
         "text": "The routing table has too many entries"
+      },
+      {
+        "id": "c",
+        "text": "The VLAN database is out of sync"
       }
     ],
     "correct": [
@@ -2910,20 +2910,20 @@
     "stem": "A newly terminated cable passes a continuity test but fails a certification test at 1 Gbps. What does this suggest?",
     "options": [
       {
-        "id": "a",
-        "text": "The termination is electrically connected but does not meet performance specifications"
-      },
-      {
         "id": "b",
         "text": "The cable has an open circuit on one pair"
       },
       {
-        "id": "c",
-        "text": "The switch port is disabled"
-      },
-      {
         "id": "d",
         "text": "The wrong VLAN is configured"
+      },
+      {
+        "id": "a",
+        "text": "The termination is electrically connected but does not meet performance specifications"
+      },
+      {
+        "id": "c",
+        "text": "The switch port is disabled"
       }
     ],
     "correct": [
@@ -2954,12 +2954,12 @@
         "text": "A faulty or improperly seated cable assembly"
       },
       {
-        "id": "b",
-        "text": "An incorrect subnet mask on the management interface"
-      },
-      {
         "id": "c",
         "text": "A mismatch in spanning tree priority"
+      },
+      {
+        "id": "b",
+        "text": "An incorrect subnet mask on the management interface"
       },
       {
         "id": "d",
@@ -2994,16 +2994,16 @@
         "text": "An ACL or route on the router is blocking or omitting that subnet's outbound path"
       },
       {
-        "id": "b",
-        "text": "The internal DNS server has failed"
+        "id": "d",
+        "text": "The switch is missing a spanning tree root"
       },
       {
         "id": "c",
         "text": "The internet circuit is down"
       },
       {
-        "id": "d",
-        "text": "The switch is missing a spanning tree root"
+        "id": "b",
+        "text": "The internal DNS server has failed"
       }
     ],
     "correct": [
@@ -3030,20 +3030,20 @@
     "stem": "A technician suspects asymmetric routing is causing a stateful firewall to drop return traffic. Which observation would support this theory?",
     "options": [
       {
-        "id": "a",
-        "text": "Traffic leaves via one path and returns via another that does not pass the firewall's state table"
-      },
-      {
-        "id": "b",
-        "text": "Interface counters show CRC errors increasing"
+        "id": "d",
+        "text": "The wireless controller reports high channel utilization"
       },
       {
         "id": "c",
         "text": "The DHCP scope is nearly exhausted"
       },
       {
-        "id": "d",
-        "text": "The wireless controller reports high channel utilization"
+        "id": "a",
+        "text": "Traffic leaves via one path and returns via another that does not pass the firewall's state table"
+      },
+      {
+        "id": "b",
+        "text": "Interface counters show CRC errors increasing"
       }
     ],
     "correct": [
@@ -3070,20 +3070,20 @@
     "stem": "A device obtains an address and gateway correctly but cannot reach any host by name or IP outside its subnet. Pinging the gateway succeeds. What should be checked next?",
     "options": [
       {
-        "id": "a",
-        "text": "Routing beyond the gateway and any filtering applied to that host"
-      },
-      {
         "id": "b",
         "text": "The physical cable to the workstation"
+      },
+      {
+        "id": "d",
+        "text": "The wireless SSID configuration"
       },
       {
         "id": "c",
         "text": "The DHCP lease duration"
       },
       {
-        "id": "d",
-        "text": "The wireless SSID configuration"
+        "id": "a",
+        "text": "Routing beyond the gateway and any filtering applied to that host"
       }
     ],
     "correct": [
@@ -3110,20 +3110,20 @@
     "stem": "Users report that an internal application intermittently fails only for clients that recently connected. The application server was recently given a second IP address. What should be investigated?",
     "options": [
       {
-        "id": "a",
-        "text": "Whether DNS round robin is returning an address the clients cannot reach"
-      },
-      {
-        "id": "b",
-        "text": "Whether the switch requires a firmware update"
-      },
-      {
         "id": "c",
         "text": "Whether the UPS battery is degraded"
       },
       {
+        "id": "a",
+        "text": "Whether DNS round robin is returning an address the clients cannot reach"
+      },
+      {
         "id": "d",
         "text": "Whether the patch panel labels are correct"
+      },
+      {
+        "id": "b",
+        "text": "Whether the switch requires a firmware update"
       }
     ],
     "correct": [
@@ -3150,20 +3150,20 @@
     "stem": "After a firewall rule change, an application that uses a dynamic range of high ports stops working while web browsing continues. What is the most likely cause?",
     "options": [
       {
-        "id": "a",
-        "text": "The rule change did not account for the application's dynamic port range"
-      },
-      {
-        "id": "b",
-        "text": "The DNS server is returning stale records"
-      },
-      {
         "id": "c",
         "text": "The default gateway changed"
       },
       {
         "id": "d",
         "text": "The switch port entered err-disable"
+      },
+      {
+        "id": "a",
+        "text": "The rule change did not account for the application's dynamic port range"
+      },
+      {
+        "id": "b",
+        "text": "The DNS server is returning stale records"
       }
     ],
     "correct": [
@@ -3198,12 +3198,12 @@
         "text": "The number of VLANs configured on the path"
       },
       {
-        "id": "c",
-        "text": "The DHCP lease duration on both ends"
-      },
-      {
         "id": "d",
         "text": "The spanning tree root bridge location"
+      },
+      {
+        "id": "c",
+        "text": "The DHCP lease duration on both ends"
       }
     ],
     "correct": [
@@ -3230,20 +3230,20 @@
     "stem": "A network experiences periodic slowdowns that correlate exactly with a broadcast-heavy legacy application. Which change would most directly reduce the impact?",
     "options": [
       {
-        "id": "a",
-        "text": "Segment the legacy application into its own VLAN to contain broadcast traffic"
-      },
-      {
         "id": "b",
         "text": "Increase the DHCP lease duration"
       },
       {
-        "id": "c",
-        "text": "Disable spanning tree on access ports"
+        "id": "a",
+        "text": "Segment the legacy application into its own VLAN to contain broadcast traffic"
       },
       {
         "id": "d",
         "text": "Extend the cable runs to reduce contention"
+      },
+      {
+        "id": "c",
+        "text": "Disable spanning tree on access ports"
       }
     ],
     "correct": [
@@ -3270,20 +3270,20 @@
     "stem": "Which symptom most strongly suggests a bottleneck at a specific device rather than general congestion?",
     "options": [
       {
-        "id": "a",
-        "text": "Latency increases sharply at one hop in a traceroute while remaining low before it"
-      },
-      {
-        "id": "b",
-        "text": "All hops show uniformly elevated latency"
+        "id": "d",
+        "text": "The client cannot obtain an IP address"
       },
       {
         "id": "c",
         "text": "Name resolution fails intermittently"
       },
       {
-        "id": "d",
-        "text": "The client cannot obtain an IP address"
+        "id": "a",
+        "text": "Latency increases sharply at one hop in a traceroute while remaining low before it"
+      },
+      {
+        "id": "b",
+        "text": "All hops show uniformly elevated latency"
       }
     ],
     "correct": [
@@ -3310,12 +3310,12 @@
     "stem": "Wireless clients at the edge of coverage report very low throughput although they remain connected. What explains this?",
     "options": [
       {
-        "id": "a",
-        "text": "Clients negotiate lower data rates as signal quality degrades, consuming more airtime per frame"
-      },
-      {
         "id": "b",
         "text": "The access point has exhausted its DHCP scope"
+      },
+      {
+        "id": "a",
+        "text": "Clients negotiate lower data rates as signal quality degrades, consuming more airtime per frame"
       },
       {
         "id": "c",
@@ -3354,16 +3354,16 @@
         "text": "A port scanner that interprets ICMP port unreachable responses and service replies"
       },
       {
-        "id": "b",
-        "text": "ping to the destination address"
-      },
-      {
         "id": "c",
         "text": "arp to check the MAC mapping"
       },
       {
         "id": "d",
         "text": "ipconfig on the local host"
+      },
+      {
+        "id": "b",
+        "text": "ping to the destination address"
       }
     ],
     "correct": [
@@ -3390,20 +3390,20 @@
     "stem": "Which command on a Linux host displays the current neighbor cache mapping IP addresses to MAC addresses?",
     "options": [
       {
-        "id": "a",
-        "text": "ip neigh"
+        "id": "d",
+        "text": "ip addr"
       },
       {
-        "id": "b",
-        "text": "ip route"
+        "id": "a",
+        "text": "ip neigh"
       },
       {
         "id": "c",
         "text": "ip link"
       },
       {
-        "id": "d",
-        "text": "ip addr"
+        "id": "b",
+        "text": "ip route"
       }
     ],
     "correct": [
@@ -3429,6 +3429,10 @@
     "stem": "During packet analysis, a technician observes TCP resets immediately after each SYN-ACK. What does this most likely indicate?",
     "options": [
       {
+        "id": "d",
+        "text": "The DHCP server issued a duplicate address"
+      },
+      {
         "id": "a",
         "text": "A device is actively refusing or terminating the connection"
       },
@@ -3439,10 +3443,6 @@
       {
         "id": "c",
         "text": "The DNS record points to the wrong address family"
-      },
-      {
-        "id": "d",
-        "text": "The DHCP server issued a duplicate address"
       }
     ],
     "correct": [
@@ -3469,20 +3469,20 @@
     "stem": "Which utility verifies the DNS record type returned for a query and the server that answered it?",
     "options": [
       {
-        "id": "a",
-        "text": "dig"
-      },
-      {
         "id": "b",
         "text": "ping"
       },
       {
-        "id": "c",
-        "text": "netstat"
+        "id": "a",
+        "text": "dig"
       },
       {
         "id": "d",
         "text": "iperf"
+      },
+      {
+        "id": "c",
+        "text": "netstat"
       }
     ],
     "correct": [
@@ -3509,20 +3509,20 @@
     "stem": "A technician must determine whether packet loss occurs on the LAN or beyond the WAN edge. Which approach isolates this most efficiently?",
     "options": [
       {
-        "id": "a",
-        "text": "Run sustained tests to the local gateway, then to the WAN edge, then to an external host"
-      },
-      {
-        "id": "b",
-        "text": "Replace the LAN switch and observe"
-      },
-      {
         "id": "c",
         "text": "Reboot all client workstations"
       },
       {
         "id": "d",
         "text": "Change the DNS forwarder and retest"
+      },
+      {
+        "id": "a",
+        "text": "Run sustained tests to the local gateway, then to the WAN edge, then to an external host"
+      },
+      {
+        "id": "b",
+        "text": "Replace the LAN switch and observe"
       }
     ],
     "correct": [
@@ -3549,20 +3549,20 @@
     "stem": "Which protocol allows a device to report interface errors and status changes to a monitoring system without being polled?",
     "options": [
       {
-        "id": "a",
-        "text": "SNMP traps"
-      },
-      {
         "id": "b",
         "text": "ICMP echo"
+      },
+      {
+        "id": "d",
+        "text": "DHCP"
       },
       {
         "id": "c",
         "text": "ARP"
       },
       {
-        "id": "d",
-        "text": "DHCP"
+        "id": "a",
+        "text": "SNMP traps"
       }
     ],
     "correct": [

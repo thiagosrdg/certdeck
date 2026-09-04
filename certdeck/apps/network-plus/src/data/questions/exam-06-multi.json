@@ -1,0 +1,434 @@
+[
+  {
+    "id": "n10-009-10-106",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "multiple",
+    "difficulty": "medium",
+    "stem": "Which two protocols transmit credentials in clear text and should be replaced on a modern network? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "Telnet" },
+      { "id": "b", "text": "SSH" },
+      { "id": "c", "text": "FTP" },
+      { "id": "d", "text": "SFTP" },
+      { "id": "e", "text": "HTTPS" }
+    ],
+    "correct": ["a", "c"],
+    "explanation": "Telnet and FTP both carry authentication in plain text, so anyone able to observe the traffic reads the credentials. SSH replaces Telnet and SFTP or FTPS replaces FTP.",
+    "distractorExplanations": {
+      "b": "SSH encrypts the entire session, which is why it replaced Telnet.",
+      "d": "SFTP runs inside an SSH session and is encrypted.",
+      "e": "HTTPS protects the session with TLS."
+    },
+    "tags": ["protocols", "security", "ports"]
+  },
+  {
+    "id": "n10-009-10-107",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.7",
+    "type": "multiple",
+    "difficulty": "hard",
+    "stem": "A host is configured with 192.168.20.70/26. Which two addresses are valid hosts on the same subnet? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "192.168.20.65" },
+      { "id": "b", "text": "192.168.20.126" },
+      { "id": "c", "text": "192.168.20.64" },
+      { "id": "d", "text": "192.168.20.127" },
+      { "id": "e", "text": "192.168.20.130" }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "A /26 has blocks of 64. The block containing .70 runs from .64 to .127, so its usable range is .65 through .126.",
+    "distractorExplanations": {
+      "c": "192.168.20.64 is the network address of the block and cannot be assigned to a host.",
+      "d": "192.168.20.127 is the broadcast address of the block.",
+      "e": "192.168.20.130 falls in the next block, which starts at .128."
+    },
+    "tags": ["subnetting", "addressing"]
+  },
+  {
+    "id": "n10-009-10-108",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.3",
+    "type": "multiple",
+    "difficulty": "medium",
+    "stem": "Under the shared responsibility model for IaaS, which two tasks belong to the customer? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "Patching the guest operating system" },
+      { "id": "b", "text": "Configuring security group rules" },
+      { "id": "c", "text": "Securing the hypervisor" },
+      { "id": "d", "text": "Replacing failed physical disks" },
+      { "id": "e", "text": "Maintaining the data center's physical access controls" }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "In IaaS the provider secures everything up to and including the hypervisor; the customer owns the guest OS and the network policy applied to its instances.",
+    "distractorExplanations": {
+      "c": "The hypervisor is part of the infrastructure the provider secures.",
+      "d": "Physical hardware replacement is a provider responsibility.",
+      "e": "Facility security belongs to the provider."
+    },
+    "tags": ["cloud", "security"]
+  },
+  {
+    "id": "n10-009-10-109",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.5",
+    "type": "multiple",
+    "difficulty": "hard",
+    "stem": "Which two conditions require single-mode fiber rather than multimode? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "A 20 km run between buildings" },
+      { "id": "b", "text": "A 10 Gbps link that must reach 40 km" },
+      { "id": "c", "text": "A 50 m link between two switches in the same rack row" },
+      { "id": "d", "text": "A 100 m horizontal run to a workstation" },
+      { "id": "e", "text": "A 3 m connection inside a single rack" }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "Single-mode uses a narrow core and a laser source, which avoids the modal dispersion that limits multimode to a few hundred metres. Distance, not speed alone, is what forces the choice.",
+    "distractorExplanations": {
+      "c": "50 m is comfortably inside multimode's range.",
+      "d": "A 100 m horizontal run is normally copper, and multimode would also serve.",
+      "e": "A 3 m intra-rack link is typically direct attach copper."
+    },
+    "tags": ["fiber", "cabling"]
+  },
+  {
+    "id": "n10-009-20-091",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "multiple",
+    "difficulty": "hard",
+    "stem": "Which two conditions must match for a port channel to form between two switches? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "Speed on every member interface" },
+      { "id": "b", "text": "Duplex on every member interface" },
+      { "id": "c", "text": "Interface descriptions" },
+      { "id": "d", "text": "Switch hostnames" },
+      { "id": "e", "text": "Serial numbers of the two switches" }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "Aggregation requires consistent Layer 1 and Layer 2 parameters across members; a mismatched interface is excluded from the bundle or prevents it forming.",
+    "distractorExplanations": {
+      "c": "Descriptions are cosmetic and never affect negotiation.",
+      "d": "Hostnames play no part in link aggregation.",
+      "e": "Hardware serial numbers are irrelevant to the protocol."
+    },
+    "tags": ["lacp", "switching"]
+  },
+  {
+    "id": "n10-009-20-092",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.3",
+    "type": "multiple",
+    "difficulty": "medium",
+    "stem": "Which two changes reduce co-channel interference in a dense wireless deployment? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "Reduce transmit power so cells are smaller" },
+      { "id": "b", "text": "Use a repeating 1, 6, 11 channel plan in 2.4 GHz" },
+      { "id": "c", "text": "Increase transmit power on every access point" },
+      { "id": "d", "text": "Widen every channel to 80 MHz in 2.4 GHz" },
+      { "id": "e", "text": "Disable the 5 GHz radio to consolidate clients" }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "Smaller cells and a non-overlapping channel plan both reduce the number of radios contending for the same airtime, which is what co-channel interference actually is.",
+    "distractorExplanations": {
+      "c": "Higher power enlarges cells and makes contention worse.",
+      "d": "2.4 GHz cannot fit 80 MHz channels without severe overlap.",
+      "e": "Disabling 5 GHz pushes every client into the more congested band."
+    },
+    "tags": ["wireless", "interference"]
+  },
+  {
+    "id": "n10-009-20-093",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "multiple",
+    "difficulty": "hard",
+    "stem": "Which two statements about administrative distance are correct? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "It breaks ties between routes to the same prefix learned from different sources" },
+      { "id": "b", "text": "A lower value is considered more trustworthy" },
+      { "id": "c", "text": "It is compared before longest prefix match" },
+      { "id": "d", "text": "It is exchanged between routers in routing updates" },
+      { "id": "e", "text": "It replaces the protocol metric when comparing two OSPF routes" }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "Administrative distance ranks the trustworthiness of route sources and is consulted only when the same prefix is learned more than once. Lower wins.",
+    "distractorExplanations": {
+      "c": "Longest prefix match is applied first; administrative distance never overrides a more specific route.",
+      "d": "Administrative distance is locally significant and is not advertised.",
+      "e": "Two routes from the same protocol are compared by that protocol's metric."
+    },
+    "tags": ["routing"]
+  },
+  {
+    "id": "n10-009-20-094",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.4",
+    "type": "multiple",
+    "difficulty": "medium",
+    "stem": "Which two practices improve airflow in a equipment rack? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "Installing blanking panels in unused rack units" },
+      { "id": "b", "text": "Arranging racks in hot aisle and cold aisle rows" },
+      { "id": "c", "text": "Mounting the heaviest equipment at the top" },
+      { "id": "d", "text": "Facing every rack in the same direction" },
+      { "id": "e", "text": "Coiling excess patch cable across the intake vents" }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "Both keep cold intake air and hot exhaust separated: blanking panels stop air bypassing equipment through empty units, and the aisle arrangement stops one rack ingesting another's exhaust.",
+    "distractorExplanations": {
+      "c": "Heavy equipment belongs low for stability; this is a safety error, not an airflow one.",
+      "d": "Uniform facing makes each rack breathe the exhaust of the one in front.",
+      "e": "Blocking intake vents restricts airflow."
+    },
+    "tags": ["data-center", "environmental"]
+  },
+  {
+    "id": "n10-009-30-086",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.3",
+    "type": "multiple",
+    "difficulty": "hard",
+    "stem": "An organization sets a four-hour RTO and a 15-minute RPO. Which two measures support meeting them? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "Replicating data to the recovery site at least every 15 minutes" },
+      { "id": "b", "text": "Maintaining a warm or hot site that can take over within four hours" },
+      { "id": "c", "text": "Increasing the MTBF rating of the production hardware" },
+      { "id": "d", "text": "Extending backup retention to seven years" },
+      { "id": "e", "text": "Scheduling a full backup once per week" }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "RPO drives replication frequency and RTO drives how ready the recovery site must be. The two metrics are met by different measures, and both are needed.",
+    "distractorExplanations": {
+      "c": "A higher MTBF makes failure less frequent but does nothing for recovery speed once it happens.",
+      "d": "Retention governs how far back you can restore, not how much data is lost or how fast service returns.",
+      "e": "A weekly full backup alone implies up to a week of data loss, far outside a 15-minute RPO."
+    },
+    "tags": ["disaster-recovery"]
+  },
+  {
+    "id": "n10-009-30-087",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.2",
+    "type": "multiple",
+    "difficulty": "medium",
+    "stem": "Which two data sources are needed to attribute bandwidth use to a specific host and destination? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "Flow records exported from the router" },
+      { "id": "b", "text": "A collector that stores and reports on those records" },
+      { "id": "c", "text": "SNMP interface counters alone" },
+      { "id": "d", "text": "The switch's ARP cache" },
+      { "id": "e", "text": "Syslog messages at severity 6" }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "Flow export produces the per-conversation metadata, but it is only useful once a collector retains and aggregates it. Either half alone answers nothing.",
+    "distractorExplanations": {
+      "c": "Interface counters give totals per port and cannot break traffic down by conversation.",
+      "d": "The ARP cache maps addresses on the local segment and carries no volume data.",
+      "e": "Syslog records discrete events, not traffic volume."
+    },
+    "tags": ["netflow", "monitoring"]
+  },
+  {
+    "id": "n10-009-30-088",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.4",
+    "type": "multiple",
+    "difficulty": "hard",
+    "stem": "Clients on a remote VLAN receive no DHCP addresses while clients on the server's own VLAN work. Which two facts explain why, and what fixes it? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "DHCP DISCOVER is a broadcast and routers do not forward broadcasts" },
+      { "id": "b", "text": "An IP helper address on the remote VLAN's gateway relays the request as unicast" },
+      { "id": "c", "text": "The scope is too small for the remote VLAN" },
+      { "id": "d", "text": "The lease duration on the server is too long" },
+      { "id": "e", "text": "The remote clients need static reservations to receive any address" }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "The cause is that the discovery broadcast never leaves the segment; the fix is a relay that converts it to a unicast aimed at the server.",
+    "distractorExplanations": {
+      "c": "Scope size is irrelevant when the request never reaches the server.",
+      "d": "Lease duration affects renewal, not initial reachability.",
+      "e": "Reservations still require the request to arrive at the server."
+    },
+    "tags": ["dhcp", "relay"]
+  },
+  {
+    "id": "n10-009-40-066",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.3",
+    "type": "multiple",
+    "difficulty": "hard",
+    "stem": "Which two switch features work together to drop forged ARP messages? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "DHCP snooping" },
+      { "id": "b", "text": "Dynamic ARP inspection" },
+      { "id": "c", "text": "BPDU guard" },
+      { "id": "d", "text": "Storm control" },
+      { "id": "e", "text": "PortFast" }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "DHCP snooping builds the table of legitimate IP-to-MAC bindings, and dynamic ARP inspection validates ARP traffic against that table. Neither is sufficient alone.",
+    "distractorExplanations": {
+      "c": "BPDU guard protects spanning tree from rogue switches.",
+      "d": "Storm control limits excessive broadcast or multicast rates.",
+      "e": "PortFast speeds up port transition for end devices."
+    },
+    "tags": ["hardening", "arp"]
+  },
+  {
+    "id": "n10-009-40-067",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.1",
+    "type": "multiple",
+    "difficulty": "medium",
+    "stem": "Which two examples combine to form genuine multifactor authentication? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "A password" },
+      { "id": "b", "text": "A hardware token generating a rotating code" },
+      { "id": "c", "text": "A password and a PIN" },
+      { "id": "d", "text": "Two security questions" },
+      { "id": "e", "text": "A username" }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "Multifactor requires factors from different categories. A password is something you know and a token is something you have; together they qualify.",
+    "distractorExplanations": {
+      "c": "A password and a PIN are both something you know, so this is single-factor twice over.",
+      "d": "Security questions are also knowledge factors.",
+      "e": "A username is an identifier, not an authentication factor."
+    },
+    "tags": ["mfa", "authentication"]
+  },
+  {
+    "id": "n10-009-40-068",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.2",
+    "type": "multiple",
+    "difficulty": "hard",
+    "stem": "An attacker floods a switch with frames from thousands of random source MAC addresses. Which two outcomes follow? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "The CAM table fills and cannot record legitimate entries" },
+      { "id": "b", "text": "The switch floods unknown unicast frames out all ports" },
+      { "id": "c", "text": "The DHCP scope is exhausted" },
+      { "id": "d", "text": "The routing table is overwritten" },
+      { "id": "e", "text": "Spanning tree elects a new root bridge" }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "MAC flooding exhausts the CAM table so the switch fails open, flooding frames it can no longer map to a port. That flooding is what lets the attacker capture traffic.",
+    "distractorExplanations": {
+      "c": "Exhausting addresses is DHCP starvation, a different attack.",
+      "d": "The routing table is a Layer 3 structure unaffected by CAM exhaustion.",
+      "e": "A root bridge election requires crafted BPDUs."
+    },
+    "tags": ["attacks", "switching"]
+  },
+  {
+    "id": "n10-009-50-106",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.2",
+    "type": "multiple",
+    "difficulty": "hard",
+    "stem": "An interface on a full-duplex link shows rising CRC errors. Which two causes are consistent with that symptom? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "A damaged or poorly terminated cable" },
+      { "id": "b", "text": "Electromagnetic interference along the run" },
+      { "id": "c", "text": "An undersized DHCP scope" },
+      { "id": "d", "text": "An incorrect VLAN assignment on the port" },
+      { "id": "e", "text": "A default gateway misconfigured on the host" }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "A CRC error means the frame arrived corrupted, which is a physical layer symptom. On a full-duplex link, collisions are ruled out, leaving the medium itself.",
+    "distractorExplanations": {
+      "c": "Address exhaustion prevents hosts obtaining addresses; it does not corrupt frames.",
+      "d": "A VLAN error isolates traffic rather than damaging it.",
+      "e": "A gateway error breaks reachability without affecting frame integrity."
+    },
+    "tags": ["cabling", "monitoring"]
+  },
+  {
+    "id": "n10-009-50-107",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.5",
+    "type": "multiple",
+    "difficulty": "medium",
+    "stem": "A user can reach a server by IP but not by name. Which two commands help isolate the fault? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "nslookup" },
+      { "id": "b", "text": "dig" },
+      { "id": "c", "text": "iperf" },
+      { "id": "d", "text": "arp -a" },
+      { "id": "e", "text": "ipconfig /release" }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "Reaching the host by address proves connectivity, so the fault is in resolution. Both tools query DNS directly and report which server answered and with what record.",
+    "distractorExplanations": {
+      "c": "iperf measures throughput between endpoints.",
+      "d": "arp shows local address mappings, which are already working.",
+      "e": "Releasing the address discards a working configuration and tests nothing."
+    },
+    "tags": ["dns", "cli-tools"]
+  },
+  {
+    "id": "n10-009-50-108",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.4",
+    "type": "multiple",
+    "difficulty": "hard",
+    "stem": "A file transfer over a WAN link achieves far less than the circuit's capacity, with low utilization and no errors. Which two factors should be examined? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "Round trip time on the path" },
+      { "id": "b", "text": "The TCP window size in use" },
+      { "id": "c", "text": "The number of VLANs configured along the path" },
+      { "id": "d", "text": "The DHCP lease duration on both hosts" },
+      { "id": "e", "text": "The spanning tree root bridge location" }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "A single TCP session is bounded by window size divided by round trip time. On a long path, an undersized window leaves most of the circuit idle no matter how much capacity exists.",
+    "distractorExplanations": {
+      "c": "VLAN count does not constrain per-session throughput.",
+      "d": "Lease duration is an addressing parameter.",
+      "e": "Root bridge placement affects Layer 2 topology, not TCP windowing."
+    },
+    "tags": ["performance", "tcp"]
+  },
+  {
+    "id": "n10-009-50-109",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.1",
+    "type": "multiple",
+    "difficulty": "medium",
+    "stem": "A technician has confirmed a theory of probable cause. Which two steps come next, in order, before the work is complete? (Choose two.)",
+    "options": [
+      { "id": "a", "text": "Establish a plan of action and implement the solution" },
+      { "id": "b", "text": "Verify full system functionality and document the outcome" },
+      { "id": "c", "text": "Establish a new theory of probable cause" },
+      { "id": "d", "text": "Escalate to a higher support tier" },
+      { "id": "e", "text": "Question the obvious and gather symptoms" }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "Once the cause is confirmed the methodology moves to planning and implementing the fix, then to verifying the whole system and documenting what was found and done.",
+    "distractorExplanations": {
+      "c": "A new theory is needed only when the first is disproved.",
+      "d": "Escalation applies when the cause cannot be determined.",
+      "e": "Gathering symptoms belongs to the identification step, which is already finished."
+    },
+    "tags": ["methodology"]
+  }
+]

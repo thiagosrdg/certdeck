@@ -9,20 +9,20 @@
     "stem": "Which well-known port number does POP3S use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "995"
+        "id": "d",
+        "text": "5060"
       },
       {
         "id": "b",
         "text": "3306"
       },
       {
-        "id": "c",
-        "text": "3389"
+        "id": "a",
+        "text": "995"
       },
       {
-        "id": "d",
-        "text": "5060"
+        "id": "c",
+        "text": "3389"
       }
     ],
     "correct": [
@@ -49,20 +49,20 @@
     "stem": "Which well-known port number does MySQL use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "3306"
-      },
-      {
-        "id": "b",
-        "text": "21"
-      },
-      {
         "id": "c",
         "text": "22"
       },
       {
+        "id": "a",
+        "text": "3306"
+      },
+      {
         "id": "d",
         "text": "23"
+      },
+      {
+        "id": "b",
+        "text": "21"
       }
     ],
     "correct": [
@@ -89,20 +89,20 @@
     "stem": "Which well-known port number does RDP use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "3389"
-      },
-      {
-        "id": "b",
-        "text": "20"
-      },
-      {
         "id": "c",
         "text": "21"
       },
       {
         "id": "d",
         "text": "22"
+      },
+      {
+        "id": "b",
+        "text": "20"
+      },
+      {
+        "id": "a",
+        "text": "3389"
       }
     ],
     "correct": [
@@ -129,8 +129,8 @@
     "stem": "Which well-known port number does SIP use by default?",
     "options": [
       {
-        "id": "a",
-        "text": "5060"
+        "id": "d",
+        "text": "993"
       },
       {
         "id": "b",
@@ -141,8 +141,8 @@
         "text": "636"
       },
       {
-        "id": "d",
-        "text": "993"
+        "id": "a",
+        "text": "5060"
       }
     ],
     "correct": [
@@ -169,16 +169,16 @@
     "stem": "A packet capture shows traffic on TCP port 20. Which service most likely generated it?",
     "options": [
       {
+        "id": "c",
+        "text": "IMAPS"
+      },
+      {
         "id": "a",
         "text": "FTP (data)"
       },
       {
         "id": "b",
         "text": "LDAPS"
-      },
-      {
-        "id": "c",
-        "text": "IMAPS"
       },
       {
         "id": "d",
@@ -213,16 +213,16 @@
         "text": "FTP (control)"
       },
       {
-        "id": "b",
-        "text": "IMAPS"
+        "id": "d",
+        "text": "MySQL"
       },
       {
         "id": "c",
         "text": "POP3S"
       },
       {
-        "id": "d",
-        "text": "MySQL"
+        "id": "b",
+        "text": "IMAPS"
       }
     ],
     "correct": [
@@ -257,12 +257,12 @@
         "text": "POP3S"
       },
       {
-        "id": "c",
-        "text": "MySQL"
-      },
-      {
         "id": "d",
         "text": "RDP"
+      },
+      {
+        "id": "c",
+        "text": "MySQL"
       }
     ],
     "correct": [
@@ -289,20 +289,20 @@
     "stem": "A packet capture shows traffic on TCP port 23. Which service most likely generated it?",
     "options": [
       {
-        "id": "a",
-        "text": "Telnet"
-      },
-      {
-        "id": "b",
-        "text": "MySQL"
+        "id": "d",
+        "text": "SIP"
       },
       {
         "id": "c",
         "text": "RDP"
       },
       {
-        "id": "d",
-        "text": "SIP"
+        "id": "b",
+        "text": "MySQL"
+      },
+      {
+        "id": "a",
+        "text": "Telnet"
       }
     ],
     "correct": [
@@ -329,20 +329,20 @@
     "stem": "A packet capture shows traffic on TCP port 25. Which service most likely generated it?",
     "options": [
       {
-        "id": "a",
-        "text": "SMTP"
-      },
-      {
-        "id": "b",
-        "text": "SIP"
-      },
-      {
         "id": "c",
         "text": "FTP (data)"
       },
       {
         "id": "d",
         "text": "FTP (control)"
+      },
+      {
+        "id": "b",
+        "text": "SIP"
+      },
+      {
+        "id": "a",
+        "text": "SMTP"
       }
     ],
     "correct": [
@@ -373,16 +373,16 @@
         "text": "DNS"
       },
       {
-        "id": "b",
-        "text": "LDAPS"
+        "id": "d",
+        "text": "POP3S"
       },
       {
         "id": "c",
         "text": "IMAPS"
       },
       {
-        "id": "d",
-        "text": "POP3S"
+        "id": "b",
+        "text": "LDAPS"
       }
     ],
     "correct": [
@@ -409,20 +409,20 @@
     "stem": "A packet capture shows traffic on UDP port 67. Which service most likely generated it?",
     "options": [
       {
-        "id": "a",
-        "text": "DHCP (server)"
-      },
-      {
-        "id": "b",
-        "text": "DNS"
-      },
-      {
         "id": "c",
         "text": "DHCP (client)"
       },
       {
         "id": "d",
         "text": "TFTP"
+      },
+      {
+        "id": "a",
+        "text": "DHCP (server)"
+      },
+      {
+        "id": "b",
+        "text": "DNS"
       }
     ],
     "correct": [
@@ -449,20 +449,20 @@
     "stem": "A packet capture shows traffic on UDP port 68. Which service most likely generated it?",
     "options": [
       {
-        "id": "a",
-        "text": "DHCP (client)"
+        "id": "d",
+        "text": "HTTP"
       },
       {
         "id": "b",
         "text": "DHCP (server)"
       },
       {
-        "id": "c",
-        "text": "TFTP"
+        "id": "a",
+        "text": "DHCP (client)"
       },
       {
-        "id": "d",
-        "text": "HTTP"
+        "id": "c",
+        "text": "TFTP"
       }
     ],
     "correct": [
@@ -489,20 +489,20 @@
     "stem": "A packet capture shows traffic on UDP port 69. Which service most likely generated it?",
     "options": [
       {
-        "id": "a",
-        "text": "TFTP"
-      },
-      {
-        "id": "b",
-        "text": "DHCP (client)"
-      },
-      {
         "id": "c",
         "text": "HTTP"
       },
       {
         "id": "d",
         "text": "POP3"
+      },
+      {
+        "id": "a",
+        "text": "TFTP"
+      },
+      {
+        "id": "b",
+        "text": "DHCP (client)"
       }
     ],
     "correct": [
@@ -529,20 +529,20 @@
     "stem": "A packet capture shows traffic on TCP port 80. Which service most likely generated it?",
     "options": [
       {
-        "id": "a",
-        "text": "HTTP"
-      },
-      {
         "id": "b",
         "text": "SNMP"
       },
       {
-        "id": "c",
-        "text": "SNMP trap"
-      },
-      {
         "id": "d",
         "text": "LDAP"
+      },
+      {
+        "id": "a",
+        "text": "HTTP"
+      },
+      {
+        "id": "c",
+        "text": "SNMP trap"
       }
     ],
     "correct": [
@@ -569,20 +569,20 @@
     "stem": "A packet capture shows traffic on TCP port 110. Which service most likely generated it?",
     "options": [
       {
-        "id": "a",
-        "text": "POP3"
-      },
-      {
-        "id": "b",
-        "text": "SNMP"
-      },
-      {
         "id": "c",
         "text": "SNMP trap"
       },
       {
+        "id": "a",
+        "text": "POP3"
+      },
+      {
         "id": "d",
         "text": "LDAP"
+      },
+      {
+        "id": "b",
+        "text": "SNMP"
       }
     ],
     "correct": [
@@ -617,12 +617,12 @@
         "text": "SSH"
       },
       {
-        "id": "c",
-        "text": "Telnet"
-      },
-      {
         "id": "d",
         "text": "SMTP"
+      },
+      {
+        "id": "c",
+        "text": "Telnet"
       }
     ],
     "correct": [
@@ -649,8 +649,8 @@
     "stem": "A packet capture shows traffic on TCP port 143. Which service most likely generated it?",
     "options": [
       {
-        "id": "a",
-        "text": "IMAP"
+        "id": "d",
+        "text": "LDAP"
       },
       {
         "id": "b",
@@ -661,8 +661,8 @@
         "text": "SNMP trap"
       },
       {
-        "id": "d",
-        "text": "LDAP"
+        "id": "a",
+        "text": "IMAP"
       }
     ],
     "correct": [
@@ -689,6 +689,10 @@
     "stem": "A packet capture shows traffic on UDP port 161. Which service most likely generated it?",
     "options": [
       {
+        "id": "d",
+        "text": "SSH"
+      },
+      {
         "id": "a",
         "text": "SNMP"
       },
@@ -699,10 +703,6 @@
       {
         "id": "c",
         "text": "FTP (control)"
-      },
-      {
-        "id": "d",
-        "text": "SSH"
       }
     ],
     "correct": [
@@ -733,12 +733,12 @@
         "text": "SNMP trap"
       },
       {
-        "id": "b",
-        "text": "SIP"
-      },
-      {
         "id": "c",
         "text": "FTP (data)"
+      },
+      {
+        "id": "b",
+        "text": "SIP"
       },
       {
         "id": "d",
@@ -769,20 +769,20 @@
     "stem": "A packet capture shows traffic on TCP port 389. Which service most likely generated it?",
     "options": [
       {
-        "id": "a",
-        "text": "LDAP"
-      },
-      {
-        "id": "b",
-        "text": "FTP (data)"
-      },
-      {
         "id": "c",
         "text": "FTP (control)"
       },
       {
         "id": "d",
         "text": "SSH"
+      },
+      {
+        "id": "b",
+        "text": "FTP (data)"
+      },
+      {
+        "id": "a",
+        "text": "LDAP"
       }
     ],
     "correct": [
@@ -849,20 +849,20 @@
     "stem": "Which routing protocol is a advanced distance-vector (hybrid) protocol that uses a composite metric of bandwidth and delay as its metric?",
     "options": [
       {
-        "id": "a",
-        "text": "EIGRP"
-      },
-      {
-        "id": "b",
-        "text": "RIP"
-      },
-      {
         "id": "c",
         "text": "OSPF"
       },
       {
         "id": "d",
         "text": "BGP"
+      },
+      {
+        "id": "a",
+        "text": "EIGRP"
+      },
+      {
+        "id": "b",
+        "text": "RIP"
       }
     ],
     "correct": [
@@ -888,6 +888,10 @@
     "stem": "Which routing protocol is a path-vector protocol that uses AS-path and configured policy as its metric?",
     "options": [
       {
+        "id": "d",
+        "text": "OSPF"
+      },
+      {
         "id": "a",
         "text": "BGP"
       },
@@ -898,10 +902,6 @@
       {
         "id": "c",
         "text": "RIP"
-      },
-      {
-        "id": "d",
-        "text": "OSPF"
       }
     ],
     "correct": [
@@ -927,20 +927,20 @@
     "stem": "What is the correct order of the DHCP lease process?",
     "options": [
       {
-        "id": "a",
-        "text": "Discover, Offer, Request, Acknowledge"
+        "id": "c",
+        "text": "Request, Discover, Offer, Acknowledge"
       },
       {
         "id": "b",
         "text": "Offer, Discover, Acknowledge, Request"
       },
       {
-        "id": "c",
-        "text": "Request, Discover, Offer, Acknowledge"
-      },
-      {
         "id": "d",
         "text": "Discover, Request, Offer, Acknowledge"
+      },
+      {
+        "id": "a",
+        "text": "Discover, Offer, Request, Acknowledge"
       }
     ],
     "correct": [
@@ -966,6 +966,10 @@
     "stem": "What distinguishes PAT (port address translation) from basic NAT?",
     "options": [
       {
+        "id": "d",
+        "text": "PAT operates at the data link layer instead of the network layer"
+      },
+      {
         "id": "a",
         "text": "PAT lets many private addresses share a single public address by tracking unique port numbers"
       },
@@ -976,10 +980,6 @@
       {
         "id": "c",
         "text": "PAT requires a one-to-one mapping between private and public addresses"
-      },
-      {
-        "id": "d",
-        "text": "PAT operates at the data link layer instead of the network layer"
       }
     ],
     "correct": [
@@ -1005,16 +1005,16 @@
     "stem": "What is the primary purpose of configuring VLANs on a switch?",
     "options": [
       {
-        "id": "a",
-        "text": "To logically segment a single physical switch into multiple isolated broadcast domains"
+        "id": "c",
+        "text": "To encrypt traffic between two switches"
       },
       {
         "id": "b",
         "text": "To physically split a switch's backplane into separate hardware segments"
       },
       {
-        "id": "c",
-        "text": "To encrypt traffic between two switches"
+        "id": "a",
+        "text": "To logically segment a single physical switch into multiple isolated broadcast domains"
       },
       {
         "id": "d",
@@ -1045,20 +1045,20 @@
     "stem": "A trunk link between two switches carries traffic for multiple VLANs. Which standard tags Ethernet frames with their VLAN ID as they cross that link?",
     "options": [
       {
-        "id": "a",
-        "text": "802.1Q"
-      },
-      {
         "id": "b",
         "text": "802.1X"
+      },
+      {
+        "id": "d",
+        "text": "802.11ac"
       },
       {
         "id": "c",
         "text": "802.3af"
       },
       {
-        "id": "d",
-        "text": "802.11ac"
+        "id": "a",
+        "text": "802.1Q"
       }
     ],
     "correct": [
@@ -1089,16 +1089,16 @@
         "text": "T1"
       },
       {
+        "id": "d",
+        "text": "Cable"
+      },
+      {
         "id": "b",
         "text": "Fibre (FTTH)"
       },
       {
         "id": "c",
         "text": "Satellite"
-      },
-      {
-        "id": "d",
-        "text": "Cable"
       }
     ],
     "correct": [
@@ -1124,16 +1124,16 @@
     "stem": "Which WAN connection type is shared broadband delivered over coaxial cable using DOCSIS, shared with neighbouring subscribers?",
     "options": [
       {
-        "id": "a",
-        "text": "Cable"
+        "id": "c",
+        "text": "Satellite"
       },
       {
         "id": "b",
         "text": "Fibre (FTTH)"
       },
       {
-        "id": "c",
-        "text": "Satellite"
+        "id": "a",
+        "text": "Cable"
       },
       {
         "id": "d",
@@ -1163,20 +1163,20 @@
     "stem": "Which WAN connection type is broadband delivered over existing copper telephone lines?",
     "options": [
       {
-        "id": "a",
-        "text": "DSL"
+        "id": "c",
+        "text": "Cable"
       },
       {
         "id": "b",
         "text": "T1"
       },
       {
-        "id": "c",
-        "text": "Cable"
-      },
-      {
         "id": "d",
         "text": "Fibre (FTTH)"
+      },
+      {
+        "id": "a",
+        "text": "DSL"
       }
     ],
     "correct": [
@@ -1202,20 +1202,20 @@
     "stem": "Which WAN connection type is broadband delivered directly to the premises over fibre optic cable?",
     "options": [
       {
-        "id": "a",
-        "text": "Fibre (FTTH)"
-      },
-      {
-        "id": "b",
-        "text": "DSL"
+        "id": "d",
+        "text": "T1"
       },
       {
         "id": "c",
         "text": "Satellite"
       },
       {
-        "id": "d",
-        "text": "T1"
+        "id": "b",
+        "text": "DSL"
+      },
+      {
+        "id": "a",
+        "text": "Fibre (FTTH)"
       }
     ],
     "correct": [
@@ -1241,20 +1241,20 @@
     "stem": "Which WAN connection type is broadband delivered via a geostationary satellite link, with noticeably high latency?",
     "options": [
       {
-        "id": "a",
-        "text": "Satellite"
+        "id": "d",
+        "text": "DSL"
       },
       {
         "id": "b",
         "text": "T1"
       },
       {
-        "id": "c",
-        "text": "Cable"
+        "id": "a",
+        "text": "Satellite"
       },
       {
-        "id": "d",
-        "text": "DSL"
+        "id": "c",
+        "text": "Cable"
       }
     ],
     "correct": [
@@ -1284,16 +1284,16 @@
         "text": "SFP"
       },
       {
+        "id": "d",
+        "text": "RJ45"
+      },
+      {
         "id": "b",
         "text": "SFP+"
       },
       {
         "id": "c",
         "text": "QSFP"
-      },
-      {
-        "id": "d",
-        "text": "RJ45"
       }
     ],
     "correct": [
@@ -1319,20 +1319,20 @@
     "stem": "Which transceiver form factor supports up to 10 Gbps over fibre or twinax?",
     "options": [
       {
-        "id": "a",
-        "text": "SFP+"
-      },
-      {
-        "id": "b",
-        "text": "SFP"
+        "id": "d",
+        "text": "RJ45"
       },
       {
         "id": "c",
         "text": "QSFP"
       },
       {
-        "id": "d",
-        "text": "RJ45"
+        "id": "b",
+        "text": "SFP"
+      },
+      {
+        "id": "a",
+        "text": "SFP+"
       }
     ],
     "correct": [
@@ -1358,20 +1358,20 @@
     "stem": "Which transceiver form factor supports 40 Gbps or more over fibre or twinax?",
     "options": [
       {
-        "id": "a",
-        "text": "QSFP"
-      },
-      {
-        "id": "b",
-        "text": "SFP"
-      },
-      {
         "id": "c",
         "text": "SFP+"
       },
       {
         "id": "d",
         "text": "RJ45"
+      },
+      {
+        "id": "a",
+        "text": "QSFP"
+      },
+      {
+        "id": "b",
+        "text": "SFP"
       }
     ],
     "correct": [
@@ -1397,16 +1397,16 @@
     "stem": "Which Power over Ethernet standard delivers up to 15.4 W per port?",
     "options": [
       {
-        "id": "a",
-        "text": "802.3af (PoE)"
+        "id": "c",
+        "text": "802.3bt (PoE++)"
       },
       {
         "id": "b",
         "text": "802.3at (PoE+)"
       },
       {
-        "id": "c",
-        "text": "802.3bt (PoE++)"
+        "id": "a",
+        "text": "802.3af (PoE)"
       },
       {
         "id": "d",
@@ -1436,16 +1436,16 @@
     "stem": "Which Power over Ethernet standard delivers up to 25.5 W per port?",
     "options": [
       {
-        "id": "a",
-        "text": "802.3at (PoE+)"
-      },
-      {
         "id": "b",
         "text": "802.3af (PoE)"
       },
       {
         "id": "c",
         "text": "802.3bt (PoE++)"
+      },
+      {
+        "id": "a",
+        "text": "802.3at (PoE+)"
       },
       {
         "id": "d",
@@ -1475,20 +1475,20 @@
     "stem": "Which Power over Ethernet standard delivers up to around 90-100 W per port?",
     "options": [
       {
-        "id": "a",
-        "text": "802.3bt (PoE++)"
+        "id": "d",
+        "text": "802.1Q"
       },
       {
-        "id": "b",
-        "text": "802.3af (PoE)"
+        "id": "a",
+        "text": "802.3bt (PoE++)"
       },
       {
         "id": "c",
         "text": "802.3at (PoE+)"
       },
       {
-        "id": "d",
-        "text": "802.1Q"
+        "id": "b",
+        "text": "802.3af (PoE)"
       }
     ],
     "correct": [
@@ -1514,20 +1514,20 @@
     "stem": "A switch port connects directly to a single desktop PC that should only ever be a member of one VLAN. How should that port be configured?",
     "options": [
       {
-        "id": "a",
-        "text": "As an access port assigned to that one VLAN"
-      },
-      {
-        "id": "b",
-        "text": "As a trunk port carrying all VLANs"
+        "id": "d",
+        "text": "As an EtherChannel member"
       },
       {
         "id": "c",
         "text": "As a mirrored (SPAN) port"
       },
       {
-        "id": "d",
-        "text": "As an EtherChannel member"
+        "id": "a",
+        "text": "As an access port assigned to that one VLAN"
+      },
+      {
+        "id": "b",
+        "text": "As a trunk port carrying all VLANs"
       }
     ],
     "correct": [
@@ -1554,12 +1554,12 @@
     "stem": "Which network monitoring approach collects timestamped log messages devices send about events and errors?",
     "options": [
       {
-        "id": "a",
-        "text": "Syslog"
-      },
-      {
         "id": "b",
         "text": "SNMP"
+      },
+      {
+        "id": "a",
+        "text": "Syslog"
       },
       {
         "id": "c",
@@ -1593,20 +1593,20 @@
     "stem": "Which network monitoring approach collects metadata about traffic flows — source/destination, ports, and volume — for traffic analysis?",
     "options": [
       {
-        "id": "a",
-        "text": "NetFlow"
-      },
-      {
         "id": "b",
         "text": "SNMP"
       },
       {
-        "id": "c",
-        "text": "Syslog"
+        "id": "a",
+        "text": "NetFlow"
       },
       {
         "id": "d",
         "text": "Packet capture"
+      },
+      {
+        "id": "c",
+        "text": "Syslog"
       }
     ],
     "correct": [
@@ -1632,20 +1632,20 @@
     "stem": "Which network monitoring approach records full packet contents for deep, after-the-fact protocol analysis?",
     "options": [
       {
-        "id": "a",
-        "text": "Packet capture"
-      },
-      {
         "id": "b",
         "text": "SNMP"
       },
       {
-        "id": "c",
-        "text": "Syslog"
-      },
-      {
         "id": "d",
         "text": "NetFlow"
+      },
+      {
+        "id": "a",
+        "text": "Packet capture"
+      },
+      {
+        "id": "c",
+        "text": "Syslog"
       }
     ],
     "correct": [
@@ -1671,16 +1671,16 @@
     "stem": "A network's current performance under normal conditions, recorded so future measurements can be compared against it, is called a:",
     "options": [
       {
-        "id": "a",
-        "text": "Baseline"
+        "id": "c",
+        "text": "Change request"
       },
       {
         "id": "b",
         "text": "Wiring diagram"
       },
       {
-        "id": "c",
-        "text": "Change request"
+        "id": "a",
+        "text": "Baseline"
       },
       {
         "id": "d",
@@ -1710,20 +1710,20 @@
     "stem": "In change management, which term describes the formal document proposing a change, describing what will change and why, submitted for approval before work begins?",
     "options": [
       {
-        "id": "a",
-        "text": "Change request"
-      },
-      {
-        "id": "b",
-        "text": "Rollback plan"
+        "id": "d",
+        "text": "Configuration baseline"
       },
       {
         "id": "c",
         "text": "Maintenance window"
       },
       {
-        "id": "d",
-        "text": "Configuration baseline"
+        "id": "a",
+        "text": "Change request"
+      },
+      {
+        "id": "b",
+        "text": "Rollback plan"
       }
     ],
     "correct": [
@@ -1749,10 +1749,6 @@
     "stem": "In change management, which term describes the documented steps to undo a change and restore the previous working state if something goes wrong?",
     "options": [
       {
-        "id": "a",
-        "text": "Rollback plan"
-      },
-      {
         "id": "b",
         "text": "Change request"
       },
@@ -1763,6 +1759,10 @@
       {
         "id": "d",
         "text": "Configuration baseline"
+      },
+      {
+        "id": "a",
+        "text": "Rollback plan"
       }
     ],
     "correct": [
@@ -1788,8 +1788,8 @@
     "stem": "In change management, which term describes the pre-approved time period during which a change is allowed to cause disruption?",
     "options": [
       {
-        "id": "a",
-        "text": "Maintenance window"
+        "id": "d",
+        "text": "Configuration baseline"
       },
       {
         "id": "b",
@@ -1800,8 +1800,8 @@
         "text": "Rollback plan"
       },
       {
-        "id": "d",
-        "text": "Configuration baseline"
+        "id": "a",
+        "text": "Maintenance window"
       }
     ],
     "correct": [
@@ -1827,20 +1827,20 @@
     "stem": "Which business document is a contract that defines the minimum level of service a provider guarantees, such as uptime or response time?",
     "options": [
       {
-        "id": "a",
-        "text": "SLA (Service Level Agreement)"
-      },
-      {
-        "id": "b",
-        "text": "MOU (Memorandum of Understanding)"
+        "id": "d",
+        "text": "AUP (Acceptable Use Policy)"
       },
       {
         "id": "c",
         "text": "NDA (Non-Disclosure Agreement)"
       },
       {
-        "id": "d",
-        "text": "AUP (Acceptable Use Policy)"
+        "id": "a",
+        "text": "SLA (Service Level Agreement)"
+      },
+      {
+        "id": "b",
+        "text": "MOU (Memorandum of Understanding)"
       }
     ],
     "correct": [
@@ -1866,16 +1866,16 @@
     "stem": "Which business document is a document expressing mutual intent to work together, without the binding formality of a full contract?",
     "options": [
       {
-        "id": "a",
-        "text": "MOU (Memorandum of Understanding)"
+        "id": "c",
+        "text": "NDA (Non-Disclosure Agreement)"
       },
       {
         "id": "b",
         "text": "SLA (Service Level Agreement)"
       },
       {
-        "id": "c",
-        "text": "NDA (Non-Disclosure Agreement)"
+        "id": "a",
+        "text": "MOU (Memorandum of Understanding)"
       },
       {
         "id": "d",
@@ -1909,16 +1909,16 @@
         "text": "NDA (Non-Disclosure Agreement)"
       },
       {
+        "id": "d",
+        "text": "AUP (Acceptable Use Policy)"
+      },
+      {
         "id": "b",
         "text": "SLA (Service Level Agreement)"
       },
       {
         "id": "c",
         "text": "MOU (Memorandum of Understanding)"
-      },
-      {
-        "id": "d",
-        "text": "AUP (Acceptable Use Policy)"
       }
     ],
     "correct": [
@@ -1944,20 +1944,20 @@
     "stem": "A network analyst needs to capture a copy of all traffic passing through a particular switch port for analysis, without disrupting normal traffic flow. Which feature accomplishes this?",
     "options": [
       {
-        "id": "a",
-        "text": "Port mirroring (SPAN)"
-      },
-      {
-        "id": "b",
-        "text": "802.1Q trunking"
-      },
-      {
         "id": "c",
         "text": "Port security"
       },
       {
         "id": "d",
         "text": "LACP"
+      },
+      {
+        "id": "b",
+        "text": "802.1Q trunking"
+      },
+      {
+        "id": "a",
+        "text": "Port mirroring (SPAN)"
       }
     ],
     "correct": [
@@ -1983,16 +1983,16 @@
     "stem": "A company's VoIP calls break up whenever a large file transfer runs on the same link. Which technique is designed to solve this by prioritising latency-sensitive traffic?",
     "options": [
       {
+        "id": "c",
+        "text": "VLAN tagging"
+      },
+      {
         "id": "a",
         "text": "QoS (Quality of Service)"
       },
       {
         "id": "b",
         "text": "NAT"
-      },
-      {
-        "id": "c",
-        "text": "VLAN tagging"
       },
       {
         "id": "d",
@@ -2022,20 +2022,20 @@
     "stem": "What is the primary purpose of a UPS (uninterruptible power supply) in a server room?",
     "options": [
       {
-        "id": "a",
-        "text": "To provide short-term battery backup power so equipment can ride out a brief outage or shut down gracefully"
-      },
-      {
-        "id": "b",
-        "text": "To permanently replace utility power for the building"
-      },
-      {
         "id": "c",
         "text": "To cool server room equipment during heavy load"
       },
       {
         "id": "d",
         "text": "To distribute network traffic across multiple links"
+      },
+      {
+        "id": "b",
+        "text": "To permanently replace utility power for the building"
+      },
+      {
+        "id": "a",
+        "text": "To provide short-term battery backup power so equipment can ride out a brief outage or shut down gracefully"
       }
     ],
     "correct": [
@@ -2061,20 +2061,20 @@
     "stem": "Why do server rooms typically include temperature and humidity monitoring?",
     "options": [
       {
-        "id": "a",
-        "text": "Excess heat or humidity can damage equipment and cause failures, so early warning allows corrective action before hardware is harmed"
-      },
-      {
         "id": "b",
         "text": "It's required to keep DNS records synchronised"
       },
       {
-        "id": "c",
-        "text": "It improves wireless signal strength throughout the building"
-      },
-      {
         "id": "d",
         "text": "It automatically balances load across redundant links"
+      },
+      {
+        "id": "a",
+        "text": "Excess heat or humidity can damage equipment and cause failures, so early warning allows corrective action before hardware is harmed"
+      },
+      {
+        "id": "c",
+        "text": "It improves wireless signal strength throughout the building"
       }
     ],
     "correct": [
@@ -2100,12 +2100,12 @@
     "stem": "What is the main goal of a formal patch management process?",
     "options": [
       {
-        "id": "a",
-        "text": "To apply software updates in a controlled, tested, and scheduled way that balances security against stability"
-      },
-      {
         "id": "b",
         "text": "To permanently disable automatic updates on all devices"
+      },
+      {
+        "id": "a",
+        "text": "To apply software updates in a controlled, tested, and scheduled way that balances security against stability"
       },
       {
         "id": "c",
@@ -2139,8 +2139,8 @@
     "stem": "Which disaster recovery site type is a fully equipped, continuously synchronised duplicate facility that can take over almost immediately after a disaster?",
     "options": [
       {
-        "id": "a",
-        "text": "Hot site"
+        "id": "d",
+        "text": "Primary site"
       },
       {
         "id": "b",
@@ -2151,8 +2151,8 @@
         "text": "Cold site"
       },
       {
-        "id": "d",
-        "text": "Primary site"
+        "id": "a",
+        "text": "Hot site"
       }
     ],
     "correct": [
@@ -2178,10 +2178,6 @@
     "stem": "Which disaster recovery site type is a partially equipped facility with some hardware and periodically updated data, needing hours to become fully operational?",
     "options": [
       {
-        "id": "a",
-        "text": "Warm site"
-      },
-      {
         "id": "b",
         "text": "Hot site"
       },
@@ -2192,6 +2188,10 @@
       {
         "id": "d",
         "text": "Primary site"
+      },
+      {
+        "id": "a",
+        "text": "Warm site"
       }
     ],
     "correct": [
@@ -2217,16 +2217,16 @@
     "stem": "Which type of firewall tracks the state of active connections and only allows traffic that matches an established or expected session?",
     "options": [
       {
-        "id": "a",
-        "text": "Stateful firewall"
+        "id": "c",
+        "text": "Application-layer (proxy) firewall"
       },
       {
         "id": "b",
         "text": "Packet-filtering firewall"
       },
       {
-        "id": "c",
-        "text": "Application-layer (proxy) firewall"
+        "id": "a",
+        "text": "Stateful firewall"
       },
       {
         "id": "d",
@@ -2260,16 +2260,16 @@
         "text": "Application-layer (proxy) firewall"
       },
       {
-        "id": "b",
-        "text": "Next-generation firewall (NGFW)"
-      },
-      {
         "id": "c",
         "text": "Packet-filtering firewall"
       },
       {
         "id": "d",
         "text": "Stateful firewall"
+      },
+      {
+        "id": "b",
+        "text": "Next-generation firewall (NGFW)"
       }
     ],
     "correct": [
@@ -2295,6 +2295,10 @@
     "stem": "Which type of firewall combines stateful inspection with deep packet inspection, intrusion prevention, and application awareness in one device?",
     "options": [
       {
+        "id": "d",
+        "text": "Packet-filtering firewall"
+      },
+      {
         "id": "a",
         "text": "Next-generation firewall (NGFW)"
       },
@@ -2305,10 +2309,6 @@
       {
         "id": "c",
         "text": "Application-layer (proxy) firewall"
-      },
-      {
-        "id": "d",
-        "text": "Packet-filtering firewall"
       }
     ],
     "correct": [
@@ -2342,12 +2342,12 @@
         "text": "Client-to-site VPN"
       },
       {
-        "id": "c",
-        "text": "Clientless SSL VPN"
-      },
-      {
         "id": "d",
         "text": "Split-tunnel VPN"
+      },
+      {
+        "id": "c",
+        "text": "Clientless SSL VPN"
       }
     ],
     "correct": [
@@ -2373,16 +2373,16 @@
     "stem": "Which practice is an example of device hardening?",
     "options": [
       {
+        "id": "c",
+        "text": "Leaving factory default credentials in place for convenience"
+      },
+      {
         "id": "a",
         "text": "Disabling unused switch ports and default accounts"
       },
       {
         "id": "b",
         "text": "Enabling every optional service so troubleshooting is easier later"
-      },
-      {
-        "id": "c",
-        "text": "Leaving factory default credentials in place for convenience"
       },
       {
         "id": "d",
@@ -2412,20 +2412,20 @@
     "stem": "Which physical security control a small interlocking pair of doors that only allows one person through at a time, preventing tailgating into a secure area?",
     "options": [
       {
-        "id": "a",
-        "text": "Mantrap"
-      },
-      {
         "id": "b",
         "text": "Cable lock"
       },
       {
-        "id": "c",
-        "text": "Badge reader"
-      },
-      {
         "id": "d",
         "text": "Biometric scanner"
+      },
+      {
+        "id": "a",
+        "text": "Mantrap"
+      },
+      {
+        "id": "c",
+        "text": "Badge reader"
       }
     ],
     "correct": [
@@ -2459,12 +2459,12 @@
         "text": "Biometric scanner"
       },
       {
-        "id": "c",
-        "text": "Cable lock"
-      },
-      {
         "id": "d",
         "text": "Mantrap"
+      },
+      {
+        "id": "c",
+        "text": "Cable lock"
       }
     ],
     "correct": [
@@ -2494,16 +2494,16 @@
         "text": "Biometric scanner"
       },
       {
-        "id": "b",
-        "text": "Cable lock"
+        "id": "d",
+        "text": "Badge reader"
       },
       {
         "id": "c",
         "text": "Mantrap"
       },
       {
-        "id": "d",
-        "text": "Badge reader"
+        "id": "b",
+        "text": "Cable lock"
       }
     ],
     "correct": [
@@ -2529,20 +2529,20 @@
     "stem": "Which physical security control physically secures a device to prevent it from being carried off?",
     "options": [
       {
-        "id": "a",
-        "text": "Cable lock"
-      },
-      {
         "id": "b",
         "text": "Mantrap"
       },
       {
-        "id": "c",
-        "text": "Badge reader"
-      },
-      {
         "id": "d",
         "text": "Biometric scanner"
+      },
+      {
+        "id": "a",
+        "text": "Cable lock"
+      },
+      {
+        "id": "c",
+        "text": "Badge reader"
       }
     ],
     "correct": [
@@ -2568,20 +2568,20 @@
     "stem": "In multi-factor authentication, which category is something the user knows, such as a password or PIN?",
     "options": [
       {
-        "id": "a",
-        "text": "Knowledge factor"
-      },
-      {
-        "id": "b",
-        "text": "Location factor"
-      },
-      {
         "id": "c",
         "text": "Possession factor"
       },
       {
         "id": "d",
         "text": "Inherence factor"
+      },
+      {
+        "id": "b",
+        "text": "Location factor"
+      },
+      {
+        "id": "a",
+        "text": "Knowledge factor"
       }
     ],
     "correct": [
@@ -2608,8 +2608,8 @@
     "stem": "In multi-factor authentication, which category is something the user has, such as a hardware token or smart card?",
     "options": [
       {
-        "id": "a",
-        "text": "Possession factor"
+        "id": "d",
+        "text": "Knowledge factor"
       },
       {
         "id": "b",
@@ -2620,8 +2620,8 @@
         "text": "Location factor"
       },
       {
-        "id": "d",
-        "text": "Knowledge factor"
+        "id": "a",
+        "text": "Possession factor"
       }
     ],
     "correct": [
@@ -2648,20 +2648,20 @@
     "stem": "In multi-factor authentication, which category is something the user is, such as a fingerprint or facial scan?",
     "options": [
       {
-        "id": "a",
-        "text": "Inherence factor"
-      },
-      {
-        "id": "b",
-        "text": "Possession factor"
-      },
-      {
         "id": "c",
         "text": "Location factor"
       },
       {
         "id": "d",
         "text": "Knowledge factor"
+      },
+      {
+        "id": "b",
+        "text": "Possession factor"
+      },
+      {
+        "id": "a",
+        "text": "Inherence factor"
       }
     ],
     "correct": [
@@ -2688,16 +2688,16 @@
     "stem": "In multi-factor authentication, which category is somewhere the user is, verified through GPS or network location?",
     "options": [
       {
-        "id": "a",
-        "text": "Location factor"
+        "id": "c",
+        "text": "Knowledge factor"
       },
       {
         "id": "b",
         "text": "Inherence factor"
       },
       {
-        "id": "c",
-        "text": "Knowledge factor"
+        "id": "a",
+        "text": "Location factor"
       },
       {
         "id": "d",
@@ -2728,20 +2728,20 @@
     "stem": "After a new wireless access point is installed near several existing ones on the same channel, users nearby report slow, unreliable Wi-Fi even though signal strength looks strong. What is the most likely issue?",
     "options": [
       {
-        "id": "a",
-        "text": "Co-channel interference from overlapping access points on the same channel"
-      },
-      {
         "id": "b",
         "text": "An expired TLS certificate on the RADIUS server"
+      },
+      {
+        "id": "d",
+        "text": "Incorrect VLAN tagging on the wireless controller"
       },
       {
         "id": "c",
         "text": "A duplex mismatch on the access point's uplink port"
       },
       {
-        "id": "d",
-        "text": "Incorrect VLAN tagging on the wireless controller"
+        "id": "a",
+        "text": "Co-channel interference from overlapping access points on the same channel"
       }
     ],
     "correct": [
@@ -2773,16 +2773,16 @@
         "text": "DNS resolution for that hostname"
       },
       {
+        "id": "d",
+        "text": "The switch port's duplex setting"
+      },
+      {
         "id": "b",
         "text": "The physical cable connecting the technician's workstation"
       },
       {
         "id": "c",
         "text": "The server's power supply"
-      },
-      {
-        "id": "d",
-        "text": "The switch port's duplex setting"
       }
     ],
     "correct": [
@@ -2809,20 +2809,20 @@
     "stem": "A branch office's internet connection has recently become very slow. A continuous ping to the ISP gateway shows 5-15% packet loss, while pings to internal devices show 0% loss. Where is the problem most likely located?",
     "options": [
       {
-        "id": "a",
-        "text": "Between the branch router and the ISP, outside the local network"
+        "id": "d",
+        "text": "In the local DNS cache on each workstation"
       },
       {
         "id": "b",
         "text": "On the internal switch connecting the office workstations"
       },
       {
-        "id": "c",
-        "text": "In the DHCP scope configuration for the office"
+        "id": "a",
+        "text": "Between the branch router and the ISP, outside the local network"
       },
       {
-        "id": "d",
-        "text": "In the local DNS cache on each workstation"
+        "id": "c",
+        "text": "In the DHCP scope configuration for the office"
       }
     ],
     "correct": [
@@ -2853,12 +2853,12 @@
         "text": "Whether the new switch port is assigned to the correct VLAN"
       },
       {
-        "id": "b",
-        "text": "Whether the server's power cable is fully seated"
-      },
-      {
         "id": "c",
         "text": "Whether the server's hostname is spelled correctly"
+      },
+      {
+        "id": "b",
+        "text": "Whether the server's power cable is fully seated"
       },
       {
         "id": "d",
@@ -2889,20 +2889,20 @@
     "stem": "Which cabling issue is the gradual weakening of a signal as it travels further along a cable?",
     "options": [
       {
-        "id": "a",
-        "text": "Attenuation"
-      },
-      {
         "id": "b",
         "text": "Mismatched wiring standard (568A/568B)"
       },
       {
-        "id": "c",
-        "text": "Crosstalk"
-      },
-      {
         "id": "d",
         "text": "EMI/RFI interference"
+      },
+      {
+        "id": "a",
+        "text": "Attenuation"
+      },
+      {
+        "id": "c",
+        "text": "Crosstalk"
       }
     ],
     "correct": [
@@ -2929,20 +2929,20 @@
     "stem": "Which cabling issue is unwanted signal coupling from one wire pair into an adjacent pair?",
     "options": [
       {
-        "id": "a",
-        "text": "Crosstalk"
+        "id": "d",
+        "text": "Mismatched wiring standard (568A/568B)"
       },
       {
-        "id": "b",
-        "text": "Attenuation"
+        "id": "a",
+        "text": "Crosstalk"
       },
       {
         "id": "c",
         "text": "EMI/RFI interference"
       },
       {
-        "id": "d",
-        "text": "Mismatched wiring standard (568A/568B)"
+        "id": "b",
+        "text": "Attenuation"
       }
     ],
     "correct": [
@@ -2969,12 +2969,12 @@
     "stem": "Which cabling issue is signal degradation caused by nearby electrical equipment or radio sources?",
     "options": [
       {
-        "id": "a",
-        "text": "EMI/RFI interference"
-      },
-      {
         "id": "b",
         "text": "Mismatched wiring standard (568A/568B)"
+      },
+      {
+        "id": "a",
+        "text": "EMI/RFI interference"
       },
       {
         "id": "c",
@@ -3009,20 +3009,20 @@
     "stem": "Which cabling issue is a cable wired with one end following T568A and the other following T568B, when both ends should match?",
     "options": [
       {
-        "id": "a",
-        "text": "Mismatched wiring standard (568A/568B)"
+        "id": "c",
+        "text": "Crosstalk"
       },
       {
         "id": "b",
         "text": "Attenuation"
       },
       {
-        "id": "c",
-        "text": "Crosstalk"
-      },
-      {
         "id": "d",
         "text": "EMI/RFI interference"
+      },
+      {
+        "id": "a",
+        "text": "Mismatched wiring standard (568A/568B)"
       }
     ],
     "correct": [
@@ -3053,12 +3053,12 @@
         "text": "Request timed out"
       },
       {
-        "id": "b",
-        "text": "Destination host unreachable"
-      },
-      {
         "id": "c",
         "text": "Reply from the destination with 0% loss"
+      },
+      {
+        "id": "b",
+        "text": "Destination host unreachable"
       },
       {
         "id": "d",
@@ -3089,20 +3089,20 @@
     "stem": "In ping output, what does the message \"Destination host unreachable\" indicate: the local device (or a router along the path) has no route to the destination and rejected the request immediately?",
     "options": [
       {
-        "id": "a",
-        "text": "Destination host unreachable"
-      },
-      {
         "id": "b",
         "text": "Request timed out"
       },
       {
-        "id": "c",
-        "text": "Reply from the destination with 0% loss"
+        "id": "a",
+        "text": "Destination host unreachable"
       },
       {
         "id": "d",
         "text": "TTL expired in transit"
+      },
+      {
+        "id": "c",
+        "text": "Reply from the destination with 0% loss"
       }
     ],
     "correct": [
@@ -3129,20 +3129,20 @@
     "stem": "Which \"ipconfig\" switch releases the current DHCP-assigned IP address?",
     "options": [
       {
-        "id": "a",
-        "text": "/release"
-      },
-      {
         "id": "b",
         "text": "/flushdns"
       },
       {
-        "id": "c",
-        "text": "/all"
-      },
-      {
         "id": "d",
         "text": "/renew"
+      },
+      {
+        "id": "a",
+        "text": "/release"
+      },
+      {
+        "id": "c",
+        "text": "/all"
       }
     ],
     "correct": [
@@ -3168,20 +3168,20 @@
     "stem": "Which \"ipconfig\" switch requests a new IP address lease from the DHCP server?",
     "options": [
       {
-        "id": "a",
-        "text": "/renew"
-      },
-      {
         "id": "b",
         "text": "/all"
+      },
+      {
+        "id": "d",
+        "text": "/flushdns"
       },
       {
         "id": "c",
         "text": "/release"
       },
       {
-        "id": "d",
-        "text": "/flushdns"
+        "id": "a",
+        "text": "/renew"
       }
     ],
     "correct": [
@@ -3207,20 +3207,20 @@
     "stem": "Which \"ipconfig\" switch clears the local DNS resolver cache?",
     "options": [
       {
-        "id": "a",
-        "text": "/flushdns"
-      },
-      {
         "id": "b",
         "text": "/renew"
       },
       {
-        "id": "c",
-        "text": "/all"
-      },
-      {
         "id": "d",
         "text": "/release"
+      },
+      {
+        "id": "a",
+        "text": "/flushdns"
+      },
+      {
+        "id": "c",
+        "text": "/all"
       }
     ],
     "correct": [
@@ -3246,20 +3246,20 @@
     "stem": "Which \"ipconfig\" switch displays full configuration detail for every adapter, not just a summary?",
     "options": [
       {
-        "id": "a",
-        "text": "/all"
+        "id": "d",
+        "text": "/renew"
       },
       {
-        "id": "b",
-        "text": "/flushdns"
+        "id": "a",
+        "text": "/all"
       },
       {
         "id": "c",
         "text": "/release"
       },
       {
-        "id": "d",
-        "text": "/renew"
+        "id": "b",
+        "text": "/flushdns"
       }
     ],
     "correct": [
@@ -3285,20 +3285,20 @@
     "stem": "A workstation is configured with IP address 192.168.1.50/25 while the rest of the /24 subnet's devices and the gateway use 192.168.1.1/24. The workstation can't reach anything, including the gateway. What is the most likely cause?",
     "options": [
       {
-        "id": "a",
-        "text": "An incorrect subnet mask on the workstation splits it into a different logical subnet than the rest of the network"
-      },
-      {
         "id": "b",
         "text": "The workstation's DNS server is misconfigured"
       },
       {
-        "id": "c",
-        "text": "The switch port is set to the wrong speed"
-      },
-      {
         "id": "d",
         "text": "The workstation's MAC address is duplicated elsewhere on the network"
+      },
+      {
+        "id": "a",
+        "text": "An incorrect subnet mask on the workstation splits it into a different logical subnet than the rest of the network"
+      },
+      {
+        "id": "c",
+        "text": "The switch port is set to the wrong speed"
       }
     ],
     "correct": [
@@ -3369,16 +3369,16 @@
         "text": "The firewall's rule set no longer allows traffic on port 8443"
       },
       {
-        "id": "b",
-        "text": "The application server's power supply failed"
+        "id": "d",
+        "text": "A duplex mismatch on the application server's NIC"
       },
       {
         "id": "c",
         "text": "The users' workstations have an expired DHCP lease"
       },
       {
-        "id": "d",
-        "text": "A duplex mismatch on the application server's NIC"
+        "id": "b",
+        "text": "The application server's power supply failed"
       }
     ],
     "correct": [
@@ -3413,12 +3413,12 @@
         "text": "The DHCP scope for that subnet has run out of available addresses"
       },
       {
-        "id": "c",
-        "text": "The switch serving that subnet has spanning tree misconfigured"
-      },
-      {
         "id": "d",
         "text": "The subnet's default gateway has the wrong MAC address in its ARP table"
+      },
+      {
+        "id": "c",
+        "text": "The switch serving that subnet has spanning tree misconfigured"
       }
     ],
     "correct": [
@@ -3445,6 +3445,10 @@
     "stem": "A small office suddenly has several devices receiving IP addresses in an unexpected 10.10.10.0/24 range with a gateway that doesn't belong to the office router, even though the office's DHCP server is scoped for 192.168.1.0/24. What is the most likely explanation?",
     "options": [
       {
+        "id": "d",
+        "text": "The office's ISP has changed the public IP block it assigns"
+      },
+      {
         "id": "a",
         "text": "A rogue DHCP server on the network is responding to requests faster than the legitimate one"
       },
@@ -3455,10 +3459,6 @@
       {
         "id": "c",
         "text": "The affected devices have manually configured static IP addresses"
-      },
-      {
-        "id": "d",
-        "text": "The office's ISP has changed the public IP block it assigns"
       }
     ],
     "correct": [
@@ -3485,20 +3485,20 @@
     "stem": "A fibre link between two buildings goes down. A technician confirms the switch ports on both ends show 'down/down' and there's no light detected at either end with an optical power meter. What should be checked first?",
     "options": [
       {
-        "id": "a",
-        "text": "A physical break or a disconnected/dirty connector somewhere along the fibre run"
+        "id": "c",
+        "text": "The IP addressing scheme used between the two buildings"
       },
       {
         "id": "b",
         "text": "The VLAN configuration on both switches"
       },
       {
-        "id": "c",
-        "text": "The IP addressing scheme used between the two buildings"
-      },
-      {
         "id": "d",
         "text": "Whether QoS policies are dropping the traffic"
+      },
+      {
+        "id": "a",
+        "text": "A physical break or a disconnected/dirty connector somewhere along the fibre run"
       }
     ],
     "correct": [
@@ -3526,8 +3526,8 @@
     "stem": "A technician needs to connect two older switches directly together using their Ethernet uplink ports, and neither switch supports Auto-MDI-X. Which cable should be used?",
     "options": [
       {
-        "id": "a",
-        "text": "A crossover cable"
+        "id": "d",
+        "text": "A coaxial patch cable"
       },
       {
         "id": "b",
@@ -3538,8 +3538,8 @@
         "text": "A rollover (console) cable"
       },
       {
-        "id": "d",
-        "text": "A coaxial patch cable"
+        "id": "a",
+        "text": "A crossover cable"
       }
     ],
     "correct": [
