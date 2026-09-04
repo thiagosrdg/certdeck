@@ -56,6 +56,15 @@ navigator, results calculation, shared UI primitives, design tokens.
 `cert.config.ts` (including its domains' suit marks and hues), its question
 JSON, its PWA manifest and icons, its `base` path, its accent colour.
 
+Styling is Tailwind 4, so the shared theme is CSS, not a JS preset. An app's
+stylesheet starts with `@import "tailwindcss"` followed by
+`@import "@certdeck/engine/theme.css"`, and needs an
+`@source "<relative path>/packages/engine/src"` line because Tailwind's
+automatic source detection does not reach outside the app's own folder. The
+theme's colours forward to the `--cd-*` custom properties in `tokens.css`,
+which is what keeps light, dark and each app's accent switching at runtime —
+define new colours that way rather than as literals.
+
 ## Structure
 
 The repository is an umbrella that may hold other, unrelated projects, so
