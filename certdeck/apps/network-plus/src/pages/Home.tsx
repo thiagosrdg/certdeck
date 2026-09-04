@@ -1,12 +1,18 @@
+import { useMemo } from "react";
 import { useNavigate } from "react-router";
-import { Button } from "@certdeck/engine";
+import { Button, SuitIcon, Wordmark, computeStudyStats } from "@certdeck/engine";
 import { certConfig } from "../cert.config";
 import { questions } from "../data/questions";
-import { useExamStore } from "../stores";
+import { suitFor } from "../lib/suit";
+import { useExamStore, useHistoryStore } from "../stores";
+
+const pct = (v: number) => `${Math.round(v * 100)}%`;
 
 export default function Home() {
   const navigate = useNavigate();
   const resumable = useExamStore((s) => s.hasResumableAttempt());
+  const entries = useHistoryStore((s) => s.entries);
+  const stats = useMemo(() => computeStudyStats(entries, questions, certConfig), [entries]);
 
   function resume() {
     useExamStore.getState().resume();
@@ -17,16 +23,56 @@ export default function Home() {
 
   return (
     <div className="mx-auto flex min-h-screen max-w-md flex-col justify-center gap-6 p-6">
-      <div className="text-center">
-        <h1 className="text-3xl font-extrabold text-accent">{certConfig.appName}</h1>
-        <p className="mt-1 text-sm text-ink-muted">
-          {certConfig.certName} · {certConfig.examCode}
-        </p>
-        <p className="mt-1 font-mono text-xs text-ink-muted">{questions.length} questions loaded</p>
+      {/* The deck's front: title card, then the five suits it is cut from. */}
+      <div className="rounded-card border border-edge bg-card px-5 py-7">
+        <Wordmark
+          name={certConfig.appName}
+          subtitle={`${certConfig.certName} · ${certConfig.examCode}`}
+          meta={`${questions.length} cards in the deck`}
+        />
+
+        <ul className="mt-5 flex items-center justify-center gap-4" aria-label="Domains in this deck">
+          {certConfig.domains.map((d) => {
+            const suit = suitFor(d.id);
+            return (
+              <li key={d.id} title={d.name}>
+                <SuitIcon name={suit.name} className="h-4 w-4" style={{ color: suit.hue }} />
+                <span className="sr-only">{d.name}</span>
+              </li>
+            );
+          })}
+        </ul>
       </div>
 
+      {/* Where the player stands — only once there is something to say. */}
+      {stats.hasData && (
+        <button
+          onClick={() => navigate("/stats")}
+          className="rounded-card border border-edge bg-card px-4 py-3 text-left transition-colors hover:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-table"
+        >
+          <div className="flex items-center justify-between gap-3">
+            <span className="flex items-baseline gap-1.5">
+              <span className="font-mono text-[10px] uppercase tracking-wide text-ink-muted">Level</span>
+              <span className="text-xl font-extrabold leading-none text-gilt">{stats.level}</span>
+            </span>
+            <span className="font-mono text-[11px] text-ink-muted">
+              {pct(stats.overallAccuracy)} accuracy · {stats.currentStreakDays}d streak
+            </span>
+          </div>
+          <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-edge">
+            <div
+              className="h-full rounded-full bg-gilt"
+              style={{
+                width: `${stats.xpForNextLevel > 0 ? (stats.xpIntoLevel / stats.xpForNextLevel) * 100 : 0}%`,
+                transition: "width var(--cd-flip-duration) var(--cd-flip-easing)",
+              }}
+            />
+          </div>
+        </button>
+      )}
+
       {resumable && (
-        <div className="rounded-lg border border-gilt bg-gilt/10 p-4 text-center text-sm">
+        <div className="rounded-card border border-gilt bg-gilt/10 p-4 text-center text-sm">
           <p className="mb-2">You have an exam in progress.</p>
           <Button onClick={resume}>Resume</Button>
         </div>
@@ -40,15 +86,17 @@ export default function Home() {
         <Button variant="secondary" onClick={() => navigate("/random")}>
           Random question
         </Button>
-        <Button variant="ghost" onClick={() => navigate("/stats")}>
-          Statistics
-        </Button>
-        <Button variant="ghost" onClick={() => navigate("/history")}>
-          History
-        </Button>
-        <Button variant="ghost" onClick={() => navigate("/settings")}>
-          Settings
-        </Button>
+        <div className="mt-1 flex gap-2">
+          <Button variant="ghost" className="flex-1" onClick={() => navigate("/stats")}>
+            Statistics
+          </Button>
+          <Button variant="ghost" className="flex-1" onClick={() => navigate("/history")}>
+            History
+          </Button>
+          <Button variant="ghost" className="flex-1" onClick={() => navigate("/settings")}>
+            Settings
+          </Button>
+        </div>
       </nav>
 
       <p className="text-center text-xs text-ink-muted">Unofficial. Not affiliated with CompTIA.</p>

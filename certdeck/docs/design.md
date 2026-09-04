@@ -74,24 +74,37 @@ never the only cue: every place a suit appears it carries its mark and its
 domain name as well.
 
 App accent (`--cd-accent`, used for primary buttons, active nav, the PWA
-theme colour): `#A32B62` plum magenta in light, `#F07AAE` in dark.
+theme colour): `#7B2FA8` royal purple in light, `#BFA0F0` lilac in dark.
 
 Unlike the core tokens, an accent needs both values supplied by the app: a
 hue saturated enough to carry a filled button on ivory is too dark to read
 on the charcoal-plum card, so each app declares a light and a dark accent in
 its own stylesheet. Both must clear WCAG AA against the card face in their
-own theme — this pair measures 6.32 and 6.30.
+own theme — this pair measures 6.91 and 7.38.
+
+An accent also has to clear the app's own suit hues, not just the core
+tokens: domain 3.0 is already violet, and most purples land on top of it.
+Measure before choosing — amethyst `#6D3FA0` sits only ΔE 11.7 from that
+suit and would have read as the same thing. This accent measures ΔE 25.6
+from it, and 67.3 from `--cd-incorrect`.
 
 ## Type
 
-Two typefaces, self-hosted via `@fontsource` packages (bundled into the
+Three typefaces, self-hosted via `@fontsource` packages (bundled into the
 build, served from the app's own origin — no Google Fonts CDN, works
 offline from the first load):
 
-- **Libre Franklin** — the only typeface for UI chrome and body text:
-  headings, the deck wordmark, question stems, options, buttons, results.
-  A grotesque with enough weight range to carry both a card-game logotype
-  (700/800) and long-form reading (400/500) without switching families.
+- **Cinzel** — display only: the deck wordmark and nothing else, widely
+  letterspaced in caps between two gilt hairlines (the engine's `Wordmark`).
+  Cut from Roman inscriptional capitals, which is the engraved, foil-stamped
+  register this deck wants, and which a grotesque cannot reach. It ships at
+  two weights *because* its use is this narrow — the moment it appears in a
+  paragraph it stops being a wordmark and starts being a cost.
+- **Libre Franklin** — UI chrome and body text: headings, question stems,
+  options, buttons, results. A grotesque with enough weight range to carry
+  both interface (600/700) and long-form reading (400/500) without switching
+  families. Question stems stay here: a display face is unreadable at 90
+  questions.
 - **IBM Plex Mono** — question metadata (`1.0 · Objective 1.1 · medium`),
   command-line output inside question stems, and the countdown timer. Never
   body text. Justified by the subject matter (CLI networking tools) and it

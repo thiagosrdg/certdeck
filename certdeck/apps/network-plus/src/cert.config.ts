@@ -15,7 +15,7 @@ export const certConfig: CertConfig = CertConfigSchema.parse({
   questionsPerExam: 90,
   timeLimitMinutes: 90,
   passThreshold: 0.75,
-  accentHue: "#A32B62",
+  accentHue: "#7B2FA8",
   domains: [
     { id: "1.0", name: "Networking Concepts", weight: 0.23, count: 21, hue: "#3B6EA5", icon: "node" },
     { id: "2.0", name: "Network Implementation", weight: 0.2, count: 18, hue: "#2E8B57", icon: "link" },

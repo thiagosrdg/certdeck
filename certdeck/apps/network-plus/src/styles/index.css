@@ -16,17 +16,17 @@
  * way tokens.css lifts correct/incorrect/gilt.
  */
 :root {
-  --cd-accent: #a32b62;
+  --cd-accent: #7b2fa8;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --cd-accent: #f07aae;
+    --cd-accent: #bfa0f0;
   }
 }
 
 :root[data-theme="dark"] {
-  --cd-accent: #f07aae;
+  --cd-accent: #bfa0f0;
 }
 
 html,

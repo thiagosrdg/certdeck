@@ -15,3 +15,4 @@ export * from "./MasteryBadge";
 export * from "./StatTile";
 export * from "./LevelBar";
 export * from "./ScoreTrend";
+export * from "./Wordmark";
