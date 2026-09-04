@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router";
 import { questionLoadErrors } from "./data/questions";
 import History from "./pages/History";
 import Home from "./pages/Home";

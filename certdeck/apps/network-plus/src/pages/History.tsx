@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { Button } from "@certdeck/engine";
 import { PageShell } from "../components/PageShell";
 import { useHistoryStore } from "../stores";

@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router";
 import { CardFrame, ExplanationPanel, Navigator, OptionList, isAnswerCorrect, type NavigatorState } from "@certdeck/engine";
 import { questions } from "../data/questions";
 import { domainName, suitFor } from "../lib/suit";

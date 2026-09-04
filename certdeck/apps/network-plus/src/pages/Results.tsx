@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router";
 import { Button, ResultsSummary } from "@certdeck/engine";
 import { PageShell } from "../components/PageShell";
 import { suitFor } from "../lib/suit";
