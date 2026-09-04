@@ -119,17 +119,15 @@ export default function Home() {
         <Button variant="secondary" onClick={() => navigate("/random")}>
           Random question
         </Button>
-        <div className="mt-1 flex gap-2">
-          <Button variant="ghost" className="flex-1" onClick={() => navigate("/stats")}>
-            Statistics
-          </Button>
-          <Button variant="ghost" className="flex-1" onClick={() => navigate("/history")}>
-            History
-          </Button>
-          <Button variant="ghost" className="flex-1" onClick={() => navigate("/settings")}>
-            Settings
-          </Button>
-        </div>
+        <Button variant="secondary" onClick={() => navigate("/stats")}>
+          Statistics
+        </Button>
+        <Button variant="secondary" onClick={() => navigate("/history")}>
+          History
+        </Button>
+        <Button variant="secondary" onClick={() => navigate("/settings")}>
+          Settings
+        </Button>
       </nav>
 
       <p className="text-center text-xs text-ink-muted">Unofficial. Not affiliated with CompTIA.</p>

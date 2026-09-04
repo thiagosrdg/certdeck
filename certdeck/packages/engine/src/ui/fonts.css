@@ -3,15 +3,14 @@
  * bundled by Vite into the app's own build — never fetched from a CDN, so
  * they work offline from the first load.
  *
- * Cinzel is the display face, and it earns its weight by being used sparingly:
- * titles and the wordmark only, at two weights, never for body copy. It is cut
- * from Roman inscriptional capitals, which is the engraved, foil-stamped
- * register docs/design.md asks for — a finely printed deck, not a casino.
+ * JetBrains Mono is the display face, used for the wordmark only, at two
+ * weights. Never for body copy — a monospace paragraph is slower to read
+ * than a proportional one, and 90 questions is a lot of paragraphs.
  */
-@import "@fontsource/cinzel/latin-600.css";
-@import "@fontsource/cinzel/latin-700.css";
-@import "@fontsource/cinzel/latin-ext-600.css";
-@import "@fontsource/cinzel/latin-ext-700.css";
+@import "@fontsource/jetbrains-mono/latin-700.css";
+@import "@fontsource/jetbrains-mono/latin-800.css";
+@import "@fontsource/jetbrains-mono/latin-ext-700.css";
+@import "@fontsource/jetbrains-mono/latin-ext-800.css";
 @import "@fontsource/libre-franklin/latin-400.css";
 @import "@fontsource/libre-franklin/latin-500.css";
 @import "@fontsource/libre-franklin/latin-600.css";

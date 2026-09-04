@@ -94,12 +94,17 @@ Three typefaces, self-hosted via `@fontsource` packages (bundled into the
 build, served from the app's own origin — no Google Fonts CDN, works
 offline from the first load):
 
-- **Cinzel** — display only: the deck wordmark and nothing else, widely
-  letterspaced in caps between two gilt hairlines (the engine's `Wordmark`).
-  Cut from Roman inscriptional capitals, which is the engraved, foil-stamped
-  register this deck wants, and which a grotesque cannot reach. It ships at
-  two weights *because* its use is this narrow — the moment it appears in a
-  paragraph it stops being a wordmark and starts being a cost.
+- **JetBrains Mono** — display only: the deck wordmark and nothing else,
+  set in caps with light tracking (the engine's `Wordmark`). Monospace
+  already carries its own even rhythm, so the wordmark needs far less
+  letterspacing than an inscriptional face would. It ships at two weights
+  *because* its use is this narrow — the moment it appears in a paragraph it
+  stops being a wordmark and starts being a cost.
+
+  Note that this leaves two monospace families in the build: this one for
+  the wordmark and IBM Plex Mono for metadata. Consolidating to one is
+  available and would shrink the bundle; keeping them separate keeps the
+  wordmark from drifting whenever the metadata face is retuned.
 - **Libre Franklin** — UI chrome and body text: headings, question stems,
   options, buttons, results. A grotesque with enough weight range to carry
   both interface (600/700) and long-form reading (400/500) without switching

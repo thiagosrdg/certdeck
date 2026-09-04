@@ -23,7 +23,7 @@
   --color-tier-silver: var(--cd-tier-silver);
   --color-tier-gold: var(--cd-tier-gold);
 
-  --font-display: "Cinzel", "Libre Franklin", Georgia, serif;
+  --font-display: "JetBrains Mono", ui-monospace, monospace;
   --font-sans: "Libre Franklin", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 
