@@ -96,9 +96,11 @@ a simulator, then install it:
 - **Desktop (Chrome / Edge):** the install icon in the address bar
 
 After the first load everything is cached, questions included, and the app
-works offline. Each simulator installs independently. When a new version is
-deployed, the app shows an update prompt rather than silently serving a stale
-build.
+works offline. Each simulator installs independently.
+
+A newly deployed version is picked up on a later launch, once every window of
+the running one has been closed. There is no update prompt yet, so an
+installed app can serve a previous build for a while without saying so.
 
 ## Adding questions
 

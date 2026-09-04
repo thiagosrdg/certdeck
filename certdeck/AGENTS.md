@@ -249,8 +249,19 @@ because publishing is a deliberate one-off at the end of development rather
 than something every push does. Adding an app means adding to the matrix, not
 rewriting the workflow.
 
-Service worker auto-updates with a non-blocking prompt, so a stale cache
-never hides newly added questions.
+The service worker precaches the app and every question file, so the app
+works offline after the first load.
+
+**The update prompt is specified but not built.** `registerType: "prompt"`
+generates a worker that calls `skipWaiting()` only on receiving a
+`SKIP_WAITING` message, and nothing sends it: the app never imports
+`virtual:pwa-register`, so `injectRegister: "auto"` falls back to a plain
+`navigator.serviceWorker.register` with no UI. A new version therefore
+installs, waits for every window of the old one to close, and appears on a
+later launch, silently. Wiring `registerSW({ onNeedRefresh })` to a prompt is
+what closes the gap between this and the design — until then a stale cache
+can hide newly added questions, which is the thing the prompt existed to
+prevent.
 
 ## Design direction — card game
 
