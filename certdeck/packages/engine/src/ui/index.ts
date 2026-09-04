@@ -1,3 +1,4 @@
+export * from "./accents";
 export * from "./SuitIcon";
 export * from "./Button";
 export * from "./ConfirmDialog";

@@ -88,6 +88,29 @@ Measure before choosing — amethyst `#6D3FA0` sits only ΔE 11.7 from that
 suit and would have read as the same thing. This accent measures ΔE 25.6
 from it, and 67.3 from `--cd-incorrect`.
 
+### The accent palette
+
+The accent is the one token a user picks, from the set in
+`packages/engine/src/ui/accents.ts`: Lilac (the default), Indigo, Teal,
+Moss, Rose, Plum, Slate. Each is a light/dark pair, and the app's stylesheet
+declares `--cd-accent-light` and `--cd-accent-dark` with `--cd-accent`
+resolving to whichever the current theme calls for — so choosing a colour is
+setting two custom properties, and the light/dark rule stays in CSS where
+`prefers-color-scheme` needs no listener.
+
+A new entry has to clear four bars, and `accents.test.ts` enforces every one
+of them rather than trusting this paragraph:
+
+- WCAG AA against its own theme's card face — the accent carries button text.
+- ΔE >= 25 from `--cd-correct` and `--cd-incorrect`. An accent that reads as
+  the verdict breaks the one signal this app cannot get wrong. Crimson, pine
+  and copper were rejected here.
+- ΔE >= 18 from all five suit hues, so a button is never taken for a domain.
+  Ocean blue (ΔE 5.8 from the blue suit) and amber (ΔE 11.9 from the amber
+  suit) were rejected here.
+- ΔE >= 20 from every other accent — a picker of near-identical swatches is a
+  worse picker. Fuchsia was rejected here, at ΔE 16.4 from lilac.
+
 ## Type
 
 Three typefaces, self-hosted via `@fontsource` packages (bundled into the

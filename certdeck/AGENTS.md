@@ -196,6 +196,13 @@ there is a test that pins it.
 suppressed dialogs, which once made submitting a finished exam do nothing at
 all. Use the engine's `ConfirmDialog`.
 
+### Accent
+
+Users pick the accent from `ACCENTS` in the engine; `null` in settings means
+the app's own `cert.config` colour. The rules a new colour must satisfy, and
+why each exists, are in `docs/design.md` and enforced by `accents.test.ts` —
+add a colour there and the tests will tell you whether it is allowed.
+
 ### Progression
 
 `computeStudyStats` in the engine owns XP, levels, mastery tiers and

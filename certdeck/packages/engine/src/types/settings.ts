@@ -9,6 +9,12 @@ export const SettingsSchema = z.object({
   timerEnabledInPractice: z.boolean().default(false),
   shuffleOptions: z.boolean().default(true),
   cardFlipEnabled: z.boolean().default(true),
+  /**
+   * An accent id from ACCENTS, or null to wear the one the app's own
+   * cert.config declares. Defaulted so settings saved before this existed
+   * keep parsing.
+   */
+  accent: z.string().nullable().default(null),
 });
 export type Settings = z.infer<typeof SettingsSchema>;
 

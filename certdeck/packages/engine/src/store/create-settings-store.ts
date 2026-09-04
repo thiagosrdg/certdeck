@@ -9,6 +9,7 @@ export interface SettingsStore {
   setTimerEnabledInPractice: (enabled: boolean) => void;
   setShuffleOptions: (enabled: boolean) => void;
   setCardFlipEnabled: (enabled: boolean) => void;
+  setAccent: (accentId: string | null) => void;
   resetToDefaults: () => void;
 }
 
@@ -33,6 +34,7 @@ export function createSettingsStore(certId: string) {
       setTimerEnabledInPractice: (timerEnabledInPractice) => update({ timerEnabledInPractice }),
       setShuffleOptions: (shuffleOptions) => update({ shuffleOptions }),
       setCardFlipEnabled: (cardFlipEnabled) => update({ cardFlipEnabled }),
+      setAccent: (accent) => update({ accent }),
       resetToDefaults: () => update(DEFAULT_SETTINGS),
     };
   });

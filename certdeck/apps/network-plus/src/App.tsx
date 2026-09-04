@@ -1,5 +1,7 @@
 import { useEffect } from "react";
+import { findAccent } from "@certdeck/engine";
 import { HashRouter, Navigate, Route, Routes } from "react-router";
+import { certConfig } from "./cert.config";
 import { questionLoadErrors } from "./data/questions";
 import History from "./pages/History";
 import Home from "./pages/Home";
@@ -14,12 +16,35 @@ import { useSettingsStore } from "./stores";
 
 export default function App() {
   const theme = useSettingsStore((s) => s.settings.theme);
+  const accentId = useSettingsStore((s) => s.settings.accent);
 
   useEffect(() => {
     const root = document.documentElement;
     if (theme === "system") root.removeAttribute("data-theme");
     else root.setAttribute("data-theme", theme);
   }, [theme]);
+
+  /**
+   * Set only the light/dark *pair*; index.css already decides which half of
+   * it applies for the current theme. Doing it this way keeps one copy of
+   * the light/dark rule — in CSS, where `prefers-color-scheme` works without
+   * a listener — instead of duplicating that logic here.
+   */
+  useEffect(() => {
+    const root = document.documentElement;
+    const accent = findAccent(accentId);
+    if (!accent) {
+      root.style.removeProperty("--cd-accent-light");
+      root.style.removeProperty("--cd-accent-dark");
+    } else {
+      root.style.setProperty("--cd-accent-light", accent.light);
+      root.style.setProperty("--cd-accent-dark", accent.dark);
+    }
+    // Keep the browser chrome in step with the choice.
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute("content", accent?.light ?? certConfig.accentHue);
+  }, [accentId]);
 
   if (questionLoadErrors.length > 0) {
     return (

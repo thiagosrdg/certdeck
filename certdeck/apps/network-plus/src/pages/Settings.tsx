@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, ConfirmDialog } from "@certdeck/engine";
+import { ACCENTS, Button, ConfirmDialog } from "@certdeck/engine";
 import { PageShell } from "../components/PageShell";
 import { certConfig } from "../cert.config";
 import { useExamStore, useHistoryStore, useSettingsStore } from "../stores";
@@ -11,6 +11,7 @@ export default function Settings() {
   const setTimerEnabledInPractice = useSettingsStore((s) => s.setTimerEnabledInPractice);
   const setShuffleOptions = useSettingsStore((s) => s.setShuffleOptions);
   const setCardFlipEnabled = useSettingsStore((s) => s.setCardFlipEnabled);
+  const setAccent = useSettingsStore((s) => s.setAccent);
 
   const [confirmReset, setConfirmReset] = useState(false);
   const attemptCount = useHistoryStore((s) => s.entries.length);
@@ -38,6 +39,39 @@ export default function Settings() {
                 {t}
               </button>
             ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="mb-1 text-sm font-semibold">Accent</h2>
+          <p className="mb-3 text-xs text-ink-muted">
+            Every shade is checked for contrast on both card faces, and kept clear of the suit hues and of the
+            right/wrong colours — so none of them can be mistaken for a domain or for a verdict.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {ACCENTS.map((a) => {
+              const active = (settings.accent ?? "lilac") === a.id;
+              return (
+                <button
+                  key={a.id}
+                  type="button"
+                  onClick={() => setAccent(a.id)}
+                  aria-pressed={active}
+                  title={a.name}
+                  className={`flex items-center gap-2 rounded-lg border py-1.5 pl-1.5 pr-3 text-sm transition-colors ${
+                    active ? "border-accent ring-2 ring-accent" : "border-edge hover:border-accent/60"
+                  }`}
+                >
+                  <span
+                    aria-hidden="true"
+                    className="block h-6 w-6 flex-shrink-0 rounded-md border border-edge"
+                    style={{ backgroundColor: a.light }}
+                  />
+                  <span>{a.name}</span>
+                  {active && <span className="sr-only">(selected)</span>}
+                </button>
+              );
+            })}
           </div>
         </section>
 
