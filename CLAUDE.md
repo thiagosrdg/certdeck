@@ -14,6 +14,7 @@ direction, quality floor. This file only covers what lives above it.
 cd certdeck            # every npm command runs from here, not the repo root
 npm run dev            # dev servers (landing + network-plus)
 npm run validate       # question data — also runs in the pre-commit hook
+npm run typecheck      # tsc --noEmit; the builds do NOT typecheck
 npm run test           # unit tests
 npm run build          # engine + landing + apps
 ```

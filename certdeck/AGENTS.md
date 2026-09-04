@@ -275,8 +275,13 @@ in that app's config, and per-domain counts. Runs in a pre-commit hook.
 ## Testing expectations
 
 At minimum: weighted exam generation against a config, scoring including
-multi-answer questions, and the persistence layer's per-certification
-namespacing.
+multi-answer questions, the persistence layer's per-certification
+namespacing, and the schema refinements that types cannot express — the
+QuestionSchema and CertConfigSchema rules `npm run validate` relies on.
+
+CI runs `validate`, `typecheck` and `test`. `typecheck` is not optional
+there: `vite build` strips types with esbuild rather than checking them,
+and the unit tests never see a type error, so `tsc` is the only gate.
 
 ## Working style
 
