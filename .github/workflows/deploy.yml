@@ -1,3 +1,5 @@
+# CertDeck lives in certdeck/ so this repo can host other projects; every
+# job that touches the workspace runs from there.
 name: Deploy to GitHub Pages
 
 on:
@@ -19,12 +21,16 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: certdeck
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
+          cache-dependency-path: certdeck/package-lock.json
       - run: npm ci
       - run: npm run validate
       - run: npm run test
@@ -35,6 +41,9 @@ jobs:
   build-apps:
     needs: check
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: certdeck
     strategy:
       matrix:
         app:
@@ -45,28 +54,33 @@ jobs:
         with:
           node-version: 20
           cache: npm
+          cache-dependency-path: certdeck/package-lock.json
       - run: npm ci
       - run: npm run build -w apps/${{ matrix.app }}
       - uses: actions/upload-artifact@v4
         with:
           name: app-dist-${{ matrix.app }}
-          path: apps/${{ matrix.app }}/dist
+          path: certdeck/apps/${{ matrix.app }}/dist
 
   build-landing:
     needs: check
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: certdeck
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
+          cache-dependency-path: certdeck/package-lock.json
       - run: npm ci
       - run: npm run build -w landing
       - uses: actions/upload-artifact@v4
         with:
           name: landing-dist
-          path: landing/dist
+          path: certdeck/landing/dist
 
   deploy:
     needs: [build-apps, build-landing]

@@ -1,0 +1,2 @@
+# Hooks run from the repo root; the CertDeck workspace lives one level down.
+cd certdeck && npm run validate

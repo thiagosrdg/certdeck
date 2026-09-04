@@ -16,7 +16,7 @@
     "test:watch": "vitest",
     "validate": "tsx scripts/validate-questions.ts",
     "typecheck": "npm run typecheck --workspaces --if-present",
-    "prepare": "husky"
+    "prepare": "cd .. && husky certdeck/.husky"
   },
   "devDependencies": {
     "@types/node": "^22.9.0",
