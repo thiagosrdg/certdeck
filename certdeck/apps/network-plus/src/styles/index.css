@@ -1,6 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "@certdeck/engine/theme.css";
+
+/*
+ * The engine's components live outside this app's folder, so Tailwind's
+ * automatic source detection does not reach them on its own.
+ */
+@source "../../../../packages/engine/src";
 
 /*
  * PacketPrep's accent, see docs/design.md. Everything else (table, card,

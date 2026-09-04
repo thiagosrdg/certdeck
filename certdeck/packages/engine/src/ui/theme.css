@@ -1,0 +1,28 @@
+/*
+ * CertDeck's Tailwind theme — shared by every app, the Tailwind v4
+ * counterpart of tokens.css. Import it right after `@import "tailwindcss"`.
+ *
+ * Every colour resolves through a `--cd-*` custom property rather than a
+ * literal, so light/dark and each app's own accent keep working at runtime:
+ * `bg-card` compiles to `var(--color-card)`, which forwards to
+ * `var(--cd-card)`, which tokens.css redefines per theme.
+ */
+
+@theme {
+  --color-table: var(--cd-table);
+  --color-card: var(--cd-card);
+  --color-ink: var(--cd-ink);
+  --color-ink-muted: var(--cd-ink-muted);
+  --color-edge: var(--cd-edge);
+  --color-gilt: var(--cd-gilt);
+  --color-correct: var(--cd-correct);
+  --color-incorrect: var(--cd-incorrect);
+  --color-accent: var(--cd-accent);
+
+  --font-sans: "Libre Franklin", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --aspect-card: 5 / 7;
+  --radius-card: 14px;
+  --ease-settle: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
