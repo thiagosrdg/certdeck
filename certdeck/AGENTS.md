@@ -139,7 +139,7 @@ component. See the README for a commented example.
 | `id` | Unique within the certification |
 | `domain` | Must match a domain id in that app's config |
 | `domainName` | Human-readable domain name |
-| `objective` | Official objective number, e.g. `"1.1"` |
+| `objective` | Official objective number, e.g. `"1.1"`; must be one the domain lists in the config |
 | `type` | `"single"` or `"multiple"` (checkboxes when multiple) |
 | `difficulty` | `"easy" \| "medium" \| "hard"` |
 | `stem` | Question text |
@@ -323,8 +323,16 @@ npm run test       # unit tests
 ```
 
 `npm run validate` checks schema validity, id uniqueness within a
-certification, complete distractor explanations, that every `domain` exists
-in that app's config, and per-domain counts. Runs in a pre-commit hook.
+certification, complete distractor explanations, that every `domain` and
+every `objective` exists in that app's config, and per-domain counts. Runs
+in a pre-commit hook.
+
+Each domain in `cert.config.ts` lists its `objectives`. This is what makes
+the objective check possible, and it exists because it was missing: five
+questions carried objective `4.4`, which N10-009 does not have, and nothing
+caught it — the config had no objective list to check against. A domain with
+an empty `objectives` array opts out, so a new app is not blocked before its
+objectives are transcribed.
 
 ## Testing expectations
 

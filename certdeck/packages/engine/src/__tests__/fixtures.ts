@@ -11,9 +11,9 @@ export function makeConfig(overrides: Partial<CertConfig> = {}): CertConfig {
     passThreshold: 0.7,
     accentHue: "#123456",
     domains: [
-      { id: "1.0", name: "Domain One", weight: 0.5, count: 5, hue: "#111111", icon: "node" },
-      { id: "2.0", name: "Domain Two", weight: 0.3, count: 3, hue: "#222222", icon: "link" },
-      { id: "3.0", name: "Domain Three", weight: 0.2, count: 2, hue: "#333333", icon: "wave" },
+      { id: "1.0", name: "Domain One", weight: 0.5, count: 5, hue: "#111111", icon: "node", objectives: ["1.1", "1.2"] },
+      { id: "2.0", name: "Domain Two", weight: 0.3, count: 3, hue: "#222222", icon: "link", objectives: ["2.1"] },
+      { id: "3.0", name: "Domain Three", weight: 0.2, count: 2, hue: "#333333", icon: "wave", objectives: ["3.1"] },
     ],
     ...overrides,
   };

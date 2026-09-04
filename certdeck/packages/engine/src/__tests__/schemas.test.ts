@@ -151,6 +151,38 @@ describe("CertConfigSchema", () => {
     );
   });
 
+  it("defaults objectives to empty, so an app that has not listed them still parses", () => {
+    const config = makeConfig();
+    const input = { ...config, domains: config.domains.map(({ objectives: _drop, ...rest }) => rest) };
+    const result = CertConfigSchema.safeParse(input);
+    expect(result.success).toBe(true);
+    expect(result.success && result.data.domains[0]?.objectives).toEqual([]);
+  });
+
+  it("rejects a domain listing an objective that belongs to another domain", () => {
+    const config = makeConfig();
+    const input = {
+      ...config,
+      domains: config.domains.map((d, i) => (i === 0 ? { ...d, objectives: ["1.1", "3.2"] } : d)),
+    };
+    const result = CertConfigSchema.safeParse(input);
+    expect(result.success).toBe(false);
+    expect(!result.success && result.error.issues.map((i) => i.message).join(" | ")).toContain(
+      "objectives from another domain"
+    );
+  });
+
+  it("rejects a duplicated objective within a domain", () => {
+    const config = makeConfig();
+    const input = {
+      ...config,
+      domains: config.domains.map((d, i) => (i === 0 ? { ...d, objectives: ["1.1", "1.1"] } : d)),
+    };
+    const result = CertConfigSchema.safeParse(input);
+    expect(result.success).toBe(false);
+    expect(!result.success && result.error.issues.map((i) => i.message).join(" | ")).toContain("duplicate objective");
+  });
+
   it("rejects duplicate domain ids", () => {
     const config = makeConfig();
     const input = {

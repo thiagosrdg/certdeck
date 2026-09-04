@@ -2,8 +2,9 @@
 /**
  * Validates every question file in every app: schema validity, id
  * uniqueness within a certification, complete distractor explanations
- * (enforced by the schema itself), that every `domain` exists in that
- * app's config, and per-domain counts against the config. Run via
+ * (enforced by the schema itself), that every `domain` and `objective`
+ * exists in that app's config, and per-domain counts against the config.
+ * Run via
  * `npm run validate`; also wired into the pre-commit hook.
  */
 import { existsSync, readdirSync, readFileSync } from "node:fs";
@@ -60,6 +61,10 @@ async function validateApp(appName: string): Promise<boolean> {
   }
 
   const domainIds = new Set(certConfig.domains.map((d) => d.id));
+  // A domain that lists no objectives opts out of the objective check.
+  const objectivesByDomain = new Map(
+    certConfig.domains.filter((d) => d.objectives.length > 0).map((d) => [d.id, new Set(d.objectives)])
+  );
   const seenIds = new Set<string>();
   const perDomainCount = new Map<string, number>();
 
@@ -105,6 +110,15 @@ async function validateApp(appName: string): Promise<boolean> {
       }
       seenIds.add(q.id);
       questionCount++;
+
+      const allowedObjectives = objectivesByDomain.get(q.domain);
+      if (allowedObjectives && !allowedObjectives.has(q.objective)) {
+        ok = false;
+        console.error(
+          `  ${file}: question "${q.id}" references objective "${q.objective}", which domain ${q.domain} does not list ` +
+            `(valid: ${[...allowedObjectives].join(", ")})`
+        );
+      }
 
       if (!domainIds.has(q.domain)) {
         ok = false;

@@ -14,6 +14,13 @@ export const DomainConfigSchema = z.object({
   count: z.number().int().positive(),
   hue: z.string().min(1),
   icon: z.string().min(1),
+  /**
+   * The exam objectives this domain covers, as the certification numbers
+   * them ("1.1", "1.2", ...). Defaulted to empty so an app that has not
+   * listed them yet still parses; `npm run validate` checks question
+   * objectives against this list whenever it is non-empty.
+   */
+  objectives: z.array(z.string().min(1)).default([]),
 });
 export type DomainConfig = z.infer<typeof DomainConfigSchema>;
 
@@ -35,6 +42,19 @@ export const CertConfigSchema = z
     domains: z.array(DomainConfigSchema).min(1),
   })
   .superRefine((cfg, ctx) => {
+    for (const d of cfg.domains) {
+      const stray = d.objectives.filter((o) => !o.startsWith(`${d.id.split(".")[0]}.`));
+      if (stray.length > 0) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: `Domain ${d.id} lists objectives from another domain: ${stray.join(", ")}`,
+        });
+      }
+      if (new Set(d.objectives).size !== d.objectives.length) {
+        ctx.addIssue({ code: z.ZodIssueCode.custom, message: `Domain ${d.id} lists a duplicate objective` });
+      }
+    }
+
     const total = cfg.domains.reduce((sum, d) => sum + d.count, 0);
     if (total !== cfg.questionsPerExam) {
       ctx.addIssue({
