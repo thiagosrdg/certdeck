@@ -18,7 +18,7 @@
     "@fontsource/ibm-plex-mono": "^5.3.0",
     "@fontsource/libre-franklin": "^5.3.0",
     "zod": "^4.5.4",
-    "zustand": "^5.0.1"
+    "zustand": "^5.0.15"
   },
   "peerDependencies": {
     "react": "^19.2.8",
@@ -27,6 +27,6 @@
   "devDependencies": {
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
-    "typescript": "^5.6.3"
+    "typescript": "^7.0.2"
   }
 }
