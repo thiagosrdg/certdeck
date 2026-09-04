@@ -1,0 +1,114 @@
+:root {
+  /* CertDeck's own brand — gilt, the one identity element shared by every deck. */
+  --cd-accent: #b08d2b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Libre Franklin", system-ui, sans-serif;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem;
+  color: var(--cd-ink);
+}
+
+.hero p {
+  color: var(--cd-ink-muted);
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.deck-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  position: relative;
+  display: block;
+  aspect-ratio: 5 / 7;
+  border-radius: 14px;
+  border: 1px solid var(--cd-edge);
+  background: var(--cd-card);
+  color: var(--cd-ink);
+  text-decoration: none;
+  padding: 1.25rem;
+  box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease;
+}
+
+.card:hover:not(.card--disabled) {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.card--disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.card__status {
+  display: inline-block;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.card h2 {
+  margin: 1.5rem 0 0.25rem;
+  font-size: 1.25rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--cd-ink-muted);
+  font-size: 0.9rem;
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  color: var(--cd-ink-muted);
+  font-size: 0.8rem;
+}
+
+footer a {
+  color: var(--cd-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}

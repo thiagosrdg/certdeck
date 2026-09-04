@@ -1,0 +1,3559 @@
+[
+  {
+    "id": "n10-009-10-022",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does POP3S use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "995"
+      },
+      {
+        "id": "b",
+        "text": "3306"
+      },
+      {
+        "id": "c",
+        "text": "3389"
+      },
+      {
+        "id": "d",
+        "text": "5060"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "POP3S uses port 995/TCP by default — it carries POP3 encrypted with TLS.",
+    "distractorExplanations": {
+      "b": "Port 3306 is MySQL's default port, not POP3S's.",
+      "c": "Port 3389 is RDP's default port, not POP3S's.",
+      "d": "Port 5060 is SIP's default port, not POP3S's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-023",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does MySQL use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "3306"
+      },
+      {
+        "id": "b",
+        "text": "21"
+      },
+      {
+        "id": "c",
+        "text": "22"
+      },
+      {
+        "id": "d",
+        "text": "23"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "MySQL uses port 3306/TCP by default — it accepts client connections to a MySQL/MariaDB database.",
+    "distractorExplanations": {
+      "b": "Port 21 is FTP (control)'s default port, not MySQL's.",
+      "c": "Port 22 is SSH's default port, not MySQL's.",
+      "d": "Port 23 is Telnet's default port, not MySQL's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-024",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does RDP use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "3389"
+      },
+      {
+        "id": "b",
+        "text": "20"
+      },
+      {
+        "id": "c",
+        "text": "21"
+      },
+      {
+        "id": "d",
+        "text": "22"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "RDP uses port 3389/TCP by default — it carries a Windows Remote Desktop session.",
+    "distractorExplanations": {
+      "b": "Port 20 is FTP (data)'s default port, not RDP's.",
+      "c": "Port 21 is FTP (control)'s default port, not RDP's.",
+      "d": "Port 22 is SSH's default port, not RDP's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-025",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does SIP use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "5060"
+      },
+      {
+        "id": "b",
+        "text": "514"
+      },
+      {
+        "id": "c",
+        "text": "636"
+      },
+      {
+        "id": "d",
+        "text": "993"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "SIP uses port 5060/TCP/UDP by default — it signals and sets up VoIP calls.",
+    "distractorExplanations": {
+      "b": "Port 514 is Syslog's default port, not SIP's.",
+      "c": "Port 636 is LDAPS's default port, not SIP's.",
+      "d": "Port 993 is IMAPS's default port, not SIP's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-026",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A packet capture shows traffic on TCP port 20. Which service most likely generated it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "FTP (data)"
+      },
+      {
+        "id": "b",
+        "text": "LDAPS"
+      },
+      {
+        "id": "c",
+        "text": "IMAPS"
+      },
+      {
+        "id": "d",
+        "text": "POP3S"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port 20 is the default port for FTP (data).",
+    "distractorExplanations": {
+      "b": "LDAPS defaults to port 636, not 20.",
+      "c": "IMAPS defaults to port 993, not 20.",
+      "d": "POP3S defaults to port 995, not 20."
+    },
+    "tags": [
+      "ports",
+      "packet-analysis"
+    ]
+  },
+  {
+    "id": "n10-009-10-027",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A packet capture shows traffic on TCP port 21. Which service most likely generated it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "FTP (control)"
+      },
+      {
+        "id": "b",
+        "text": "IMAPS"
+      },
+      {
+        "id": "c",
+        "text": "POP3S"
+      },
+      {
+        "id": "d",
+        "text": "MySQL"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port 21 is the default port for FTP (control).",
+    "distractorExplanations": {
+      "b": "IMAPS defaults to port 993, not 21.",
+      "c": "POP3S defaults to port 995, not 21.",
+      "d": "MySQL defaults to port 3306, not 21."
+    },
+    "tags": [
+      "ports",
+      "packet-analysis"
+    ]
+  },
+  {
+    "id": "n10-009-10-028",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A packet capture shows traffic on TCP port 22. Which service most likely generated it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "SSH"
+      },
+      {
+        "id": "b",
+        "text": "POP3S"
+      },
+      {
+        "id": "c",
+        "text": "MySQL"
+      },
+      {
+        "id": "d",
+        "text": "RDP"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port 22 is the default port for SSH.",
+    "distractorExplanations": {
+      "b": "POP3S defaults to port 995, not 22.",
+      "c": "MySQL defaults to port 3306, not 22.",
+      "d": "RDP defaults to port 3389, not 22."
+    },
+    "tags": [
+      "ports",
+      "packet-analysis"
+    ]
+  },
+  {
+    "id": "n10-009-10-029",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A packet capture shows traffic on TCP port 23. Which service most likely generated it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Telnet"
+      },
+      {
+        "id": "b",
+        "text": "MySQL"
+      },
+      {
+        "id": "c",
+        "text": "RDP"
+      },
+      {
+        "id": "d",
+        "text": "SIP"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port 23 is the default port for Telnet.",
+    "distractorExplanations": {
+      "b": "MySQL defaults to port 3306, not 23.",
+      "c": "RDP defaults to port 3389, not 23.",
+      "d": "SIP defaults to port 5060, not 23."
+    },
+    "tags": [
+      "ports",
+      "packet-analysis"
+    ]
+  },
+  {
+    "id": "n10-009-10-030",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A packet capture shows traffic on TCP port 25. Which service most likely generated it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "SMTP"
+      },
+      {
+        "id": "b",
+        "text": "SIP"
+      },
+      {
+        "id": "c",
+        "text": "FTP (data)"
+      },
+      {
+        "id": "d",
+        "text": "FTP (control)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port 25 is the default port for SMTP.",
+    "distractorExplanations": {
+      "b": "SIP defaults to port 5060, not 25.",
+      "c": "FTP (data) defaults to port 20, not 25.",
+      "d": "FTP (control) defaults to port 21, not 25."
+    },
+    "tags": [
+      "ports",
+      "packet-analysis"
+    ]
+  },
+  {
+    "id": "n10-009-10-031",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A packet capture shows traffic on TCP port 53. Which service most likely generated it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "DNS"
+      },
+      {
+        "id": "b",
+        "text": "LDAPS"
+      },
+      {
+        "id": "c",
+        "text": "IMAPS"
+      },
+      {
+        "id": "d",
+        "text": "POP3S"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port 53 is the default port for DNS.",
+    "distractorExplanations": {
+      "b": "LDAPS defaults to port 636, not 53.",
+      "c": "IMAPS defaults to port 993, not 53.",
+      "d": "POP3S defaults to port 995, not 53."
+    },
+    "tags": [
+      "ports",
+      "packet-analysis"
+    ]
+  },
+  {
+    "id": "n10-009-10-032",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A packet capture shows traffic on UDP port 67. Which service most likely generated it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "DHCP (server)"
+      },
+      {
+        "id": "b",
+        "text": "DNS"
+      },
+      {
+        "id": "c",
+        "text": "DHCP (client)"
+      },
+      {
+        "id": "d",
+        "text": "TFTP"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port 67 is the default port for DHCP (server).",
+    "distractorExplanations": {
+      "b": "DNS defaults to port 53, not 67.",
+      "c": "DHCP (client) defaults to port 68, not 67.",
+      "d": "TFTP defaults to port 69, not 67."
+    },
+    "tags": [
+      "ports",
+      "packet-analysis"
+    ]
+  },
+  {
+    "id": "n10-009-10-033",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A packet capture shows traffic on UDP port 68. Which service most likely generated it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "DHCP (client)"
+      },
+      {
+        "id": "b",
+        "text": "DHCP (server)"
+      },
+      {
+        "id": "c",
+        "text": "TFTP"
+      },
+      {
+        "id": "d",
+        "text": "HTTP"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port 68 is the default port for DHCP (client).",
+    "distractorExplanations": {
+      "b": "DHCP (server) defaults to port 67, not 68.",
+      "c": "TFTP defaults to port 69, not 68.",
+      "d": "HTTP defaults to port 80, not 68."
+    },
+    "tags": [
+      "ports",
+      "packet-analysis"
+    ]
+  },
+  {
+    "id": "n10-009-10-034",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A packet capture shows traffic on UDP port 69. Which service most likely generated it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "TFTP"
+      },
+      {
+        "id": "b",
+        "text": "DHCP (client)"
+      },
+      {
+        "id": "c",
+        "text": "HTTP"
+      },
+      {
+        "id": "d",
+        "text": "POP3"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port 69 is the default port for TFTP.",
+    "distractorExplanations": {
+      "b": "DHCP (client) defaults to port 68, not 69.",
+      "c": "HTTP defaults to port 80, not 69.",
+      "d": "POP3 defaults to port 110, not 69."
+    },
+    "tags": [
+      "ports",
+      "packet-analysis"
+    ]
+  },
+  {
+    "id": "n10-009-10-035",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A packet capture shows traffic on TCP port 80. Which service most likely generated it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "HTTP"
+      },
+      {
+        "id": "b",
+        "text": "SNMP"
+      },
+      {
+        "id": "c",
+        "text": "SNMP trap"
+      },
+      {
+        "id": "d",
+        "text": "LDAP"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port 80 is the default port for HTTP.",
+    "distractorExplanations": {
+      "b": "SNMP defaults to port 161, not 80.",
+      "c": "SNMP trap defaults to port 162, not 80.",
+      "d": "LDAP defaults to port 389, not 80."
+    },
+    "tags": [
+      "ports",
+      "packet-analysis"
+    ]
+  },
+  {
+    "id": "n10-009-10-036",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A packet capture shows traffic on TCP port 110. Which service most likely generated it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "POP3"
+      },
+      {
+        "id": "b",
+        "text": "SNMP"
+      },
+      {
+        "id": "c",
+        "text": "SNMP trap"
+      },
+      {
+        "id": "d",
+        "text": "LDAP"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port 110 is the default port for POP3.",
+    "distractorExplanations": {
+      "b": "SNMP defaults to port 161, not 110.",
+      "c": "SNMP trap defaults to port 162, not 110.",
+      "d": "LDAP defaults to port 389, not 110."
+    },
+    "tags": [
+      "ports",
+      "packet-analysis"
+    ]
+  },
+  {
+    "id": "n10-009-10-037",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A packet capture shows traffic on UDP port 123. Which service most likely generated it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "NTP"
+      },
+      {
+        "id": "b",
+        "text": "SSH"
+      },
+      {
+        "id": "c",
+        "text": "Telnet"
+      },
+      {
+        "id": "d",
+        "text": "SMTP"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port 123 is the default port for NTP.",
+    "distractorExplanations": {
+      "b": "SSH defaults to port 22, not 123.",
+      "c": "Telnet defaults to port 23, not 123.",
+      "d": "SMTP defaults to port 25, not 123."
+    },
+    "tags": [
+      "ports",
+      "packet-analysis"
+    ]
+  },
+  {
+    "id": "n10-009-10-038",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A packet capture shows traffic on TCP port 143. Which service most likely generated it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "IMAP"
+      },
+      {
+        "id": "b",
+        "text": "SNMP"
+      },
+      {
+        "id": "c",
+        "text": "SNMP trap"
+      },
+      {
+        "id": "d",
+        "text": "LDAP"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port 143 is the default port for IMAP.",
+    "distractorExplanations": {
+      "b": "SNMP defaults to port 161, not 143.",
+      "c": "SNMP trap defaults to port 162, not 143.",
+      "d": "LDAP defaults to port 389, not 143."
+    },
+    "tags": [
+      "ports",
+      "packet-analysis"
+    ]
+  },
+  {
+    "id": "n10-009-10-039",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A packet capture shows traffic on UDP port 161. Which service most likely generated it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "SNMP"
+      },
+      {
+        "id": "b",
+        "text": "FTP (data)"
+      },
+      {
+        "id": "c",
+        "text": "FTP (control)"
+      },
+      {
+        "id": "d",
+        "text": "SSH"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port 161 is the default port for SNMP.",
+    "distractorExplanations": {
+      "b": "FTP (data) defaults to port 20, not 161.",
+      "c": "FTP (control) defaults to port 21, not 161.",
+      "d": "SSH defaults to port 22, not 161."
+    },
+    "tags": [
+      "ports",
+      "packet-analysis"
+    ]
+  },
+  {
+    "id": "n10-009-10-040",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A packet capture shows traffic on UDP port 162. Which service most likely generated it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "SNMP trap"
+      },
+      {
+        "id": "b",
+        "text": "SIP"
+      },
+      {
+        "id": "c",
+        "text": "FTP (data)"
+      },
+      {
+        "id": "d",
+        "text": "FTP (control)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port 162 is the default port for SNMP trap.",
+    "distractorExplanations": {
+      "b": "SIP defaults to port 5060, not 162.",
+      "c": "FTP (data) defaults to port 20, not 162.",
+      "d": "FTP (control) defaults to port 21, not 162."
+    },
+    "tags": [
+      "ports",
+      "packet-analysis"
+    ]
+  },
+  {
+    "id": "n10-009-10-041",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A packet capture shows traffic on TCP port 389. Which service most likely generated it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "LDAP"
+      },
+      {
+        "id": "b",
+        "text": "FTP (data)"
+      },
+      {
+        "id": "c",
+        "text": "FTP (control)"
+      },
+      {
+        "id": "d",
+        "text": "SSH"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port 389 is the default port for LDAP.",
+    "distractorExplanations": {
+      "b": "FTP (data) defaults to port 20, not 389.",
+      "c": "FTP (control) defaults to port 21, not 389.",
+      "d": "SSH defaults to port 22, not 389."
+    },
+    "tags": [
+      "ports",
+      "packet-analysis"
+    ]
+  },
+  {
+    "id": "n10-009-10-042",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A packet capture shows traffic on TCP port 443. Which service most likely generated it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "HTTPS"
+      },
+      {
+        "id": "b",
+        "text": "HTTP"
+      },
+      {
+        "id": "c",
+        "text": "POP3"
+      },
+      {
+        "id": "d",
+        "text": "NTP"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port 443 is the default port for HTTPS.",
+    "distractorExplanations": {
+      "b": "HTTP defaults to port 80, not 443.",
+      "c": "POP3 defaults to port 110, not 443.",
+      "d": "NTP defaults to port 123, not 443."
+    },
+    "tags": [
+      "ports",
+      "packet-analysis"
+    ]
+  },
+  {
+    "id": "n10-009-20-019",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which routing protocol is a advanced distance-vector (hybrid) protocol that uses a composite metric of bandwidth and delay as its metric?",
+    "options": [
+      {
+        "id": "a",
+        "text": "EIGRP"
+      },
+      {
+        "id": "b",
+        "text": "RIP"
+      },
+      {
+        "id": "c",
+        "text": "OSPF"
+      },
+      {
+        "id": "d",
+        "text": "BGP"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "EIGRP is a advanced distance-vector (hybrid) protocol using a composite metric of bandwidth and delay; it is known for Cisco-proprietary fast convergence using DUAL.",
+    "distractorExplanations": {
+      "b": "RIP is distance-vector, using hop count instead.",
+      "c": "OSPF is link-state, using cost (based on bandwidth) instead.",
+      "d": "BGP is path-vector, using AS-path and configured policy instead."
+    },
+    "tags": [
+      "routing"
+    ]
+  },
+  {
+    "id": "n10-009-20-020",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which routing protocol is a path-vector protocol that uses AS-path and configured policy as its metric?",
+    "options": [
+      {
+        "id": "a",
+        "text": "BGP"
+      },
+      {
+        "id": "b",
+        "text": "EIGRP"
+      },
+      {
+        "id": "c",
+        "text": "RIP"
+      },
+      {
+        "id": "d",
+        "text": "OSPF"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "BGP is a path-vector protocol using AS-path and configured policy; it is known for routing between autonomous systems across the internet.",
+    "distractorExplanations": {
+      "b": "EIGRP is advanced distance-vector (hybrid), using a composite metric of bandwidth and delay instead.",
+      "c": "RIP is distance-vector, using hop count instead.",
+      "d": "OSPF is link-state, using cost (based on bandwidth) instead."
+    },
+    "tags": [
+      "routing"
+    ]
+  },
+  {
+    "id": "n10-009-20-021",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "What is the correct order of the DHCP lease process?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Discover, Offer, Request, Acknowledge"
+      },
+      {
+        "id": "b",
+        "text": "Offer, Discover, Acknowledge, Request"
+      },
+      {
+        "id": "c",
+        "text": "Request, Discover, Offer, Acknowledge"
+      },
+      {
+        "id": "d",
+        "text": "Discover, Request, Offer, Acknowledge"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "DHCP follows DORA: the client broadcasts Discover, a server responds with an Offer, the client broadcasts Request to accept it, and the server confirms with an Acknowledge.",
+    "distractorExplanations": {
+      "b": "The client always initiates with Discover — a server can't Offer before it sees a request.",
+      "c": "The client's first message is Discover, not Request.",
+      "d": "Request comes after the client evaluates an Offer, not before it."
+    },
+    "tags": [
+      "dhcp"
+    ]
+  },
+  {
+    "id": "n10-009-20-022",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "What distinguishes PAT (port address translation) from basic NAT?",
+    "options": [
+      {
+        "id": "a",
+        "text": "PAT lets many private addresses share a single public address by tracking unique port numbers"
+      },
+      {
+        "id": "b",
+        "text": "PAT translates IPv6 addresses, while NAT only translates IPv4"
+      },
+      {
+        "id": "c",
+        "text": "PAT requires a one-to-one mapping between private and public addresses"
+      },
+      {
+        "id": "d",
+        "text": "PAT operates at the data link layer instead of the network layer"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "PAT (also called NAT overload) maps many internal hosts to one public IP by assigning each connection a distinct source port, which is why most home and small-office routers only need one public address.",
+    "distractorExplanations": {
+      "b": "PAT is not IPv6-specific; it's most commonly used to conserve IPv4 addresses.",
+      "c": "A one-to-one mapping describes static NAT, not PAT.",
+      "d": "NAT and PAT both operate at the network layer, translating IP addresses (and, for PAT, transport-layer ports)."
+    },
+    "tags": [
+      "nat"
+    ]
+  },
+  {
+    "id": "n10-009-20-023",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "What is the primary purpose of configuring VLANs on a switch?",
+    "options": [
+      {
+        "id": "a",
+        "text": "To logically segment a single physical switch into multiple isolated broadcast domains"
+      },
+      {
+        "id": "b",
+        "text": "To physically split a switch's backplane into separate hardware segments"
+      },
+      {
+        "id": "c",
+        "text": "To encrypt traffic between two switches"
+      },
+      {
+        "id": "d",
+        "text": "To increase the maximum cable length supported by a switch port"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "VLANs let a single physical switch behave like multiple separate switches, each its own broadcast domain, without any additional cabling or hardware.",
+    "distractorExplanations": {
+      "b": "VLANs are a logical, configuration-based segmentation — no physical hardware is split.",
+      "c": "VLANs alone don't encrypt anything; that's the job of protocols like IPsec or TLS.",
+      "d": "VLAN configuration has no effect on a cable's supported length."
+    },
+    "tags": [
+      "vlan",
+      "switching"
+    ]
+  },
+  {
+    "id": "n10-009-20-024",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A trunk link between two switches carries traffic for multiple VLANs. Which standard tags Ethernet frames with their VLAN ID as they cross that link?",
+    "options": [
+      {
+        "id": "a",
+        "text": "802.1Q"
+      },
+      {
+        "id": "b",
+        "text": "802.1X"
+      },
+      {
+        "id": "c",
+        "text": "802.3af"
+      },
+      {
+        "id": "d",
+        "text": "802.11ac"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "802.1Q inserts a 4-byte VLAN tag into the Ethernet frame header so a trunk link can carry multiple VLANs and each switch knows which VLAN a frame belongs to.",
+    "distractorExplanations": {
+      "b": "802.1X is a port-based authentication standard, unrelated to VLAN tagging.",
+      "c": "802.3af defines Power over Ethernet, not VLAN tagging.",
+      "d": "802.11ac is a wireless standard, not related to wired trunking."
+    },
+    "tags": [
+      "vlan",
+      "trunking"
+    ]
+  },
+  {
+    "id": "n10-009-20-025",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which WAN connection type is a dedicated leased line delivering 1.544 Mbps symmetrically?",
+    "options": [
+      {
+        "id": "a",
+        "text": "T1"
+      },
+      {
+        "id": "b",
+        "text": "Fibre (FTTH)"
+      },
+      {
+        "id": "c",
+        "text": "Satellite"
+      },
+      {
+        "id": "d",
+        "text": "Cable"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "T1 matches that description.",
+    "distractorExplanations": {
+      "b": "Fibre (FTTH) is instead broadband delivered directly to the premises over fibre optic cable.",
+      "c": "Satellite is instead broadband delivered via a geostationary satellite link, with noticeably high latency.",
+      "d": "Cable is instead shared broadband delivered over coaxial cable using DOCSIS, shared with neighbouring subscribers."
+    },
+    "tags": [
+      "wan"
+    ]
+  },
+  {
+    "id": "n10-009-20-026",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which WAN connection type is shared broadband delivered over coaxial cable using DOCSIS, shared with neighbouring subscribers?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cable"
+      },
+      {
+        "id": "b",
+        "text": "Fibre (FTTH)"
+      },
+      {
+        "id": "c",
+        "text": "Satellite"
+      },
+      {
+        "id": "d",
+        "text": "T1"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Cable matches that description.",
+    "distractorExplanations": {
+      "b": "Fibre (FTTH) is instead broadband delivered directly to the premises over fibre optic cable.",
+      "c": "Satellite is instead broadband delivered via a geostationary satellite link, with noticeably high latency.",
+      "d": "T1 is instead a dedicated leased line delivering 1.544 Mbps symmetrically."
+    },
+    "tags": [
+      "wan"
+    ]
+  },
+  {
+    "id": "n10-009-20-027",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which WAN connection type is broadband delivered over existing copper telephone lines?",
+    "options": [
+      {
+        "id": "a",
+        "text": "DSL"
+      },
+      {
+        "id": "b",
+        "text": "T1"
+      },
+      {
+        "id": "c",
+        "text": "Cable"
+      },
+      {
+        "id": "d",
+        "text": "Fibre (FTTH)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "DSL matches that description.",
+    "distractorExplanations": {
+      "b": "T1 is instead a dedicated leased line delivering 1.544 Mbps symmetrically.",
+      "c": "Cable is instead shared broadband delivered over coaxial cable using DOCSIS, shared with neighbouring subscribers.",
+      "d": "Fibre (FTTH) is instead broadband delivered directly to the premises over fibre optic cable."
+    },
+    "tags": [
+      "wan"
+    ]
+  },
+  {
+    "id": "n10-009-20-028",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which WAN connection type is broadband delivered directly to the premises over fibre optic cable?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Fibre (FTTH)"
+      },
+      {
+        "id": "b",
+        "text": "DSL"
+      },
+      {
+        "id": "c",
+        "text": "Satellite"
+      },
+      {
+        "id": "d",
+        "text": "T1"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Fibre (FTTH) matches that description.",
+    "distractorExplanations": {
+      "b": "DSL is instead broadband delivered over existing copper telephone lines.",
+      "c": "Satellite is instead broadband delivered via a geostationary satellite link, with noticeably high latency.",
+      "d": "T1 is instead a dedicated leased line delivering 1.544 Mbps symmetrically."
+    },
+    "tags": [
+      "wan"
+    ]
+  },
+  {
+    "id": "n10-009-20-029",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which WAN connection type is broadband delivered via a geostationary satellite link, with noticeably high latency?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Satellite"
+      },
+      {
+        "id": "b",
+        "text": "T1"
+      },
+      {
+        "id": "c",
+        "text": "Cable"
+      },
+      {
+        "id": "d",
+        "text": "DSL"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Satellite matches that description.",
+    "distractorExplanations": {
+      "b": "T1 is instead a dedicated leased line delivering 1.544 Mbps symmetrically.",
+      "c": "Cable is instead shared broadband delivered over coaxial cable using DOCSIS, shared with neighbouring subscribers.",
+      "d": "DSL is instead broadband delivered over existing copper telephone lines."
+    },
+    "tags": [
+      "wan"
+    ]
+  },
+  {
+    "id": "n10-009-20-030",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which transceiver form factor supports up to 1 Gbps over fibre or twinax?",
+    "options": [
+      {
+        "id": "a",
+        "text": "SFP"
+      },
+      {
+        "id": "b",
+        "text": "SFP+"
+      },
+      {
+        "id": "c",
+        "text": "QSFP"
+      },
+      {
+        "id": "d",
+        "text": "RJ45"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "SFP is rated for up to 1 Gbps.",
+    "distractorExplanations": {
+      "b": "SFP+ supports a different speed tier.",
+      "c": "QSFP supports a different speed tier.",
+      "d": "RJ45 is a copper Ethernet connector, not a pluggable fibre/twinax transceiver."
+    },
+    "tags": [
+      "transceivers"
+    ]
+  },
+  {
+    "id": "n10-009-20-031",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which transceiver form factor supports up to 10 Gbps over fibre or twinax?",
+    "options": [
+      {
+        "id": "a",
+        "text": "SFP+"
+      },
+      {
+        "id": "b",
+        "text": "SFP"
+      },
+      {
+        "id": "c",
+        "text": "QSFP"
+      },
+      {
+        "id": "d",
+        "text": "RJ45"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "SFP+ is rated for up to 10 Gbps.",
+    "distractorExplanations": {
+      "b": "SFP supports a different speed tier.",
+      "c": "QSFP supports a different speed tier.",
+      "d": "RJ45 is a copper Ethernet connector, not a pluggable fibre/twinax transceiver."
+    },
+    "tags": [
+      "transceivers"
+    ]
+  },
+  {
+    "id": "n10-009-20-032",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which transceiver form factor supports 40 Gbps or more over fibre or twinax?",
+    "options": [
+      {
+        "id": "a",
+        "text": "QSFP"
+      },
+      {
+        "id": "b",
+        "text": "SFP"
+      },
+      {
+        "id": "c",
+        "text": "SFP+"
+      },
+      {
+        "id": "d",
+        "text": "RJ45"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "QSFP is rated for 40 Gbps or more.",
+    "distractorExplanations": {
+      "b": "SFP supports a different speed tier.",
+      "c": "SFP+ supports a different speed tier.",
+      "d": "RJ45 is a copper Ethernet connector, not a pluggable fibre/twinax transceiver."
+    },
+    "tags": [
+      "transceivers"
+    ]
+  },
+  {
+    "id": "n10-009-20-033",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which Power over Ethernet standard delivers up to 15.4 W per port?",
+    "options": [
+      {
+        "id": "a",
+        "text": "802.3af (PoE)"
+      },
+      {
+        "id": "b",
+        "text": "802.3at (PoE+)"
+      },
+      {
+        "id": "c",
+        "text": "802.3bt (PoE++)"
+      },
+      {
+        "id": "d",
+        "text": "802.1Q"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "802.3af (PoE) is rated for up to 15.4 W per port, enough to power devices like APs, phones, or cameras depending on the tier.",
+    "distractorExplanations": {
+      "b": "802.3at (PoE+) delivers a different power budget.",
+      "c": "802.3bt (PoE++) delivers a different power budget.",
+      "d": "802.1Q is the VLAN tagging standard, unrelated to power delivery."
+    },
+    "tags": [
+      "poe"
+    ]
+  },
+  {
+    "id": "n10-009-20-034",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which Power over Ethernet standard delivers up to 25.5 W per port?",
+    "options": [
+      {
+        "id": "a",
+        "text": "802.3at (PoE+)"
+      },
+      {
+        "id": "b",
+        "text": "802.3af (PoE)"
+      },
+      {
+        "id": "c",
+        "text": "802.3bt (PoE++)"
+      },
+      {
+        "id": "d",
+        "text": "802.1Q"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "802.3at (PoE+) is rated for up to 25.5 W per port, enough to power devices like APs, phones, or cameras depending on the tier.",
+    "distractorExplanations": {
+      "b": "802.3af (PoE) delivers a different power budget.",
+      "c": "802.3bt (PoE++) delivers a different power budget.",
+      "d": "802.1Q is the VLAN tagging standard, unrelated to power delivery."
+    },
+    "tags": [
+      "poe"
+    ]
+  },
+  {
+    "id": "n10-009-20-035",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which Power over Ethernet standard delivers up to around 90-100 W per port?",
+    "options": [
+      {
+        "id": "a",
+        "text": "802.3bt (PoE++)"
+      },
+      {
+        "id": "b",
+        "text": "802.3af (PoE)"
+      },
+      {
+        "id": "c",
+        "text": "802.3at (PoE+)"
+      },
+      {
+        "id": "d",
+        "text": "802.1Q"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "802.3bt (PoE++) is rated for up to around 90-100 W per port, enough to power devices like APs, phones, or cameras depending on the tier.",
+    "distractorExplanations": {
+      "b": "802.3af (PoE) delivers a different power budget.",
+      "c": "802.3at (PoE+) delivers a different power budget.",
+      "d": "802.1Q is the VLAN tagging standard, unrelated to power delivery."
+    },
+    "tags": [
+      "poe"
+    ]
+  },
+  {
+    "id": "n10-009-20-036",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A switch port connects directly to a single desktop PC that should only ever be a member of one VLAN. How should that port be configured?",
+    "options": [
+      {
+        "id": "a",
+        "text": "As an access port assigned to that one VLAN"
+      },
+      {
+        "id": "b",
+        "text": "As a trunk port carrying all VLANs"
+      },
+      {
+        "id": "c",
+        "text": "As a mirrored (SPAN) port"
+      },
+      {
+        "id": "d",
+        "text": "As an EtherChannel member"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "An access port carries traffic for exactly one VLAN and is untagged — the correct mode for an end-device port with no need to see other VLANs.",
+    "distractorExplanations": {
+      "b": "A trunk port carries multiple tagged VLANs and is meant for switch-to-switch or switch-to-router links, not a single end device.",
+      "c": "A SPAN/mirror port copies traffic for monitoring — it's not how you'd connect an end-user PC.",
+      "d": "EtherChannel bundles multiple physical links into one logical link; a single PC doesn't need link aggregation."
+    },
+    "tags": [
+      "vlan",
+      "switching"
+    ]
+  },
+  {
+    "id": "n10-009-30-018",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which network monitoring approach collects timestamped log messages devices send about events and errors?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Syslog"
+      },
+      {
+        "id": "b",
+        "text": "SNMP"
+      },
+      {
+        "id": "c",
+        "text": "NetFlow"
+      },
+      {
+        "id": "d",
+        "text": "Packet capture"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Syslog is the tool/protocol that collects timestamped log messages devices send about events and errors.",
+    "distractorExplanations": {
+      "b": "SNMP instead polls devices for status and performance data and can receive unsolicited traps.",
+      "c": "NetFlow instead collects metadata about traffic flows — source/destination, ports, and volume — for traffic analysis.",
+      "d": "Packet capture instead records full packet contents for deep, after-the-fact protocol analysis."
+    },
+    "tags": [
+      "monitoring"
+    ]
+  },
+  {
+    "id": "n10-009-30-019",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which network monitoring approach collects metadata about traffic flows — source/destination, ports, and volume — for traffic analysis?",
+    "options": [
+      {
+        "id": "a",
+        "text": "NetFlow"
+      },
+      {
+        "id": "b",
+        "text": "SNMP"
+      },
+      {
+        "id": "c",
+        "text": "Syslog"
+      },
+      {
+        "id": "d",
+        "text": "Packet capture"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "NetFlow is the tool/protocol that collects metadata about traffic flows — source/destination, ports, and volume — for traffic analysis.",
+    "distractorExplanations": {
+      "b": "SNMP instead polls devices for status and performance data and can receive unsolicited traps.",
+      "c": "Syslog instead collects timestamped log messages devices send about events and errors.",
+      "d": "Packet capture instead records full packet contents for deep, after-the-fact protocol analysis."
+    },
+    "tags": [
+      "monitoring"
+    ]
+  },
+  {
+    "id": "n10-009-30-020",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which network monitoring approach records full packet contents for deep, after-the-fact protocol analysis?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Packet capture"
+      },
+      {
+        "id": "b",
+        "text": "SNMP"
+      },
+      {
+        "id": "c",
+        "text": "Syslog"
+      },
+      {
+        "id": "d",
+        "text": "NetFlow"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Packet capture is the tool/protocol that records full packet contents for deep, after-the-fact protocol analysis.",
+    "distractorExplanations": {
+      "b": "SNMP instead polls devices for status and performance data and can receive unsolicited traps.",
+      "c": "Syslog instead collects timestamped log messages devices send about events and errors.",
+      "d": "NetFlow instead collects metadata about traffic flows — source/destination, ports, and volume — for traffic analysis."
+    },
+    "tags": [
+      "monitoring"
+    ]
+  },
+  {
+    "id": "n10-009-30-021",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "A network's current performance under normal conditions, recorded so future measurements can be compared against it, is called a:",
+    "options": [
+      {
+        "id": "a",
+        "text": "Baseline"
+      },
+      {
+        "id": "b",
+        "text": "Wiring diagram"
+      },
+      {
+        "id": "c",
+        "text": "Change request"
+      },
+      {
+        "id": "d",
+        "text": "Rack diagram"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A baseline is a recorded snapshot of normal performance metrics, used as the reference point for spotting abnormal behaviour later.",
+    "distractorExplanations": {
+      "b": "A wiring diagram documents physical cable runs and connections, not performance data.",
+      "c": "A change request documents a proposed change and its approval, not a performance snapshot.",
+      "d": "A rack diagram documents physical equipment placement, not performance data."
+    },
+    "tags": [
+      "documentation"
+    ]
+  },
+  {
+    "id": "n10-009-30-022",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In change management, which term describes the formal document proposing a change, describing what will change and why, submitted for approval before work begins?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Change request"
+      },
+      {
+        "id": "b",
+        "text": "Rollback plan"
+      },
+      {
+        "id": "c",
+        "text": "Maintenance window"
+      },
+      {
+        "id": "d",
+        "text": "Configuration baseline"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Change request is defined by this role in the change management process.",
+    "distractorExplanations": {
+      "b": "Rollback plan instead: the documented steps to undo a change and restore the previous working state if something goes wrong.",
+      "c": "Maintenance window instead: the pre-approved time period during which a change is allowed to cause disruption.",
+      "d": "A configuration baseline records a system's known-good settings for comparison, not the change process itself."
+    },
+    "tags": [
+      "change-management"
+    ]
+  },
+  {
+    "id": "n10-009-30-023",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In change management, which term describes the documented steps to undo a change and restore the previous working state if something goes wrong?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Rollback plan"
+      },
+      {
+        "id": "b",
+        "text": "Change request"
+      },
+      {
+        "id": "c",
+        "text": "Maintenance window"
+      },
+      {
+        "id": "d",
+        "text": "Configuration baseline"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Rollback plan is defined by this role in the change management process.",
+    "distractorExplanations": {
+      "b": "Change request instead: the formal document proposing a change, describing what will change and why, submitted for approval before work begins.",
+      "c": "Maintenance window instead: the pre-approved time period during which a change is allowed to cause disruption.",
+      "d": "A configuration baseline records a system's known-good settings for comparison, not the change process itself."
+    },
+    "tags": [
+      "change-management"
+    ]
+  },
+  {
+    "id": "n10-009-30-024",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In change management, which term describes the pre-approved time period during which a change is allowed to cause disruption?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Maintenance window"
+      },
+      {
+        "id": "b",
+        "text": "Change request"
+      },
+      {
+        "id": "c",
+        "text": "Rollback plan"
+      },
+      {
+        "id": "d",
+        "text": "Configuration baseline"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Maintenance window is defined by this role in the change management process.",
+    "distractorExplanations": {
+      "b": "Change request instead: the formal document proposing a change, describing what will change and why, submitted for approval before work begins.",
+      "c": "Rollback plan instead: the documented steps to undo a change and restore the previous working state if something goes wrong.",
+      "d": "A configuration baseline records a system's known-good settings for comparison, not the change process itself."
+    },
+    "tags": [
+      "change-management"
+    ]
+  },
+  {
+    "id": "n10-009-30-025",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which business document is a contract that defines the minimum level of service a provider guarantees, such as uptime or response time?",
+    "options": [
+      {
+        "id": "a",
+        "text": "SLA (Service Level Agreement)"
+      },
+      {
+        "id": "b",
+        "text": "MOU (Memorandum of Understanding)"
+      },
+      {
+        "id": "c",
+        "text": "NDA (Non-Disclosure Agreement)"
+      },
+      {
+        "id": "d",
+        "text": "AUP (Acceptable Use Policy)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "SLA (Service Level Agreement) matches this description.",
+    "distractorExplanations": {
+      "b": "MOU (Memorandum of Understanding) instead: a document expressing mutual intent to work together, without the binding formality of a full contract.",
+      "c": "NDA (Non-Disclosure Agreement) instead: a legal agreement that restricts parties from sharing confidential information they're exposed to.",
+      "d": "An AUP defines what users are and aren't allowed to do with company systems — a different kind of document."
+    },
+    "tags": [
+      "business-documents"
+    ]
+  },
+  {
+    "id": "n10-009-30-026",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which business document is a document expressing mutual intent to work together, without the binding formality of a full contract?",
+    "options": [
+      {
+        "id": "a",
+        "text": "MOU (Memorandum of Understanding)"
+      },
+      {
+        "id": "b",
+        "text": "SLA (Service Level Agreement)"
+      },
+      {
+        "id": "c",
+        "text": "NDA (Non-Disclosure Agreement)"
+      },
+      {
+        "id": "d",
+        "text": "AUP (Acceptable Use Policy)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "MOU (Memorandum of Understanding) matches this description.",
+    "distractorExplanations": {
+      "b": "SLA (Service Level Agreement) instead: a contract that defines the minimum level of service a provider guarantees, such as uptime or response time.",
+      "c": "NDA (Non-Disclosure Agreement) instead: a legal agreement that restricts parties from sharing confidential information they're exposed to.",
+      "d": "An AUP defines what users are and aren't allowed to do with company systems — a different kind of document."
+    },
+    "tags": [
+      "business-documents"
+    ]
+  },
+  {
+    "id": "n10-009-30-027",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which business document is a legal agreement that restricts parties from sharing confidential information they're exposed to?",
+    "options": [
+      {
+        "id": "a",
+        "text": "NDA (Non-Disclosure Agreement)"
+      },
+      {
+        "id": "b",
+        "text": "SLA (Service Level Agreement)"
+      },
+      {
+        "id": "c",
+        "text": "MOU (Memorandum of Understanding)"
+      },
+      {
+        "id": "d",
+        "text": "AUP (Acceptable Use Policy)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "NDA (Non-Disclosure Agreement) matches this description.",
+    "distractorExplanations": {
+      "b": "SLA (Service Level Agreement) instead: a contract that defines the minimum level of service a provider guarantees, such as uptime or response time.",
+      "c": "MOU (Memorandum of Understanding) instead: a document expressing mutual intent to work together, without the binding formality of a full contract.",
+      "d": "An AUP defines what users are and aren't allowed to do with company systems — a different kind of document."
+    },
+    "tags": [
+      "business-documents"
+    ]
+  },
+  {
+    "id": "n10-009-30-028",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A network analyst needs to capture a copy of all traffic passing through a particular switch port for analysis, without disrupting normal traffic flow. Which feature accomplishes this?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Port mirroring (SPAN)"
+      },
+      {
+        "id": "b",
+        "text": "802.1Q trunking"
+      },
+      {
+        "id": "c",
+        "text": "Port security"
+      },
+      {
+        "id": "d",
+        "text": "LACP"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port mirroring (Cisco calls it SPAN) copies traffic from one or more source ports to a destination port where a capture tool can observe it, without interrupting the original traffic.",
+    "distractorExplanations": {
+      "b": "Trunking carries multiple VLANs across a link; it doesn't duplicate traffic for analysis.",
+      "c": "Port security restricts which MAC addresses can use a port; it doesn't copy traffic anywhere.",
+      "d": "LACP aggregates links for bandwidth/redundancy, not for traffic capture."
+    },
+    "tags": [
+      "monitoring"
+    ]
+  },
+  {
+    "id": "n10-009-30-029",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A company's VoIP calls break up whenever a large file transfer runs on the same link. Which technique is designed to solve this by prioritising latency-sensitive traffic?",
+    "options": [
+      {
+        "id": "a",
+        "text": "QoS (Quality of Service)"
+      },
+      {
+        "id": "b",
+        "text": "NAT"
+      },
+      {
+        "id": "c",
+        "text": "VLAN tagging"
+      },
+      {
+        "id": "d",
+        "text": "Spanning Tree Protocol"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "QoS lets a network classify and prioritise traffic — typically giving latency-sensitive traffic like VoIP priority over bulk transfers — so real-time traffic isn't starved during congestion.",
+    "distractorExplanations": {
+      "b": "NAT translates addresses; it has no concept of traffic prioritisation.",
+      "c": "VLAN tagging segments broadcast domains; it doesn't prioritise traffic types.",
+      "d": "STP prevents Layer 2 loops; it has nothing to do with traffic prioritisation."
+    },
+    "tags": [
+      "qos"
+    ]
+  },
+  {
+    "id": "n10-009-30-030",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "What is the primary purpose of a UPS (uninterruptible power supply) in a server room?",
+    "options": [
+      {
+        "id": "a",
+        "text": "To provide short-term battery backup power so equipment can ride out a brief outage or shut down gracefully"
+      },
+      {
+        "id": "b",
+        "text": "To permanently replace utility power for the building"
+      },
+      {
+        "id": "c",
+        "text": "To cool server room equipment during heavy load"
+      },
+      {
+        "id": "d",
+        "text": "To distribute network traffic across multiple links"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A UPS bridges the gap during a power interruption, keeping equipment running briefly and giving systems time to shut down cleanly or for a generator to take over.",
+    "distractorExplanations": {
+      "b": "A UPS is a short-term bridge, not a permanent replacement for utility power — batteries have limited capacity.",
+      "c": "Cooling is handled by HVAC/CRAC systems, not a UPS.",
+      "d": "Traffic distribution is a networking/load-balancing function, unrelated to a UPS."
+    },
+    "tags": [
+      "environmental"
+    ]
+  },
+  {
+    "id": "n10-009-30-031",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Why do server rooms typically include temperature and humidity monitoring?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Excess heat or humidity can damage equipment and cause failures, so early warning allows corrective action before hardware is harmed"
+      },
+      {
+        "id": "b",
+        "text": "It's required to keep DNS records synchronised"
+      },
+      {
+        "id": "c",
+        "text": "It improves wireless signal strength throughout the building"
+      },
+      {
+        "id": "d",
+        "text": "It automatically balances load across redundant links"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Heat and humidity extremes accelerate hardware failure; environmental monitoring gives staff advance warning to intervene (e.g., fix cooling) before equipment is damaged.",
+    "distractorExplanations": {
+      "b": "Environmental monitoring has no relationship to DNS synchronisation.",
+      "c": "It has no effect on wireless signal propagation.",
+      "d": "Load balancing is a separate networking function, unrelated to environmental monitoring."
+    },
+    "tags": [
+      "environmental"
+    ]
+  },
+  {
+    "id": "n10-009-30-032",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "What is the main goal of a formal patch management process?",
+    "options": [
+      {
+        "id": "a",
+        "text": "To apply software updates in a controlled, tested, and scheduled way that balances security against stability"
+      },
+      {
+        "id": "b",
+        "text": "To permanently disable automatic updates on all devices"
+      },
+      {
+        "id": "c",
+        "text": "To physically repair damaged network cabling"
+      },
+      {
+        "id": "d",
+        "text": "To assign static IP addresses to all servers"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Patch management ensures updates (especially security patches) are tested and rolled out on a controlled schedule, rather than applied ad hoc, reducing both security risk and the chance of an untested update breaking something.",
+    "distractorExplanations": {
+      "b": "Patch management is about controlling how updates are applied, not disabling them altogether.",
+      "c": "Repairing physical cabling is a hardware maintenance task, not patch management.",
+      "d": "Static IP assignment is an addressing task, unrelated to patch management."
+    },
+    "tags": [
+      "patch-management"
+    ]
+  },
+  {
+    "id": "n10-009-30-033",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which disaster recovery site type is a fully equipped, continuously synchronised duplicate facility that can take over almost immediately after a disaster?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Hot site"
+      },
+      {
+        "id": "b",
+        "text": "Warm site"
+      },
+      {
+        "id": "c",
+        "text": "Cold site"
+      },
+      {
+        "id": "d",
+        "text": "Primary site"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A hot site is defined by this level of readiness.",
+    "distractorExplanations": {
+      "b": "Warm site instead: a partially equipped facility with some hardware and periodically updated data, needing hours to become fully operational.",
+      "c": "Cold site instead: a bare facility with power and space but little to no pre-installed equipment, needing days or weeks to become operational.",
+      "d": "The \"primary site\" is simply the organisation's normal operating location, not a disaster recovery classification."
+    },
+    "tags": [
+      "disaster-recovery"
+    ]
+  },
+  {
+    "id": "n10-009-30-034",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which disaster recovery site type is a partially equipped facility with some hardware and periodically updated data, needing hours to become fully operational?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Warm site"
+      },
+      {
+        "id": "b",
+        "text": "Hot site"
+      },
+      {
+        "id": "c",
+        "text": "Cold site"
+      },
+      {
+        "id": "d",
+        "text": "Primary site"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A warm site is defined by this level of readiness.",
+    "distractorExplanations": {
+      "b": "Hot site instead: a fully equipped, continuously synchronised duplicate facility that can take over almost immediately after a disaster.",
+      "c": "Cold site instead: a bare facility with power and space but little to no pre-installed equipment, needing days or weeks to become operational.",
+      "d": "The \"primary site\" is simply the organisation's normal operating location, not a disaster recovery classification."
+    },
+    "tags": [
+      "disaster-recovery"
+    ]
+  },
+  {
+    "id": "n10-009-40-014",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which type of firewall tracks the state of active connections and only allows traffic that matches an established or expected session?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Stateful firewall"
+      },
+      {
+        "id": "b",
+        "text": "Packet-filtering firewall"
+      },
+      {
+        "id": "c",
+        "text": "Application-layer (proxy) firewall"
+      },
+      {
+        "id": "d",
+        "text": "Next-generation firewall (NGFW)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A stateful firewall is defined by this behaviour.",
+    "distractorExplanations": {
+      "b": "Packet-filtering firewall instead inspects each packet's header (source/destination IP and port) in isolation against a rule set, with no awareness of connection state.",
+      "c": "Application-layer (proxy) firewall instead inspects traffic up to Layer 7, understanding the specific application protocol it's filtering.",
+      "d": "Next-generation firewall (NGFW) instead combines stateful inspection with deep packet inspection, intrusion prevention, and application awareness in one device."
+    },
+    "tags": [
+      "firewalls"
+    ]
+  },
+  {
+    "id": "n10-009-40-015",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which type of firewall inspects traffic up to Layer 7, understanding the specific application protocol it's filtering?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Application-layer (proxy) firewall"
+      },
+      {
+        "id": "b",
+        "text": "Next-generation firewall (NGFW)"
+      },
+      {
+        "id": "c",
+        "text": "Packet-filtering firewall"
+      },
+      {
+        "id": "d",
+        "text": "Stateful firewall"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A application-layer (proxy) firewall is defined by this behaviour.",
+    "distractorExplanations": {
+      "b": "Next-generation firewall (NGFW) instead combines stateful inspection with deep packet inspection, intrusion prevention, and application awareness in one device.",
+      "c": "Packet-filtering firewall instead inspects each packet's header (source/destination IP and port) in isolation against a rule set, with no awareness of connection state.",
+      "d": "Stateful firewall instead tracks the state of active connections and only allows traffic that matches an established or expected session."
+    },
+    "tags": [
+      "firewalls"
+    ]
+  },
+  {
+    "id": "n10-009-40-016",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which type of firewall combines stateful inspection with deep packet inspection, intrusion prevention, and application awareness in one device?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Next-generation firewall (NGFW)"
+      },
+      {
+        "id": "b",
+        "text": "Stateful firewall"
+      },
+      {
+        "id": "c",
+        "text": "Application-layer (proxy) firewall"
+      },
+      {
+        "id": "d",
+        "text": "Packet-filtering firewall"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A next-generation firewall (ngfw) is defined by this behaviour.",
+    "distractorExplanations": {
+      "b": "Stateful firewall instead tracks the state of active connections and only allows traffic that matches an established or expected session.",
+      "c": "Application-layer (proxy) firewall instead inspects traffic up to Layer 7, understanding the specific application protocol it's filtering.",
+      "d": "Packet-filtering firewall instead inspects each packet's header (source/destination IP and port) in isolation against a rule set, with no awareness of connection state."
+    },
+    "tags": [
+      "firewalls"
+    ]
+  },
+  {
+    "id": "n10-009-40-017",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A company needs to permanently connect its two office networks over the internet so devices on either side can reach each other transparently, without installing client software on every device. Which VPN type fits best?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Site-to-site VPN"
+      },
+      {
+        "id": "b",
+        "text": "Client-to-site VPN"
+      },
+      {
+        "id": "c",
+        "text": "Clientless SSL VPN"
+      },
+      {
+        "id": "d",
+        "text": "Split-tunnel VPN"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A site-to-site VPN builds a permanent, always-on tunnel between two network gateways (usually routers or firewalls), transparently connecting both networks with no client software needed on individual devices.",
+    "distractorExplanations": {
+      "b": "Client-to-site (remote-access) VPN connects an individual device to a network, not two networks to each other.",
+      "c": "Clientless SSL VPN gives a single user browser-based access to specific applications, not a full site-to-site network bridge.",
+      "d": "Split-tunnel describes how traffic is routed during a remote-access VPN session, not a site-to-site topology."
+    },
+    "tags": [
+      "vpn"
+    ]
+  },
+  {
+    "id": "n10-009-40-018",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which practice is an example of device hardening?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Disabling unused switch ports and default accounts"
+      },
+      {
+        "id": "b",
+        "text": "Enabling every optional service so troubleshooting is easier later"
+      },
+      {
+        "id": "c",
+        "text": "Leaving factory default credentials in place for convenience"
+      },
+      {
+        "id": "d",
+        "text": "Connecting the management interface directly to the public internet"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Hardening means reducing a device's attack surface: disabling unused ports/services, removing default accounts, and changing default credentials.",
+    "distractorExplanations": {
+      "b": "Enabling unnecessary services increases the attack surface — the opposite of hardening.",
+      "c": "Default credentials are one of the first things attackers try; leaving them in place is a major weakness.",
+      "d": "Exposing a management interface to the public internet dramatically increases risk rather than reducing it."
+    },
+    "tags": [
+      "hardening"
+    ]
+  },
+  {
+    "id": "n10-009-40-019",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which physical security control a small interlocking pair of doors that only allows one person through at a time, preventing tailgating into a secure area?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mantrap"
+      },
+      {
+        "id": "b",
+        "text": "Cable lock"
+      },
+      {
+        "id": "c",
+        "text": "Badge reader"
+      },
+      {
+        "id": "d",
+        "text": "Biometric scanner"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A mantrap a small interlocking pair of doors that only allows one person through at a time, preventing tailgating into a secure area.",
+    "distractorExplanations": {
+      "b": "Cable lock instead physically secures a device to prevent it from being carried off.",
+      "c": "Badge reader instead requires an authorised access card to be presented before a door will unlock.",
+      "d": "Biometric scanner instead verifies identity using a physical trait such as a fingerprint or iris pattern."
+    },
+    "tags": [
+      "physical-security"
+    ]
+  },
+  {
+    "id": "n10-009-40-020",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which physical security control requires an authorised access card to be presented before a door will unlock?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Badge reader"
+      },
+      {
+        "id": "b",
+        "text": "Biometric scanner"
+      },
+      {
+        "id": "c",
+        "text": "Cable lock"
+      },
+      {
+        "id": "d",
+        "text": "Mantrap"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A badge reader requires an authorised access card to be presented before a door will unlock.",
+    "distractorExplanations": {
+      "b": "Biometric scanner instead verifies identity using a physical trait such as a fingerprint or iris pattern.",
+      "c": "Cable lock instead physically secures a device to prevent it from being carried off.",
+      "d": "Mantrap instead a small interlocking pair of doors that only allows one person through at a time, preventing tailgating into a secure area."
+    },
+    "tags": [
+      "physical-security"
+    ]
+  },
+  {
+    "id": "n10-009-40-021",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which physical security control verifies identity using a physical trait such as a fingerprint or iris pattern?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Biometric scanner"
+      },
+      {
+        "id": "b",
+        "text": "Cable lock"
+      },
+      {
+        "id": "c",
+        "text": "Mantrap"
+      },
+      {
+        "id": "d",
+        "text": "Badge reader"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A biometric scanner verifies identity using a physical trait such as a fingerprint or iris pattern.",
+    "distractorExplanations": {
+      "b": "Cable lock instead physically secures a device to prevent it from being carried off.",
+      "c": "Mantrap instead a small interlocking pair of doors that only allows one person through at a time, preventing tailgating into a secure area.",
+      "d": "Badge reader instead requires an authorised access card to be presented before a door will unlock."
+    },
+    "tags": [
+      "physical-security"
+    ]
+  },
+  {
+    "id": "n10-009-40-022",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which physical security control physically secures a device to prevent it from being carried off?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cable lock"
+      },
+      {
+        "id": "b",
+        "text": "Mantrap"
+      },
+      {
+        "id": "c",
+        "text": "Badge reader"
+      },
+      {
+        "id": "d",
+        "text": "Biometric scanner"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A cable lock physically secures a device to prevent it from being carried off.",
+    "distractorExplanations": {
+      "b": "Mantrap instead a small interlocking pair of doors that only allows one person through at a time, preventing tailgating into a secure area.",
+      "c": "Badge reader instead requires an authorised access card to be presented before a door will unlock.",
+      "d": "Biometric scanner instead verifies identity using a physical trait such as a fingerprint or iris pattern."
+    },
+    "tags": [
+      "physical-security"
+    ]
+  },
+  {
+    "id": "n10-009-40-023",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In multi-factor authentication, which category is something the user knows, such as a password or PIN?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Knowledge factor"
+      },
+      {
+        "id": "b",
+        "text": "Location factor"
+      },
+      {
+        "id": "c",
+        "text": "Possession factor"
+      },
+      {
+        "id": "d",
+        "text": "Inherence factor"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "That's the knowledge factor — something the user knows, such as a password or PIN.",
+    "distractorExplanations": {
+      "b": "Location factor instead covers somewhere the user is, verified through GPS or network location.",
+      "c": "Possession factor instead covers something the user has, such as a hardware token or smart card.",
+      "d": "Inherence factor instead covers something the user is, such as a fingerprint or facial scan."
+    },
+    "tags": [
+      "authentication",
+      "mfa"
+    ]
+  },
+  {
+    "id": "n10-009-40-024",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In multi-factor authentication, which category is something the user has, such as a hardware token or smart card?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Possession factor"
+      },
+      {
+        "id": "b",
+        "text": "Inherence factor"
+      },
+      {
+        "id": "c",
+        "text": "Location factor"
+      },
+      {
+        "id": "d",
+        "text": "Knowledge factor"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "That's the possession factor — something the user has, such as a hardware token or smart card.",
+    "distractorExplanations": {
+      "b": "Inherence factor instead covers something the user is, such as a fingerprint or facial scan.",
+      "c": "Location factor instead covers somewhere the user is, verified through GPS or network location.",
+      "d": "Knowledge factor instead covers something the user knows, such as a password or PIN."
+    },
+    "tags": [
+      "authentication",
+      "mfa"
+    ]
+  },
+  {
+    "id": "n10-009-40-025",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In multi-factor authentication, which category is something the user is, such as a fingerprint or facial scan?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Inherence factor"
+      },
+      {
+        "id": "b",
+        "text": "Possession factor"
+      },
+      {
+        "id": "c",
+        "text": "Location factor"
+      },
+      {
+        "id": "d",
+        "text": "Knowledge factor"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "That's the inherence factor — something the user is, such as a fingerprint or facial scan.",
+    "distractorExplanations": {
+      "b": "Possession factor instead covers something the user has, such as a hardware token or smart card.",
+      "c": "Location factor instead covers somewhere the user is, verified through GPS or network location.",
+      "d": "Knowledge factor instead covers something the user knows, such as a password or PIN."
+    },
+    "tags": [
+      "authentication",
+      "mfa"
+    ]
+  },
+  {
+    "id": "n10-009-40-026",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In multi-factor authentication, which category is somewhere the user is, verified through GPS or network location?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Location factor"
+      },
+      {
+        "id": "b",
+        "text": "Inherence factor"
+      },
+      {
+        "id": "c",
+        "text": "Knowledge factor"
+      },
+      {
+        "id": "d",
+        "text": "Possession factor"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "That's the location factor — somewhere the user is, verified through GPS or network location.",
+    "distractorExplanations": {
+      "b": "Inherence factor instead covers something the user is, such as a fingerprint or facial scan.",
+      "c": "Knowledge factor instead covers something the user knows, such as a password or PIN.",
+      "d": "Possession factor instead covers something the user has, such as a hardware token or smart card."
+    },
+    "tags": [
+      "authentication",
+      "mfa"
+    ]
+  },
+  {
+    "id": "n10-009-50-022",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "After a new wireless access point is installed near several existing ones on the same channel, users nearby report slow, unreliable Wi-Fi even though signal strength looks strong. What is the most likely issue?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Co-channel interference from overlapping access points on the same channel"
+      },
+      {
+        "id": "b",
+        "text": "An expired TLS certificate on the RADIUS server"
+      },
+      {
+        "id": "c",
+        "text": "A duplex mismatch on the access point's uplink port"
+      },
+      {
+        "id": "d",
+        "text": "Incorrect VLAN tagging on the wireless controller"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Multiple access points transmitting on the same or overlapping channels in the same physical area contend for airtime and interfere with each other, degrading throughput even when signal strength readings look fine.",
+    "distractorExplanations": {
+      "b": "A RADIUS certificate issue would block authentication entirely, not cause intermittent slowness with successful connections.",
+      "c": "A duplex mismatch is a wired Ethernet concept and wouldn't explain wireless interference symptoms.",
+      "d": "VLAN tagging issues would typically cause connectivity/isolation problems, not the described interference pattern."
+    },
+    "tags": [
+      "wireless",
+      "interference",
+      "scenario"
+    ]
+  },
+  {
+    "id": "n10-009-50-023",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "A technician runs 'ping' to a server by IP address successfully, but browsing to the server by its hostname fails. What should be checked first?",
+    "options": [
+      {
+        "id": "a",
+        "text": "DNS resolution for that hostname"
+      },
+      {
+        "id": "b",
+        "text": "The physical cable connecting the technician's workstation"
+      },
+      {
+        "id": "c",
+        "text": "The server's power supply"
+      },
+      {
+        "id": "d",
+        "text": "The switch port's duplex setting"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Successful connectivity by IP but failure by name is the classic signature of a DNS problem — the network path works, but the name isn't resolving to the correct (or any) address.",
+    "distractorExplanations": {
+      "b": "A cabling problem would also break the successful IP-based ping, which it didn't.",
+      "c": "A power issue on the server would break the IP ping too, since the host wouldn't respond at all.",
+      "d": "A duplex issue would degrade or break both name- and IP-based access, not just name resolution."
+    },
+    "tags": [
+      "dns",
+      "scenario"
+    ]
+  },
+  {
+    "id": "n10-009-50-024",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A branch office's internet connection has recently become very slow. A continuous ping to the ISP gateway shows 5-15% packet loss, while pings to internal devices show 0% loss. Where is the problem most likely located?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Between the branch router and the ISP, outside the local network"
+      },
+      {
+        "id": "b",
+        "text": "On the internal switch connecting the office workstations"
+      },
+      {
+        "id": "c",
+        "text": "In the DHCP scope configuration for the office"
+      },
+      {
+        "id": "d",
+        "text": "In the local DNS cache on each workstation"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Clean internal pings with loss only appearing on traffic leaving toward the ISP gateway isolate the fault to the WAN link or the provider's side, not the local network.",
+    "distractorExplanations": {
+      "b": "Internal pings show 0% loss, which rules out the internal switch as the cause.",
+      "c": "A DHCP problem would show up as addressing failures, not intermittent packet loss on established connections.",
+      "d": "A DNS cache issue would cause resolution problems, not packet loss visible in a raw ping test."
+    },
+    "tags": [
+      "packet-loss",
+      "scenario"
+    ]
+  },
+  {
+    "id": "n10-009-50-025",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A server was recently moved to a new switch port. It can reach some devices on the network but not others, and its IP configuration looks correct. What should be checked first?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Whether the new switch port is assigned to the correct VLAN"
+      },
+      {
+        "id": "b",
+        "text": "Whether the server's power cable is fully seated"
+      },
+      {
+        "id": "c",
+        "text": "Whether the server's hostname is spelled correctly"
+      },
+      {
+        "id": "d",
+        "text": "Whether the server's case fan is spinning"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Partial reachability right after a physical move, with otherwise-correct IP configuration, is a textbook symptom of the new port being on the wrong VLAN — the server can reach devices in its own VLAN/subnet but not others it used to reach.",
+    "distractorExplanations": {
+      "b": "A loose power cable would take the server fully offline, not cause selective reachability.",
+      "c": "A hostname typo would affect name resolution, not IP-level reachability to some hosts and not others.",
+      "d": "A case fan has no relationship to network reachability."
+    },
+    "tags": [
+      "vlan",
+      "scenario"
+    ]
+  },
+  {
+    "id": "n10-009-50-026",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which cabling issue is the gradual weakening of a signal as it travels further along a cable?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Attenuation"
+      },
+      {
+        "id": "b",
+        "text": "Mismatched wiring standard (568A/568B)"
+      },
+      {
+        "id": "c",
+        "text": "Crosstalk"
+      },
+      {
+        "id": "d",
+        "text": "EMI/RFI interference"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Attenuation is defined by this problem.",
+    "distractorExplanations": {
+      "b": "Mismatched wiring standard (568A/568B) instead is a cable wired with one end following T568A and the other following T568B, when both ends should match.",
+      "c": "Crosstalk instead is unwanted signal coupling from one wire pair into an adjacent pair.",
+      "d": "EMI/RFI interference instead is signal degradation caused by nearby electrical equipment or radio sources."
+    },
+    "tags": [
+      "wiring",
+      "physical-layer"
+    ]
+  },
+  {
+    "id": "n10-009-50-027",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which cabling issue is unwanted signal coupling from one wire pair into an adjacent pair?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Crosstalk"
+      },
+      {
+        "id": "b",
+        "text": "Attenuation"
+      },
+      {
+        "id": "c",
+        "text": "EMI/RFI interference"
+      },
+      {
+        "id": "d",
+        "text": "Mismatched wiring standard (568A/568B)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Crosstalk is defined by this problem.",
+    "distractorExplanations": {
+      "b": "Attenuation instead is the gradual weakening of a signal as it travels further along a cable.",
+      "c": "EMI/RFI interference instead is signal degradation caused by nearby electrical equipment or radio sources.",
+      "d": "Mismatched wiring standard (568A/568B) instead is a cable wired with one end following T568A and the other following T568B, when both ends should match."
+    },
+    "tags": [
+      "wiring",
+      "physical-layer"
+    ]
+  },
+  {
+    "id": "n10-009-50-028",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which cabling issue is signal degradation caused by nearby electrical equipment or radio sources?",
+    "options": [
+      {
+        "id": "a",
+        "text": "EMI/RFI interference"
+      },
+      {
+        "id": "b",
+        "text": "Mismatched wiring standard (568A/568B)"
+      },
+      {
+        "id": "c",
+        "text": "Attenuation"
+      },
+      {
+        "id": "d",
+        "text": "Crosstalk"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "EMI/RFI interference is defined by this problem.",
+    "distractorExplanations": {
+      "b": "Mismatched wiring standard (568A/568B) instead is a cable wired with one end following T568A and the other following T568B, when both ends should match.",
+      "c": "Attenuation instead is the gradual weakening of a signal as it travels further along a cable.",
+      "d": "Crosstalk instead is unwanted signal coupling from one wire pair into an adjacent pair."
+    },
+    "tags": [
+      "wiring",
+      "physical-layer"
+    ]
+  },
+  {
+    "id": "n10-009-50-029",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which cabling issue is a cable wired with one end following T568A and the other following T568B, when both ends should match?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mismatched wiring standard (568A/568B)"
+      },
+      {
+        "id": "b",
+        "text": "Attenuation"
+      },
+      {
+        "id": "c",
+        "text": "Crosstalk"
+      },
+      {
+        "id": "d",
+        "text": "EMI/RFI interference"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Mismatched wiring standard (568A/568B) is defined by this problem.",
+    "distractorExplanations": {
+      "b": "Attenuation instead is the gradual weakening of a signal as it travels further along a cable.",
+      "c": "Crosstalk instead is unwanted signal coupling from one wire pair into an adjacent pair.",
+      "d": "EMI/RFI interference instead is signal degradation caused by nearby electrical equipment or radio sources."
+    },
+    "tags": [
+      "wiring",
+      "physical-layer"
+    ]
+  },
+  {
+    "id": "n10-009-50-030",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In ping output, what does the message \"Request timed out\" indicate: no reply was received within the wait period — the destination may be down, or a firewall may be silently dropping the packets?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Request timed out"
+      },
+      {
+        "id": "b",
+        "text": "Destination host unreachable"
+      },
+      {
+        "id": "c",
+        "text": "Reply from the destination with 0% loss"
+      },
+      {
+        "id": "d",
+        "text": "TTL expired in transit"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "\"Request timed out\" means: no reply was received within the wait period — the destination may be down, or a firewall may be silently dropping the packets.",
+    "distractorExplanations": {
+      "b": "\"Destination host unreachable\" has a different meaning: a route lookup failure rather than a timeout (or vice versa).",
+      "c": "A successful reply indicates the host responded — the opposite of this message.",
+      "d": "\"TTL expired in transit\" means a router along the path decremented the packet's TTL to zero, which is a routing-loop/too-many-hops symptom, not what's described here."
+    },
+    "tags": [
+      "ping",
+      "cli-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-031",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In ping output, what does the message \"Destination host unreachable\" indicate: the local device (or a router along the path) has no route to the destination and rejected the request immediately?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Destination host unreachable"
+      },
+      {
+        "id": "b",
+        "text": "Request timed out"
+      },
+      {
+        "id": "c",
+        "text": "Reply from the destination with 0% loss"
+      },
+      {
+        "id": "d",
+        "text": "TTL expired in transit"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "\"Destination host unreachable\" means: the local device (or a router along the path) has no route to the destination and rejected the request immediately.",
+    "distractorExplanations": {
+      "b": "\"Request timed out\" has a different meaning: a route lookup failure rather than a timeout (or vice versa).",
+      "c": "A successful reply indicates the host responded — the opposite of this message.",
+      "d": "\"TTL expired in transit\" means a router along the path decremented the packet's TTL to zero, which is a routing-loop/too-many-hops symptom, not what's described here."
+    },
+    "tags": [
+      "ping",
+      "cli-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-032",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which \"ipconfig\" switch releases the current DHCP-assigned IP address?",
+    "options": [
+      {
+        "id": "a",
+        "text": "/release"
+      },
+      {
+        "id": "b",
+        "text": "/flushdns"
+      },
+      {
+        "id": "c",
+        "text": "/all"
+      },
+      {
+        "id": "d",
+        "text": "/renew"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "\"ipconfig /release\" releases the current DHCP-assigned IP address.",
+    "distractorExplanations": {
+      "b": "\"ipconfig /flushdns\" instead clears the local DNS resolver cache.",
+      "c": "\"ipconfig /all\" instead displays full configuration detail for every adapter, not just a summary.",
+      "d": "\"ipconfig /renew\" instead requests a new IP address lease from the DHCP server."
+    },
+    "tags": [
+      "cli-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-033",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which \"ipconfig\" switch requests a new IP address lease from the DHCP server?",
+    "options": [
+      {
+        "id": "a",
+        "text": "/renew"
+      },
+      {
+        "id": "b",
+        "text": "/all"
+      },
+      {
+        "id": "c",
+        "text": "/release"
+      },
+      {
+        "id": "d",
+        "text": "/flushdns"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "\"ipconfig /renew\" requests a new IP address lease from the DHCP server.",
+    "distractorExplanations": {
+      "b": "\"ipconfig /all\" instead displays full configuration detail for every adapter, not just a summary.",
+      "c": "\"ipconfig /release\" instead releases the current DHCP-assigned IP address.",
+      "d": "\"ipconfig /flushdns\" instead clears the local DNS resolver cache."
+    },
+    "tags": [
+      "cli-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-034",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which \"ipconfig\" switch clears the local DNS resolver cache?",
+    "options": [
+      {
+        "id": "a",
+        "text": "/flushdns"
+      },
+      {
+        "id": "b",
+        "text": "/renew"
+      },
+      {
+        "id": "c",
+        "text": "/all"
+      },
+      {
+        "id": "d",
+        "text": "/release"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "\"ipconfig /flushdns\" clears the local DNS resolver cache.",
+    "distractorExplanations": {
+      "b": "\"ipconfig /renew\" instead requests a new IP address lease from the DHCP server.",
+      "c": "\"ipconfig /all\" instead displays full configuration detail for every adapter, not just a summary.",
+      "d": "\"ipconfig /release\" instead releases the current DHCP-assigned IP address."
+    },
+    "tags": [
+      "cli-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-035",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which \"ipconfig\" switch displays full configuration detail for every adapter, not just a summary?",
+    "options": [
+      {
+        "id": "a",
+        "text": "/all"
+      },
+      {
+        "id": "b",
+        "text": "/flushdns"
+      },
+      {
+        "id": "c",
+        "text": "/release"
+      },
+      {
+        "id": "d",
+        "text": "/renew"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "\"ipconfig /all\" displays full configuration detail for every adapter, not just a summary.",
+    "distractorExplanations": {
+      "b": "\"ipconfig /flushdns\" instead clears the local DNS resolver cache.",
+      "c": "\"ipconfig /release\" instead releases the current DHCP-assigned IP address.",
+      "d": "\"ipconfig /renew\" instead requests a new IP address lease from the DHCP server."
+    },
+    "tags": [
+      "cli-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-036",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A workstation is configured with IP address 192.168.1.50/25 while the rest of the /24 subnet's devices and the gateway use 192.168.1.1/24. The workstation can't reach anything, including the gateway. What is the most likely cause?",
+    "options": [
+      {
+        "id": "a",
+        "text": "An incorrect subnet mask on the workstation splits it into a different logical subnet than the rest of the network"
+      },
+      {
+        "id": "b",
+        "text": "The workstation's DNS server is misconfigured"
+      },
+      {
+        "id": "c",
+        "text": "The switch port is set to the wrong speed"
+      },
+      {
+        "id": "d",
+        "text": "The workstation's MAC address is duplicated elsewhere on the network"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A /25 mask splits 192.168.1.0/24 into two /25 subnets (.0-.127 and .128-.255). With a /25 mask, the workstation considers only addresses in its own half local — including believing the real gateway at .1 is local when it should be, but any device patched from the .128-.255 range would be cut off, and mismatched masks across a subnet reliably break connectivity like this.",
+    "distractorExplanations": {
+      "b": "A DNS issue would break name resolution, not fundamental reachability including the gateway.",
+      "c": "A speed mismatch typically degrades or drops the link rather than causing a clean full outage while showing a valid IP.",
+      "d": "A duplicate MAC would usually cause intermittent, not total, connectivity loss, and isn't suggested by anything in this scenario."
+    },
+    "tags": [
+      "subnetting",
+      "scenario"
+    ]
+  },
+  {
+    "id": "n10-009-50-037",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A user can access internal file shares but reports 'This site can't be reached' for every external website, while colleagues on the same switch have no issue. Pinging 8.8.8.8 by IP works fine from the affected machine. What should be checked first?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The DNS server address in the workstation's IP configuration"
+      },
+      {
+        "id": "b",
+        "text": "Whether the Ethernet cable is fully seated"
+      },
+      {
+        "id": "c",
+        "text": "Whether the switch port is configured for the correct VLAN"
+      },
+      {
+        "id": "d",
+        "text": "Whether the workstation's firewall is blocking ICMP"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Internal access works, external IP-based connectivity works (the 8.8.8.8 ping succeeded), but name-based external browsing fails only on one machine — that isolates the fault to that machine's DNS configuration.",
+    "distractorExplanations": {
+      "b": "A loose cable would break connectivity entirely, including the successful ping and internal file share access.",
+      "c": "A VLAN problem would typically affect broad connectivity, not selectively break only DNS-dependent browsing.",
+      "d": "Blocking ICMP would break the ping test itself, which succeeded, so that's not the issue here."
+    },
+    "tags": [
+      "dns",
+      "scenario"
+    ]
+  },
+  {
+    "id": "n10-009-50-038",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "After a firmware update on a firewall, internal users can browse HTTPS websites normally but a specific internal application that uses TCP port 8443 stops working, even though the application server itself is confirmed to be running. What is the most likely cause?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The firewall's rule set no longer allows traffic on port 8443"
+      },
+      {
+        "id": "b",
+        "text": "The application server's power supply failed"
+      },
+      {
+        "id": "c",
+        "text": "The users' workstations have an expired DHCP lease"
+      },
+      {
+        "id": "d",
+        "text": "A duplex mismatch on the application server's NIC"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Everything else working normally (including HTTPS on 443) while only traffic to one specific non-standard port fails right after a firewall firmware update strongly points at that port being blocked or reset in the updated rule set.",
+    "distractorExplanations": {
+      "b": "The scenario states the server is confirmed running, ruling out a power failure.",
+      "c": "A DHCP lease issue would affect general connectivity, not selectively block one TCP port while HTTPS works fine.",
+      "d": "A duplex mismatch would cause broad performance/error symptoms, not a clean, total block of exactly one port right after a firewall change."
+    },
+    "tags": [
+      "firewall",
+      "scenario"
+    ]
+  },
+  {
+    "id": "n10-009-50-039",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Users on a particular subnet report that large file transfers frequently stall or fail, while small requests like DNS lookups and basic web browsing work fine. A network engineer suspects an MTU mismatch somewhere along the path. What underlying behaviour would confirm this theory?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Large packets that need fragmentation are being silently dropped by a device that has ICMP 'fragmentation needed' messages blocked"
+      },
+      {
+        "id": "b",
+        "text": "The DHCP scope for that subnet has run out of available addresses"
+      },
+      {
+        "id": "c",
+        "text": "The switch serving that subnet has spanning tree misconfigured"
+      },
+      {
+        "id": "d",
+        "text": "The subnet's default gateway has the wrong MAC address in its ARP table"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "This is the classic MTU 'black hole' scenario: a device along the path has a smaller MTU and needs to fragment (or ask the sender to), but if ICMP 'fragmentation needed' messages are filtered somewhere, large packets are silently dropped instead of being fragmented or rejected with a helpful error — which matches small traffic working while large transfers stall.",
+    "distractorExplanations": {
+      "b": "A full DHCP scope would prevent new devices from getting an address at all, not selectively stall large transfers for already-connected devices.",
+      "c": "An STP misconfiguration would tend to cause broader connectivity or loop symptoms, not a size-dependent transfer problem.",
+      "d": "A stale ARP entry would cause a connectivity failure to a specific host, not a pattern that correlates with transfer size."
+    },
+    "tags": [
+      "mtu",
+      "scenario"
+    ]
+  },
+  {
+    "id": "n10-009-50-040",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A small office suddenly has several devices receiving IP addresses in an unexpected 10.10.10.0/24 range with a gateway that doesn't belong to the office router, even though the office's DHCP server is scoped for 192.168.1.0/24. What is the most likely explanation?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A rogue DHCP server on the network is responding to requests faster than the legitimate one"
+      },
+      {
+        "id": "b",
+        "text": "The office router's firmware has automatically changed its own subnet"
+      },
+      {
+        "id": "c",
+        "text": "The affected devices have manually configured static IP addresses"
+      },
+      {
+        "id": "d",
+        "text": "The office's ISP has changed the public IP block it assigns"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "An unexpected, unauthorised address range and gateway appearing via DHCP — while the legitimate scope is untouched — is the signature of a rogue DHCP server (whether malicious or an accidentally misconfigured device) winning the race against the real server for some clients.",
+    "distractorExplanations": {
+      "b": "Router firmware doesn't autonomously change its configured subnet; that would require a person to change it.",
+      "c": "Static configuration wouldn't explain devices getting an address from an unexpected DHCP-style lease process.",
+      "d": "ISP-assigned public addressing is unrelated to internal DHCP leases on a private LAN."
+    },
+    "tags": [
+      "dhcp",
+      "scenario"
+    ]
+  },
+  {
+    "id": "n10-009-50-041",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A fibre link between two buildings goes down. A technician confirms the switch ports on both ends show 'down/down' and there's no light detected at either end with an optical power meter. What should be checked first?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A physical break or a disconnected/dirty connector somewhere along the fibre run"
+      },
+      {
+        "id": "b",
+        "text": "The VLAN configuration on both switches"
+      },
+      {
+        "id": "c",
+        "text": "The IP addressing scheme used between the two buildings"
+      },
+      {
+        "id": "d",
+        "text": "Whether QoS policies are dropping the traffic"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "'Down/down' with zero detected light at both ends is a physical-layer symptom — no light means no signal is getting through at all, which points to a physical break, a disconnected patch, or a badly contaminated connector rather than anything configuration-related.",
+    "distractorExplanations": {
+      "b": "A VLAN issue would show a 'up/up' port with a logical connectivity problem, not zero detected light at the physical layer.",
+      "c": "IP addressing is a Layer 3 concern; it can't explain a Layer 1 'no light detected' symptom.",
+      "d": "QoS operates on traffic that's already passing over an active link — it's irrelevant when there's no light/signal at all."
+    },
+    "tags": [
+      "fiber",
+      "physical-layer",
+      "scenario"
+    ]
+  },
+  {
+    "id": "n10-009-50-042",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A technician needs to connect two older switches directly together using their Ethernet uplink ports, and neither switch supports Auto-MDI-X. Which cable should be used?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A crossover cable"
+      },
+      {
+        "id": "b",
+        "text": "A straight-through cable"
+      },
+      {
+        "id": "c",
+        "text": "A rollover (console) cable"
+      },
+      {
+        "id": "d",
+        "text": "A coaxial patch cable"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Connecting two like devices (switch to switch) without Auto-MDI-X requires a crossover cable, which swaps the transmit and receive pairs so each side's transmitter lines up with the other's receiver.",
+    "distractorExplanations": {
+      "b": "A straight-through cable is for connecting unlike devices (e.g., PC to switch), where each side already expects the other's pinout.",
+      "c": "A rollover/console cable is used for out-of-band device management via a console port, not for a data uplink.",
+      "d": "Coaxial cable isn't used for Ethernet switch uplinks at all."
+    },
+    "tags": [
+      "cabling",
+      "scenario"
+    ]
+  }
+]

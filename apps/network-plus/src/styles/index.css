@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * PacketPrep's accent, see docs/design.md. Everything else (table, card,
+ * ink, gilt...) comes from the engine's tokens.css unchanged.
+ */
+:root {
+  --cd-accent: #1f6f78;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: "Libre Franklin", system-ui, sans-serif;
+}

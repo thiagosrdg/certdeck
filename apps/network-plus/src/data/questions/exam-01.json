@@ -1,0 +1,3539 @@
+[
+  {
+    "id": "n10-009-10-001",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does FTP (data) use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "20"
+      },
+      {
+        "id": "b",
+        "text": "995"
+      },
+      {
+        "id": "c",
+        "text": "3306"
+      },
+      {
+        "id": "d",
+        "text": "3389"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "FTP (data) uses port 20/TCP by default — it transfers the actual file contents during an FTP session.",
+    "distractorExplanations": {
+      "b": "Port 995 is POP3S's default port, not FTP (data)'s.",
+      "c": "Port 3306 is MySQL's default port, not FTP (data)'s.",
+      "d": "Port 3389 is RDP's default port, not FTP (data)'s."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-002",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does FTP (control) use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "21"
+      },
+      {
+        "id": "b",
+        "text": "995"
+      },
+      {
+        "id": "c",
+        "text": "3306"
+      },
+      {
+        "id": "d",
+        "text": "3389"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "FTP (control) uses port 21/TCP by default — it carries FTP commands and responses.",
+    "distractorExplanations": {
+      "b": "Port 995 is POP3S's default port, not FTP (control)'s.",
+      "c": "Port 3306 is MySQL's default port, not FTP (control)'s.",
+      "d": "Port 3389 is RDP's default port, not FTP (control)'s."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-003",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does SSH use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "22"
+      },
+      {
+        "id": "b",
+        "text": "110"
+      },
+      {
+        "id": "c",
+        "text": "123"
+      },
+      {
+        "id": "d",
+        "text": "143"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "SSH uses port 22/TCP by default — it provides an encrypted remote shell and file transfer (SFTP/SCP).",
+    "distractorExplanations": {
+      "b": "Port 110 is POP3's default port, not SSH's.",
+      "c": "Port 123 is NTP's default port, not SSH's.",
+      "d": "Port 143 is IMAP's default port, not SSH's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-004",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does Telnet use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "23"
+      },
+      {
+        "id": "b",
+        "text": "389"
+      },
+      {
+        "id": "c",
+        "text": "443"
+      },
+      {
+        "id": "d",
+        "text": "445"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Telnet uses port 23/TCP by default — it provides an unencrypted remote terminal session.",
+    "distractorExplanations": {
+      "b": "Port 389 is LDAP's default port, not Telnet's.",
+      "c": "Port 443 is HTTPS's default port, not Telnet's.",
+      "d": "Port 445 is SMB's default port, not Telnet's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-005",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does SMTP use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "25"
+      },
+      {
+        "id": "b",
+        "text": "445"
+      },
+      {
+        "id": "c",
+        "text": "514"
+      },
+      {
+        "id": "d",
+        "text": "636"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "SMTP uses port 25/TCP by default — it relays outgoing email between mail servers.",
+    "distractorExplanations": {
+      "b": "Port 445 is SMB's default port, not SMTP's.",
+      "c": "Port 514 is Syslog's default port, not SMTP's.",
+      "d": "Port 636 is LDAPS's default port, not SMTP's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-006",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does DNS use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "53"
+      },
+      {
+        "id": "b",
+        "text": "445"
+      },
+      {
+        "id": "c",
+        "text": "514"
+      },
+      {
+        "id": "d",
+        "text": "636"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "DNS uses port 53/TCP/UDP by default — it resolves domain names to IP addresses (UDP for lookups, TCP for zone transfers and large responses).",
+    "distractorExplanations": {
+      "b": "Port 445 is SMB's default port, not DNS's.",
+      "c": "Port 514 is Syslog's default port, not DNS's.",
+      "d": "Port 636 is LDAPS's default port, not DNS's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-007",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does DHCP (server) use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "67"
+      },
+      {
+        "id": "b",
+        "text": "23"
+      },
+      {
+        "id": "c",
+        "text": "25"
+      },
+      {
+        "id": "d",
+        "text": "53"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "DHCP (server) uses port 67/UDP by default — it is where a DHCP server listens for client requests.",
+    "distractorExplanations": {
+      "b": "Port 23 is Telnet's default port, not DHCP (server)'s.",
+      "c": "Port 25 is SMTP's default port, not DHCP (server)'s.",
+      "d": "Port 53 is DNS's default port, not DHCP (server)'s."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-008",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does DHCP (client) use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "68"
+      },
+      {
+        "id": "b",
+        "text": "636"
+      },
+      {
+        "id": "c",
+        "text": "993"
+      },
+      {
+        "id": "d",
+        "text": "995"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "DHCP (client) uses port 68/UDP by default — it is where a DHCP client listens for server replies.",
+    "distractorExplanations": {
+      "b": "Port 636 is LDAPS's default port, not DHCP (client)'s.",
+      "c": "Port 993 is IMAPS's default port, not DHCP (client)'s.",
+      "d": "Port 995 is POP3S's default port, not DHCP (client)'s."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-009",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does TFTP use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "69"
+      },
+      {
+        "id": "b",
+        "text": "80"
+      },
+      {
+        "id": "c",
+        "text": "110"
+      },
+      {
+        "id": "d",
+        "text": "123"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "TFTP uses port 69/UDP by default — it transfers files with no authentication, often for device firmware/config.",
+    "distractorExplanations": {
+      "b": "Port 80 is HTTP's default port, not TFTP's.",
+      "c": "Port 110 is POP3's default port, not TFTP's.",
+      "d": "Port 123 is NTP's default port, not TFTP's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-010",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does HTTP use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "80"
+      },
+      {
+        "id": "b",
+        "text": "514"
+      },
+      {
+        "id": "c",
+        "text": "636"
+      },
+      {
+        "id": "d",
+        "text": "993"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "HTTP uses port 80/TCP by default — it serves unencrypted web traffic.",
+    "distractorExplanations": {
+      "b": "Port 514 is Syslog's default port, not HTTP's.",
+      "c": "Port 636 is LDAPS's default port, not HTTP's.",
+      "d": "Port 993 is IMAPS's default port, not HTTP's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-011",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does POP3 use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "110"
+      },
+      {
+        "id": "b",
+        "text": "443"
+      },
+      {
+        "id": "c",
+        "text": "445"
+      },
+      {
+        "id": "d",
+        "text": "514"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "POP3 uses port 110/TCP by default — it downloads and typically removes email from a mail server.",
+    "distractorExplanations": {
+      "b": "Port 443 is HTTPS's default port, not POP3's.",
+      "c": "Port 445 is SMB's default port, not POP3's.",
+      "d": "Port 514 is Syslog's default port, not POP3's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-012",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does NTP use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "123"
+      },
+      {
+        "id": "b",
+        "text": "80"
+      },
+      {
+        "id": "c",
+        "text": "110"
+      },
+      {
+        "id": "d",
+        "text": "143"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "NTP uses port 123/UDP by default — it synchronises device clocks.",
+    "distractorExplanations": {
+      "b": "Port 80 is HTTP's default port, not NTP's.",
+      "c": "Port 110 is POP3's default port, not NTP's.",
+      "d": "Port 143 is IMAP's default port, not NTP's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-013",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does IMAP use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "143"
+      },
+      {
+        "id": "b",
+        "text": "995"
+      },
+      {
+        "id": "c",
+        "text": "3306"
+      },
+      {
+        "id": "d",
+        "text": "3389"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "IMAP uses port 143/TCP by default — it manages email that stays synchronised on the server.",
+    "distractorExplanations": {
+      "b": "Port 995 is POP3S's default port, not IMAP's.",
+      "c": "Port 3306 is MySQL's default port, not IMAP's.",
+      "d": "Port 3389 is RDP's default port, not IMAP's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-014",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does SNMP use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "161"
+      },
+      {
+        "id": "b",
+        "text": "123"
+      },
+      {
+        "id": "c",
+        "text": "143"
+      },
+      {
+        "id": "d",
+        "text": "162"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "SNMP uses port 161/UDP by default — it lets a management station poll and configure network devices.",
+    "distractorExplanations": {
+      "b": "Port 123 is NTP's default port, not SNMP's.",
+      "c": "Port 143 is IMAP's default port, not SNMP's.",
+      "d": "Port 162 is SNMP trap's default port, not SNMP's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-015",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does SNMP trap use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "162"
+      },
+      {
+        "id": "b",
+        "text": "443"
+      },
+      {
+        "id": "c",
+        "text": "445"
+      },
+      {
+        "id": "d",
+        "text": "514"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "SNMP trap uses port 162/UDP by default — it is where a management station receives unsolicited device alerts.",
+    "distractorExplanations": {
+      "b": "Port 443 is HTTPS's default port, not SNMP trap's.",
+      "c": "Port 445 is SMB's default port, not SNMP trap's.",
+      "d": "Port 514 is Syslog's default port, not SNMP trap's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-016",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does LDAP use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "389"
+      },
+      {
+        "id": "b",
+        "text": "67"
+      },
+      {
+        "id": "c",
+        "text": "68"
+      },
+      {
+        "id": "d",
+        "text": "69"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "LDAP uses port 389/TCP by default — it queries and modifies directory services such as Active Directory.",
+    "distractorExplanations": {
+      "b": "Port 67 is DHCP (server)'s default port, not LDAP's.",
+      "c": "Port 68 is DHCP (client)'s default port, not LDAP's.",
+      "d": "Port 69 is TFTP's default port, not LDAP's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-017",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does HTTPS use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "443"
+      },
+      {
+        "id": "b",
+        "text": "514"
+      },
+      {
+        "id": "c",
+        "text": "636"
+      },
+      {
+        "id": "d",
+        "text": "993"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "HTTPS uses port 443/TCP by default — it serves web traffic encrypted with TLS.",
+    "distractorExplanations": {
+      "b": "Port 514 is Syslog's default port, not HTTPS's.",
+      "c": "Port 636 is LDAPS's default port, not HTTPS's.",
+      "d": "Port 993 is IMAPS's default port, not HTTPS's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-018",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does SMB use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "445"
+      },
+      {
+        "id": "b",
+        "text": "143"
+      },
+      {
+        "id": "c",
+        "text": "161"
+      },
+      {
+        "id": "d",
+        "text": "162"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "SMB uses port 445/TCP by default — it shares files and printers on Windows networks.",
+    "distractorExplanations": {
+      "b": "Port 143 is IMAP's default port, not SMB's.",
+      "c": "Port 161 is SNMP's default port, not SMB's.",
+      "d": "Port 162 is SNMP trap's default port, not SMB's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-019",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does Syslog use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "514"
+      },
+      {
+        "id": "b",
+        "text": "20"
+      },
+      {
+        "id": "c",
+        "text": "21"
+      },
+      {
+        "id": "d",
+        "text": "22"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Syslog uses port 514/UDP by default — it collects log messages from network devices.",
+    "distractorExplanations": {
+      "b": "Port 20 is FTP (data)'s default port, not Syslog's.",
+      "c": "Port 21 is FTP (control)'s default port, not Syslog's.",
+      "d": "Port 22 is SSH's default port, not Syslog's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-020",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does LDAPS use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "636"
+      },
+      {
+        "id": "b",
+        "text": "3389"
+      },
+      {
+        "id": "c",
+        "text": "5060"
+      },
+      {
+        "id": "d",
+        "text": "20"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "LDAPS uses port 636/TCP by default — it carries LDAP directory traffic encrypted with TLS.",
+    "distractorExplanations": {
+      "b": "Port 3389 is RDP's default port, not LDAPS's.",
+      "c": "Port 5060 is SIP's default port, not LDAPS's.",
+      "d": "Port 20 is FTP (data)'s default port, not LDAPS's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-021",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which well-known port number does IMAPS use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "993"
+      },
+      {
+        "id": "b",
+        "text": "162"
+      },
+      {
+        "id": "c",
+        "text": "389"
+      },
+      {
+        "id": "d",
+        "text": "443"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "IMAPS uses port 993/TCP by default — it carries IMAP encrypted with TLS.",
+    "distractorExplanations": {
+      "b": "Port 162 is SNMP trap's default port, not IMAPS's.",
+      "c": "Port 389 is LDAP's default port, not IMAPS's.",
+      "d": "Port 443 is HTTPS's default port, not IMAPS's."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-20-001",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which cable type is twisted-pair copper typically terminated with a RJ45 connector and rated for up to 1 Gbps?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cat 5e"
+      },
+      {
+        "id": "b",
+        "text": "Cat 6"
+      },
+      {
+        "id": "c",
+        "text": "Cat 6a"
+      },
+      {
+        "id": "d",
+        "text": "Single-mode fibre"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Cat 5e matches that connector and performance profile (max distance up to 100 m).",
+    "distractorExplanations": {
+      "b": "Cat 6 uses a different connector/performance profile.",
+      "c": "Cat 6a uses a different connector/performance profile.",
+      "d": "Single-mode fibre uses a different connector/performance profile."
+    },
+    "tags": [
+      "cabling"
+    ]
+  },
+  {
+    "id": "n10-009-20-002",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which cable type is twisted-pair copper typically terminated with a RJ45 connector and rated for up to 10 Gbps over short runs (up to 55 m), 1 Gbps at full 100 m?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cat 6"
+      },
+      {
+        "id": "b",
+        "text": "Multimode fibre"
+      },
+      {
+        "id": "c",
+        "text": "Coaxial (RG-6)"
+      },
+      {
+        "id": "d",
+        "text": "Cat 5e"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Cat 6 matches that connector and performance profile (max distance up to 100 m).",
+    "distractorExplanations": {
+      "b": "Multimode fibre uses a different connector/performance profile.",
+      "c": "Coaxial (RG-6) uses a different connector/performance profile.",
+      "d": "Cat 5e uses a different connector/performance profile."
+    },
+    "tags": [
+      "cabling"
+    ]
+  },
+  {
+    "id": "n10-009-20-003",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which cable type is twisted-pair copper typically terminated with a RJ45 connector and rated for 10 Gbps at the full 100 m distance?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cat 6a"
+      },
+      {
+        "id": "b",
+        "text": "Single-mode fibre"
+      },
+      {
+        "id": "c",
+        "text": "Multimode fibre"
+      },
+      {
+        "id": "d",
+        "text": "Coaxial (RG-6)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Cat 6a matches that connector and performance profile (max distance up to 100 m).",
+    "distractorExplanations": {
+      "b": "Single-mode fibre uses a different connector/performance profile.",
+      "c": "Multimode fibre uses a different connector/performance profile.",
+      "d": "Coaxial (RG-6) uses a different connector/performance profile."
+    },
+    "tags": [
+      "cabling"
+    ]
+  },
+  {
+    "id": "n10-009-20-004",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which cable type is glass fibre typically terminated with a SC/LC/ST connector and rated for very high bandwidth over very long distances using a single light path?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Single-mode fibre"
+      },
+      {
+        "id": "b",
+        "text": "Coaxial (RG-6)"
+      },
+      {
+        "id": "c",
+        "text": "Cat 5e"
+      },
+      {
+        "id": "d",
+        "text": "Cat 6"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Single-mode fibre matches that connector and performance profile (max distance several kilometres or more).",
+    "distractorExplanations": {
+      "b": "Coaxial (RG-6) uses a different connector/performance profile.",
+      "c": "Cat 5e uses a different connector/performance profile.",
+      "d": "Cat 6 uses a different connector/performance profile."
+    },
+    "tags": [
+      "cabling"
+    ]
+  },
+  {
+    "id": "n10-009-20-005",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which cable type is glass fibre typically terminated with a SC/LC/ST connector and rated for high bandwidth over shorter distances than single-mode, using multiple light paths?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Multimode fibre"
+      },
+      {
+        "id": "b",
+        "text": "Coaxial (RG-6)"
+      },
+      {
+        "id": "c",
+        "text": "Cat 5e"
+      },
+      {
+        "id": "d",
+        "text": "Cat 6"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Multimode fibre matches that connector and performance profile (max distance typically under 2 km).",
+    "distractorExplanations": {
+      "b": "Coaxial (RG-6) uses a different connector/performance profile.",
+      "c": "Cat 5e uses a different connector/performance profile.",
+      "d": "Cat 6 uses a different connector/performance profile."
+    },
+    "tags": [
+      "cabling"
+    ]
+  },
+  {
+    "id": "n10-009-20-006",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which cable type is copper with a shielded core typically terminated with a F-connector connector and rated for broadband cable/satellite delivery?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Coaxial (RG-6)"
+      },
+      {
+        "id": "b",
+        "text": "Cat 6"
+      },
+      {
+        "id": "c",
+        "text": "Cat 6a"
+      },
+      {
+        "id": "d",
+        "text": "Single-mode fibre"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Coaxial (RG-6) matches that connector and performance profile (max distance varies, commonly used for last-mile cable internet).",
+    "distractorExplanations": {
+      "b": "Cat 6 uses a different connector/performance profile.",
+      "c": "Cat 6a uses a different connector/performance profile.",
+      "d": "Single-mode fibre uses a different connector/performance profile."
+    },
+    "tags": [
+      "cabling"
+    ]
+  },
+  {
+    "id": "n10-009-20-007",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which wireless standard operates on 5 GHz and provides up to 54 Mbps?",
+    "options": [
+      {
+        "id": "a",
+        "text": "802.11a"
+      },
+      {
+        "id": "b",
+        "text": "802.11b"
+      },
+      {
+        "id": "c",
+        "text": "802.11g"
+      },
+      {
+        "id": "d",
+        "text": "802.11n (Wi-Fi 4)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "802.11a is defined by this band and throughput.",
+    "distractorExplanations": {
+      "b": "802.11b uses 2.4 GHz with up to 11 Mbps instead.",
+      "c": "802.11g uses 2.4 GHz with up to 54 Mbps instead.",
+      "d": "802.11n (Wi-Fi 4) uses 2.4 GHz and 5 GHz with up to 600 Mbps with MIMO instead."
+    },
+    "tags": [
+      "wireless"
+    ]
+  },
+  {
+    "id": "n10-009-20-008",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which wireless standard operates on 2.4 GHz and provides up to 11 Mbps?",
+    "options": [
+      {
+        "id": "a",
+        "text": "802.11b"
+      },
+      {
+        "id": "b",
+        "text": "802.11ax (Wi-Fi 6)"
+      },
+      {
+        "id": "c",
+        "text": "802.11a"
+      },
+      {
+        "id": "d",
+        "text": "802.11g"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "802.11b is defined by this band and throughput.",
+    "distractorExplanations": {
+      "b": "802.11ax (Wi-Fi 6) uses 2.4 GHz, 5 GHz, and (Wi-Fi 6E) 6 GHz with higher efficiency in dense environments via OFDMA instead.",
+      "c": "802.11a uses 5 GHz with up to 54 Mbps instead.",
+      "d": "802.11g uses 2.4 GHz with up to 54 Mbps instead."
+    },
+    "tags": [
+      "wireless"
+    ]
+  },
+  {
+    "id": "n10-009-20-009",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which wireless standard operates on 2.4 GHz and provides up to 54 Mbps?",
+    "options": [
+      {
+        "id": "a",
+        "text": "802.11g"
+      },
+      {
+        "id": "b",
+        "text": "802.11ax (Wi-Fi 6)"
+      },
+      {
+        "id": "c",
+        "text": "802.11a"
+      },
+      {
+        "id": "d",
+        "text": "802.11b"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "802.11g is defined by this band and throughput.",
+    "distractorExplanations": {
+      "b": "802.11ax (Wi-Fi 6) uses 2.4 GHz, 5 GHz, and (Wi-Fi 6E) 6 GHz with higher efficiency in dense environments via OFDMA instead.",
+      "c": "802.11a uses 5 GHz with up to 54 Mbps instead.",
+      "d": "802.11b uses 2.4 GHz with up to 11 Mbps instead."
+    },
+    "tags": [
+      "wireless"
+    ]
+  },
+  {
+    "id": "n10-009-20-010",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which wireless standard operates on 2.4 GHz and 5 GHz and provides up to 600 Mbps with MIMO?",
+    "options": [
+      {
+        "id": "a",
+        "text": "802.11n (Wi-Fi 4)"
+      },
+      {
+        "id": "b",
+        "text": "802.11ax (Wi-Fi 6)"
+      },
+      {
+        "id": "c",
+        "text": "802.11a"
+      },
+      {
+        "id": "d",
+        "text": "802.11b"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "802.11n (Wi-Fi 4) is defined by this band and throughput.",
+    "distractorExplanations": {
+      "b": "802.11ax (Wi-Fi 6) uses 2.4 GHz, 5 GHz, and (Wi-Fi 6E) 6 GHz with higher efficiency in dense environments via OFDMA instead.",
+      "c": "802.11a uses 5 GHz with up to 54 Mbps instead.",
+      "d": "802.11b uses 2.4 GHz with up to 11 Mbps instead."
+    },
+    "tags": [
+      "wireless"
+    ]
+  },
+  {
+    "id": "n10-009-20-011",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which wireless standard operates on 5 GHz and provides up to several Gbps with MU-MIMO?",
+    "options": [
+      {
+        "id": "a",
+        "text": "802.11ac (Wi-Fi 5)"
+      },
+      {
+        "id": "b",
+        "text": "802.11a"
+      },
+      {
+        "id": "c",
+        "text": "802.11b"
+      },
+      {
+        "id": "d",
+        "text": "802.11g"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "802.11ac (Wi-Fi 5) is defined by this band and throughput.",
+    "distractorExplanations": {
+      "b": "802.11a uses 5 GHz with up to 54 Mbps instead.",
+      "c": "802.11b uses 2.4 GHz with up to 11 Mbps instead.",
+      "d": "802.11g uses 2.4 GHz with up to 54 Mbps instead."
+    },
+    "tags": [
+      "wireless"
+    ]
+  },
+  {
+    "id": "n10-009-20-012",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which wireless standard operates on 2.4 GHz, 5 GHz, and (Wi-Fi 6E) 6 GHz and provides higher efficiency in dense environments via OFDMA?",
+    "options": [
+      {
+        "id": "a",
+        "text": "802.11ax (Wi-Fi 6)"
+      },
+      {
+        "id": "b",
+        "text": "802.11b"
+      },
+      {
+        "id": "c",
+        "text": "802.11g"
+      },
+      {
+        "id": "d",
+        "text": "802.11n (Wi-Fi 4)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "802.11ax (Wi-Fi 6) is defined by this band and throughput.",
+    "distractorExplanations": {
+      "b": "802.11b uses 2.4 GHz with up to 11 Mbps instead.",
+      "c": "802.11g uses 2.4 GHz with up to 54 Mbps instead.",
+      "d": "802.11n (Wi-Fi 4) uses 2.4 GHz and 5 GHz with up to 600 Mbps with MIMO instead."
+    },
+    "tags": [
+      "wireless"
+    ]
+  },
+  {
+    "id": "n10-009-20-013",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "In Spanning Tree Protocol, which port state does not forward frames and does not learn MAC addresses, to prevent a switching loop?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Blocking"
+      },
+      {
+        "id": "b",
+        "text": "Listening"
+      },
+      {
+        "id": "c",
+        "text": "Learning"
+      },
+      {
+        "id": "d",
+        "text": "Forwarding"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The Blocking state is defined by this behaviour in STP's port state machine.",
+    "distractorExplanations": {
+      "b": "Listening does not forward frames yet but starts processing BPDUs to determine the topology instead.",
+      "c": "Learning still does not forward frames but starts building its MAC address table instead.",
+      "d": "Forwarding forwards frames and learns MAC addresses normally instead."
+    },
+    "tags": [
+      "stp",
+      "switching"
+    ]
+  },
+  {
+    "id": "n10-009-20-014",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "In Spanning Tree Protocol, which port state does not forward frames yet but starts processing BPDUs to determine the topology?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Listening"
+      },
+      {
+        "id": "b",
+        "text": "Blocking"
+      },
+      {
+        "id": "c",
+        "text": "Learning"
+      },
+      {
+        "id": "d",
+        "text": "Forwarding"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The Listening state is defined by this behaviour in STP's port state machine.",
+    "distractorExplanations": {
+      "b": "Blocking does not forward frames and does not learn MAC addresses, to prevent a switching loop instead.",
+      "c": "Learning still does not forward frames but starts building its MAC address table instead.",
+      "d": "Forwarding forwards frames and learns MAC addresses normally instead."
+    },
+    "tags": [
+      "stp",
+      "switching"
+    ]
+  },
+  {
+    "id": "n10-009-20-015",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "In Spanning Tree Protocol, which port state still does not forward frames but starts building its MAC address table?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Learning"
+      },
+      {
+        "id": "b",
+        "text": "Blocking"
+      },
+      {
+        "id": "c",
+        "text": "Listening"
+      },
+      {
+        "id": "d",
+        "text": "Forwarding"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The Learning state is defined by this behaviour in STP's port state machine.",
+    "distractorExplanations": {
+      "b": "Blocking does not forward frames and does not learn MAC addresses, to prevent a switching loop instead.",
+      "c": "Listening does not forward frames yet but starts processing BPDUs to determine the topology instead.",
+      "d": "Forwarding forwards frames and learns MAC addresses normally instead."
+    },
+    "tags": [
+      "stp",
+      "switching"
+    ]
+  },
+  {
+    "id": "n10-009-20-016",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "In Spanning Tree Protocol, which port state forwards frames and learns MAC addresses normally?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Forwarding"
+      },
+      {
+        "id": "b",
+        "text": "Blocking"
+      },
+      {
+        "id": "c",
+        "text": "Listening"
+      },
+      {
+        "id": "d",
+        "text": "Learning"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The Forwarding state is defined by this behaviour in STP's port state machine.",
+    "distractorExplanations": {
+      "b": "Blocking does not forward frames and does not learn MAC addresses, to prevent a switching loop instead.",
+      "c": "Listening does not forward frames yet but starts processing BPDUs to determine the topology instead.",
+      "d": "Learning still does not forward frames but starts building its MAC address table instead."
+    },
+    "tags": [
+      "stp",
+      "switching"
+    ]
+  },
+  {
+    "id": "n10-009-20-017",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which routing protocol is a distance-vector protocol that uses hop count as its metric?",
+    "options": [
+      {
+        "id": "a",
+        "text": "RIP"
+      },
+      {
+        "id": "b",
+        "text": "BGP"
+      },
+      {
+        "id": "c",
+        "text": "OSPF"
+      },
+      {
+        "id": "d",
+        "text": "EIGRP"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "RIP is a distance-vector protocol using hop count; it is known for a maximum of 15 hops, making it unsuitable for large networks.",
+    "distractorExplanations": {
+      "b": "BGP is path-vector, using AS-path and configured policy instead.",
+      "c": "OSPF is link-state, using cost (based on bandwidth) instead.",
+      "d": "EIGRP is advanced distance-vector (hybrid), using a composite metric of bandwidth and delay instead."
+    },
+    "tags": [
+      "routing"
+    ]
+  },
+  {
+    "id": "n10-009-20-018",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which routing protocol is a link-state protocol that uses cost (based on bandwidth) as its metric?",
+    "options": [
+      {
+        "id": "a",
+        "text": "OSPF"
+      },
+      {
+        "id": "b",
+        "text": "EIGRP"
+      },
+      {
+        "id": "c",
+        "text": "BGP"
+      },
+      {
+        "id": "d",
+        "text": "RIP"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "OSPF is a link-state protocol using cost (based on bandwidth); it is known for fast convergence using a complete map of the network via Dijkstra's algorithm.",
+    "distractorExplanations": {
+      "b": "EIGRP is advanced distance-vector (hybrid), using a composite metric of bandwidth and delay instead.",
+      "c": "BGP is path-vector, using AS-path and configured policy instead.",
+      "d": "RIP is distance-vector, using hop count instead."
+    },
+    "tags": [
+      "routing"
+    ]
+  },
+  {
+    "id": "n10-009-30-001",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which network performance metric describes the time it takes a packet to travel from source to destination, typically measured in milliseconds?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Latency"
+      },
+      {
+        "id": "b",
+        "text": "Packet loss"
+      },
+      {
+        "id": "c",
+        "text": "Jitter"
+      },
+      {
+        "id": "d",
+        "text": "Throughput"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Latency is defined as the time it takes a packet to travel from source to destination.",
+    "distractorExplanations": {
+      "b": "Packet loss instead describes the percentage of packets that never arrive at their destination.",
+      "c": "Jitter instead describes the variation in latency between consecutive packets.",
+      "d": "Throughput instead describes the actual amount of data successfully transferred over a link in a given time."
+    },
+    "tags": [
+      "performance"
+    ]
+  },
+  {
+    "id": "n10-009-30-002",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which network performance metric describes the variation in latency between consecutive packets, typically measured in milliseconds?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Jitter"
+      },
+      {
+        "id": "b",
+        "text": "Throughput"
+      },
+      {
+        "id": "c",
+        "text": "Bandwidth"
+      },
+      {
+        "id": "d",
+        "text": "Packet loss"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Jitter is defined as the variation in latency between consecutive packets.",
+    "distractorExplanations": {
+      "b": "Throughput instead describes the actual amount of data successfully transferred over a link in a given time.",
+      "c": "Bandwidth instead describes the theoretical maximum data rate a link can carry.",
+      "d": "Packet loss instead describes the percentage of packets that never arrive at their destination."
+    },
+    "tags": [
+      "performance"
+    ]
+  },
+  {
+    "id": "n10-009-30-003",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which network performance metric describes the actual amount of data successfully transferred over a link in a given time, typically measured in Mbps or Gbps?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Throughput"
+      },
+      {
+        "id": "b",
+        "text": "Packet loss"
+      },
+      {
+        "id": "c",
+        "text": "Latency"
+      },
+      {
+        "id": "d",
+        "text": "Jitter"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Throughput is defined as the actual amount of data successfully transferred over a link in a given time.",
+    "distractorExplanations": {
+      "b": "Packet loss instead describes the percentage of packets that never arrive at their destination.",
+      "c": "Latency instead describes the time it takes a packet to travel from source to destination.",
+      "d": "Jitter instead describes the variation in latency between consecutive packets."
+    },
+    "tags": [
+      "performance"
+    ]
+  },
+  {
+    "id": "n10-009-30-004",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which network performance metric describes the theoretical maximum data rate a link can carry, typically measured in Mbps or Gbps?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Bandwidth"
+      },
+      {
+        "id": "b",
+        "text": "Throughput"
+      },
+      {
+        "id": "c",
+        "text": "Packet loss"
+      },
+      {
+        "id": "d",
+        "text": "Latency"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Bandwidth is defined as the theoretical maximum data rate a link can carry.",
+    "distractorExplanations": {
+      "b": "Throughput instead describes the actual amount of data successfully transferred over a link in a given time.",
+      "c": "Packet loss instead describes the percentage of packets that never arrive at their destination.",
+      "d": "Latency instead describes the time it takes a packet to travel from source to destination."
+    },
+    "tags": [
+      "performance"
+    ]
+  },
+  {
+    "id": "n10-009-30-005",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which network performance metric describes the percentage of packets that never arrive at their destination, typically measured in a percentage?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Packet loss"
+      },
+      {
+        "id": "b",
+        "text": "Throughput"
+      },
+      {
+        "id": "c",
+        "text": "Bandwidth"
+      },
+      {
+        "id": "d",
+        "text": "Latency"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Packet loss is defined as the percentage of packets that never arrive at their destination.",
+    "distractorExplanations": {
+      "b": "Throughput instead describes the actual amount of data successfully transferred over a link in a given time.",
+      "c": "Bandwidth instead describes the theoretical maximum data rate a link can carry.",
+      "d": "Latency instead describes the time it takes a packet to travel from source to destination."
+    },
+    "tags": [
+      "performance"
+    ]
+  },
+  {
+    "id": "n10-009-30-006",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which high-availability concept describes a design where all nodes in a cluster handle traffic simultaneously, and load is distributed across them?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Active-active"
+      },
+      {
+        "id": "b",
+        "text": "Active-passive"
+      },
+      {
+        "id": "c",
+        "text": "Load balancing"
+      },
+      {
+        "id": "d",
+        "text": "Clustering"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Active-active is defined by this arrangement.",
+    "distractorExplanations": {
+      "b": "Active-passive instead means one node handles all traffic while a standby node waits to take over if it fails.",
+      "c": "Load balancing instead means traffic is distributed across multiple servers to prevent any one server from being overwhelmed.",
+      "d": "Clustering instead means multiple servers are grouped to act as a single logical system for availability and performance."
+    },
+    "tags": [
+      "high-availability"
+    ]
+  },
+  {
+    "id": "n10-009-30-007",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which high-availability concept describes a design where one node handles all traffic while a standby node waits to take over if it fails?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Active-passive"
+      },
+      {
+        "id": "b",
+        "text": "Active-active"
+      },
+      {
+        "id": "c",
+        "text": "Load balancing"
+      },
+      {
+        "id": "d",
+        "text": "Clustering"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Active-passive is defined by this arrangement.",
+    "distractorExplanations": {
+      "b": "Active-active instead means all nodes in a cluster handle traffic simultaneously, and load is distributed across them.",
+      "c": "Load balancing instead means traffic is distributed across multiple servers to prevent any one server from being overwhelmed.",
+      "d": "Clustering instead means multiple servers are grouped to act as a single logical system for availability and performance."
+    },
+    "tags": [
+      "high-availability"
+    ]
+  },
+  {
+    "id": "n10-009-30-008",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which high-availability concept describes a design where traffic is distributed across multiple servers to prevent any one server from being overwhelmed?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Load balancing"
+      },
+      {
+        "id": "b",
+        "text": "Active-active"
+      },
+      {
+        "id": "c",
+        "text": "Active-passive"
+      },
+      {
+        "id": "d",
+        "text": "Clustering"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Load balancing is defined by this arrangement.",
+    "distractorExplanations": {
+      "b": "Active-active instead means all nodes in a cluster handle traffic simultaneously, and load is distributed across them.",
+      "c": "Active-passive instead means one node handles all traffic while a standby node waits to take over if it fails.",
+      "d": "Clustering instead means multiple servers are grouped to act as a single logical system for availability and performance."
+    },
+    "tags": [
+      "high-availability"
+    ]
+  },
+  {
+    "id": "n10-009-30-009",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which high-availability concept describes a design where multiple servers are grouped to act as a single logical system for availability and performance?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Clustering"
+      },
+      {
+        "id": "b",
+        "text": "Active-active"
+      },
+      {
+        "id": "c",
+        "text": "Active-passive"
+      },
+      {
+        "id": "d",
+        "text": "Load balancing"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Clustering is defined by this arrangement.",
+    "distractorExplanations": {
+      "b": "Active-active instead means all nodes in a cluster handle traffic simultaneously, and load is distributed across them.",
+      "c": "Active-passive instead means one node handles all traffic while a standby node waits to take over if it fails.",
+      "d": "Load balancing instead means traffic is distributed across multiple servers to prevent any one server from being overwhelmed."
+    },
+    "tags": [
+      "high-availability"
+    ]
+  },
+  {
+    "id": "n10-009-30-010",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which disaster recovery metric is defined as the maximum acceptable time a system can be down after a disaster before it must be restored?",
+    "options": [
+      {
+        "id": "a",
+        "text": "RTO (Recovery Time Objective)"
+      },
+      {
+        "id": "b",
+        "text": "RPO (Recovery Point Objective)"
+      },
+      {
+        "id": "c",
+        "text": "MTTR (Mean Time To Repair)"
+      },
+      {
+        "id": "d",
+        "text": "MTBF (Mean Time Between Failures)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "RTO (Recovery Time Objective) is defined this way and is used to set recovery targets and SLAs.",
+    "distractorExplanations": {
+      "b": "RPO (Recovery Point Objective) instead measures the maximum acceptable amount of data loss, measured as time since the last good backup.",
+      "c": "MTTR (Mean Time To Repair) instead measures the average time it actually takes to fix a failed component and restore service.",
+      "d": "MTBF (Mean Time Between Failures) instead measures the average time a component is expected to operate before it fails."
+    },
+    "tags": [
+      "disaster-recovery"
+    ]
+  },
+  {
+    "id": "n10-009-30-011",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which disaster recovery metric is defined as the maximum acceptable amount of data loss, measured as time since the last good backup?",
+    "options": [
+      {
+        "id": "a",
+        "text": "RPO (Recovery Point Objective)"
+      },
+      {
+        "id": "b",
+        "text": "RTO (Recovery Time Objective)"
+      },
+      {
+        "id": "c",
+        "text": "MTTR (Mean Time To Repair)"
+      },
+      {
+        "id": "d",
+        "text": "MTBF (Mean Time Between Failures)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "RPO (Recovery Point Objective) is defined this way and is used to set recovery targets and SLAs.",
+    "distractorExplanations": {
+      "b": "RTO (Recovery Time Objective) instead measures the maximum acceptable time a system can be down after a disaster before it must be restored.",
+      "c": "MTTR (Mean Time To Repair) instead measures the average time it actually takes to fix a failed component and restore service.",
+      "d": "MTBF (Mean Time Between Failures) instead measures the average time a component is expected to operate before it fails."
+    },
+    "tags": [
+      "disaster-recovery"
+    ]
+  },
+  {
+    "id": "n10-009-30-012",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which disaster recovery metric is defined as the average time it actually takes to fix a failed component and restore service?",
+    "options": [
+      {
+        "id": "a",
+        "text": "MTTR (Mean Time To Repair)"
+      },
+      {
+        "id": "b",
+        "text": "RTO (Recovery Time Objective)"
+      },
+      {
+        "id": "c",
+        "text": "RPO (Recovery Point Objective)"
+      },
+      {
+        "id": "d",
+        "text": "MTBF (Mean Time Between Failures)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "MTTR (Mean Time To Repair) is defined this way and is used to set recovery targets and SLAs.",
+    "distractorExplanations": {
+      "b": "RTO (Recovery Time Objective) instead measures the maximum acceptable time a system can be down after a disaster before it must be restored.",
+      "c": "RPO (Recovery Point Objective) instead measures the maximum acceptable amount of data loss, measured as time since the last good backup.",
+      "d": "MTBF (Mean Time Between Failures) instead measures the average time a component is expected to operate before it fails."
+    },
+    "tags": [
+      "disaster-recovery"
+    ]
+  },
+  {
+    "id": "n10-009-30-013",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which disaster recovery metric is defined as the average time a component is expected to operate before it fails?",
+    "options": [
+      {
+        "id": "a",
+        "text": "MTBF (Mean Time Between Failures)"
+      },
+      {
+        "id": "b",
+        "text": "RTO (Recovery Time Objective)"
+      },
+      {
+        "id": "c",
+        "text": "RPO (Recovery Point Objective)"
+      },
+      {
+        "id": "d",
+        "text": "MTTR (Mean Time To Repair)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "MTBF (Mean Time Between Failures) is defined this way and is used to set recovery targets and SLAs.",
+    "distractorExplanations": {
+      "b": "RTO (Recovery Time Objective) instead measures the maximum acceptable time a system can be down after a disaster before it must be restored.",
+      "c": "RPO (Recovery Point Objective) instead measures the maximum acceptable amount of data loss, measured as time since the last good backup.",
+      "d": "MTTR (Mean Time To Repair) instead measures the average time it actually takes to fix a failed component and restore service."
+    },
+    "tags": [
+      "disaster-recovery"
+    ]
+  },
+  {
+    "id": "n10-009-30-014",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which backup type backs up every selected file regardless of when it last changed, taking the longest but making restores simplest?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Full"
+      },
+      {
+        "id": "b",
+        "text": "Incremental"
+      },
+      {
+        "id": "c",
+        "text": "Differential"
+      },
+      {
+        "id": "d",
+        "text": "Snapshot"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A full backup backs up every selected file regardless of when it last changed, taking the longest but making restores simplest.",
+    "distractorExplanations": {
+      "b": "Incremental backups instead: backs up only files that changed since the last backup of any type, keeping backups small but requiring the full chain to restore.",
+      "c": "Differential backups instead: backs up all files that changed since the last full backup, growing larger each day but needing only two backups to restore.",
+      "d": "A snapshot captures point-in-time system state (often at the storage/VM layer) rather than following a scheduled full/incremental/differential file backup cycle."
+    },
+    "tags": [
+      "backup"
+    ]
+  },
+  {
+    "id": "n10-009-30-015",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which backup type backs up only files that changed since the last backup of any type, keeping backups small but requiring the full chain to restore?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Incremental"
+      },
+      {
+        "id": "b",
+        "text": "Full"
+      },
+      {
+        "id": "c",
+        "text": "Differential"
+      },
+      {
+        "id": "d",
+        "text": "Snapshot"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A incremental backup backs up only files that changed since the last backup of any type, keeping backups small but requiring the full chain to restore.",
+    "distractorExplanations": {
+      "b": "Full backups instead: backs up every selected file regardless of when it last changed, taking the longest but making restores simplest.",
+      "c": "Differential backups instead: backs up all files that changed since the last full backup, growing larger each day but needing only two backups to restore.",
+      "d": "A snapshot captures point-in-time system state (often at the storage/VM layer) rather than following a scheduled full/incremental/differential file backup cycle."
+    },
+    "tags": [
+      "backup"
+    ]
+  },
+  {
+    "id": "n10-009-30-016",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which backup type backs up all files that changed since the last full backup, growing larger each day but needing only two backups to restore?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Differential"
+      },
+      {
+        "id": "b",
+        "text": "Full"
+      },
+      {
+        "id": "c",
+        "text": "Incremental"
+      },
+      {
+        "id": "d",
+        "text": "Snapshot"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A differential backup backs up all files that changed since the last full backup, growing larger each day but needing only two backups to restore.",
+    "distractorExplanations": {
+      "b": "Full backups instead: backs up every selected file regardless of when it last changed, taking the longest but making restores simplest.",
+      "c": "Incremental backups instead: backs up only files that changed since the last backup of any type, keeping backups small but requiring the full chain to restore.",
+      "d": "A snapshot captures point-in-time system state (often at the storage/VM layer) rather than following a scheduled full/incremental/differential file backup cycle."
+    },
+    "tags": [
+      "backup"
+    ]
+  },
+  {
+    "id": "n10-009-30-017",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which network monitoring approach polls devices for status and performance data and can receive unsolicited traps?",
+    "options": [
+      {
+        "id": "a",
+        "text": "SNMP"
+      },
+      {
+        "id": "b",
+        "text": "Syslog"
+      },
+      {
+        "id": "c",
+        "text": "NetFlow"
+      },
+      {
+        "id": "d",
+        "text": "Packet capture"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "SNMP is the tool/protocol that polls devices for status and performance data and can receive unsolicited traps.",
+    "distractorExplanations": {
+      "b": "Syslog instead collects timestamped log messages devices send about events and errors.",
+      "c": "NetFlow instead collects metadata about traffic flows — source/destination, ports, and volume — for traffic analysis.",
+      "d": "Packet capture instead records full packet contents for deep, after-the-fact protocol analysis."
+    },
+    "tags": [
+      "monitoring"
+    ]
+  },
+  {
+    "id": "n10-009-40-001",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which element of the CIA triad ensures information is only accessible to those authorised to see it, typically through encryption and access controls?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Confidentiality"
+      },
+      {
+        "id": "b",
+        "text": "Integrity"
+      },
+      {
+        "id": "c",
+        "text": "Availability"
+      },
+      {
+        "id": "d",
+        "text": "Non-repudiation"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Confidentiality is the CIA triad element defined by this goal.",
+    "distractorExplanations": {
+      "b": "Integrity instead: ensures information isn't altered in transit or storage without detection, typically through hashing.",
+      "c": "Availability instead: ensures systems and data are accessible when needed, through redundancy and resilience.",
+      "d": "Non-repudiation ensures an action can't be denied after the fact — it's related but not one of the three CIA triad elements."
+    },
+    "tags": [
+      "cia-triad"
+    ]
+  },
+  {
+    "id": "n10-009-40-002",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which element of the CIA triad ensures information isn't altered in transit or storage without detection, typically through hashing?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Integrity"
+      },
+      {
+        "id": "b",
+        "text": "Confidentiality"
+      },
+      {
+        "id": "c",
+        "text": "Availability"
+      },
+      {
+        "id": "d",
+        "text": "Non-repudiation"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Integrity is the CIA triad element defined by this goal.",
+    "distractorExplanations": {
+      "b": "Confidentiality instead: ensures information is only accessible to those authorised to see it, typically through encryption and access controls.",
+      "c": "Availability instead: ensures systems and data are accessible when needed, through redundancy and resilience.",
+      "d": "Non-repudiation ensures an action can't be denied after the fact — it's related but not one of the three CIA triad elements."
+    },
+    "tags": [
+      "cia-triad"
+    ]
+  },
+  {
+    "id": "n10-009-40-003",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which element of the CIA triad ensures systems and data are accessible when needed, through redundancy and resilience?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Availability"
+      },
+      {
+        "id": "b",
+        "text": "Confidentiality"
+      },
+      {
+        "id": "c",
+        "text": "Integrity"
+      },
+      {
+        "id": "d",
+        "text": "Non-repudiation"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Availability is the CIA triad element defined by this goal.",
+    "distractorExplanations": {
+      "b": "Confidentiality instead: ensures information is only accessible to those authorised to see it, typically through encryption and access controls.",
+      "c": "Integrity instead: ensures information isn't altered in transit or storage without detection, typically through hashing.",
+      "d": "Non-repudiation ensures an action can't be denied after the fact — it's related but not one of the three CIA triad elements."
+    },
+    "tags": [
+      "cia-triad"
+    ]
+  },
+  {
+    "id": "n10-009-40-004",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In the AAA framework, which component verifies that a user is who they claim to be, typically with a password, token, or biometric?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Authentication"
+      },
+      {
+        "id": "b",
+        "text": "Authorization"
+      },
+      {
+        "id": "c",
+        "text": "Accounting"
+      },
+      {
+        "id": "d",
+        "text": "Encryption"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Authentication is the AAA component defined by this responsibility.",
+    "distractorExplanations": {
+      "b": "Authorization instead: determines what an already-verified user is allowed to do.",
+      "c": "Accounting instead: logs what an authenticated user actually did, for auditing.",
+      "d": "Encryption protects data confidentiality — it isn't one of the three AAA components."
+    },
+    "tags": [
+      "aaa"
+    ]
+  },
+  {
+    "id": "n10-009-40-005",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In the AAA framework, which component determines what an already-verified user is allowed to do?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Authorization"
+      },
+      {
+        "id": "b",
+        "text": "Authentication"
+      },
+      {
+        "id": "c",
+        "text": "Accounting"
+      },
+      {
+        "id": "d",
+        "text": "Encryption"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Authorization is the AAA component defined by this responsibility.",
+    "distractorExplanations": {
+      "b": "Authentication instead: verifies that a user is who they claim to be, typically with a password, token, or biometric.",
+      "c": "Accounting instead: logs what an authenticated user actually did, for auditing.",
+      "d": "Encryption protects data confidentiality — it isn't one of the three AAA components."
+    },
+    "tags": [
+      "aaa"
+    ]
+  },
+  {
+    "id": "n10-009-40-006",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In the AAA framework, which component logs what an authenticated user actually did, for auditing?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Accounting"
+      },
+      {
+        "id": "b",
+        "text": "Authentication"
+      },
+      {
+        "id": "c",
+        "text": "Authorization"
+      },
+      {
+        "id": "d",
+        "text": "Encryption"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Accounting is the AAA component defined by this responsibility.",
+    "distractorExplanations": {
+      "b": "Authentication instead: verifies that a user is who they claim to be, typically with a password, token, or biometric.",
+      "c": "Authorization instead: determines what an already-verified user is allowed to do.",
+      "d": "Encryption protects data confidentiality — it isn't one of the three AAA components."
+    },
+    "tags": [
+      "aaa"
+    ]
+  },
+  {
+    "id": "n10-009-40-007",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which attack involves an attacker sends forged ARP replies to associate their own MAC address with another host's IP, letting them intercept traffic on the local segment?",
+    "options": [
+      {
+        "id": "a",
+        "text": "ARP spoofing"
+      },
+      {
+        "id": "b",
+        "text": "Evil twin"
+      },
+      {
+        "id": "c",
+        "text": "On-path (man-in-the-middle)"
+      },
+      {
+        "id": "d",
+        "text": "DDoS"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "That description matches ARP spoofing.",
+    "distractorExplanations": {
+      "b": "Evil twin instead involves an attacker sets up a fake wireless access point that mimics a legitimate one to lure victims into connecting.",
+      "c": "On-path (man-in-the-middle) instead involves an attacker secretly relays and possibly alters communications between two parties who believe they're talking directly to each other.",
+      "d": "DDoS instead involves many compromised hosts flood a target simultaneously to exhaust its resources and deny service to legitimate users."
+    },
+    "tags": [
+      "attacks"
+    ]
+  },
+  {
+    "id": "n10-009-40-008",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which attack involves an unauthorised DHCP server hands out incorrect configuration (like a malicious default gateway) to clients on the network?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Rogue DHCP server"
+      },
+      {
+        "id": "b",
+        "text": "DNS poisoning"
+      },
+      {
+        "id": "c",
+        "text": "ARP spoofing"
+      },
+      {
+        "id": "d",
+        "text": "Evil twin"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "That description matches Rogue DHCP server.",
+    "distractorExplanations": {
+      "b": "DNS poisoning instead involves an attacker corrupts DNS resolver data so queries for a legitimate domain return a malicious IP address.",
+      "c": "ARP spoofing instead involves an attacker sends forged ARP replies to associate their own MAC address with another host's IP, letting them intercept traffic on the local segment.",
+      "d": "Evil twin instead involves an attacker sets up a fake wireless access point that mimics a legitimate one to lure victims into connecting."
+    },
+    "tags": [
+      "attacks"
+    ]
+  },
+  {
+    "id": "n10-009-40-009",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which attack involves an attacker sets up a fake wireless access point that mimics a legitimate one to lure victims into connecting?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Evil twin"
+      },
+      {
+        "id": "b",
+        "text": "ARP spoofing"
+      },
+      {
+        "id": "c",
+        "text": "Rogue DHCP server"
+      },
+      {
+        "id": "d",
+        "text": "On-path (man-in-the-middle)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "That description matches Evil twin.",
+    "distractorExplanations": {
+      "b": "ARP spoofing instead involves an attacker sends forged ARP replies to associate their own MAC address with another host's IP, letting them intercept traffic on the local segment.",
+      "c": "Rogue DHCP server instead involves an unauthorised DHCP server hands out incorrect configuration (like a malicious default gateway) to clients on the network.",
+      "d": "On-path (man-in-the-middle) instead involves an attacker secretly relays and possibly alters communications between two parties who believe they're talking directly to each other."
+    },
+    "tags": [
+      "attacks"
+    ]
+  },
+  {
+    "id": "n10-009-40-010",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which attack involves an attacker secretly relays and possibly alters communications between two parties who believe they're talking directly to each other?",
+    "options": [
+      {
+        "id": "a",
+        "text": "On-path (man-in-the-middle)"
+      },
+      {
+        "id": "b",
+        "text": "DDoS"
+      },
+      {
+        "id": "c",
+        "text": "DNS poisoning"
+      },
+      {
+        "id": "d",
+        "text": "ARP spoofing"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "That description matches On-path (man-in-the-middle).",
+    "distractorExplanations": {
+      "b": "DDoS instead involves many compromised hosts flood a target simultaneously to exhaust its resources and deny service to legitimate users.",
+      "c": "DNS poisoning instead involves an attacker corrupts DNS resolver data so queries for a legitimate domain return a malicious IP address.",
+      "d": "ARP spoofing instead involves an attacker sends forged ARP replies to associate their own MAC address with another host's IP, letting them intercept traffic on the local segment."
+    },
+    "tags": [
+      "attacks"
+    ]
+  },
+  {
+    "id": "n10-009-40-011",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which attack involves many compromised hosts flood a target simultaneously to exhaust its resources and deny service to legitimate users?",
+    "options": [
+      {
+        "id": "a",
+        "text": "DDoS"
+      },
+      {
+        "id": "b",
+        "text": "Evil twin"
+      },
+      {
+        "id": "c",
+        "text": "On-path (man-in-the-middle)"
+      },
+      {
+        "id": "d",
+        "text": "DNS poisoning"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "That description matches DDoS.",
+    "distractorExplanations": {
+      "b": "Evil twin instead involves an attacker sets up a fake wireless access point that mimics a legitimate one to lure victims into connecting.",
+      "c": "On-path (man-in-the-middle) instead involves an attacker secretly relays and possibly alters communications between two parties who believe they're talking directly to each other.",
+      "d": "DNS poisoning instead involves an attacker corrupts DNS resolver data so queries for a legitimate domain return a malicious IP address."
+    },
+    "tags": [
+      "attacks"
+    ]
+  },
+  {
+    "id": "n10-009-40-012",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which attack involves an attacker corrupts DNS resolver data so queries for a legitimate domain return a malicious IP address?",
+    "options": [
+      {
+        "id": "a",
+        "text": "DNS poisoning"
+      },
+      {
+        "id": "b",
+        "text": "ARP spoofing"
+      },
+      {
+        "id": "c",
+        "text": "Rogue DHCP server"
+      },
+      {
+        "id": "d",
+        "text": "Evil twin"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "That description matches DNS poisoning.",
+    "distractorExplanations": {
+      "b": "ARP spoofing instead involves an attacker sends forged ARP replies to associate their own MAC address with another host's IP, letting them intercept traffic on the local segment.",
+      "c": "Rogue DHCP server instead involves an unauthorised DHCP server hands out incorrect configuration (like a malicious default gateway) to clients on the network.",
+      "d": "Evil twin instead involves an attacker sets up a fake wireless access point that mimics a legitimate one to lure victims into connecting."
+    },
+    "tags": [
+      "attacks"
+    ]
+  },
+  {
+    "id": "n10-009-40-013",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which type of firewall inspects each packet's header (source/destination IP and port) in isolation against a rule set, with no awareness of connection state?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Packet-filtering firewall"
+      },
+      {
+        "id": "b",
+        "text": "Stateful firewall"
+      },
+      {
+        "id": "c",
+        "text": "Application-layer (proxy) firewall"
+      },
+      {
+        "id": "d",
+        "text": "Next-generation firewall (NGFW)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A packet-filtering firewall is defined by this behaviour.",
+    "distractorExplanations": {
+      "b": "Stateful firewall instead tracks the state of active connections and only allows traffic that matches an established or expected session.",
+      "c": "Application-layer (proxy) firewall instead inspects traffic up to Layer 7, understanding the specific application protocol it's filtering.",
+      "d": "Next-generation firewall (NGFW) instead combines stateful inspection with deep packet inspection, intrusion prevention, and application awareness in one device."
+    },
+    "tags": [
+      "firewalls"
+    ]
+  },
+  {
+    "id": "n10-009-50-001",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which command-line tool sends ICMP echo requests to test basic reachability and round-trip latency to a host?",
+    "options": [
+      {
+        "id": "a",
+        "text": "ping"
+      },
+      {
+        "id": "b",
+        "text": "pathping"
+      },
+      {
+        "id": "c",
+        "text": "traceroute/tracert"
+      },
+      {
+        "id": "d",
+        "text": "nslookup/dig"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "ping sends ICMP echo requests to test basic reachability and round-trip latency to a host.",
+    "distractorExplanations": {
+      "b": "pathping instead combines ping and traceroute to measure loss and latency at each hop over time.",
+      "c": "traceroute/tracert instead shows the sequence of routers (hops) a packet passes through to reach a destination.",
+      "d": "nslookup/dig instead queries DNS directly to resolve a name or troubleshoot DNS records."
+    },
+    "tags": [
+      "cli-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-002",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which command-line tool shows the sequence of routers (hops) a packet passes through to reach a destination?",
+    "options": [
+      {
+        "id": "a",
+        "text": "traceroute/tracert"
+      },
+      {
+        "id": "b",
+        "text": "arp -a"
+      },
+      {
+        "id": "c",
+        "text": "ipconfig/ifconfig"
+      },
+      {
+        "id": "d",
+        "text": "pathping"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "traceroute/tracert shows the sequence of routers (hops) a packet passes through to reach a destination.",
+    "distractorExplanations": {
+      "b": "arp -a instead displays the local ARP cache mapping IP addresses to MAC addresses.",
+      "c": "ipconfig/ifconfig instead displays a host's own IP configuration, including address, subnet mask, and gateway.",
+      "d": "pathping instead combines ping and traceroute to measure loss and latency at each hop over time."
+    },
+    "tags": [
+      "cli-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-003",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which command-line tool queries DNS directly to resolve a name or troubleshoot DNS records?",
+    "options": [
+      {
+        "id": "a",
+        "text": "nslookup/dig"
+      },
+      {
+        "id": "b",
+        "text": "arp -a"
+      },
+      {
+        "id": "c",
+        "text": "ipconfig/ifconfig"
+      },
+      {
+        "id": "d",
+        "text": "pathping"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "nslookup/dig queries DNS directly to resolve a name or troubleshoot DNS records.",
+    "distractorExplanations": {
+      "b": "arp -a instead displays the local ARP cache mapping IP addresses to MAC addresses.",
+      "c": "ipconfig/ifconfig instead displays a host's own IP configuration, including address, subnet mask, and gateway.",
+      "d": "pathping instead combines ping and traceroute to measure loss and latency at each hop over time."
+    },
+    "tags": [
+      "cli-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-004",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which command-line tool lists active connections and listening ports on the local machine?",
+    "options": [
+      {
+        "id": "a",
+        "text": "netstat"
+      },
+      {
+        "id": "b",
+        "text": "ping"
+      },
+      {
+        "id": "c",
+        "text": "traceroute/tracert"
+      },
+      {
+        "id": "d",
+        "text": "nslookup/dig"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "netstat lists active connections and listening ports on the local machine.",
+    "distractorExplanations": {
+      "b": "ping instead sends ICMP echo requests to test basic reachability and round-trip latency to a host.",
+      "c": "traceroute/tracert instead shows the sequence of routers (hops) a packet passes through to reach a destination.",
+      "d": "nslookup/dig instead queries DNS directly to resolve a name or troubleshoot DNS records."
+    },
+    "tags": [
+      "cli-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-005",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which command-line tool displays the local ARP cache mapping IP addresses to MAC addresses?",
+    "options": [
+      {
+        "id": "a",
+        "text": "arp -a"
+      },
+      {
+        "id": "b",
+        "text": "ping"
+      },
+      {
+        "id": "c",
+        "text": "traceroute/tracert"
+      },
+      {
+        "id": "d",
+        "text": "nslookup/dig"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "arp -a displays the local ARP cache mapping IP addresses to MAC addresses.",
+    "distractorExplanations": {
+      "b": "ping instead sends ICMP echo requests to test basic reachability and round-trip latency to a host.",
+      "c": "traceroute/tracert instead shows the sequence of routers (hops) a packet passes through to reach a destination.",
+      "d": "nslookup/dig instead queries DNS directly to resolve a name or troubleshoot DNS records."
+    },
+    "tags": [
+      "cli-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-006",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which command-line tool displays a host's own IP configuration, including address, subnet mask, and gateway?",
+    "options": [
+      {
+        "id": "a",
+        "text": "ipconfig/ifconfig"
+      },
+      {
+        "id": "b",
+        "text": "arp -a"
+      },
+      {
+        "id": "c",
+        "text": "pathping"
+      },
+      {
+        "id": "d",
+        "text": "ping"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "ipconfig/ifconfig displays a host's own IP configuration, including address, subnet mask, and gateway.",
+    "distractorExplanations": {
+      "b": "arp -a instead displays the local ARP cache mapping IP addresses to MAC addresses.",
+      "c": "pathping instead combines ping and traceroute to measure loss and latency at each hop over time.",
+      "d": "ping instead sends ICMP echo requests to test basic reachability and round-trip latency to a host."
+    },
+    "tags": [
+      "cli-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-007",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": "easy",
+    "stem": "Which command-line tool combines ping and traceroute to measure loss and latency at each hop over time?",
+    "options": [
+      {
+        "id": "a",
+        "text": "pathping"
+      },
+      {
+        "id": "b",
+        "text": "ping"
+      },
+      {
+        "id": "c",
+        "text": "traceroute/tracert"
+      },
+      {
+        "id": "d",
+        "text": "nslookup/dig"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "pathping combines ping and traceroute to measure loss and latency at each hop over time.",
+    "distractorExplanations": {
+      "b": "ping instead sends ICMP echo requests to test basic reachability and round-trip latency to a host.",
+      "c": "traceroute/tracert instead shows the sequence of routers (hops) a packet passes through to reach a destination.",
+      "d": "nslookup/dig instead queries DNS directly to resolve a name or troubleshoot DNS records."
+    },
+    "tags": [
+      "cli-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-008",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which cable/hardware testing tool verifies that a twisted-pair cable's individual wires are correctly mapped end to end and checks for opens or shorts?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cable tester"
+      },
+      {
+        "id": "b",
+        "text": "Tone generator and probe"
+      },
+      {
+        "id": "c",
+        "text": "TDR (time-domain reflectometer)"
+      },
+      {
+        "id": "d",
+        "text": "OTDR (optical time-domain reflectometer)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A cable tester verifies that a twisted-pair cable's individual wires are correctly mapped end to end and checks for opens or shorts.",
+    "distractorExplanations": {
+      "b": "Tone generator and probe instead lets a technician trace a specific cable through a wall or bundle by injecting an audible tone and locating it with a probe.",
+      "c": "TDR (time-domain reflectometer) instead sends a signal down a copper cable and measures reflections to pinpoint the distance to a break or fault.",
+      "d": "OTDR (optical time-domain reflectometer) instead does the same distance-to-fault measurement as a TDR, but for fibre optic cable using light pulses."
+    },
+    "tags": [
+      "hardware-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-009",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which cable/hardware testing tool lets a technician trace a specific cable through a wall or bundle by injecting an audible tone and locating it with a probe?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tone generator and probe"
+      },
+      {
+        "id": "b",
+        "text": "Cable tester"
+      },
+      {
+        "id": "c",
+        "text": "TDR (time-domain reflectometer)"
+      },
+      {
+        "id": "d",
+        "text": "OTDR (optical time-domain reflectometer)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A tone generator and probe lets a technician trace a specific cable through a wall or bundle by injecting an audible tone and locating it with a probe.",
+    "distractorExplanations": {
+      "b": "Cable tester instead verifies that a twisted-pair cable's individual wires are correctly mapped end to end and checks for opens or shorts.",
+      "c": "TDR (time-domain reflectometer) instead sends a signal down a copper cable and measures reflections to pinpoint the distance to a break or fault.",
+      "d": "OTDR (optical time-domain reflectometer) instead does the same distance-to-fault measurement as a TDR, but for fibre optic cable using light pulses."
+    },
+    "tags": [
+      "hardware-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-010",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which cable/hardware testing tool sends a signal down a copper cable and measures reflections to pinpoint the distance to a break or fault?",
+    "options": [
+      {
+        "id": "a",
+        "text": "TDR (time-domain reflectometer)"
+      },
+      {
+        "id": "b",
+        "text": "Cable tester"
+      },
+      {
+        "id": "c",
+        "text": "Tone generator and probe"
+      },
+      {
+        "id": "d",
+        "text": "OTDR (optical time-domain reflectometer)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A tdr (time-domain reflectometer) sends a signal down a copper cable and measures reflections to pinpoint the distance to a break or fault.",
+    "distractorExplanations": {
+      "b": "Cable tester instead verifies that a twisted-pair cable's individual wires are correctly mapped end to end and checks for opens or shorts.",
+      "c": "Tone generator and probe instead lets a technician trace a specific cable through a wall or bundle by injecting an audible tone and locating it with a probe.",
+      "d": "OTDR (optical time-domain reflectometer) instead does the same distance-to-fault measurement as a TDR, but for fibre optic cable using light pulses."
+    },
+    "tags": [
+      "hardware-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-011",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which cable/hardware testing tool does the same distance-to-fault measurement as a TDR, but for fibre optic cable using light pulses?",
+    "options": [
+      {
+        "id": "a",
+        "text": "OTDR (optical time-domain reflectometer)"
+      },
+      {
+        "id": "b",
+        "text": "Tone generator and probe"
+      },
+      {
+        "id": "c",
+        "text": "TDR (time-domain reflectometer)"
+      },
+      {
+        "id": "d",
+        "text": "Loopback plug"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A otdr (optical time-domain reflectometer) does the same distance-to-fault measurement as a TDR, but for fibre optic cable using light pulses.",
+    "distractorExplanations": {
+      "b": "Tone generator and probe instead lets a technician trace a specific cable through a wall or bundle by injecting an audible tone and locating it with a probe.",
+      "c": "TDR (time-domain reflectometer) instead sends a signal down a copper cable and measures reflections to pinpoint the distance to a break or fault.",
+      "d": "Loopback plug instead is inserted into a port to test whether the port's transmit and receive circuitry works, by looping signals back to themselves."
+    },
+    "tags": [
+      "hardware-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-012",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which cable/hardware testing tool is inserted into a port to test whether the port's transmit and receive circuitry works, by looping signals back to themselves?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Loopback plug"
+      },
+      {
+        "id": "b",
+        "text": "Tone generator and probe"
+      },
+      {
+        "id": "c",
+        "text": "TDR (time-domain reflectometer)"
+      },
+      {
+        "id": "d",
+        "text": "OTDR (optical time-domain reflectometer)"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A loopback plug is inserted into a port to test whether the port's transmit and receive circuitry works, by looping signals back to themselves.",
+    "distractorExplanations": {
+      "b": "Tone generator and probe instead lets a technician trace a specific cable through a wall or bundle by injecting an audible tone and locating it with a probe.",
+      "c": "TDR (time-domain reflectometer) instead sends a signal down a copper cable and measures reflections to pinpoint the distance to a break or fault.",
+      "d": "OTDR (optical time-domain reflectometer) instead does the same distance-to-fault measurement as a TDR, but for fibre optic cable using light pulses."
+    },
+    "tags": [
+      "hardware-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-013",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In the standard network troubleshooting methodology, which step is it when you gather information, question users, and identify symptoms before touching anything?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Step 1: Identify the problem"
+      },
+      {
+        "id": "b",
+        "text": "Step 7: Document findings, actions, and outcomes"
+      },
+      {
+        "id": "c",
+        "text": "Step 2: Establish a theory of probable cause"
+      },
+      {
+        "id": "d",
+        "text": "Step 3: Test the theory to determine the cause"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "That's step 1, \"Identify the problem,\" in the methodology.",
+    "distractorExplanations": {
+      "b": "Step 7 (\"Document findings, actions, and outcomes\") comes at a different point in the process.",
+      "c": "Step 2 (\"Establish a theory of probable cause\") comes at a different point in the process.",
+      "d": "Step 3 (\"Test the theory to determine the cause\") comes at a different point in the process."
+    },
+    "tags": [
+      "methodology"
+    ]
+  },
+  {
+    "id": "n10-009-50-014",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In the standard network troubleshooting methodology, which step is it when you consider the most likely causes, starting with the simplest/most obvious?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Step 2: Establish a theory of probable cause"
+      },
+      {
+        "id": "b",
+        "text": "Step 1: Identify the problem"
+      },
+      {
+        "id": "c",
+        "text": "Step 3: Test the theory to determine the cause"
+      },
+      {
+        "id": "d",
+        "text": "Step 4: Establish a plan of action and identify potential effects"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "That's step 2, \"Establish a theory of probable cause,\" in the methodology.",
+    "distractorExplanations": {
+      "b": "Step 1 (\"Identify the problem\") comes at a different point in the process.",
+      "c": "Step 3 (\"Test the theory to determine the cause\") comes at a different point in the process.",
+      "d": "Step 4 (\"Establish a plan of action and identify potential effects\") comes at a different point in the process."
+    },
+    "tags": [
+      "methodology"
+    ]
+  },
+  {
+    "id": "n10-009-50-015",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In the standard network troubleshooting methodology, which step is it when you confirm the theory before acting on it, or re-establish a new theory if it's wrong?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Step 3: Test the theory to determine the cause"
+      },
+      {
+        "id": "b",
+        "text": "Step 2: Establish a theory of probable cause"
+      },
+      {
+        "id": "c",
+        "text": "Step 4: Establish a plan of action and identify potential effects"
+      },
+      {
+        "id": "d",
+        "text": "Step 5: Implement the solution or escalate"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "That's step 3, \"Test the theory to determine the cause,\" in the methodology.",
+    "distractorExplanations": {
+      "b": "Step 2 (\"Establish a theory of probable cause\") comes at a different point in the process.",
+      "c": "Step 4 (\"Establish a plan of action and identify potential effects\") comes at a different point in the process.",
+      "d": "Step 5 (\"Implement the solution or escalate\") comes at a different point in the process."
+    },
+    "tags": [
+      "methodology"
+    ]
+  },
+  {
+    "id": "n10-009-50-016",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In the standard network troubleshooting methodology, which step is it when you plan the fix and consider what else it might impact before implementing it?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Step 4: Establish a plan of action and identify potential effects"
+      },
+      {
+        "id": "b",
+        "text": "Step 3: Test the theory to determine the cause"
+      },
+      {
+        "id": "c",
+        "text": "Step 5: Implement the solution or escalate"
+      },
+      {
+        "id": "d",
+        "text": "Step 6: Verify full system functionality and implement preventive measures"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "That's step 4, \"Establish a plan of action and identify potential effects,\" in the methodology.",
+    "distractorExplanations": {
+      "b": "Step 3 (\"Test the theory to determine the cause\") comes at a different point in the process.",
+      "c": "Step 5 (\"Implement the solution or escalate\") comes at a different point in the process.",
+      "d": "Step 6 (\"Verify full system functionality and implement preventive measures\") comes at a different point in the process."
+    },
+    "tags": [
+      "methodology"
+    ]
+  },
+  {
+    "id": "n10-009-50-017",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In the standard network troubleshooting methodology, which step is it when you carry out the fix, or escalate if it's beyond your authority or ability?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Step 5: Implement the solution or escalate"
+      },
+      {
+        "id": "b",
+        "text": "Step 4: Establish a plan of action and identify potential effects"
+      },
+      {
+        "id": "c",
+        "text": "Step 6: Verify full system functionality and implement preventive measures"
+      },
+      {
+        "id": "d",
+        "text": "Step 7: Document findings, actions, and outcomes"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "That's step 5, \"Implement the solution or escalate,\" in the methodology.",
+    "distractorExplanations": {
+      "b": "Step 4 (\"Establish a plan of action and identify potential effects\") comes at a different point in the process.",
+      "c": "Step 6 (\"Verify full system functionality and implement preventive measures\") comes at a different point in the process.",
+      "d": "Step 7 (\"Document findings, actions, and outcomes\") comes at a different point in the process."
+    },
+    "tags": [
+      "methodology"
+    ]
+  },
+  {
+    "id": "n10-009-50-018",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In the standard network troubleshooting methodology, which step is it when you confirm the fix actually resolved the issue and prevent recurrence?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Step 6: Verify full system functionality and implement preventive measures"
+      },
+      {
+        "id": "b",
+        "text": "Step 5: Implement the solution or escalate"
+      },
+      {
+        "id": "c",
+        "text": "Step 7: Document findings, actions, and outcomes"
+      },
+      {
+        "id": "d",
+        "text": "Step 1: Identify the problem"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "That's step 6, \"Verify full system functionality and implement preventive measures,\" in the methodology.",
+    "distractorExplanations": {
+      "b": "Step 5 (\"Implement the solution or escalate\") comes at a different point in the process.",
+      "c": "Step 7 (\"Document findings, actions, and outcomes\") comes at a different point in the process.",
+      "d": "Step 1 (\"Identify the problem\") comes at a different point in the process."
+    },
+    "tags": [
+      "methodology"
+    ]
+  },
+  {
+    "id": "n10-009-50-019",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In the standard network troubleshooting methodology, which step is it when you record what happened for future reference?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Step 7: Document findings, actions, and outcomes"
+      },
+      {
+        "id": "b",
+        "text": "Step 6: Verify full system functionality and implement preventive measures"
+      },
+      {
+        "id": "c",
+        "text": "Step 1: Identify the problem"
+      },
+      {
+        "id": "d",
+        "text": "Step 2: Establish a theory of probable cause"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "That's step 7, \"Document findings, actions, and outcomes,\" in the methodology.",
+    "distractorExplanations": {
+      "b": "Step 6 (\"Verify full system functionality and implement preventive measures\") comes at a different point in the process.",
+      "c": "Step 1 (\"Identify the problem\") comes at a different point in the process.",
+      "d": "Step 2 (\"Establish a theory of probable cause\") comes at a different point in the process."
+    },
+    "tags": [
+      "methodology"
+    ]
+  },
+  {
+    "id": "n10-009-50-020",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A newly connected switch port shows extremely high late collisions and the link light flickers, even though traffic volume is low. The port is configured for 100 Mbps/full-duplex; the attached NIC is set to auto-negotiate. What is the most likely cause?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A duplex mismatch — the NIC auto-negotiated half-duplex against the switch's forced full-duplex"
+      },
+      {
+        "id": "b",
+        "text": "A bad DNS server configuration on the host"
+      },
+      {
+        "id": "c",
+        "text": "An expired DHCP lease on the host"
+      },
+      {
+        "id": "d",
+        "text": "The switch port is assigned to the wrong VLAN"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Forcing one side of a link to full-duplex while the other auto-negotiates commonly results in a duplex mismatch (the auto side falls back to half-duplex), which produces exactly this symptom: late collisions and degraded performance despite a low-traffic, seemingly fine link.",
+    "distractorExplanations": {
+      "b": "A DNS misconfiguration would cause name resolution failures, not collisions at the physical/data-link layer.",
+      "c": "A DHCP lease issue would show up as an addressing problem (e.g., an APIPA address), not collisions.",
+      "d": "A wrong VLAN would cause connectivity/isolation issues, not late collisions."
+    },
+    "tags": [
+      "duplex",
+      "scenario"
+    ]
+  },
+  {
+    "id": "n10-009-50-021",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A user reports their laptop has an IP address of 169.254.34.12 and cannot reach anything on the network. What does this address indicate?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The laptop couldn't reach a DHCP server and self-assigned an APIPA address"
+      },
+      {
+        "id": "b",
+        "text": "The laptop is correctly configured with a static private IP address"
+      },
+      {
+        "id": "c",
+        "text": "The laptop received a valid address from a DHCP scope reserved for guests"
+      },
+      {
+        "id": "d",
+        "text": "The laptop is using a public IP address assigned by the ISP"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "169.254.0.0/16 is the APIPA (Automatic Private IP Addressing) range. A Windows host assigns itself an address from this range when it can't contact a DHCP server, which is a strong sign of a DHCP or connectivity problem upstream.",
+    "distractorExplanations": {
+      "b": "169.254.x.x is never used as an intentional static assignment on a working network — it's a self-assigned fallback.",
+      "c": "DHCP scopes are never configured in the 169.254.0.0/16 range; that block is reserved for APIPA.",
+      "d": "169.254.0.0/16 is a link-local range, not a publicly routable ISP-assigned range."
+    },
+    "tags": [
+      "apipa",
+      "scenario"
+    ]
+  }
+]

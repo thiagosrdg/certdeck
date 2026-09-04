@@ -1,0 +1,104 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one Pages deployment at a time; let an in-flight run finish rather
+# than cancelling it mid-deploy.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run validate
+      - run: npm run test
+
+  # One matrix entry per app. Adding a certification means adding its
+  # folder name here — nothing else in this workflow changes (see
+  # AGENTS.md, "Adding a certification").
+  build-apps:
+    needs: check
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        app:
+          - network-plus
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build -w apps/${{ matrix.app }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: app-dist-${{ matrix.app }}
+          path: apps/${{ matrix.app }}/dist
+
+  build-landing:
+    needs: check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build -w landing
+      - uses: actions/upload-artifact@v4
+        with:
+          name: landing-dist
+          path: landing/dist
+
+  deploy:
+    needs: [build-apps, build-landing]
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Download all build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      # Assembles the combined site purely from artifact names, so this
+      # step never needs editing when an app is added to the matrix above:
+      # the landing page goes to the site root, and each app-dist-<name>
+      # artifact goes to dist/<name>/, matching that app's Vite `base`.
+      - name: Assemble site
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          cp -r artifacts/landing-dist/. dist/
+          for dir in artifacts/app-dist-*/; do
+            name="$(basename "$dir")"
+            app="${name#app-dist-}"
+            mkdir -p "dist/$app"
+            cp -r "$dir." "dist/$app/"
+          done
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,33 @@
+{
+  "name": "certdeck",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "landing"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n landing,network-plus -c cyan,magenta \"npm run dev -w landing\" \"npm run dev -w apps/network-plus\"",
+    "build": "npm run build -w packages/engine --if-present && npm run build -w landing && npm run build -w apps/network-plus",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "validate": "tsx scripts/validate-questions.ts",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "concurrently": "^9.0.1",
+    "husky": "^9.1.7",
+    "jsdom": "^25.0.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

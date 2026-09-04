@@ -1,0 +1,58 @@
+/*
+ * CertDeck design tokens — shared by every app. See docs/design.md.
+ *
+ * The card face keeps the same warm-ivory / charcoal-plum "cardstock"
+ * identity in both themes; only the table background, ink, and edge invert.
+ * `--cd-accent` has a neutral fallback here — each app overrides it with
+ * its own accent hue (see docs/design.md's per-app palette).
+ */
+
+:root {
+  --cd-table: #e7e4f1;
+  --cd-card: #faf6ec;
+  --cd-ink: #201b2e;
+  --cd-ink-muted: #5b5570;
+  --cd-edge: #d8d2c2;
+  --cd-gilt: #b08d2b;
+  --cd-correct: #2f7a4f;
+  --cd-incorrect: #9c3d46;
+  --cd-accent: #3b6ea5;
+
+  --cd-flip-duration: 300ms;
+  --cd-flip-easing: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --cd-table: #12111a;
+    --cd-card: #211e2c;
+    --cd-ink: #ede9f5;
+    --cd-ink-muted: #a79fc2;
+    --cd-edge: #3a3550;
+    --cd-correct: #57c285;
+    --cd-incorrect: #e37680;
+    --cd-gilt: #d4b24c;
+  }
+}
+
+:root[data-theme="dark"] {
+  --cd-table: #12111a;
+  --cd-card: #211e2c;
+  --cd-ink: #ede9f5;
+  --cd-ink-muted: #a79fc2;
+  --cd-edge: #3a3550;
+  --cd-correct: #57c285;
+  --cd-incorrect: #e37680;
+  --cd-gilt: #d4b24c;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --cd-flip-duration: 120ms;
+  }
+}
+
+body {
+  background-color: var(--cd-table);
+  color: var(--cd-ink);
+}
