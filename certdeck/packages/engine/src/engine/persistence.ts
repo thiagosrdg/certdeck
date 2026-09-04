@@ -41,9 +41,9 @@ function safeRemove(key: string): void {
   }
 }
 
-// The explicit Def/Input params keep TS from unifying T against a zod
+// The explicit `unknown` input param keeps TS from unifying T against a zod
 // schema's (optional-field-heavy) input type instead of its output type.
-function readJson<T>(key: string, schema: z.ZodType<T, z.ZodTypeDef, unknown>): T | null {
+function readJson<T>(key: string, schema: z.ZodType<T, unknown>): T | null {
   const raw = safeGet(key);
   if (!raw) return null;
   try {
