@@ -155,9 +155,29 @@ visible error, not a blank screen.
 - **Random question** — single question, immediate feedback.
 - **Review** — walk a finished attempt with full explanations.
 
+- **Statistics** — everything in history aggregated: mastery per domain,
+  accuracy by rank and by objective, deck coverage, XP, level and study
+  streak.
+
 Results show overall score, pass/fail against `passThreshold`, per-domain
-breakdown, time taken, and the weakest domain called out as the next study
-focus.
+breakdown, time taken, the weakest domain called out as the next study
+focus, XP earned, accuracy by rank, and the change against the previous
+attempt in the same mode.
+
+**Nothing the user must be able to finish may depend on a native dialog.**
+`window.confirm` returns false with no signal in a browser that has
+suppressed dialogs, which once made submitting a finished exam do nothing at
+all. Use the engine's `ConfirmDialog`.
+
+### Progression
+
+`computeStudyStats` in the engine owns XP, levels, mastery tiers and
+streaks, driven entirely by the config and the question bank. Its rules are
+deliberate and tested: a skipped question is not a wrong answer, a tier
+needs volume as well as accuracy, harder questions are worth more XP, a
+streak survives a day not yet studied and breaks only on one that was
+missed, and a question needs review by its most recent outcome rather than
+its worst. Change one of those and a test should fail.
 
 **Explanations are the product.** These apps exist for understanding, not
 scoring. Feedback and results screens treat explanations as primary content.

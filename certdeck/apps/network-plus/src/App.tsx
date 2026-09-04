@@ -9,6 +9,7 @@ import RandomQuestion from "./pages/RandomQuestion";
 import Results from "./pages/Results";
 import Review from "./pages/Review";
 import Settings from "./pages/Settings";
+import Stats from "./pages/Stats";
 import { useSettingsStore } from "./stores";
 
 export default function App() {
@@ -47,6 +48,7 @@ export default function App() {
         <Route path="/review/:attemptId" element={<Review />} />
         <Route path="/results/:attemptId" element={<Results />} />
         <Route path="/history" element={<History />} />
+        <Route path="/stats" element={<Stats />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

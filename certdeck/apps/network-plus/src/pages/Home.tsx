@@ -40,6 +40,9 @@ export default function Home() {
         <Button variant="secondary" onClick={() => navigate("/random")}>
           Random question
         </Button>
+        <Button variant="ghost" onClick={() => navigate("/stats")}>
+          Statistics
+        </Button>
         <Button variant="ghost" onClick={() => navigate("/history")}>
           History
         </Button>
