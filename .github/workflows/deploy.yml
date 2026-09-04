@@ -82,7 +82,14 @@ jobs:
           name: landing-dist
           path: certdeck/landing/dist
 
+  # Publication is a deliberate, one-off act at the end of development, not
+  # something every push does — and GitHub Pages is not enabled on the repo
+  # yet, so an automatic deploy would only fail with a 404 and train us to
+  # ignore a red CI. Pushes therefore run the checks and the builds only;
+  # deploying is an explicit "Run workflow" from the Actions tab. Drop this
+  # `if` once Pages is enabled and continuous publishing is wanted.
   deploy:
+    if: github.event_name == 'workflow_dispatch'
     needs: [build-apps, build-landing]
     runs-on: ubuntu-latest
     environment:

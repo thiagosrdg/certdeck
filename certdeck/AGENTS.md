@@ -172,9 +172,12 @@ Three things depend on this and break silently if changed:
 - Pages has no SPA rewrite, so deep links 404. The chosen approach is
   documented in `docs/design.md` — do not switch routers without updating it.
 
-Deploy is one GitHub Actions workflow on push to `main`: build each app into
-`dist/<app-name>/`, the landing page into `dist/`, then `actions/deploy-pages`.
-Adding an app means adding to the matrix, not rewriting the workflow.
+One GitHub Actions workflow covers both CI and deploy. A push to `main` runs
+`check` and builds each app into `dist/<app-name>/` and the landing page into
+`dist/`. The final `actions/deploy-pages` job is gated on `workflow_dispatch`,
+because publishing is a deliberate one-off at the end of development rather
+than something every push does. Adding an app means adding to the matrix, not
+rewriting the workflow.
 
 Service worker auto-updates with a non-blocking prompt, so a stale cache
 never hides newly added questions.
