@@ -156,7 +156,15 @@ scoring. Feedback and results screens treat explanations as primary content.
 ## GitHub Pages specifics
 
 One Pages project site at `https://<user>.github.io/certdeck/`. Each app on
-its own subpath. Three things depend on this and break silently if changed:
+its own subpath.
+
+The repository is named `certdeck`, lowercase, and that is load-bearing: the
+repo name is the first path segment of every Pages URL, and Pages serves that
+segment case-sensitively. Renaming the repo, or capitalising it, breaks every
+built asset path and orphans installed PWAs (`scope` and `id` are the app's
+identity). Keep the name, the Vite `base` and the docs below in agreement.
+
+Three things depend on this and break silently if changed:
 
 - Vite `base` is `/certdeck/<app-name>/` in production, `/` in dev.
 - Each app's PWA `scope` and `start_url` must match its own subpath, or the

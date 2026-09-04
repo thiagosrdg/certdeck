@@ -39,10 +39,5 @@ and push at the end of each completed task without waiting to be asked.
   fails with a 404 while `check`, `build-apps` and `build-landing` pass. The
   build is healthy; only publication is blocked. Enabling it is Thiago's call
   because it makes the site public (Settings → Pages → Source: GitHub Actions).
-- **Case mismatch, blocks the first real deploy.** The repo is `Certdeck`, so
-  Pages will serve `https://thiagosrdg.github.io/Certdeck/`, but the Vite
-  `base` and the PWA `scope`/`start_url` assume `/certdeck/`. Pages URLs are
-  case-sensitive, so assets would 404. Fix the casing throughout — or rename
-  the repo to lowercase — in the same change that enables Pages.
 - The stale remote branch `claude/novo-projeto-u997wt` still exists; `main` is
   the default branch now and the only one in use.
