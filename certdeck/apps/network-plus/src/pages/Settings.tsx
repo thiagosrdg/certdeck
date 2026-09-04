@@ -43,35 +43,35 @@ export default function Settings() {
         </section>
 
         <section>
-          <h2 className="mb-1 text-sm font-semibold">Accent</h2>
+          <h2 className="mb-1 text-sm font-semibold">
+            <label htmlFor="accent">Accent</label>
+          </h2>
           <p className="mb-3 text-xs text-ink-muted">
             Every shade is checked for contrast on both card faces, and kept clear of the suit hues and of the
             right/wrong colours — so none of them can be mistaken for a domain or for a verdict.
           </p>
-          <div className="flex flex-wrap gap-2">
-            {ACCENTS.map((a) => {
-              const active = (settings.accent ?? "lilac") === a.id;
-              return (
-                <button
-                  key={a.id}
-                  type="button"
-                  onClick={() => setAccent(a.id)}
-                  aria-pressed={active}
-                  title={a.name}
-                  className={`flex items-center gap-2 rounded-lg border py-1.5 pl-1.5 pr-3 text-sm transition-colors ${
-                    active ? "border-accent ring-2 ring-accent" : "border-edge hover:border-accent/60"
-                  }`}
-                >
-                  <span
-                    aria-hidden="true"
-                    className="block h-6 w-6 flex-shrink-0 rounded-md border border-edge"
-                    style={{ backgroundColor: a.light }}
-                  />
-                  <span>{a.name}</span>
-                  {active && <span className="sr-only">(selected)</span>}
-                </button>
-              );
-            })}
+          {/* A native select so the tablet gets the system picker. The chosen
+              accent applies immediately, so the swatch beside it is a
+              confirmation and the rest of the screen is the real preview. */}
+          <div className="flex items-center gap-2">
+            <span
+              aria-hidden="true"
+              className="block h-9 w-9 flex-shrink-0 rounded-lg border border-edge"
+              style={{ backgroundColor: "var(--cd-accent)" }}
+            />
+            <select
+              id="accent"
+              aria-label="Accent colour"
+              value={settings.accent ?? "lilac"}
+              onChange={(e) => setAccent(e.target.value)}
+              className="flex-1 rounded-lg border border-edge bg-card px-3 py-2 text-sm"
+            >
+              {ACCENTS.map((a) => (
+                <option key={a.id} value={a.id}>
+                  {a.name}
+                </option>
+              ))}
+            </select>
           </div>
         </section>
 

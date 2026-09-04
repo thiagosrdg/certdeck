@@ -92,7 +92,10 @@ from it, and 67.3 from `--cd-incorrect`.
 
 The accent is the one token a user picks, from the set in
 `packages/engine/src/ui/accents.ts`: Lilac (the default), Indigo, Teal,
-Moss, Rose, Plum, Slate. Each is a light/dark pair, and the app's stylesheet
+Moss, Rose, Plum, Slate. Settings offers them in a native `<select>` rather
+than a row of swatches — it keeps the page short, and on a phone or tablet it
+opens the system picker. A swatch beside it confirms the current colour; the
+rest of the screen is the real preview, since the choice applies at once. Each is a light/dark pair, and the app's stylesheet
 declares `--cd-accent-light` and `--cd-accent-dark` with `--cd-accent`
 resolving to whichever the current theme calls for — so choosing a colour is
 setting two custom properties, and the light/dark rule stays in CSS where
