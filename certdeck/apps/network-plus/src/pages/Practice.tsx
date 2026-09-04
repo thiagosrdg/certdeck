@@ -3,6 +3,10 @@ import { useNavigate } from "react-router";
 import {
   Button,
   ConfirmDialog,
+  MasteryBadge,
+  ProgressRing,
+  SuitIcon,
+  computeStudyStats,
   CardFlip,
   CardFrame,
   ExplanationPanel,
@@ -37,6 +41,7 @@ export default function Practice() {
   const [navigatorOpen, setNavigatorOpen] = useState(false);
   const [confirmExit, setConfirmExit] = useState(false);
   const [draftSelected, setDraftSelected] = useState<string[]>([]);
+  const historyEntries = useHistoryStore((s) => s.entries);
   const directionRef = useRef<1 | -1>(1);
 
   useEffect(() => {
@@ -54,6 +59,24 @@ export default function Practice() {
   }, [currentIndex, attempt?.id]);
 
   const questionMap = useMemo(() => new Map(questions.map((q) => [q.id, q])), []);
+
+  /** How many cards each suit holds, so the picker can say what it is offering. */
+  const perDomainTotal = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const q of questions) counts.set(q.domain, (counts.get(q.domain) ?? 0) + 1);
+    return counts;
+  }, []);
+
+  /** Accuracy per suit, so the weakest is visible while choosing what to drill. */
+  const masteryByDomain = useMemo(() => {
+    const stats = computeStudyStats(historyEntries, questions, certConfig);
+    return new Map(stats.domains.map((d) => [d.domainId, d]));
+  }, [historyEntries]);
+
+  const availableInSelection = useMemo(
+    () => selectedDomains.reduce((sum, id) => sum + (perDomainTotal.get(id) ?? 0), 0),
+    [selectedDomains, perDomainTotal]
+  );
 
   function toggleDomain(id: string) {
     setSelectedDomains((prev) => (prev.includes(id) ? prev.filter((d) => d !== id) : [...prev, id]));
@@ -132,43 +155,123 @@ export default function Practice() {
     return (
       <PageShell title="Practice by domain" backTo="/">
         <div className="flex flex-col gap-5">
-          <fieldset className="flex flex-col gap-2">
-            <legend className="mb-1 text-sm font-semibold">Domains</legend>
-            {certConfig.domains.map((d) => (
-              <label key={d.id} className="flex items-center gap-2 text-sm">
-                <input
-                  type="checkbox"
-                  checked={selectedDomains.includes(d.id)}
-                  onChange={() => toggleDomain(d.id)}
-                  className="h-4 w-4"
-                  style={{ accentColor: "var(--cd-accent)" }}
-                />
-                {d.name}
-              </label>
-            ))}
+          <fieldset>
+            <div className="mb-2 flex items-baseline justify-between gap-2">
+              <legend className="text-sm font-semibold">Suits</legend>
+              {/* Whole-set toggles, because five taps to clear is four too many. */}
+              <div className="flex gap-1">
+                <button
+                  type="button"
+                  onClick={() => setSelectedDomains(certConfig.domains.map((d) => d.id))}
+                  className="rounded-md px-2 py-1 font-mono text-[10px] uppercase tracking-wide text-ink-muted hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                >
+                  All
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setSelectedDomains([])}
+                  className="rounded-md px-2 py-1 font-mono text-[10px] uppercase tracking-wide text-ink-muted hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                >
+                  None
+                </button>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              {certConfig.domains.map((d) => {
+                const suit = suitFor(d.id);
+                const active = selectedDomains.includes(d.id);
+                const mastery = masteryByDomain.get(d.id);
+                const seen = mastery && mastery.answered > 0;
+                return (
+                  <label
+                    key={d.id}
+                    className={`flex cursor-pointer items-center gap-3 rounded-card border bg-card p-3 transition-colors ${
+                      active ? "border-accent ring-2 ring-accent" : "border-edge hover:border-accent/60"
+                    }`}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={active}
+                      onChange={() => toggleDomain(d.id)}
+                      className="h-5 w-5 flex-shrink-0"
+                      style={{ accentColor: "var(--cd-accent)" }}
+                    />
+
+                    {/* The suit itself, in its own hue — the same mark the card
+                        carries, so the picker and the deck agree. */}
+                    <span
+                      className="grid h-9 w-9 flex-shrink-0 place-items-center rounded-lg border"
+                      style={{ borderColor: suit.hue, backgroundColor: `${suit.hue}1a` }}
+                      aria-hidden="true"
+                    >
+                      <SuitIcon name={suit.name} className="h-5 w-5" style={{ color: suit.hue }} />
+                    </span>
+
+                    <span className="min-w-0 flex-1">
+                      <span className="block truncate text-sm font-semibold">{d.name}</span>
+                      <span className="mt-0.5 flex items-center gap-2">
+                        <span className="font-mono text-[10px] text-ink-muted">
+                          {perDomainTotal.get(d.id) ?? 0} cards
+                        </span>
+                        {seen && <MasteryBadge tier={mastery.tier} compact />}
+                      </span>
+                    </span>
+
+                    {/* Only once there is something to show: the weakest suit
+                        should be visible while deciding what to drill. */}
+                    {seen && (
+                      <ProgressRing
+                        value={mastery.accuracy}
+                        size={40}
+                        thickness={4}
+                        color={suit.hue}
+                        label={`${d.name}: ${Math.round(mastery.accuracy * 100)}% accuracy`}
+                        className="flex-shrink-0"
+                      >
+                        <span className="font-mono text-[10px] font-bold">
+                          {Math.round(mastery.accuracy * 100)}
+                        </span>
+                      </ProgressRing>
+                    )}
+                  </label>
+                );
+              })}
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend className="mb-2 text-sm font-semibold">How many cards</legend>
+            <div className="grid grid-cols-4 gap-2">
+              {COUNT_OPTIONS.map((c) => {
+                const active = count === c;
+                return (
+                  <button
+                    key={c}
+                    type="button"
+                    onClick={() => setCount(c)}
+                    aria-pressed={active}
+                    className={`rounded-lg border py-2.5 text-sm font-semibold transition-colors ${
+                      active ? "border-accent bg-accent/10 text-accent" : "border-edge bg-card hover:border-accent/60"
+                    }`}
+                  >
+                    {c}
+                  </button>
+                );
+              })}
+            </div>
           </fieldset>
 
           <div>
-            <label className="mb-1 block text-sm font-semibold" htmlFor="count">
-              Question count
-            </label>
-            <select
-              id="count"
-              value={count}
-              onChange={(e) => setCount(Number(e.target.value))}
-              className="rounded-lg border border-edge bg-card px-3 py-2 text-sm"
-            >
-              {COUNT_OPTIONS.map((c) => (
-                <option key={c} value={c}>
-                  {c}
-                </option>
-              ))}
-            </select>
+            <Button className="w-full" onClick={start} disabled={selectedDomains.length === 0}>
+              Start practice
+            </Button>
+            <p className="mt-2 text-center font-mono text-[11px] text-ink-muted">
+              {selectedDomains.length === 0
+                ? "Pick at least one suit"
+                : `${Math.min(count, availableInSelection)} cards drawn from ${availableInSelection} available in ${selectedDomains.length} suit${selectedDomains.length === 1 ? "" : "s"}`}
+            </p>
           </div>
-
-          <Button onClick={start} disabled={selectedDomains.length === 0}>
-            Start practice
-          </Button>
         </div>
       </PageShell>
     );

@@ -167,7 +167,7 @@ vite-plugin-pwa · npm workspaces
 
 ## Roadmap
 
-- [ ] Keep growing the Network+ question pool (468 so far)
+- [ ] Keep growing the Network+ question pool (648 so far)
 - [ ] More multiple-response questions (18 so far)
 - [ ] Subnetting drill mode with generated IPv4/IPv6 problems
 - [ ] Data import/export for backing up attempt history

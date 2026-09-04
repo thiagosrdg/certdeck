@@ -1,0 +1,3583 @@
+[
+  {
+    "id": "n10-009-10-110",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A technician is analyzing a capture and needs to determine why a frame was discarded before reaching the IP stack. Which layer and mechanism should be examined?",
+    "options": [
+      {
+        "id": "c",
+        "text": "Layer 4, using the TCP sequence number"
+      },
+      {
+        "id": "d",
+        "text": "Layer 7, using the application response code"
+      },
+      {
+        "id": "b",
+        "text": "Layer 3, using the IP header checksum"
+      },
+      {
+        "id": "a",
+        "text": "Layer 2, using the frame check sequence to detect corruption"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The FCS trailer at the Data Link layer validates frame integrity; a failed check causes the frame to be discarded before any higher layer ever sees it.",
+    "distractorExplanations": {
+      "b": "The IP header checksum validates only the header and is evaluated after the frame is accepted at Layer 2.",
+      "c": "Sequence numbers manage ordering and reliability after the segment reaches the Transport layer.",
+      "d": "Application responses occur only after the full stack has processed the data."
+    },
+    "tags": [
+      "osi-model",
+      "cabling"
+    ]
+  },
+  {
+    "id": "n10-009-10-111",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which pairing of OSI layer and protocol data unit is correct?",
+    "options": [
+      {
+        "id": "c",
+        "text": "Layer 4 uses frames"
+      },
+      {
+        "id": "d",
+        "text": "Layer 1 uses datagrams"
+      },
+      {
+        "id": "b",
+        "text": "Layer 2 uses segments"
+      },
+      {
+        "id": "a",
+        "text": "Layer 3 uses packets"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The Network layer encapsulates data into packets containing source and destination IP addresses used for routing.",
+    "distractorExplanations": {
+      "b": "Layer 2 uses frames, not segments.",
+      "c": "Layer 4 uses segments for TCP and datagrams for UDP, not frames.",
+      "d": "Layer 1 transmits raw bits with no addressing structure."
+    },
+    "tags": [
+      "osi-model",
+      "encapsulation"
+    ]
+  },
+  {
+    "id": "n10-009-10-112",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "An organization wants a single device that performs firewalling, intrusion prevention, antivirus scanning, and content filtering. What is this class of appliance called?",
+    "options": [
+      {
+        "id": "b",
+        "text": "Layer 2 switch"
+      },
+      {
+        "id": "a",
+        "text": "Unified threat management"
+      },
+      {
+        "id": "d",
+        "text": "DHCP relay agent"
+      },
+      {
+        "id": "c",
+        "text": "Wireless LAN controller"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A UTM consolidates several security functions into one platform, simplifying management for smaller environments at the cost of creating a single point of failure and potential throughput bottleneck.",
+    "distractorExplanations": {
+      "b": "A switch forwards frames and provides none of these security services.",
+      "c": "A wireless controller centralizes AP management rather than security inspection.",
+      "d": "A relay agent forwards DHCP broadcasts between subnets."
+    },
+    "tags": [
+      "utm",
+      "firewall"
+    ]
+  },
+  {
+    "id": "n10-009-10-113",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "What is the primary function of a wireless LAN controller in an enterprise deployment?",
+    "options": [
+      {
+        "id": "d",
+        "text": "Providing Power over Ethernet to access points"
+      },
+      {
+        "id": "c",
+        "text": "Encrypting traffic between the switch and the router"
+      },
+      {
+        "id": "b",
+        "text": "Assigning IP addresses to wireless clients"
+      },
+      {
+        "id": "a",
+        "text": "Centralized configuration, channel management, and firmware control of access points"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A WLC centralizes AP management, coordinating channel and power assignment, applying consistent policy, and pushing firmware, which becomes essential beyond a handful of APs.",
+    "distractorExplanations": {
+      "b": "Address assignment is a DHCP function.",
+      "c": "Wired encryption between infrastructure devices is not the controller's role.",
+      "d": "PoE is supplied by the switch, not the controller."
+    },
+    "tags": [
+      "wireless",
+      "controller"
+    ]
+  },
+  {
+    "id": "n10-009-10-114",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which statement accurately describes the difference between NAT and PAT?",
+    "options": [
+      {
+        "id": "d",
+        "text": "PAT requires a public address for every internal host"
+      },
+      {
+        "id": "a",
+        "text": "PAT maps many private addresses to one public address using unique source ports, while basic NAT maps addresses one to one"
+      },
+      {
+        "id": "c",
+        "text": "Both operate at Layer 2 using MAC addresses"
+      },
+      {
+        "id": "b",
+        "text": "NAT maps many to one while PAT maps one to one"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Port address translation multiplexes many internal sessions over a single public address by tracking unique source ports, which is why it is the dominant form of NAT in practice.",
+    "distractorExplanations": {
+      "b": "This reverses the two definitions.",
+      "c": "Both operate at Layer 3 and above, using IP addresses and ports.",
+      "d": "Requiring a public address per host describes static one-to-one NAT, not PAT."
+    },
+    "tags": [
+      "nat"
+    ]
+  },
+  {
+    "id": "n10-009-10-115",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "An organization must allow IPv6-only clients to reach a legacy IPv4-only application server. Which mechanism addresses this?",
+    "options": [
+      {
+        "id": "a",
+        "text": "NAT64"
+      },
+      {
+        "id": "d",
+        "text": "SLAAC with EUI-64"
+      },
+      {
+        "id": "b",
+        "text": "Dual stack on the clients"
+      },
+      {
+        "id": "c",
+        "text": "6to4 tunneling"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "NAT64 translates between IPv6 and IPv4 at the network edge, allowing IPv6-only devices to communicate with IPv4-only services when dual stack is not feasible.",
+    "distractorExplanations": {
+      "b": "Dual stack requires the clients to also run IPv4, which contradicts the IPv6-only requirement.",
+      "c": "Tunneling carries IPv6 across an IPv4 transit network; it does not translate to an IPv4-only endpoint.",
+      "d": "SLAAC assigns addresses and performs no protocol translation."
+    },
+    "tags": [
+      "ipv6",
+      "nat"
+    ]
+  },
+  {
+    "id": "n10-009-10-116",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which cloud characteristic allows resources to be provisioned automatically as demand increases and released as it falls?",
+    "options": [
+      {
+        "id": "c",
+        "text": "Measured service"
+      },
+      {
+        "id": "b",
+        "text": "Resource pooling"
+      },
+      {
+        "id": "a",
+        "text": "Rapid elasticity"
+      },
+      {
+        "id": "d",
+        "text": "Broad network access"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Rapid elasticity is the ability to scale capacity up and down quickly, often automatically, matching cost to actual demand.",
+    "distractorExplanations": {
+      "b": "Resource pooling refers to multi-tenant sharing of the provider's infrastructure.",
+      "c": "Measured service refers to metering and billing based on consumption.",
+      "d": "Broad network access refers to availability across standard network mechanisms and devices."
+    },
+    "tags": [
+      "cloud"
+    ]
+  },
+  {
+    "id": "n10-009-10-117",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A capture shows traffic on UDP port 514 arriving at a central server from dozens of network devices. What is this traffic?",
+    "options": [
+      {
+        "id": "b",
+        "text": "SNMP traps being sent to a manager"
+      },
+      {
+        "id": "a",
+        "text": "Syslog messages being forwarded for centralized logging"
+      },
+      {
+        "id": "d",
+        "text": "DHCP discover broadcasts"
+      },
+      {
+        "id": "c",
+        "text": "NTP synchronization requests"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Syslog uses UDP port 514 by default, and centralized collection from many devices is the standard pattern for correlating events across infrastructure.",
+    "distractorExplanations": {
+      "b": "SNMP traps use UDP port 162.",
+      "c": "NTP uses UDP port 123.",
+      "d": "DHCP uses UDP ports 67 and 68."
+    },
+    "tags": [
+      "ports",
+      "syslog"
+    ]
+  },
+  {
+    "id": "n10-009-10-118",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which protocol pair correctly matches a secure protocol with the insecure one it replaces?",
+    "options": [
+      {
+        "id": "b",
+        "text": "SFTP replaces SSH, and HTTPS replaces TLS"
+      },
+      {
+        "id": "a",
+        "text": "SNMPv3 replaces SNMPv2c, and SSH replaces Telnet"
+      },
+      {
+        "id": "c",
+        "text": "TFTP replaces FTP, and SNMPv1 replaces SNMPv3"
+      },
+      {
+        "id": "d",
+        "text": "LDAP replaces LDAPS, and RDP replaces VNC"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "SNMPv3 adds authentication and encryption that v2c lacks, and SSH provides an encrypted session replacing Telnet's clear-text protocol.",
+    "distractorExplanations": {
+      "b": "SFTP runs inside SSH rather than replacing it, and HTTPS uses TLS rather than replacing it.",
+      "c": "TFTP is less secure than FTP, and SNMPv1 predates v3.",
+      "d": "LDAPS is the secure version of LDAP, so this reverses the relationship."
+    },
+    "tags": [
+      "protocols",
+      "hardening"
+    ]
+  },
+  {
+    "id": "n10-009-10-119",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which port does IMAP over TLS use by default?",
+    "options": [
+      {
+        "id": "a",
+        "text": "993"
+      },
+      {
+        "id": "d",
+        "text": "587"
+      },
+      {
+        "id": "c",
+        "text": "110"
+      },
+      {
+        "id": "b",
+        "text": "143"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "IMAPS uses port 993/TCP, providing encrypted mailbox access, while unencrypted IMAP uses 143.",
+    "distractorExplanations": {
+      "b": "Port 143 is unencrypted IMAP.",
+      "c": "Port 110 is unencrypted POP3.",
+      "d": "Port 587 is the mail submission port used by clients sending outbound mail."
+    },
+    "tags": [
+      "ports",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-120",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A VoIP deployment uses SIP for signaling. Which protocol carries the actual audio stream, and what is its transport characteristic?",
+    "options": [
+      {
+        "id": "b",
+        "text": "RTP over TCP, chosen for guaranteed delivery"
+      },
+      {
+        "id": "c",
+        "text": "SIP itself carries the audio over TCP"
+      },
+      {
+        "id": "d",
+        "text": "ICMP carries the audio with low overhead"
+      },
+      {
+        "id": "a",
+        "text": "RTP over UDP, chosen because retransmitting late audio is useless"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Real-time Transport Protocol runs over UDP because a retransmitted voice packet arriving late is worse than a small gap; timeliness matters more than completeness.",
+    "distractorExplanations": {
+      "b": "TCP retransmission introduces delay that harms real-time audio quality.",
+      "c": "SIP handles call setup and teardown only, not the media stream.",
+      "d": "ICMP is a control and diagnostic protocol and carries no application media."
+    },
+    "tags": [
+      "voip",
+      "protocols"
+    ]
+  },
+  {
+    "id": "n10-009-10-121",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.5",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A 100 meter Cat 6 run is being certified for 10GBASE-T and fails. The same cable passes at 1 Gbps. What explains this?",
+    "options": [
+      {
+        "id": "d",
+        "text": "The connectors must be fiber terminated for 10 Gbps"
+      },
+      {
+        "id": "b",
+        "text": "The cable is damaged and cannot pass any certification"
+      },
+      {
+        "id": "c",
+        "text": "Cat 6 cannot support speeds above 100 Mbps"
+      },
+      {
+        "id": "a",
+        "text": "Cat 6 supports 10 Gbps only to roughly 55 meters due to alien crosstalk"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Cat 6 is rated for 10GBASE-T only over shortened distances, typically about 55 meters; Cat 6a extends 10 Gbps to the full 100 meters with improved alien crosstalk performance.",
+    "distractorExplanations": {
+      "b": "Passing at 1 Gbps demonstrates the cable is physically sound.",
+      "c": "Cat 6 supports 1 Gbps to 100 meters and beyond 100 Mbps easily.",
+      "d": "10GBASE-T is a copper standard and uses standard RJ45 terminations."
+    },
+    "tags": [
+      "cabling",
+      "transceivers"
+    ]
+  },
+  {
+    "id": "n10-009-10-122",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.5",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which connector type is commonly used with single-mode fiber in high-density patch panels because of its small form factor?",
+    "options": [
+      {
+        "id": "d",
+        "text": "BNC"
+      },
+      {
+        "id": "c",
+        "text": "SC"
+      },
+      {
+        "id": "a",
+        "text": "LC"
+      },
+      {
+        "id": "b",
+        "text": "ST"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "LC connectors use a smaller ferrule, allowing higher port density in patch panels and transceivers such as SFP modules.",
+    "distractorExplanations": {
+      "b": "ST connectors use a bayonet coupling and are physically larger, common in older installations.",
+      "c": "SC connectors use a push-pull design and are larger than LC.",
+      "d": "BNC is a coaxial connector, not a fiber connector."
+    },
+    "tags": [
+      "fiber",
+      "cabling"
+    ]
+  },
+  {
+    "id": "n10-009-10-123",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.6",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A network is designed so that each device connects to two separate upstream switches in different racks. What is the primary design goal?",
+    "options": [
+      {
+        "id": "b",
+        "text": "Reducing the total number of switch ports required"
+      },
+      {
+        "id": "d",
+        "text": "Simplifying the spanning tree topology"
+      },
+      {
+        "id": "c",
+        "text": "Increasing the size of the broadcast domain"
+      },
+      {
+        "id": "a",
+        "text": "Eliminating a single point of failure in the access layer"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Dual-homing each device to separate switches means the failure of one switch or rack does not isolate the device, which is a core redundancy principle.",
+    "distractorExplanations": {
+      "b": "Dual-homing increases rather than reduces the required port count.",
+      "c": "Broadcast domain size is determined by VLAN design, not physical redundancy.",
+      "d": "Additional paths make the spanning tree topology more complex, not simpler."
+    },
+    "tags": [
+      "topologies",
+      "high-availability"
+    ]
+  },
+  {
+    "id": "n10-009-10-124",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.6",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which term describes a network dedicated to carrying block-level storage traffic separate from the general data network?",
+    "options": [
+      {
+        "id": "a",
+        "text": "SAN"
+      },
+      {
+        "id": "b",
+        "text": "NAS"
+      },
+      {
+        "id": "c",
+        "text": "WAN"
+      },
+      {
+        "id": "d",
+        "text": "PAN"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A storage area network carries block-level storage protocols on dedicated infrastructure, isolating storage traffic from general LAN congestion.",
+    "distractorExplanations": {
+      "b": "Network attached storage presents file-level shares over the standard network.",
+      "c": "A wide area network connects geographically separated sites.",
+      "d": "A personal area network covers a very short range around an individual."
+    },
+    "tags": [
+      "topologies",
+      "storage"
+    ]
+  },
+  {
+    "id": "n10-009-10-125",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.7",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A host receives an IPv6 address beginning with fe80::. What does this indicate about its scope?",
+    "options": [
+      {
+        "id": "c",
+        "text": "It is a unique local address routable within the organization"
+      },
+      {
+        "id": "d",
+        "text": "It is a multicast group address"
+      },
+      {
+        "id": "b",
+        "text": "It is a global unicast address routable on the internet"
+      },
+      {
+        "id": "a",
+        "text": "It is a link-local address valid only on the local link and never routed"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The fe80::/64 prefix designates link-local addresses, which are automatically configured on every IPv6 interface and are used for neighbor discovery and local communication but are never forwarded by routers.",
+    "distractorExplanations": {
+      "b": "Global unicast addresses fall under 2000::/3.",
+      "c": "Unique local addresses use the fc00::/7 range.",
+      "d": "Multicast addresses begin with ff."
+    },
+    "tags": [
+      "ipv6",
+      "addressing"
+    ]
+  },
+  {
+    "id": "n10-009-10-126",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.7",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which IPv6 mechanism generates a 64-bit interface identifier from the interface MAC address?",
+    "options": [
+      {
+        "id": "b",
+        "text": "NAT64"
+      },
+      {
+        "id": "d",
+        "text": "Neighbor unreachability detection"
+      },
+      {
+        "id": "c",
+        "text": "DHCPv6 stateful assignment"
+      },
+      {
+        "id": "a",
+        "text": "EUI-64"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "EUI-64 expands the 48-bit MAC into a 64-bit interface identifier, which SLAAC combines with the advertised prefix to form a complete address.",
+    "distractorExplanations": {
+      "b": "NAT64 translates between address families and does not build interface identifiers.",
+      "c": "Stateful DHCPv6 assigns addresses from a server pool rather than deriving them locally.",
+      "d": "Neighbor unreachability detection verifies that a neighbor is still reachable."
+    },
+    "tags": [
+      "ipv6",
+      "slaac"
+    ]
+  },
+  {
+    "id": "n10-009-10-127",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.7",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which IPv6 protocol replaces the functionality that ARP provides in IPv4?",
+    "options": [
+      {
+        "id": "c",
+        "text": "Reverse Address Resolution Protocol"
+      },
+      {
+        "id": "b",
+        "text": "Internet Group Management Protocol"
+      },
+      {
+        "id": "d",
+        "text": "Dynamic Host Configuration Protocol"
+      },
+      {
+        "id": "a",
+        "text": "Neighbor Discovery Protocol"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "NDP performs address resolution through neighbor solicitation and advertisement, and also handles router discovery, prefix discovery, and duplicate address detection.",
+    "distractorExplanations": {
+      "b": "IGMP manages IPv4 multicast group membership.",
+      "c": "RARP is a legacy IPv4 protocol used to obtain an address from a MAC.",
+      "d": "DHCP assigns configuration rather than resolving link layer addresses."
+    },
+    "tags": [
+      "ipv6",
+      "ndp"
+    ]
+  },
+  {
+    "id": "n10-009-10-128",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.7",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "How can the IPv6 address 2001:0db8:0000:0000:0000:0000:0000:0042 be correctly compressed?",
+    "options": [
+      {
+        "id": "b",
+        "text": "2001:db8::0042::"
+      },
+      {
+        "id": "c",
+        "text": "2001::db8::42"
+      },
+      {
+        "id": "a",
+        "text": "2001:db8::42"
+      },
+      {
+        "id": "d",
+        "text": "2001:db8:0::0::42"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Leading zeros within each group may be dropped, and one contiguous run of all-zero groups may be replaced with a double colon, used only once per address.",
+    "distractorExplanations": {
+      "b": "The double colon may appear only once, and trailing colons here are invalid.",
+      "c": "Using two double colons makes the number of omitted groups ambiguous.",
+      "d": "This retains unnecessary zeros and uses the double colon incorrectly."
+    },
+    "tags": [
+      "ipv6",
+      "addressing"
+    ]
+  },
+  {
+    "id": "n10-009-10-129",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.8",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "An organization uses VXLAN in its data center. What problem does this primarily solve?",
+    "options": [
+      {
+        "id": "d",
+        "text": "It eliminates the need for IP addressing on hosts"
+      },
+      {
+        "id": "b",
+        "text": "It replaces the need for spanning tree on physical links"
+      },
+      {
+        "id": "c",
+        "text": "It encrypts all east-west traffic by default"
+      },
+      {
+        "id": "a",
+        "text": "It extends Layer 2 segments across a Layer 3 underlay and raises the segment identifier limit far above 4094"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "VXLAN encapsulates Layer 2 frames in UDP so segments span a routed fabric, and its 24-bit VNI supports roughly 16 million segments compared with the 4094 available VLAN IDs.",
+    "distractorExplanations": {
+      "b": "Loop prevention in the underlay is still handled by routing or spanning tree as appropriate.",
+      "c": "VXLAN provides encapsulation, not encryption.",
+      "d": "Hosts still require IP addressing."
+    },
+    "tags": [
+      "vxlan",
+      "data-center"
+    ]
+  },
+  {
+    "id": "n10-009-10-130",
+    "domain": "1.0",
+    "domainName": "Networking Concepts",
+    "objective": "1.8",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "What distinguishes an overlay network from the underlay it runs on?",
+    "options": [
+      {
+        "id": "b",
+        "text": "The overlay is the physical cabling and the underlay is logical"
+      },
+      {
+        "id": "a",
+        "text": "The overlay is a virtual topology built on top of the physical transport network"
+      },
+      {
+        "id": "c",
+        "text": "They are two names for the same thing"
+      },
+      {
+        "id": "d",
+        "text": "The overlay operates only at Layer 1"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The underlay is the physical or routed transport, while the overlay is a logical network constructed on top of it using encapsulation, as with VXLAN or SD-WAN.",
+    "distractorExplanations": {
+      "b": "This reverses the definitions.",
+      "c": "They describe distinct layers of the design.",
+      "d": "Overlays operate at Layer 2 and above through encapsulation."
+    },
+    "tags": [
+      "overlay",
+      "sdn"
+    ]
+  },
+  {
+    "id": "n10-009-20-095",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A router receives a packet whose destination matches no entry in the routing table and no default route is configured. What happens?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The packet is dropped and an ICMP destination unreachable message may be returned"
+      },
+      {
+        "id": "b",
+        "text": "The packet is flooded out all interfaces"
+      },
+      {
+        "id": "d",
+        "text": "The packet is forwarded to the highest numbered interface"
+      },
+      {
+        "id": "c",
+        "text": "The packet is queued until a matching route appears"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Routers discard packets they cannot match to a route, optionally notifying the source with ICMP destination unreachable; unlike switches, they never flood.",
+    "distractorExplanations": {
+      "b": "Flooding unknown destinations is switch behavior at Layer 2, not router behavior.",
+      "c": "Routers do not buffer packets awaiting future routing information.",
+      "d": "Interface numbering has no role in forwarding decisions."
+    },
+    "tags": [
+      "routing"
+    ]
+  },
+  {
+    "id": "n10-009-20-096",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which condition would cause a routing loop that TTL alone eventually stops but that should be prevented at the protocol level?",
+    "options": [
+      {
+        "id": "d",
+        "text": "An expired DHCP lease on a router interface"
+      },
+      {
+        "id": "c",
+        "text": "An oversized MTU on a WAN interface"
+      },
+      {
+        "id": "a",
+        "text": "Inconsistent routing information during convergence between two routers"
+      },
+      {
+        "id": "b",
+        "text": "A duplicate MAC address on the same VLAN"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "During convergence, routers may temporarily believe each other offers a path to a failed network, sending traffic back and forth until TTL expires; split horizon and route poisoning prevent this.",
+    "distractorExplanations": {
+      "b": "Duplicate MAC addresses cause Layer 2 problems, not routing loops.",
+      "c": "MTU issues cause fragmentation or drops, not looping.",
+      "d": "Router interfaces generally use static addressing and leases do not create loops."
+    },
+    "tags": [
+      "routing",
+      "convergence"
+    ]
+  },
+  {
+    "id": "n10-009-20-097",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "What is the administrative distance of a directly connected interface, and why?",
+    "options": [
+      {
+        "id": "a",
+        "text": "0, because the router has direct evidence the network is attached"
+      },
+      {
+        "id": "d",
+        "text": "255, because it must be verified"
+      },
+      {
+        "id": "c",
+        "text": "110, matching OSPF"
+      },
+      {
+        "id": "b",
+        "text": "1, because it behaves like a static route"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Directly connected routes carry an administrative distance of 0 since the router has firsthand knowledge of the attached network, making them the most trusted source.",
+    "distractorExplanations": {
+      "b": "Static routes carry an administrative distance of 1.",
+      "c": "110 is the administrative distance of OSPF.",
+      "d": "255 marks a route as untrusted and unusable."
+    },
+    "tags": [
+      "routing"
+    ]
+  },
+  {
+    "id": "n10-009-20-098",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "In a dual-stack environment, a host resolves a name and receives both an A and an AAAA record. Which behavior is typical?",
+    "options": [
+      {
+        "id": "d",
+        "text": "The host rejects the response as ambiguous"
+      },
+      {
+        "id": "a",
+        "text": "The host prefers IPv6 and falls back to IPv4 if the connection fails"
+      },
+      {
+        "id": "c",
+        "text": "The host randomly selects one of the two"
+      },
+      {
+        "id": "b",
+        "text": "The host always uses IPv4 for compatibility"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Dual-stack implementations generally prefer IPv6 when available, with fallback mechanisms to IPv4 if the IPv6 path fails, which is why broken IPv6 paths can cause noticeable connection delays.",
+    "distractorExplanations": {
+      "b": "IPv4 preference is not the default behavior in modern dual-stack implementations.",
+      "c": "Selection follows defined preference rules rather than randomness.",
+      "d": "Receiving both record types is normal in dual-stack environments."
+    },
+    "tags": [
+      "ipv6",
+      "dns"
+    ]
+  },
+  {
+    "id": "n10-009-20-099",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which routing concept allows a router to install multiple paths of identical cost to the same destination and distribute traffic across them?",
+    "options": [
+      {
+        "id": "c",
+        "text": "Administrative distance"
+      },
+      {
+        "id": "d",
+        "text": "Passive interface"
+      },
+      {
+        "id": "b",
+        "text": "Route redistribution"
+      },
+      {
+        "id": "a",
+        "text": "Equal-cost multipath"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "ECMP installs several equal-cost routes and load shares across them, increasing aggregate bandwidth and providing immediate failover if one path drops.",
+    "distractorExplanations": {
+      "b": "Redistribution imports routes from one protocol into another.",
+      "c": "Administrative distance selects between differing sources of the same route.",
+      "d": "A passive interface participates in the routed network without forming adjacencies."
+    },
+    "tags": [
+      "routing"
+    ]
+  },
+  {
+    "id": "n10-009-20-100",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A technician needs a VLAN to span two switches connected by a single physical link, while a second VLAN must also traverse it. What must be configured?",
+    "options": [
+      {
+        "id": "c",
+        "text": "A routed port with an IP address on each end"
+      },
+      {
+        "id": "a",
+        "text": "A trunk link with 802.1Q tagging carrying both VLANs"
+      },
+      {
+        "id": "d",
+        "text": "Port security allowing two MAC addresses"
+      },
+      {
+        "id": "b",
+        "text": "Two access ports, one per VLAN, on the same cable"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A trunk tags frames so a single physical link carries multiple VLANs while preserving their separation at the far end.",
+    "distractorExplanations": {
+      "b": "A single physical link cannot be two access ports simultaneously.",
+      "c": "A routed port terminates Layer 2 and would not extend the VLANs.",
+      "d": "Port security restricts MAC addresses and does not carry VLAN membership."
+    },
+    "tags": [
+      "vlan",
+      "trunking"
+    ]
+  },
+  {
+    "id": "n10-009-20-101",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which statement about the native VLAN on an 802.1Q trunk is correct?",
+    "options": [
+      {
+        "id": "d",
+        "text": "The native VLAN must be VLAN 4094 by standard"
+      },
+      {
+        "id": "c",
+        "text": "The native VLAN cannot carry user traffic"
+      },
+      {
+        "id": "b",
+        "text": "The native VLAN is always tagged with the highest priority"
+      },
+      {
+        "id": "a",
+        "text": "Frames in the native VLAN traverse the trunk untagged"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The native VLAN carries untagged frames across the trunk, which is why mismatches cause traffic to land in the wrong VLAN and why hardening guidance recommends setting it to an unused VLAN.",
+    "distractorExplanations": {
+      "b": "The defining characteristic is that it is untagged.",
+      "c": "The native VLAN can carry user traffic, though it is inadvisable for security reasons.",
+      "d": "The native VLAN defaults to VLAN 1 and is configurable."
+    },
+    "tags": [
+      "vlan",
+      "trunking"
+    ]
+  },
+  {
+    "id": "n10-009-20-102",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "What is the effect of enabling BPDU guard on an access port that then receives a BPDU?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The port is placed in err-disabled state to prevent a potential loop"
+      },
+      {
+        "id": "b",
+        "text": "The port begins forwarding immediately"
+      },
+      {
+        "id": "c",
+        "text": "The switch becomes the root bridge"
+      },
+      {
+        "id": "d",
+        "text": "The BPDU is forwarded to all other ports"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "BPDU guard assumes an access port should never see a BPDU, so receiving one indicates an unauthorized switch and the port is shut down protectively.",
+    "distractorExplanations": {
+      "b": "Immediate forwarding is PortFast behavior in the absence of a BPDU.",
+      "c": "Receiving a BPDU does not elect the local switch as root.",
+      "d": "Forwarding the BPDU would propagate the risk rather than contain it."
+    },
+    "tags": [
+      "stp",
+      "hardening"
+    ]
+  },
+  {
+    "id": "n10-009-20-103",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Two access switches each connect to two distribution switches. Spanning tree blocks one uplink on each access switch. What is the operational consequence?",
+    "options": [
+      {
+        "id": "c",
+        "text": "The access switches become root bridges"
+      },
+      {
+        "id": "d",
+        "text": "Broadcast traffic is eliminated from the topology"
+      },
+      {
+        "id": "b",
+        "text": "Both uplinks forward traffic simultaneously"
+      },
+      {
+        "id": "a",
+        "text": "Half the available uplink bandwidth sits idle until a failure occurs"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Classic spanning tree blocks redundant paths to prevent loops, so the standby uplink carries no traffic until the active path fails, which is why technologies such as multi-chassis link aggregation were developed.",
+    "distractorExplanations": {
+      "b": "Simultaneous forwarding on both would create the loop spanning tree exists to prevent.",
+      "c": "Root bridge election is based on bridge ID, not position in the hierarchy.",
+      "d": "Broadcasts still propagate within each VLAN."
+    },
+    "tags": [
+      "stp",
+      "switching"
+    ]
+  },
+  {
+    "id": "n10-009-20-104",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which switch feature assigns a device to a specific VLAN based on its MAC address regardless of which port it uses?",
+    "options": [
+      {
+        "id": "b",
+        "text": "Static access port configuration"
+      },
+      {
+        "id": "d",
+        "text": "Port mirroring"
+      },
+      {
+        "id": "a",
+        "text": "Dynamic VLAN assignment"
+      },
+      {
+        "id": "c",
+        "text": "Trunk negotiation"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Dynamic VLAN assignment consults a policy server to place a device in the correct VLAN based on identity, supporting mobility without reconfiguring ports.",
+    "distractorExplanations": {
+      "b": "Static configuration ties the VLAN to the port rather than the device.",
+      "c": "Trunk negotiation determines link mode between switches.",
+      "d": "Port mirroring copies traffic for monitoring."
+    },
+    "tags": [
+      "vlan",
+      "nac"
+    ]
+  },
+  {
+    "id": "n10-009-20-105",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which 802.11 standard first operated in the 2.4, 5, and 6 GHz bands and introduced OFDMA for improved efficiency with many small transmissions?",
+    "options": [
+      {
+        "id": "a",
+        "text": "802.11ax"
+      },
+      {
+        "id": "c",
+        "text": "802.11n"
+      },
+      {
+        "id": "d",
+        "text": "802.11g"
+      },
+      {
+        "id": "b",
+        "text": "802.11ac"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "802.11ax (Wi-Fi 6, extended to 6 GHz as Wi-Fi 6E) introduced OFDMA, which subdivides channels into resource units so multiple clients can be served in parallel, greatly improving efficiency in dense IoT and VoIP environments.",
+    "distractorExplanations": {
+      "b": "802.11ac operates only in the 5 GHz band and uses OFDM rather than OFDMA.",
+      "c": "802.11n operates in 2.4 and 5 GHz and introduced MIMO, not OFDMA.",
+      "d": "802.11g operates only at 2.4 GHz with a maximum of 54 Mbps."
+    },
+    "tags": [
+      "wireless",
+      "standards"
+    ]
+  },
+  {
+    "id": "n10-009-20-106",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which Wi-Fi 6 feature allows overlapping access points on the same channel to distinguish each other's transmissions and reduce unnecessary deferral?",
+    "options": [
+      {
+        "id": "b",
+        "text": "Channel bonding"
+      },
+      {
+        "id": "a",
+        "text": "BSS coloring"
+      },
+      {
+        "id": "c",
+        "text": "Band steering"
+      },
+      {
+        "id": "d",
+        "text": "Dynamic frequency selection"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "BSS coloring tags transmissions with an identifier so a device can recognize a frame belonging to a neighboring basic service set and continue transmitting instead of deferring, reducing co-channel interference impact.",
+    "distractorExplanations": {
+      "b": "Channel bonding widens the channel to increase throughput.",
+      "c": "Band steering pushes dual-band clients toward 5 GHz.",
+      "d": "DFS avoids channels occupied by radar systems."
+    },
+    "tags": [
+      "wireless",
+      "standards"
+    ]
+  },
+  {
+    "id": "n10-009-20-107",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which 802.11 standard introduced MIMO and was the first to operate in both the 2.4 GHz and 5 GHz bands?",
+    "options": [
+      {
+        "id": "d",
+        "text": "802.11b"
+      },
+      {
+        "id": "b",
+        "text": "802.11ac"
+      },
+      {
+        "id": "c",
+        "text": "802.11a"
+      },
+      {
+        "id": "a",
+        "text": "802.11n"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "802.11n introduced multiple input multiple output with spatial streams and dual-band operation, reaching theoretical rates up to 600 Mbps.",
+    "distractorExplanations": {
+      "b": "802.11ac operates in 5 GHz only and added MU-MIMO.",
+      "c": "802.11a is 5 GHz only at 54 Mbps.",
+      "d": "802.11b is 2.4 GHz only at 11 Mbps."
+    },
+    "tags": [
+      "wireless",
+      "standards"
+    ]
+  },
+  {
+    "id": "n10-009-20-108",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "An access point in a 5 GHz deployment periodically stops using a channel and moves clients to another. Regulatory logs mention radar detection. Which mechanism is operating?",
+    "options": [
+      {
+        "id": "b",
+        "text": "Band steering between 2.4 and 5 GHz"
+      },
+      {
+        "id": "c",
+        "text": "Fast BSS transition under 802.11r"
+      },
+      {
+        "id": "a",
+        "text": "Dynamic frequency selection required by 802.11h"
+      },
+      {
+        "id": "d",
+        "text": "Transmit beamforming"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "DFS requires devices sharing spectrum with radar to monitor for radar signatures and vacate the channel, which is defined alongside transmit power control in 802.11h.",
+    "distractorExplanations": {
+      "b": "Band steering moves clients between bands rather than vacating a channel for radar.",
+      "c": "802.11r accelerates roaming between access points.",
+      "d": "Beamforming focuses signal toward a client and does not change channels."
+    },
+    "tags": [
+      "wireless",
+      "dfs"
+    ]
+  },
+  {
+    "id": "n10-009-20-109",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Why is beamforming with explicit client feedback more effective than earlier implicit implementations?",
+    "options": [
+      {
+        "id": "c",
+        "text": "It bonds additional channels automatically"
+      },
+      {
+        "id": "b",
+        "text": "It increases the transmit power beyond regulatory limits"
+      },
+      {
+        "id": "a",
+        "text": "The client reports channel conditions so the AP can steer energy accurately"
+      },
+      {
+        "id": "d",
+        "text": "It eliminates the need for multiple antennas"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Explicit beamforming, standardized in 802.11ac, uses feedback from the client to compute the steering matrix, whereas implicit approaches estimated conditions and produced inconsistent results.",
+    "distractorExplanations": {
+      "b": "Beamforming shapes the existing signal and does not exceed power limits.",
+      "c": "Channel bonding is a separate mechanism.",
+      "d": "Beamforming depends on multiple antennas to shape the signal."
+    },
+    "tags": [
+      "wireless"
+    ]
+  },
+  {
+    "id": "n10-009-20-110",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A technician must terminate cables in a wiring closet where several runs will be permanently connected to a patch panel. Which termination hardware is appropriate?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A 110 block or patch panel punched down with an impact tool"
+      },
+      {
+        "id": "d",
+        "text": "LC connectors polished for fiber"
+      },
+      {
+        "id": "c",
+        "text": "BNC connectors with coaxial crimps"
+      },
+      {
+        "id": "b",
+        "text": "RJ45 plugs crimped on each cable end"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Permanent horizontal cabling is punched down onto a patch panel or 110 block, and patch cords with plugs then connect the panel to equipment, which protects the permanent run from repeated handling.",
+    "distractorExplanations": {
+      "b": "Crimped plugs are used on flexible patch cords, not permanent horizontal runs.",
+      "c": "BNC is for coaxial cabling.",
+      "d": "LC connectors are for fiber, not copper twisted pair."
+    },
+    "tags": [
+      "cabling",
+      "hardware-tools"
+    ]
+  },
+  {
+    "id": "n10-009-20-111",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Why should copper network cabling avoid running parallel and adjacent to electrical power conduits?",
+    "options": [
+      {
+        "id": "c",
+        "text": "Power cables reduce the maximum supported length to 50 meters"
+      },
+      {
+        "id": "d",
+        "text": "Building code requires fiber in those locations"
+      },
+      {
+        "id": "b",
+        "text": "The heat from power cables melts the cable jacket"
+      },
+      {
+        "id": "a",
+        "text": "Electromagnetic interference from the power lines induces noise on the data pairs"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Power conductors radiate electromagnetic fields that couple into nearby unshielded copper, corrupting frames and raising error counters; crossing at right angles or maintaining separation mitigates it.",
+    "distractorExplanations": {
+      "b": "Thermal damage is not the typical concern at standard power levels.",
+      "c": "The 100 meter limit is not altered by proximity to power.",
+      "d": "Code addresses fire rating rather than mandating fiber near power."
+    },
+    "tags": [
+      "cabling",
+      "interference"
+    ]
+  },
+  {
+    "id": "n10-009-20-112",
+    "domain": "2.0",
+    "domainName": "Network Implementation",
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A camera requires 802.3at power. The switch supports only 802.3af. What is the outcome?",
+    "options": [
+      {
+        "id": "d",
+        "text": "The camera will function normally at reduced frame rate"
+      },
+      {
+        "id": "a",
+        "text": "The camera will not receive sufficient power and may fail to boot or operate intermittently"
+      },
+      {
+        "id": "c",
+        "text": "The camera will negotiate to draw power from two ports"
+      },
+      {
+        "id": "b",
+        "text": "The switch will automatically upgrade to 802.3at"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "802.3af supplies about 15.4 W at the source while 802.3at supplies about 30 W; a device requiring the higher class cannot operate reliably on an af-only port.",
+    "distractorExplanations": {
+      "b": "PoE standards are a hardware capability and cannot be upgraded by negotiation.",
+      "c": "Standard PoE does not aggregate power across multiple ports.",
+      "d": "Insufficient power typically prevents operation entirely rather than gracefully degrading."
+    },
+    "tags": [
+      "poe"
+    ]
+  },
+  {
+    "id": "n10-009-30-089",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "An organization requires that any configuration change be tested in a lab, approved, scheduled, and documented. A technician makes an undocumented change that later causes an outage during troubleshooting of an unrelated issue. What is the underlying process failure?",
+    "options": [
+      {
+        "id": "d",
+        "text": "The network diagram used the wrong symbols"
+      },
+      {
+        "id": "a",
+        "text": "The change management process was bypassed, so the configuration record no longer reflects reality"
+      },
+      {
+        "id": "c",
+        "text": "The SLA did not define an uptime target"
+      },
+      {
+        "id": "b",
+        "text": "The disaster recovery plan lacked a warm site"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Bypassing change control means the documented state diverges from production, so later troubleshooting proceeds from incorrect assumptions and can compound the problem.",
+    "distractorExplanations": {
+      "b": "Recovery site strategy is unrelated to undocumented configuration changes.",
+      "c": "Uptime targets do not prevent undocumented changes.",
+      "d": "Diagram notation is a cosmetic documentation concern."
+    },
+    "tags": [
+      "change-management"
+    ]
+  },
+  {
+    "id": "n10-009-30-090",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "What is the purpose of a configuration baseline for network devices?",
+    "options": [
+      {
+        "id": "c",
+        "text": "It lists the physical location of each device in the rack"
+      },
+      {
+        "id": "a",
+        "text": "It defines the approved standard configuration against which devices are compared"
+      },
+      {
+        "id": "d",
+        "text": "It specifies the warranty expiration for each device"
+      },
+      {
+        "id": "b",
+        "text": "It records the maximum throughput each device can sustain"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A configuration baseline establishes the approved standard so deviations can be detected and corrected, which is the foundation of drift control and consistent hardening.",
+    "distractorExplanations": {
+      "b": "Throughput capacity is a performance specification, not a configuration baseline.",
+      "c": "Physical location belongs in asset and rack documentation.",
+      "d": "Warranty tracking is part of life-cycle management."
+    },
+    "tags": [
+      "documentation",
+      "hardening"
+    ]
+  },
+  {
+    "id": "n10-009-30-091",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which document type would define the specific technical requirements, deliverables, and timeline for a network refresh performed by a vendor?",
+    "options": [
+      {
+        "id": "d",
+        "text": "Business continuity plan"
+      },
+      {
+        "id": "a",
+        "text": "Statement of work"
+      },
+      {
+        "id": "b",
+        "text": "Acceptable use policy"
+      },
+      {
+        "id": "c",
+        "text": "Non-disclosure agreement"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "An SOW specifies scope, deliverables, milestones, and acceptance criteria for a defined engagement, making it the operative document for vendor project work.",
+    "distractorExplanations": {
+      "b": "An AUP governs end user behavior on the network.",
+      "c": "An NDA protects confidential information exchanged between parties.",
+      "d": "A BCP addresses continuity of operations during disruption."
+    },
+    "tags": [
+      "business-documents"
+    ]
+  },
+  {
+    "id": "n10-009-30-092",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which QoS mechanism delays traffic exceeding a configured rate by buffering it, rather than discarding it?",
+    "options": [
+      {
+        "id": "b",
+        "text": "Traffic policing"
+      },
+      {
+        "id": "d",
+        "text": "Link fragmentation and interleaving"
+      },
+      {
+        "id": "c",
+        "text": "Random early detection"
+      },
+      {
+        "id": "a",
+        "text": "Traffic shaping"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Shaping buffers excess traffic and releases it within the configured rate, smoothing bursts at the cost of added delay, whereas policing simply drops the excess.",
+    "distractorExplanations": {
+      "b": "Policing discards packets exceeding the rate, causing retransmissions.",
+      "c": "RED proactively drops packets to avoid buffer exhaustion.",
+      "d": "LFI fragments large packets so small latency-sensitive packets are not delayed behind them."
+    },
+    "tags": [
+      "qos",
+      "performance"
+    ]
+  },
+  {
+    "id": "n10-009-30-093",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which QoS model marks packets so downstream devices can apply per-hop behavior, without reserving bandwidth end to end?",
+    "options": [
+      {
+        "id": "b",
+        "text": "IntServ"
+      },
+      {
+        "id": "d",
+        "text": "Round robin queuing"
+      },
+      {
+        "id": "a",
+        "text": "DiffServ"
+      },
+      {
+        "id": "c",
+        "text": "Best effort"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Differentiated Services marks traffic with DSCP values and each hop applies its configured treatment, which scales well because no per-flow state or reservation is maintained.",
+    "distractorExplanations": {
+      "b": "IntServ reserves bandwidth per flow, providing stricter guarantees but scaling poorly.",
+      "c": "Best effort applies no prioritization at all.",
+      "d": "Round robin is a queuing algorithm rather than a QoS architecture."
+    },
+    "tags": [
+      "qos"
+    ]
+  },
+  {
+    "id": "n10-009-30-094",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which field is used to mark IP packets for differentiated QoS treatment?",
+    "options": [
+      {
+        "id": "b",
+        "text": "The TCP window size field"
+      },
+      {
+        "id": "d",
+        "text": "The IP total length field"
+      },
+      {
+        "id": "c",
+        "text": "The Ethernet FCS trailer"
+      },
+      {
+        "id": "a",
+        "text": "DSCP within the Type of Service byte"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The Differentiated Services Code Point occupies bits in the IP header ToS byte, signaling the priority class that each hop should apply.",
+    "distractorExplanations": {
+      "b": "The window size manages TCP flow control.",
+      "c": "The FCS validates frame integrity at Layer 2.",
+      "d": "Total length indicates packet size, not priority."
+    },
+    "tags": [
+      "qos"
+    ]
+  },
+  {
+    "id": "n10-009-30-095",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A monitoring platform must alert when a device stops responding entirely. Which mechanism detects this most reliably?",
+    "options": [
+      {
+        "id": "d",
+        "text": "Checking the ARP cache for the device address"
+      },
+      {
+        "id": "c",
+        "text": "Reviewing syslog for a shutdown message"
+      },
+      {
+        "id": "a",
+        "text": "Polling with a defined timeout, since a failed device sends no trap"
+      },
+      {
+        "id": "b",
+        "text": "Waiting for an SNMP trap from the device"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A device that fails abruptly cannot send a notification, so absence of a response to polling is the only dependable indicator of total failure.",
+    "distractorExplanations": {
+      "b": "A dead device cannot generate a trap announcing its own failure.",
+      "c": "A crashed device typically logs nothing before failing.",
+      "d": "ARP entries persist briefly and are not a reliable liveness signal."
+    },
+    "tags": [
+      "monitoring",
+      "snmp"
+    ]
+  },
+  {
+    "id": "n10-009-30-096",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "An organization performs nightly backups and can tolerate losing at most one business day of data, but must restore service within one hour. What does this combination imply?",
+    "options": [
+      {
+        "id": "c",
+        "text": "Both metrics are strict, requiring synchronous replication"
+      },
+      {
+        "id": "a",
+        "text": "A relatively relaxed RPO paired with a demanding RTO, requiring rapid failover infrastructure"
+      },
+      {
+        "id": "d",
+        "text": "The metrics are contradictory and cannot both be met"
+      },
+      {
+        "id": "b",
+        "text": "Both metrics are relaxed and a cold site is sufficient"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Daily backups satisfy a 24 hour RPO, but a one hour RTO requires standby infrastructure ready to take over quickly, so the two metrics drive different investments.",
+    "distractorExplanations": {
+      "b": "A cold site cannot deliver a one hour recovery time.",
+      "c": "Synchronous replication would be required only for a near-zero RPO.",
+      "d": "The combination is common and achievable with the right architecture."
+    },
+    "tags": [
+      "disaster-recovery"
+    ]
+  },
+  {
+    "id": "n10-009-30-097",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "What does a validation test in a disaster recovery program confirm?",
+    "options": [
+      {
+        "id": "b",
+        "text": "That staff can describe their roles in a meeting"
+      },
+      {
+        "id": "a",
+        "text": "That documented recovery procedures actually work when executed"
+      },
+      {
+        "id": "c",
+        "text": "That the SLA penalties are enforceable"
+      },
+      {
+        "id": "d",
+        "text": "That the network diagram is current"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A validation test executes the recovery procedures to prove they work, uncovering gaps that a discussion-based exercise would not reveal.",
+    "distractorExplanations": {
+      "b": "Describing roles verbally is a tabletop exercise.",
+      "c": "Contract enforceability is a legal matter.",
+      "d": "Diagram accuracy is a documentation concern."
+    },
+    "tags": [
+      "disaster-recovery",
+      "testing"
+    ]
+  },
+  {
+    "id": "n10-009-30-098",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which approach provides the fastest recovery from the failure of a single network interface on a critical server?",
+    "options": [
+      {
+        "id": "b",
+        "text": "A nightly full backup of the server"
+      },
+      {
+        "id": "a",
+        "text": "NIC teaming with links to separate switches"
+      },
+      {
+        "id": "d",
+        "text": "Increasing the server's memory allocation"
+      },
+      {
+        "id": "c",
+        "text": "A documented manual failover procedure"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "NIC teaming maintains connectivity transparently when one interface or upstream switch fails, requiring no human intervention and no service interruption.",
+    "distractorExplanations": {
+      "b": "Backups protect data but do not maintain availability during a failure.",
+      "c": "Manual procedures introduce delay measured in minutes or longer.",
+      "d": "Memory capacity does not address interface redundancy."
+    },
+    "tags": [
+      "high-availability"
+    ]
+  },
+  {
+    "id": "n10-009-30-099",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A network engineer configures a DHCP scope but omits option 6. What symptom will clients exhibit?",
+    "options": [
+      {
+        "id": "b",
+        "text": "They receive no address at all"
+      },
+      {
+        "id": "a",
+        "text": "They obtain an address and gateway but cannot resolve names"
+      },
+      {
+        "id": "d",
+        "text": "They cannot reach hosts on their own subnet"
+      },
+      {
+        "id": "c",
+        "text": "They receive an APIPA address"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Option 6 supplies DNS servers; without it clients are addressed and routed correctly but have no resolver, so connections by name fail while connections by IP succeed.",
+    "distractorExplanations": {
+      "b": "Address assignment does not depend on the DNS option being present.",
+      "c": "APIPA results from receiving no response at all.",
+      "d": "Local subnet communication requires no DNS."
+    },
+    "tags": [
+      "dhcp",
+      "dns"
+    ]
+  },
+  {
+    "id": "n10-009-30-100",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "What is the purpose of a DNS TTL value on a record?",
+    "options": [
+      {
+        "id": "b",
+        "text": "It limits how many hops a query may traverse"
+      },
+      {
+        "id": "a",
+        "text": "It defines how long resolvers may cache the record before querying again"
+      },
+      {
+        "id": "c",
+        "text": "It sets the maximum size of the response"
+      },
+      {
+        "id": "d",
+        "text": "It determines the priority among multiple records"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The TTL controls cache lifetime, which is why lowering it before a planned migration reduces the window during which clients use stale data.",
+    "distractorExplanations": {
+      "b": "Hop limiting is the function of the IP TTL field, a different concept.",
+      "c": "Response size limits are governed by protocol and EDNS settings.",
+      "d": "Priority among records is expressed by preference values in record types such as MX."
+    },
+    "tags": [
+      "dns"
+    ]
+  },
+  {
+    "id": "n10-009-30-101",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which condition would cause SLAAC to fail to provide a usable IPv6 address to a host?",
+    "options": [
+      {
+        "id": "b",
+        "text": "The host lacks a DHCPv4 reservation"
+      },
+      {
+        "id": "d",
+        "text": "The switch port is configured as a trunk"
+      },
+      {
+        "id": "a",
+        "text": "No router is sending router advertisements on the link"
+      },
+      {
+        "id": "c",
+        "text": "The DNS server does not host AAAA records"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "SLAAC derives the address from the prefix in a router advertisement; without a router advertising a prefix, the host has only its link-local address.",
+    "distractorExplanations": {
+      "b": "DHCPv4 reservations are unrelated to IPv6 autoconfiguration.",
+      "c": "Missing AAAA records affect name resolution, not address assignment.",
+      "d": "Trunk configuration affects VLAN tagging rather than router advertisements."
+    },
+    "tags": [
+      "ipv6",
+      "slaac"
+    ]
+  },
+  {
+    "id": "n10-009-30-102",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which protocol secures time synchronization by authenticating the time source and protecting message integrity?",
+    "options": [
+      {
+        "id": "b",
+        "text": "SNTP"
+      },
+      {
+        "id": "a",
+        "text": "NTS"
+      },
+      {
+        "id": "c",
+        "text": "PTP"
+      },
+      {
+        "id": "d",
+        "text": "DoH"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Network Time Security extends NTP with TLS-based authentication and authenticated encryption, preventing an attacker from manipulating time to break certificate validation or Kerberos.",
+    "distractorExplanations": {
+      "b": "SNTP is a simplified NTP variant without added security.",
+      "c": "PTP delivers higher precision but is not primarily a security extension.",
+      "d": "DNS over HTTPS secures name resolution, not time."
+    },
+    "tags": [
+      "ntp",
+      "security"
+    ]
+  },
+  {
+    "id": "n10-009-30-103",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.5",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "An administrator connects to a device using SSH across the production network. What management category is this, and what is its main limitation?",
+    "options": [
+      {
+        "id": "c",
+        "text": "Console management, which requires a serial adapter"
+      },
+      {
+        "id": "d",
+        "text": "API management, which requires certificates"
+      },
+      {
+        "id": "b",
+        "text": "Out-of-band management, which requires physical presence"
+      },
+      {
+        "id": "a",
+        "text": "In-band management, which fails when the production network is unavailable"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "In-band management shares the production path, so it is convenient but becomes unusable in exactly the situations where access is most needed.",
+    "distractorExplanations": {
+      "b": "Out-of-band uses a separate path independent of production.",
+      "c": "Console access is a distinct direct-attached method.",
+      "d": "API access is another in-band method distinguished by interface type rather than path."
+    },
+    "tags": [
+      "management"
+    ]
+  },
+  {
+    "id": "n10-009-30-104",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.5",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "What is the primary advantage of a site-to-site VPN over individual client-to-site connections for a branch office?",
+    "options": [
+      {
+        "id": "d",
+        "text": "It requires no configuration on either endpoint"
+      },
+      {
+        "id": "a",
+        "text": "All hosts at the branch communicate transparently without per-device VPN software"
+      },
+      {
+        "id": "c",
+        "text": "It eliminates the need for encryption between sites"
+      },
+      {
+        "id": "b",
+        "text": "Each user must authenticate separately for stronger security"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A site-to-site tunnel is established between gateways, so every device at the branch reaches corporate resources without individual client software or user action.",
+    "distractorExplanations": {
+      "b": "Per-user authentication is characteristic of client-to-site access.",
+      "c": "Site-to-site VPNs encrypt traffic between the gateways.",
+      "d": "Both gateways require configuration to establish the tunnel."
+    },
+    "tags": [
+      "vpn"
+    ]
+  },
+  {
+    "id": "n10-009-30-105",
+    "domain": "3.0",
+    "domainName": "Network Operations",
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Interface counters show input errors climbing while output counters remain clean on the same interface. What does this asymmetry suggest?",
+    "options": [
+      {
+        "id": "c",
+        "text": "The routing table is missing a default route"
+      },
+      {
+        "id": "d",
+        "text": "The DHCP scope has been exhausted"
+      },
+      {
+        "id": "a",
+        "text": "The problem lies in the receive path, such as the inbound cable or the far-end transmitter"
+      },
+      {
+        "id": "b",
+        "text": "The local device is transmitting malformed frames"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Errors counted on receive indicate corruption arriving at this interface, directing attention to the cable, connectors, or the transmitting device at the other end.",
+    "distractorExplanations": {
+      "b": "Clean output counters indicate local transmission is healthy.",
+      "c": "Routing configuration does not generate interface-level input errors.",
+      "d": "Address exhaustion produces addressing failures, not frame corruption."
+    },
+    "tags": [
+      "monitoring",
+      "cabling"
+    ]
+  },
+  {
+    "id": "n10-009-40-069",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which statement best explains why defense in depth is preferred over relying on a single strong perimeter control?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Any single control can fail or be bypassed, so layered controls limit the impact of one failure"
+      },
+      {
+        "id": "b",
+        "text": "Multiple controls are cheaper than one strong control"
+      },
+      {
+        "id": "d",
+        "text": "Layering removes the need for monitoring"
+      },
+      {
+        "id": "c",
+        "text": "A single firewall cannot handle modern throughput"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Layered, independent controls mean the compromise or misconfiguration of one does not immediately expose everything behind it, which is the core reasoning behind defense in depth.",
+    "distractorExplanations": {
+      "b": "Layered controls generally increase rather than reduce cost.",
+      "c": "Throughput capacity is an engineering concern, not the security rationale.",
+      "d": "Monitoring remains essential in every layered design."
+    },
+    "tags": [
+      "defense-in-depth"
+    ]
+  },
+  {
+    "id": "n10-009-40-070",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In public key infrastructure, what is the role of a certificate authority?",
+    "options": [
+      {
+        "id": "d",
+        "text": "It generates the symmetric session key for each connection"
+      },
+      {
+        "id": "b",
+        "text": "It stores the private keys of all users"
+      },
+      {
+        "id": "a",
+        "text": "It issues and signs digital certificates, vouching for the identity bound to a public key"
+      },
+      {
+        "id": "c",
+        "text": "It encrypts all traffic between clients and servers"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A CA validates identity and signs the certificate, so relying parties that trust the CA can trust the binding between the subject and its public key.",
+    "distractorExplanations": {
+      "b": "Private keys remain with their owners; escrow agents are a separate optional role.",
+      "c": "Encryption is performed by the endpoints using the keys, not by the CA.",
+      "d": "Session keys are negotiated between the communicating parties."
+    },
+    "tags": [
+      "pki",
+      "encryption"
+    ]
+  },
+  {
+    "id": "n10-009-40-071",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A certificate presented by an internal server causes browser warnings even though the certificate is valid and unexpired. Which cause is most likely?",
+    "options": [
+      {
+        "id": "d",
+        "text": "The client clock is synchronized with NTP"
+      },
+      {
+        "id": "b",
+        "text": "The certificate uses too strong an encryption algorithm"
+      },
+      {
+        "id": "c",
+        "text": "The server is using HTTPS on port 443"
+      },
+      {
+        "id": "a",
+        "text": "The certificate is self-signed and its issuer is not in the client trust store"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Browsers warn when the signing authority is not trusted; a self-signed certificate has no recognized chain of trust unless its root is explicitly distributed to clients.",
+    "distractorExplanations": {
+      "b": "Stronger algorithms do not trigger trust warnings.",
+      "c": "Port 443 is the standard HTTPS port and is expected.",
+      "d": "Correct time synchronization prevents rather than causes validity warnings."
+    },
+    "tags": [
+      "pki",
+      "certificates"
+    ]
+  },
+  {
+    "id": "n10-009-40-072",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "What distinguishes authorization from authentication?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Authentication verifies identity while authorization determines what that identity may do"
+      },
+      {
+        "id": "b",
+        "text": "Authorization verifies identity while authentication grants permissions"
+      },
+      {
+        "id": "c",
+        "text": "They are two terms for the same process"
+      },
+      {
+        "id": "d",
+        "text": "Authorization always occurs before authentication"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Authentication answers who you are, and authorization answers what you are permitted to do once identity is established.",
+    "distractorExplanations": {
+      "b": "This reverses the two definitions.",
+      "c": "They are distinct stages of access control.",
+      "d": "Identity must be established before permissions can be evaluated."
+    },
+    "tags": [
+      "aaa",
+      "iam"
+    ]
+  },
+  {
+    "id": "n10-009-40-073",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "An organization implements time-based authentication so that contractor accounts function only during business hours. Which control category does this represent?",
+    "options": [
+      {
+        "id": "d",
+        "text": "Physical access control"
+      },
+      {
+        "id": "c",
+        "text": "Discretionary access control set by resource owners"
+      },
+      {
+        "id": "b",
+        "text": "Mandatory access control using security labels"
+      },
+      {
+        "id": "a",
+        "text": "A rule-based access restriction applied to authentication"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Applying conditions such as time of day to access decisions is rule-based control, complementing identity-based models by adding contextual constraints.",
+    "distractorExplanations": {
+      "b": "MAC uses classification labels and clearances rather than schedules.",
+      "c": "DAC leaves access decisions to resource owners.",
+      "d": "Physical controls govern entry to facilities."
+    },
+    "tags": [
+      "iam",
+      "authorization"
+    ]
+  },
+  {
+    "id": "n10-009-40-074",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "An attacker connects a device to an access port and sends crafted BPDUs with a very low bridge priority. What is the goal?",
+    "options": [
+      {
+        "id": "d",
+        "text": "To overflow the CAM table"
+      },
+      {
+        "id": "b",
+        "text": "To exhaust the DHCP address pool"
+      },
+      {
+        "id": "c",
+        "text": "To poison the DNS resolver cache"
+      },
+      {
+        "id": "a",
+        "text": "To become the spanning tree root so traffic is redirected through the attacker"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Winning the root bridge election reshapes the topology so traffic flows through the attacker's device, enabling interception; root guard and BPDU guard prevent this.",
+    "distractorExplanations": {
+      "b": "Address pool exhaustion is DHCP starvation, a different attack.",
+      "c": "DNS cache poisoning targets the resolver, not spanning tree.",
+      "d": "CAM overflow is achieved by flooding random MAC addresses."
+    },
+    "tags": [
+      "attacks",
+      "stp"
+    ]
+  },
+  {
+    "id": "n10-009-40-075",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which attack involves an attacker sending deauthentication frames to force wireless clients to disconnect and reassociate?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A deauthentication attack, often used to capture handshakes or force clients onto a rogue AP"
+      },
+      {
+        "id": "c",
+        "text": "A SQL injection attack against the controller"
+      },
+      {
+        "id": "b",
+        "text": "A brute force attack against the passphrase"
+      },
+      {
+        "id": "d",
+        "text": "A DNS amplification attack"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Deauthentication frames in unprotected management frame deployments allow an attacker to disconnect clients; 802.11w management frame protection mitigates this.",
+    "distractorExplanations": {
+      "b": "Brute force targets the passphrase offline rather than disconnecting clients.",
+      "c": "SQL injection targets application databases.",
+      "d": "DNS amplification is a volumetric denial-of-service technique."
+    },
+    "tags": [
+      "attacks",
+      "wireless"
+    ]
+  },
+  {
+    "id": "n10-009-40-076",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which characteristic makes DNS amplification effective as a denial-of-service technique?",
+    "options": [
+      {
+        "id": "b",
+        "text": "It encrypts the attack traffic so it cannot be filtered"
+      },
+      {
+        "id": "d",
+        "text": "It operates entirely at Layer 2"
+      },
+      {
+        "id": "c",
+        "text": "It requires compromising the victim's DNS server first"
+      },
+      {
+        "id": "a",
+        "text": "A small spoofed query generates a much larger response directed at the victim"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The attacker spoofs the victim's source address so open resolvers send disproportionately large responses to the victim, multiplying the attacker's bandwidth.",
+    "distractorExplanations": {
+      "b": "The traffic is ordinary DNS and is not encrypted by the technique.",
+      "c": "The attack abuses third-party open resolvers rather than the victim's own server.",
+      "d": "The attack operates at Layer 3 and above across the internet."
+    },
+    "tags": [
+      "attacks",
+      "dos"
+    ]
+  },
+  {
+    "id": "n10-009-40-077",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "What makes an insider threat particularly difficult to detect compared with an external attacker?",
+    "options": [
+      {
+        "id": "d",
+        "text": "Insiders operate only outside business hours"
+      },
+      {
+        "id": "b",
+        "text": "Insiders always use encrypted channels"
+      },
+      {
+        "id": "a",
+        "text": "The insider already holds legitimate credentials and expected access patterns"
+      },
+      {
+        "id": "c",
+        "text": "External attacks generate no logs"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Because the activity uses valid credentials and resembles normal work, detection depends on behavioral analysis rather than perimeter controls.",
+    "distractorExplanations": {
+      "b": "Encryption use is not a defining characteristic of insider activity.",
+      "c": "External attacks generate substantial log evidence.",
+      "d": "Insider activity commonly occurs during normal working hours."
+    },
+    "tags": [
+      "attacks",
+      "insider"
+    ]
+  },
+  {
+    "id": "n10-009-40-078",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Which control prevents an unauthorized DHCP server from assigning addresses on an access VLAN?",
+    "options": [
+      {
+        "id": "d",
+        "text": "Storm control on the uplink"
+      },
+      {
+        "id": "c",
+        "text": "BPDU guard on access ports"
+      },
+      {
+        "id": "a",
+        "text": "DHCP snooping with only the uplink configured as trusted"
+      },
+      {
+        "id": "b",
+        "text": "Port security with sticky MAC learning"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "DHCP snooping discards server-originated messages arriving on untrusted ports, so only the legitimate server reachable through the trusted uplink can offer addresses.",
+    "distractorExplanations": {
+      "b": "Port security limits MAC addresses but does not inspect DHCP message types.",
+      "c": "BPDU guard protects spanning tree, not DHCP.",
+      "d": "Storm control limits traffic rates rather than filtering by protocol role."
+    },
+    "tags": [
+      "dhcp",
+      "hardening"
+    ]
+  },
+  {
+    "id": "n10-009-40-079",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "In firewall rule design, why should more specific rules generally be placed above broader rules?",
+    "options": [
+      {
+        "id": "b",
+        "text": "Specific rules consume less memory"
+      },
+      {
+        "id": "c",
+        "text": "Broad rules cannot be logged"
+      },
+      {
+        "id": "d",
+        "text": "The firewall reorders rules automatically by specificity"
+      },
+      {
+        "id": "a",
+        "text": "Rules are evaluated in order and the first match applies, so a broad rule above would shadow the specific one"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Because evaluation stops at the first match, a permissive broad rule placed earlier prevents a more specific rule below it from ever being reached.",
+    "distractorExplanations": {
+      "b": "Memory consumption is not the ordering rationale.",
+      "c": "Logging can be enabled on rules of any scope.",
+      "d": "Firewalls apply rules in the configured order rather than reordering them."
+    },
+    "tags": [
+      "firewall",
+      "acl"
+    ]
+  },
+  {
+    "id": "n10-009-40-080",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "An organization wants to grant contractors access only to a specific application, without placing them on the internal network. Which approach best fits?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A screened subnet or application-specific access with segmentation from internal resources"
+      },
+      {
+        "id": "d",
+        "text": "Disabling the firewall between contractor and internal segments"
+      },
+      {
+        "id": "c",
+        "text": "Adding contractors to the domain administrators group"
+      },
+      {
+        "id": "b",
+        "text": "A full tunnel VPN granting complete internal access"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Limiting reachability to only the required application enforces least privilege at the network level, so a compromised contractor account cannot pivot into internal systems.",
+    "distractorExplanations": {
+      "b": "A full tunnel granting complete access contradicts least privilege.",
+      "c": "Administrative group membership grants far more privilege than required.",
+      "d": "Removing the firewall eliminates the separation the requirement depends on."
+    },
+    "tags": [
+      "segmentation",
+      "least-privilege"
+    ]
+  },
+  {
+    "id": "n10-009-40-081",
+    "domain": "4.0",
+    "domainName": "Network Security",
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "What is the security purpose of disabling unused switch ports rather than leaving them enabled but unpatched?",
+    "options": [
+      {
+        "id": "d",
+        "text": "Disabled ports improve throughput on active ports"
+      },
+      {
+        "id": "a",
+        "text": "An enabled port allows anyone with physical access to connect and gain network access"
+      },
+      {
+        "id": "b",
+        "text": "Disabled ports consume less electrical power"
+      },
+      {
+        "id": "c",
+        "text": "Enabled ports increase spanning tree convergence time"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "An unused but enabled port is an open door in any accessible area; administratively shutting it removes that entry point regardless of physical access.",
+    "distractorExplanations": {
+      "b": "Power savings are negligible and not the security rationale.",
+      "c": "Convergence time is not meaningfully affected by unused ports.",
+      "d": "Port state does not alter throughput on other ports."
+    },
+    "tags": [
+      "hardening",
+      "physical-security"
+    ]
+  },
+  {
+    "id": "n10-009-50-110",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "During problem identification, multiple users report different symptoms. What is the most effective first action?",
+    "options": [
+      {
+        "id": "b",
+        "text": "Immediately reboot the core switch"
+      },
+      {
+        "id": "c",
+        "text": "Open a ticket with the internet provider"
+      },
+      {
+        "id": "d",
+        "text": "Replace the cabling at each affected desk"
+      },
+      {
+        "id": "a",
+        "text": "Determine what the reports have in common to define the scope of the problem"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Establishing the common factor, such as a shared VLAN, switch, or application, narrows the scope dramatically and directs the investigation toward a shared cause.",
+    "distractorExplanations": {
+      "b": "Rebooting core infrastructure is disruptive and speculative.",
+      "c": "Escalating externally is premature before the scope is understood.",
+      "d": "Replacing cabling at multiple desks is unlikely to address a shared cause."
+    },
+    "tags": [
+      "methodology"
+    ]
+  },
+  {
+    "id": "n10-009-50-111",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Why should a technician consider multiple approaches, such as top-down, bottom-up, or divide and conquer, rather than always starting at Layer 1?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The most efficient starting point depends on the symptoms and what is already known"
+      },
+      {
+        "id": "b",
+        "text": "Layer 1 problems are rare in modern networks"
+      },
+      {
+        "id": "d",
+        "text": "Higher layers cannot be tested directly"
+      },
+      {
+        "id": "c",
+        "text": "Starting at Layer 1 violates the official methodology"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Choosing the approach based on available evidence saves time; if an application error is reported across many healthy links, starting at the physical layer wastes effort.",
+    "distractorExplanations": {
+      "b": "Physical layer problems remain common and important.",
+      "c": "The methodology does not prescribe a fixed layer to start from.",
+      "d": "Higher layers are directly testable with appropriate tools."
+    },
+    "tags": [
+      "methodology"
+    ]
+  },
+  {
+    "id": "n10-009-50-112",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A technician replaces a patch cable and the link comes up, but throughput remains poor with high error counts. What should be examined next?",
+    "options": [
+      {
+        "id": "d",
+        "text": "The spanning tree priority"
+      },
+      {
+        "id": "c",
+        "text": "The DNS forwarder settings"
+      },
+      {
+        "id": "b",
+        "text": "The DHCP scope configuration"
+      },
+      {
+        "id": "a",
+        "text": "The permanent horizontal run and its terminations, since the patch cable was not the fault"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Replacing the patch cord eliminated one variable without resolving the errors, so attention moves to the permanent run, punch downs, and connectors that remain in the path.",
+    "distractorExplanations": {
+      "b": "Addressing configuration does not produce physical layer errors.",
+      "c": "DNS settings do not affect frame integrity.",
+      "d": "Spanning tree priority influences topology, not error counters."
+    },
+    "tags": [
+      "cabling",
+      "troubleshooting"
+    ]
+  },
+  {
+    "id": "n10-009-50-113",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which physical condition would a wire map test on a cable certifier detect?",
+    "options": [
+      {
+        "id": "c",
+        "text": "Incorrect VLAN tagging on the switch port"
+      },
+      {
+        "id": "a",
+        "text": "Crossed pairs, opens, shorts, and reversed conductors"
+      },
+      {
+        "id": "d",
+        "text": "An expired certificate on the server"
+      },
+      {
+        "id": "b",
+        "text": "Excessive latency across a WAN link"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A wire map verifies that each conductor terminates on the correct pin at both ends, revealing miswires, opens, shorts, and split pairs.",
+    "distractorExplanations": {
+      "b": "WAN latency is measured with network tests, not a wire map.",
+      "c": "VLAN tagging is a logical switch configuration.",
+      "d": "Certificate validity is an application layer concern."
+    },
+    "tags": [
+      "cabling",
+      "hardware-tools"
+    ]
+  },
+  {
+    "id": "n10-009-50-114",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A newly installed 10 Gbps link between two racks shows intermittent errors. The optics are matched, the fiber is single-mode, and the run is only 15 meters. What should be suspected?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Excessive received power overloading the receiver on a very short single-mode run"
+      },
+      {
+        "id": "b",
+        "text": "Insufficient power due to the short distance"
+      },
+      {
+        "id": "d",
+        "text": "A duplex mismatch between the two interfaces"
+      },
+      {
+        "id": "c",
+        "text": "An incorrect VLAN on the trunk"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Long-reach optics on a very short run can deliver more power than the receiver tolerates, causing errors; an attenuator brings the level into the acceptable window.",
+    "distractorExplanations": {
+      "b": "Short runs produce more, not less, received power.",
+      "c": "VLAN misconfiguration does not create physical layer errors.",
+      "d": "Duplex is auto-negotiated and fixed at full for 10 Gbps fiber interfaces."
+    },
+    "tags": [
+      "fiber",
+      "transceivers"
+    ]
+  },
+  {
+    "id": "n10-009-50-115",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "What does a high count of late collisions specifically indicate, as distinct from ordinary collisions?",
+    "options": [
+      {
+        "id": "c",
+        "text": "An expired DHCP lease on the connected host"
+      },
+      {
+        "id": "b",
+        "text": "Normal operation on a busy half-duplex segment"
+      },
+      {
+        "id": "a",
+        "text": "A duplex mismatch or a segment exceeding maximum length"
+      },
+      {
+        "id": "d",
+        "text": "A misconfigured DNS suffix"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Ordinary collisions occur early in transmission on half-duplex segments, but a late collision means the collision was detected after the first 64 bytes, pointing to duplex mismatch or excessive cable length.",
+    "distractorExplanations": {
+      "b": "Late collisions are never normal, unlike early collisions on half duplex.",
+      "c": "Addressing problems do not generate collision counters.",
+      "d": "DNS configuration is unrelated to Layer 1 and 2 counters."
+    },
+    "tags": [
+      "duplex",
+      "cabling"
+    ]
+  },
+  {
+    "id": "n10-009-50-116",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Users can access internal resources but external HTTPS sites fail intermittently, while HTTP sites load. A capture shows TLS handshakes failing partway. Which cause deserves investigation first?",
+    "options": [
+      {
+        "id": "b",
+        "text": "A missing default gateway on the clients"
+      },
+      {
+        "id": "d",
+        "text": "A disabled switch port"
+      },
+      {
+        "id": "c",
+        "text": "An exhausted DHCP scope"
+      },
+      {
+        "id": "a",
+        "text": "An MTU or fragmentation problem affecting larger TLS handshake packets"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "TLS handshake packets are larger than typical HTTP requests, so an MTU or path MTU discovery problem breaks HTTPS while smaller HTTP traffic succeeds.",
+    "distractorExplanations": {
+      "b": "A missing gateway would prevent all external access, including HTTP.",
+      "c": "Address exhaustion would prevent clients from connecting at all.",
+      "d": "A disabled port would disconnect the affected host entirely."
+    },
+    "tags": [
+      "mtu",
+      "troubleshooting"
+    ]
+  },
+  {
+    "id": "n10-009-50-117",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "After enabling a new firewall rule set, an application using UDP stops working while TCP applications continue normally. What should be verified?",
+    "options": [
+      {
+        "id": "b",
+        "text": "That the switch supports jumbo frames"
+      },
+      {
+        "id": "c",
+        "text": "That the DNS zone has a PTR record"
+      },
+      {
+        "id": "a",
+        "text": "That the rules permit the required UDP ports and account for the absence of connection state"
+      },
+      {
+        "id": "d",
+        "text": "That spanning tree has converged"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Stateful firewalls handle UDP differently from TCP because there is no handshake to track, so return traffic depends on pseudo-state timers and explicit rules.",
+    "distractorExplanations": {
+      "b": "Frame size support does not distinguish TCP from UDP.",
+      "c": "Reverse DNS records do not affect protocol filtering.",
+      "d": "Spanning tree convergence is a Layer 2 matter."
+    },
+    "tags": [
+      "firewall",
+      "troubleshooting"
+    ]
+  },
+  {
+    "id": "n10-009-50-118",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A workstation resolves an internal hostname to an address on a different subnet than expected. Which is the most likely cause?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A stale or incorrect DNS record for that hostname"
+      },
+      {
+        "id": "d",
+        "text": "An incorrect syslog severity threshold"
+      },
+      {
+        "id": "c",
+        "text": "An exhausted PoE budget on the switch"
+      },
+      {
+        "id": "b",
+        "text": "A duplex mismatch on the uplink"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Resolution returning an unexpected address points to the record itself being wrong or stale, often after a migration where the old record was not updated or the TTL has not expired.",
+    "distractorExplanations": {
+      "b": "Duplex problems affect performance, not name resolution results.",
+      "c": "PoE budget affects powered devices, not DNS answers.",
+      "d": "Syslog configuration affects logging verbosity."
+    },
+    "tags": [
+      "dns",
+      "troubleshooting"
+    ]
+  },
+  {
+    "id": "n10-009-50-119",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A branch site loses connectivity to headquarters. The WAN interface is up, ping to the provider gateway succeeds, but ping to the headquarters subnet fails. Where should the investigation focus?",
+    "options": [
+      {
+        "id": "b",
+        "text": "The local switch port duplex setting"
+      },
+      {
+        "id": "a",
+        "text": "Routing or tunnel state beyond the provider gateway, including VPN status"
+      },
+      {
+        "id": "c",
+        "text": "The branch DHCP scope size"
+      },
+      {
+        "id": "d",
+        "text": "The wireless channel plan at the branch"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Reaching the provider gateway proves the local link and first hop are healthy, so the fault lies further along the path in routing, the VPN tunnel, or provider transit.",
+    "distractorExplanations": {
+      "b": "Local duplex settings would affect the LAN rather than selective WAN reachability.",
+      "c": "Scope size does not affect site-to-site reachability.",
+      "d": "Wireless configuration is unrelated to WAN routing."
+    },
+    "tags": [
+      "wan",
+      "routing"
+    ]
+  },
+  {
+    "id": "n10-009-50-120",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which symptom most clearly points to a default gateway problem rather than a DNS problem?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The host can ping local devices by IP but cannot ping any external IP address"
+      },
+      {
+        "id": "d",
+        "text": "The host obtains an APIPA address"
+      },
+      {
+        "id": "c",
+        "text": "The host resolves names but pages load slowly"
+      },
+      {
+        "id": "b",
+        "text": "The host can ping external IP addresses but not resolve names"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Failure to reach anything off the local subnet by IP isolates the problem to routing, since name resolution is not involved when pinging an address directly.",
+    "distractorExplanations": {
+      "b": "Reaching addresses but not names is the signature of a DNS problem.",
+      "c": "Slow loading suggests performance rather than gateway failure.",
+      "d": "An APIPA address indicates a DHCP failure."
+    },
+    "tags": [
+      "gateway",
+      "troubleshooting"
+    ]
+  },
+  {
+    "id": "n10-009-50-121",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A VoIP deployment suffers one-way audio. Signaling completes and calls connect. Which cause should be examined first?",
+    "options": [
+      {
+        "id": "b",
+        "text": "An expired DHCP lease on the handsets"
+      },
+      {
+        "id": "d",
+        "text": "A mismatched cable category on the handset run"
+      },
+      {
+        "id": "c",
+        "text": "An incorrect syslog server address"
+      },
+      {
+        "id": "a",
+        "text": "A firewall or NAT device blocking the RTP media stream in one direction"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "One-way audio with successful signaling is the classic symptom of the media path being blocked or incorrectly translated in one direction while SIP signaling passes.",
+    "distractorExplanations": {
+      "b": "An expired lease would prevent the phone from operating entirely.",
+      "c": "Logging configuration does not affect media flow.",
+      "d": "Cable category would degrade both directions rather than one."
+    },
+    "tags": [
+      "voip",
+      "firewall"
+    ]
+  },
+  {
+    "id": "n10-009-50-122",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "An application performs well on the LAN but poorly over the WAN despite adequate bandwidth. The application makes many small sequential requests. What is the underlying cause?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The application is chatty, so each round trip adds latency that accumulates"
+      },
+      {
+        "id": "d",
+        "text": "The DNS server is misconfigured"
+      },
+      {
+        "id": "c",
+        "text": "The LAN switch has a full CAM table"
+      },
+      {
+        "id": "b",
+        "text": "The WAN circuit is saturated"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Chatty applications multiply the effect of latency because each request must complete before the next begins, so total time scales with round trip time regardless of bandwidth.",
+    "distractorExplanations": {
+      "b": "Adequate bandwidth is stated, which rules out saturation.",
+      "c": "CAM table capacity would affect LAN forwarding, where performance is good.",
+      "d": "DNS affects initial resolution rather than sustained request patterns."
+    },
+    "tags": [
+      "latency",
+      "performance"
+    ]
+  },
+  {
+    "id": "n10-009-50-123",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which measurement best characterizes the variation in packet arrival times that degrades voice quality?",
+    "options": [
+      {
+        "id": "d",
+        "text": "Hop count"
+      },
+      {
+        "id": "a",
+        "text": "Jitter"
+      },
+      {
+        "id": "b",
+        "text": "Throughput"
+      },
+      {
+        "id": "c",
+        "text": "Bandwidth"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Jitter measures inconsistency in inter-packet arrival; jitter buffers compensate to a point, beyond which audio breaks up.",
+    "distractorExplanations": {
+      "b": "Throughput measures data delivered over time.",
+      "c": "Bandwidth is the capacity of the link.",
+      "d": "Hop count is the number of routers traversed."
+    },
+    "tags": [
+      "qos",
+      "performance"
+    ]
+  },
+  {
+    "id": "n10-009-50-124",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "Wireless clients in a warehouse experience frequent disconnects while roaming between aisles, though signal strength appears adequate everywhere. What should be examined?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cell overlap and roaming thresholds, since insufficient overlap prevents clean handoff"
+      },
+      {
+        "id": "b",
+        "text": "The DHCP lease duration for the wireless scope"
+      },
+      {
+        "id": "c",
+        "text": "The switch spanning tree priority"
+      },
+      {
+        "id": "d",
+        "text": "The syslog retention policy"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Roaming requires sufficient overlap between cells so the client can associate with the next AP before losing the current one; adequate individual readings do not guarantee proper overlap.",
+    "distractorExplanations": {
+      "b": "Lease duration would not cause mid-session roaming failures.",
+      "c": "Spanning tree affects wired topology.",
+      "d": "Log retention has no runtime effect."
+    },
+    "tags": [
+      "wireless",
+      "roaming"
+    ]
+  },
+  {
+    "id": "n10-009-50-125",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "A link shows high utilization only in one direction during backups. What does this asymmetry indicate?",
+    "options": [
+      {
+        "id": "b",
+        "text": "A duplex mismatch on the interface"
+      },
+      {
+        "id": "d",
+        "text": "A failed transceiver"
+      },
+      {
+        "id": "a",
+        "text": "The traffic pattern is inherently one-directional, which is normal for bulk transfer"
+      },
+      {
+        "id": "c",
+        "text": "A routing loop in the path"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Backup traffic flows predominantly from source to destination, so asymmetric utilization is expected and does not by itself indicate a fault.",
+    "distractorExplanations": {
+      "b": "A duplex mismatch produces errors and collisions rather than clean directional utilization.",
+      "c": "A routing loop would show duplicated traffic and TTL expiry.",
+      "d": "A failed transceiver would bring the link down or generate errors."
+    },
+    "tags": [
+      "performance",
+      "monitoring"
+    ]
+  },
+  {
+    "id": "n10-009-50-126",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.5",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A technician needs to capture only DNS traffic on a busy interface to avoid an unmanageable capture file. What should be applied?",
+    "options": [
+      {
+        "id": "d",
+        "text": "A port mirror of every VLAN on the switch"
+      },
+      {
+        "id": "c",
+        "text": "A larger disk to store the entire capture"
+      },
+      {
+        "id": "b",
+        "text": "A display filter applied after the full capture completes"
+      },
+      {
+        "id": "a",
+        "text": "A capture filter limiting collection to port 53 before packets are written"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A capture filter discards non-matching traffic before storage, keeping the file small on a busy link, whereas a display filter still requires capturing everything first.",
+    "distractorExplanations": {
+      "b": "A display filter reduces what is shown but not what is captured and stored.",
+      "c": "Adding storage does not address the analysis burden of an oversized capture.",
+      "d": "Mirroring more traffic makes the problem worse."
+    },
+    "tags": [
+      "packet-analysis",
+      "wireshark"
+    ]
+  },
+  {
+    "id": "n10-009-50-127",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.5",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which command would verify whether a Linux host has the correct default gateway configured?",
+    "options": [
+      {
+        "id": "a",
+        "text": "ip route"
+      },
+      {
+        "id": "d",
+        "text": "netstat -i"
+      },
+      {
+        "id": "b",
+        "text": "ip neigh"
+      },
+      {
+        "id": "c",
+        "text": "dig"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The routing table shows the default route and its next hop, which is exactly the gateway configuration being verified.",
+    "distractorExplanations": {
+      "b": "ip neigh shows the neighbor cache of resolved link layer addresses.",
+      "c": "dig queries DNS records.",
+      "d": "netstat -i lists interface statistics without routing detail."
+    },
+    "tags": [
+      "cli-tools",
+      "routing"
+    ]
+  },
+  {
+    "id": "n10-009-50-128",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.5",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A technician must determine whether a performance problem is caused by the network or the server application. Which evidence best distinguishes the two?",
+    "options": [
+      {
+        "id": "d",
+        "text": "Reviewing the physical rack layout"
+      },
+      {
+        "id": "a",
+        "text": "Comparing network round trip time against the server's response time after the request arrives"
+      },
+      {
+        "id": "b",
+        "text": "Counting the number of VLANs configured"
+      },
+      {
+        "id": "c",
+        "text": "Checking the DHCP lease duration"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Separating transit time from server processing time localizes the delay; low round trip time with slow responses points to the application rather than the network.",
+    "distractorExplanations": {
+      "b": "VLAN count does not indicate where delay originates.",
+      "c": "Lease duration is unrelated to response time.",
+      "d": "Rack layout has no bearing on this distinction."
+    },
+    "tags": [
+      "performance",
+      "troubleshooting"
+    ]
+  },
+  {
+    "id": "n10-009-50-129",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.5",
+    "type": "single",
+    "difficulty": "medium",
+    "stem": "Which tool identifies which physical switch port a given MAC address is learned on?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The switch MAC address table"
+      },
+      {
+        "id": "b",
+        "text": "The DNS resolver cache"
+      },
+      {
+        "id": "c",
+        "text": "The DHCP scope statistics"
+      },
+      {
+        "id": "d",
+        "text": "The syslog severity table"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The MAC address table maps learned addresses to ports, which is the direct way to locate where a device is physically connected.",
+    "distractorExplanations": {
+      "b": "The resolver cache maps names to addresses.",
+      "c": "Scope statistics show address utilization.",
+      "d": "Severity levels classify log messages."
+    },
+    "tags": [
+      "switching",
+      "troubleshooting"
+    ]
+  },
+  {
+    "id": "n10-009-50-130",
+    "domain": "5.0",
+    "domainName": "Network Troubleshooting",
+    "objective": "5.5",
+    "type": "single",
+    "difficulty": "hard",
+    "stem": "A capture shows a client sending repeated ARP requests for its default gateway with no replies. What does this indicate?",
+    "options": [
+      {
+        "id": "d",
+        "text": "The application is using the wrong port"
+      },
+      {
+        "id": "a",
+        "text": "The gateway is unreachable at Layer 2, possibly down or on a different VLAN"
+      },
+      {
+        "id": "b",
+        "text": "The DNS server is misconfigured"
+      },
+      {
+        "id": "c",
+        "text": "The TCP window size is too small"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Unanswered ARP requests mean the client cannot resolve the gateway's MAC address, so the gateway is absent from the broadcast domain, offline, or the client is in the wrong VLAN.",
+    "distractorExplanations": {
+      "b": "DNS operates above this and requires working Layer 2 connectivity first.",
+      "c": "Window size affects throughput after a connection is established.",
+      "d": "Port selection is irrelevant when Layer 2 resolution fails."
+    },
+    "tags": [
+      "arp",
+      "packet-analysis"
+    ]
+  }
+]
