@@ -1,16 +1,18 @@
-# Projetos
+# Projects
 
-Repositório guarda-chuva: cada projeto vive na própria pasta na raiz, com o
-seu próprio workspace npm, testes e build.
+Umbrella repository: each project lives in its own folder at the root, with
+its own npm workspace, tests, and build.
 
-| Projeto | O que é |
-|---------|---------|
-| [certdeck](certdeck/) | Simuladores offline-first de certificações de TI (CompTIA e afins) |
+| Project | What it is |
+|---------|------------|
+| [certdeck](certdeck/) | Offline-first exam simulators for IT certifications (CompTIA and similar) |
 
-O deploy do GitHub Pages é feito por [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml),
-que roda a partir de `certdeck/`.
+GitHub Pages deployment is handled by
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), which runs
+from `certdeck/`. The workflow lives at the repository root because Actions
+only runs workflows from there.
 
-## Trabalhando em um projeto
+## Working on a project
 
 ```bash
 cd certdeck

@@ -46,33 +46,51 @@ certdeck/
 
 - **Full exam mode** — questions weighted to the certification's official
   domain distribution, on a timer, with flagging and a question navigator.
+  Choose how it is played before the first card is dealt: *exam conditions*,
+  where nothing is revealed until you submit, or *card by card*, where each
+  answer is checked as you play it. Still timed and still scored either way.
+- **Pause and resume** — leave a 90-card exam and come back to the card you
+  were on, with the clock where you left it. This is a study tool, not a
+  proctored room.
 - **Practice by domain** — target specific domains with immediate feedback.
 - **Random question** — single-question quick drills.
 - **Explanations that teach** — the card flips to its reverse face to show why
   the correct option is correct *and* why each distractor is wrong.
 - **Suits for domains** — every card carries its domain's suit mark, so the
   shape of your weak areas is visible at a glance.
-- **Per-domain results** — a breakdown that points at the weakest area as the
-  next study focus.
+- **Results worth reading** — score, pass/fail, XP earned, time per card,
+  blanks, a per-suit breakdown, accuracy by difficulty, and the change against
+  your previous attempt.
+- **Statistics** — everything in history aggregated: mastery tier per domain,
+  accuracy by difficulty and by exam objective, deck coverage, exam scores
+  over time, and the weakest objectives to read up on.
+- **Progression** — XP weighted by difficulty, levels, and a study streak.
+  A mastery tier needs volume as well as accuracy, so one lucky card is never
+  mistaken for mastery.
 - **History** — attempts stored locally, so progress is visible over time.
-- **Resume** — an interrupted exam is restored, remaining time included.
+- **Themes and accents** — light, dark, or follow the system, and seven accent
+  colours, each checked for contrast on both card faces and kept clear of the
+  suit hues and the right/wrong colours.
 
 ## Running locally
 
-Requires Node.js 20 or newer.
+Requires Node.js 24 (see `.nvmrc`).
 
 ```bash
 npm install
 npm run dev        # run the apps in development
 npm run build      # build everything
 npm run validate   # validate every question file in every app
+npm run typecheck  # tsc --noEmit; note that the builds do NOT typecheck
 npm run test       # unit tests
 ```
 
 ## Installing an app
 
-Simulators are published to GitHub Pages. Open the site, pick a simulator,
-then install it:
+Simulators are installed from the published site as progressive web apps.
+Publishing has not happened yet — see **Deployment** below — so there is no
+public URL to install from at the moment. Once there is, open the site, pick
+a simulator, then install it:
 
 - **Android / tablet (Chrome):** menu → *Install app*
 - **Desktop (Chrome / Edge):** the install icon in the address bar
@@ -129,10 +147,15 @@ certification-specific logic and needs fixing.
 
 ## Deployment
 
-Pushing to `main` builds every app and publishes to GitHub Pages. Each app is
-served from its own subpath, e.g. `/certdeck/network-plus/`.
+Pushing to `main` runs the checks and builds every app, but does **not**
+publish: the deploy job is gated on `workflow_dispatch`, because publishing
+is a deliberate act rather than something every commit does. To publish, run
+the workflow manually from the Actions tab.
 
-One-time repository setup: **Settings → Pages → Source → GitHub Actions**.
+Each app is served from its own subpath, e.g. `/certdeck/network-plus/`.
+
+One-time repository setup, required before the first publish:
+**Settings → Pages → Source → GitHub Actions**.
 
 ## Tech stack
 
@@ -141,7 +164,8 @@ vite-plugin-pwa · npm workspaces
 
 ## Roadmap
 
-- [ ] Expand the Network+ question pool beyond the initial 180
+- [ ] Keep growing the Network+ question pool (468 so far)
+- [ ] More multiple-response questions (18 so far)
 - [ ] Subnetting drill mode with generated IPv4/IPv6 problems
 - [ ] Data import/export for backing up attempt history
 - [ ] Security+ (SY0-701) simulator
