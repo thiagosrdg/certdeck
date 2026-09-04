@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="CertDeck">
+  <!--
+    A single card in the deck's proportions (5:7): the ivory face of
+    tokens.css's --cd-card, edged and hairlined in --cd-gilt, the one
+    identity element every deck shares. See docs/design.md.
+  -->
+  <rect x="6" y="2" width="20" height="28" rx="3" fill="#FAF6EC" stroke="#B08D2B" stroke-width="2"/>
+  <line x1="9.5" y1="11" x2="22.5" y2="11" stroke="#B08D2B" stroke-width="1.5" opacity="0.85"/>
+</svg>
