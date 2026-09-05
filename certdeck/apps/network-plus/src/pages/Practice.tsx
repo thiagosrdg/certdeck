@@ -201,11 +201,11 @@ export default function Practice() {
                     {/* The suit itself, in its own hue — the same mark the card
                         carries, so the picker and the deck agree. */}
                     <span
-                      className="grid h-9 w-9 flex-shrink-0 place-items-center rounded-lg border"
+                      className="grid h-12 w-12 flex-shrink-0 place-items-center rounded-lg border"
                       style={{ borderColor: suit.hue, backgroundColor: `${suit.hue}1a` }}
                       aria-hidden="true"
                     >
-                      <SuitIcon name={suit.name} className="h-5 w-5" style={{ color: suit.hue }} />
+                      <SuitIcon name={suit.name} src={suit.src} className="h-8 w-8" />
                     </span>
 
                     <span className="min-w-0 flex-1">
@@ -292,6 +292,7 @@ export default function Practice() {
       <CardFrame
         suitName={suit.name}
         suitHue={suit.hue}
+        suitSrc={suit.src}
         domainLabel={domainName(displayQuestion.domain)}
         metaLeft={`${displayQuestion.domain} · Obj ${displayQuestion.objective} · Q ${currentIndex + 1}/${attempt.questionIds.length}`}
         difficulty={displayQuestion.difficulty}
@@ -366,7 +367,7 @@ export default function Practice() {
             const a = attempt.answers[id];
             const state: NavigatorState = index === currentIndex ? "current" : a?.flagged ? "flagged" : a?.answeredAt ? "answered" : "unanswered";
             const s = suitFor(q.domain);
-            return { questionId: id, suitName: s.name, suitHue: s.hue, state };
+            return { questionId: id, suitName: s.name, suitHue: s.hue, suitSrc: s.src, state };
           })}
           onSelect={(index) => {
             directionRef.current = index > currentIndex ? 1 : -1;

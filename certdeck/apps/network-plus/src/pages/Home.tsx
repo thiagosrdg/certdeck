@@ -48,7 +48,7 @@ export default function Home() {
             const suit = suitFor(d.id);
             return (
               <li key={d.id} title={d.name}>
-                <SuitIcon name={suit.name} className="h-4 w-4" style={{ color: suit.hue }} />
+                <SuitIcon name={suit.name} src={suit.src} className="h-9 w-9" />
                 <span className="sr-only">{d.name}</span>
               </li>
             );

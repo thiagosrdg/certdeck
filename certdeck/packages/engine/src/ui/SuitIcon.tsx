@@ -54,11 +54,33 @@ const ICONS: Record<string, ReactElement> = {
 
 export interface SuitIconProps {
   name: string;
+  /**
+   * An image to draw instead of the built-in glyph — each app supplies its
+   * own suit art (see docs/design.md). The engine neither knows nor cares
+   * what it depicts; without it the SVG glyph is used, so an app that ships
+   * no art still renders.
+   */
+  src?: string;
+  /** Accessible name. Omit for decoration, which is the usual case. */
+  alt?: string;
   className?: string;
   style?: CSSProperties;
 }
 
-export function SuitIcon({ name, className, style }: SuitIconProps) {
+export function SuitIcon({ name, src, alt, className, style }: SuitIconProps) {
+  if (src) {
+    return (
+      <img
+        src={src}
+        alt={alt ?? ""}
+        aria-hidden={alt ? undefined : true}
+        className={className}
+        style={style}
+        draggable={false}
+      />
+    );
+  }
+
   const icon = ICONS[name] ?? ICONS.node;
   return (
     <svg

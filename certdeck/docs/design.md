@@ -61,6 +61,18 @@ iconography rather than hearts-and-spades:
 | 4.0 Network Security | Shield | shield | `#9C3D46` garnet |
 | 5.0 Network Troubleshooting | Wrench | wrench | `#C0762B` burnt amber |
 
+Each suit is drawn as pixel art the app ships in `src/assets/suits/`, one
+image per domain, bundled by Vite so it is served from the app's own origin
+and precached with everything else. The engine's `SuitIcon` renders the image
+when given a `src` and falls back to its built-in glyph without one, so it
+stays certification-agnostic and an app that ships no art still works.
+
+The art is detailed enough that it needs room: below about 20px the
+illustrations lose their subject and read as coloured shapes. Icon sizes were
+raised throughout to suit that — the navigator grid is the one place still
+constrained by its cell size, where silhouette and colour carry the
+distinction rather than detail.
+
 The five suit hues are a categorical palette, so they are held to one: no two
 may be confusable, and none may desaturate into grey. Verify a change to them
 rather than judging it by eye — the original `#3F7D53` measured a chroma of

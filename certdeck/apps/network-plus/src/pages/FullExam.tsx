@@ -238,6 +238,7 @@ export default function FullExam() {
       <CardFrame
         suitName={suit.name}
         suitHue={suit.hue}
+        suitSrc={suit.src}
         domainLabel={domainName(displayQuestion.domain)}
         metaLeft={`${displayQuestion.domain} · Obj ${displayQuestion.objective} · Q ${currentIndex + 1}/${total}`}
         difficulty={displayQuestion.difficulty}
@@ -355,7 +356,7 @@ export default function FullExam() {
                     ? "answered"
                     : "unanswered";
             const s = suitFor(q.domain);
-            return { questionId: id, suitName: s.name, suitHue: s.hue, state };
+            return { questionId: id, suitName: s.name, suitHue: s.hue, suitSrc: s.src, state };
           })}
           onSelect={(index) => {
             directionRef.current = index > currentIndex ? 1 : -1;

@@ -39,7 +39,7 @@ export default function Review() {
           const s = suitFor(q.domain);
           // Reuses the "flagged" dot to mark a missed question in review, not a user flag.
           const state: NavigatorState = i === index ? "current" : correct ? "answered" : "flagged";
-          return { questionId: id, suitName: s.name, suitHue: s.hue, state };
+          return { questionId: id, suitName: s.name, suitHue: s.hue, suitSrc: s.src, state };
         })}
         onSelect={setIndex}
       />

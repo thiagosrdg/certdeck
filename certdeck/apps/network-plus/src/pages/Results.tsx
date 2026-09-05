@@ -34,7 +34,7 @@ function DomainRow({ domain }: { domain: DomainResult }) {
       </ProgressRing>
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-1.5">
-          <SuitIcon name={suit.name} className="h-3.5 w-3.5 flex-shrink-0" style={{ color: suit.hue }} />
+          <SuitIcon name={suit.name} src={suit.src} className="h-6 w-6 flex-shrink-0" />
           <span className="truncate text-sm font-semibold">{domain.domainName}</span>
         </div>
         <p className={`mt-0.5 font-mono text-[11px] ${weak ? "text-incorrect" : "text-ink-muted"}`}>
@@ -191,7 +191,7 @@ export default function Results() {
               const suit = suitFor(d.domainId);
               return (
                 <li key={d.domainId} className="flex items-center gap-2 rounded-lg border border-edge bg-card px-3 py-2">
-                  <SuitIcon name={suit.name} className="h-3 w-3 flex-shrink-0" style={{ color: suit.hue }} />
+                  <SuitIcon name={suit.name} src={suit.src} className="h-5 w-5 flex-shrink-0" />
                   <span className="min-w-0 flex-1 truncate text-xs">{d.domainName}</span>
                   <MasteryBadge tier={d.tier} compact />
                 </li>

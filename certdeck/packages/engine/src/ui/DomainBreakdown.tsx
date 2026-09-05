@@ -4,6 +4,8 @@ import { SuitIcon } from "./SuitIcon";
 export interface SuitLookup {
   name: string;
   hue: string;
+  /** Optional suit art; falls back to the engine's glyph when absent. */
+  src?: string;
 }
 
 export interface DomainBreakdownProps {
@@ -18,7 +20,7 @@ export function DomainBreakdown({ results, suitFor }: DomainBreakdownProps) {
         const suit = suitFor(r.domainId);
         return (
           <div key={r.domainId} className="flex items-center gap-3">
-            <SuitIcon name={suit.name} className="h-4 w-4 flex-shrink-0" style={{ color: suit.hue }} />
+            <SuitIcon name={suit.name} src={suit.src} className="h-6 w-6 flex-shrink-0" style={{ color: suit.hue }} />
             <div className="flex-1">
               <div className="mb-1 flex items-center justify-between text-sm">
                 <span>{r.domainName}</span>

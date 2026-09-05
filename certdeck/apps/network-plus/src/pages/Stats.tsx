@@ -46,7 +46,7 @@ function DomainCard({ domain }: { domain: DomainMastery }) {
 
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-1.5">
-          <SuitIcon name={suit.name} className="h-3.5 w-3.5 flex-shrink-0" style={{ color: suit.hue }} />
+          <SuitIcon name={suit.name} src={suit.src} className="h-6 w-6 flex-shrink-0" />
           <span className="truncate text-sm font-semibold">{domain.domainName}</span>
         </div>
 
@@ -195,7 +195,7 @@ export default function Stats() {
               const suit = suitFor(o.domainId);
               return (
                 <li key={o.objective} className="flex items-center gap-2 rounded-lg border border-edge bg-card px-3 py-2">
-                  <SuitIcon name={suit.name} className="h-3 w-3 flex-shrink-0" style={{ color: suit.hue }} />
+                  <SuitIcon name={suit.name} src={suit.src} className="h-5 w-5 flex-shrink-0" />
                   <span className="font-mono text-xs font-semibold">{o.objective}</span>
                   <span className="min-w-0 flex-1 truncate text-xs text-ink-muted">{o.domainName}</span>
                   <span className={`font-mono text-xs ${o.accuracy < 0.5 ? "text-incorrect" : "text-ink-muted"}`}>

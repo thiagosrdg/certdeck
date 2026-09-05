@@ -5,6 +5,8 @@ import { SuitIcon } from "./SuitIcon";
 export interface CardFrameProps {
   suitName: string;
   suitHue: string;
+  /** Optional suit art; the engine falls back to its glyph without it. */
+  suitSrc?: string;
   domainLabel: string;
   metaLeft: string;
   difficulty?: Difficulty;
@@ -25,6 +27,7 @@ const RANK_LABEL: Record<Difficulty, string> = { easy: "E", medium: "M", hard: "
 export function CardFrame({
   suitName,
   suitHue,
+  suitSrc,
   domainLabel,
   metaLeft,
   difficulty,
@@ -40,7 +43,7 @@ export function CardFrame({
           className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold"
           style={{ color: suitHue, backgroundColor: `color-mix(in srgb, ${suitHue} 16%, transparent)` }}
         >
-          <SuitIcon name={suitName} className="h-3.5 w-3.5" />
+          <SuitIcon name={suitName} src={suitSrc} className="h-5 w-5" />
           {domainLabel}
         </span>
         {difficulty && (

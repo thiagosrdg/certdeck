@@ -6,6 +6,7 @@ export interface NavigatorItem {
   questionId: string;
   suitName: string;
   suitHue: string;
+  suitSrc?: string;
   state: NavigatorState;
 }
 
@@ -37,7 +38,7 @@ export function Navigator({ items, onSelect, className = "" }: NavigatorProps) {
           ].join(" ")}
         >
           <span className="absolute inset-0 grid place-items-center">
-            <SuitIcon name={item.suitName} className="h-3 w-3 opacity-70" style={{ color: item.suitHue }} />
+            <SuitIcon name={item.suitName} src={item.suitSrc} className="h-4 w-4 opacity-80" style={{ color: item.suitHue }} />
           </span>
           {item.state === "flagged" && (
             <span className="absolute right-0.5 top-0.5 h-1.5 w-1.5 rounded-full bg-gilt" aria-hidden="true" />
